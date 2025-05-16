@@ -63,11 +63,15 @@
     <a href="destinations.html">Destinations</a>
 </li>
 
-                                        <li id="menu-item-25" class="menu-item dropdown">
+
+
+
+<li id="menu-item-25" class="menu-item dropdown">
     <a href="#" class="dropdown-toggle">Tour Packages ▼</a>
     <ul class="dropdown-menu">
         <li><a href="family-trip.html">Family Trip</a></li>
         <li><a href="group-trip.html">Group Tours</a></li>
+        <li><a href="lecture-rwanda.html">Lecture on Rwanda</a></li>
         <li><a href="solo-journey.html">Solo Journey</a></li>
         <li><a href="luxury-trip.html">Luxury Experience</a></li>
         <li><a href="eco-tourism.html">Eco-Tourism</a></li>
@@ -87,12 +91,13 @@
         border-radius: 5px;
         padding: 10px;
         list-style: none;
-        width: 200px;
+        width: 220px;
         transition: all 0.3s ease-in-out;
     }
     .dropdown-menu li {
-        padding: 8px;
-        transition: 0.3s ease-in-out;
+        padding: 10px;
+        transition: background 0.3s ease-in-out;
+        cursor: pointer;
     }
     .dropdown-menu li:hover {
         background: #f0f0f0;
@@ -103,14 +108,21 @@
 </style>
 
 <script>
-    document.querySelector('.dropdown-toggle').addEventListener('click', function(event) {
-        event.preventDefault();
-        let dropdown = this.nextElementSibling;
-        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    document.addEventListener("DOMContentLoaded", function() {
+        let toggle = document.querySelector('.dropdown-toggle');
+        let menu = toggle.nextElementSibling;
+
+        toggle.addEventListener('click', function(event) {
+            event.preventDefault();
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        });
     });
 </script>
 
-</li>
+
+
+
+
 
                                         <li id="menu-item-17019" class="menu-item dropdown">
     <a href="#" class="dropdown-toggle">Categories & Services ▼</a>

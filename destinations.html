@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations | PPRWANDA</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #005f73;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .card {
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            width: 300px;
+            border-radius: 5px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+        }
+        .card-content {
+            padding: 15px;
+        }
+        .explore-btn {
+            display: inline-block;
+            background-color: #ee6c4d;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .explore-btn:hover {
+            background-color: #bb4d33;
+        }
+        footer {
+            background-color: #005f73;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Explore Rwanda’s Top Destinations
+</header>
+
+<div class="container">
+    <div class="grid">
+        <div class="card">
+            <img src="https://pprwandatours.com/wp-content/uploads/2024/12/akagera.png" alt="Akagera National Park">
+            <div class="card-content">
+                <h3>Akagera National Park</h3>
+                <p>Home to Rwanda’s incredible wildlife, including lions, elephants, and giraffes.</p>
+                <a href="akagera.html" class="explore-btn">Explore</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://pprwandatours.com/wp-content/uploads/2024/12/volcanoes.png" alt="Volcanoes National Park">
+            <div class="card-content">
+                <h3>Volcanoes National Park</h3>
+                <p>Famous for gorilla trekking and breathtaking volcanic scenery.</p>
+                <a href="volcanoes.html" class="explore-btn">Explore</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://pprwandatours.com/wp-content/uploads/2024/12/nyungwe.png" alt="Nyungwe Forest">
+            <div class="card-content">
+                <h3>Nyungwe Forest</h3>
+                <p>A pristine rainforest with canopy walks and chimpanzee sightings.</p>
+                <a href="nyungwe.html" class="explore-btn">Explore</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://pprwandatours.com/wp-content/uploads/2024/12/lake-kivu.png" alt="Lake Kivu">
+            <div class="card-content">
+                <h3>Lake Kivu</h3>
+                <p>A stunning freshwater lake perfect for relaxation and water activities.</p>
+                <a href="lake-kivu.html" class="explore-btn">Explore</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 PPRWANDA. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

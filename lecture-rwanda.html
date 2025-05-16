@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture on Rwanda | PPRWANDA</title>
+    <link rel="stylesheet" href="styles.css"> <!-- External stylesheet -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery for animations -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Header Styling */
+        header {
+            background-color: #005f73;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('https://pprwandatours.com/wp-content/uploads/2024/12/Ruzizzi.png');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Content Container */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Hover Effects */
+        .section:hover {
+            transform: scale(1.02);
+            transition: 0.3s ease-in-out;
+        }
+
+        /* Registration Form */
+        .register-form {
+            margin-top: 20px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        /* Animated Button */
+        .register-btn {
+            display: inline-block;
+            background-color: #ee6c4d;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .register-btn:hover {
+            background-color: #bb4d33;
+        }
+
+        /* Testimonial Slider */
+        .testimonials {
+            background-color: #eee;
+            padding: 20px;
+            overflow: hidden;
+        }
+        .testimonial {
+            display: none;
+            text-align: center;
+            font-style: italic;
+        }
+        .testimonial.active {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #005f73;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    Lecture on Rwanda - Learn, Discover, Experience
+</header>
+
+<div class="hero">
+    Understanding Rwanda’s Rich History & Culture
+</div>
+
+<div class="container">
+    <h2 class="section">About the Lecture</h2>
+    <p>This in-depth session explores Rwanda’s fascinating history, its economic growth, and cultural heritage.</p>
+
+    <h2 class="section">Key Topics Covered</h2>
+    <ul>
+        <li>Ancient Rwandan Kingdoms & Traditions</li>
+        <li>Colonial Influence & Independence</li>
+        <li>Rwanda’s Rise as an Economic Power</li>
+        <li>Conservation & Wildlife Preservation</li>
+        <li>Modern Rwanda: Technology & Sustainability</li>
+    </ul>
+
+    <h2 class="section">Register for the Lecture</h2>
+    <div class="register-form">
+        <form action="register.html" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Why do you want to attend?" required></textarea>
+            <button type="submit" class="register-btn">Register Now</button>
+        </form>
+    </div>
+
+    <h2 class="section">Testimonials</h2>
+    <div class="testimonials">
+        <div class="testimonial active">"An eye-opening experience! I learned so much." - <strong>David K.</strong></div>
+        <div class="testimonial">"Rwanda’s history is amazing. I loved every session!" - <strong>Maria L.</strong></div>
+        <div class="testimonial">"Highly recommended for anyone interested in African heritage!" - <strong>James P.</strong></div>
+    </div>
+
+    <h2 class="section">Explore More</h2>
+    <a href="index.html">Back to Home</a> | <a href="solo-journey.html">Solo Travel</a> | <a href="group-trip.html">Group Tours</a>
+</div>
+
+<footer>
+    <p>&copy; 2025 PPRWANDA. All Rights Reserved.</p>
+</footer>
+
+<script>
+    // Testimonial Slider Animation
+    let testimonials = $('.testimonial');
+    let index = 0;
+    
+    function showNextTestimonial() {
+        testimonials.removeClass('active');
+        index = (index + 1) % testimonials.length;
+        testimonials.eq(index).addClass('active');
+    }
+
+    setInterval(showNextTestimonial, 3000);
+</script>
+
+</body>
+</html>

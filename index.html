@@ -1,3 +1,93 @@
+<!-- Cookie Consent Popup -->
+<div id="cookie-banner" class="cookie-container">
+    <div class="cookie-content">
+        <h2>🍪 Manage Your Cookies</h2>
+        <p>PPRWANDA uses cookies to enhance your experience. Choose your preference below.</p>
+        <div class="cookie-actions">
+            <button id="accept-cookies" class="cookie-btn accept">Accept</button>
+            <button id="reject-cookies" class="cookie-btn reject">Reject</button>
+        </div>
+    </div>
+</div>
+
+<style>
+    .cookie-container {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.9);
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+        display: none;
+        transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+        text-align: center;
+        max-width: 350px;
+    }
+    .cookie-container.show {
+        display: block;
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+    .cookie-btn {
+        margin: 10px;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+    .cookie-btn.accept {
+        background: #007bff;
+        color: white;
+    }
+    .cookie-btn.reject {
+        background: #dc3545;
+        color: white;
+    }
+    .cookie-btn:hover {
+        opacity: 0.8;
+    }
+    @media (max-width: 600px) {
+        .cookie-container {
+            width: 90%;
+            bottom: 10px;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let cookieBanner = document.getElementById("cookie-banner");
+        let acceptButton = document.getElementById("accept-cookies");
+        let rejectButton = document.getElementById("reject-cookies");
+
+        setTimeout(() => {
+            cookieBanner.classList.add("show");
+        }, 1000); // Show banner after 1 sec
+
+        acceptButton.addEventListener("click", function() {
+            localStorage.setItem("cookiesAccepted", "true");
+            cookieBanner.style.display = "none";
+        });
+
+        rejectButton.addEventListener("click", function() {
+            localStorage.setItem("cookiesAccepted", "false");
+            cookieBanner.style.display = "none";
+        });
+
+        if (localStorage.getItem("cookiesAccepted")) {
+            cookieBanner.style.display = "none";
+        }
+    });
+</script>
+
+
+
+
+
 
         <link rel="stylesheet" id="dvteam_fix-css" href="https://visitrwanda.com/wp-content/plugins/dvteam/css/fix.css?ver=1.0" type="text/css" media="all" />
         <link rel="stylesheet" id="formcraft-common-css" href="https://visitrwanda.com/wp-content/plugins/formcraft3/dist/formcraft-common.css?ver=3.8.16" type="text/css" media="all" />
@@ -207,82 +297,4 @@
      
 
 
-<!-- Main Content Area -->
-<main>
-    <section class="hero-section">
-        <h1>Welcome to PPRWANDA</h1>
-        <p>Discover breathtaking destinations and unforgettable experiences.</p>
-        <a href="tour-packages.html" class="cta-button">Explore Packages</a>
-    </section>
-
-    <section class="featured-destinations">
-        <h2>Featured Destinations</h2>
-        <div class="destination-grid">
-            <div class="destination-card">
-                <img src="https://pprwandatours.com/wp-content/uploads/2024/12/akagera.png" alt="Akagera National Park">
-                <h3>Akagera National Park</h3>
-                <a href="akagera.html" class="explore-link">Explore</a>
-            </div>
-            <div class="destination-card">
-                <img src="https://pprwandatours.com/wp-content/uploads/2024/12/volcanoes.png" alt="Volcanoes National Park">
-                <h3>Volcanoes National Park</h3>
-                <a href="volcanoes.html" class="explore-link">Explore</a>
-            </div>
-        </div>
-    </section>
-</main>
-
-<!-- Footer -->
-<footer>
-    <p>&copy; 2025 PPRWANDA. All Rights Reserved.</p>
-</footer>
-
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f8f9fa;
-    }
-    .hero-section {
-        text-align: center;
-        padding: 50px;
-        background: url('https://pprwandatours.com/wp-content/uploads/2024/12/hero-bg.jpg') center/cover no-repeat;
-        color: white;
-    }
-    .cta-button {
-        display: inline-block;
-        padding: 12px 20px;
-        background: #005f73;
-        color: white;
-        border-radius: 5px;
-        text-decoration: none;
-    }
-    .featured-destinations {
-        text-align: center;
-        padding: 40px;
-    }
-    .destination-grid {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-    }
-    .destination-card {
-        background: white;
-        box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-        padding: 15px;
-        text-align: center;
-        border-radius: 5px;
-        transition: transform 0.3s;
-    }
-    .destination-card:hover {
-        transform: scale(1.05);
-    }
-    .explore-link {
-        display: block;
-        margin-top: 10px;
-        color: #005f73;
-        text-decoration: none;
-    }
-</style>
 

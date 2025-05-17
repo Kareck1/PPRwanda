@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Special Experience | PPRWANDA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #005a36;
+      --accent: #ffd600;
+      --danger: #e32636;
+      --bg-light: #f7f9fa;
+      --text-dark: #1a2836;
+      --border-radius: 20px;
+      --special-gradient: linear-gradient(135deg, #ffd600 0%, #e32636 100%);
+    }
+    body {
+      font-family: 'Montserrat', 'Raleway', Arial, sans-serif;
+      background: var(--bg-light);
+      margin: 0;
+      color: var(--text-dark);
+    }
+    a { color: inherit; text-decoration: none; }
+    /* Hero */
+    .hero {
+      position: relative;
+      height: 44vw;
+      min-height: 320px;
+      max-height: 520px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      background: var(--special-gradient);
+    }
+    .hero-bg {
+      background: url('https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1600&q=80') center center/cover no-repeat;
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      z-index: 1;
+      filter: brightness(0.62) saturate(1.2);
+      animation: hero-zoom 19s infinite alternate linear;
+      will-change: transform;
+      opacity: 0.82;
+    }
+    @keyframes hero-zoom {
+      0% { transform: scale(1);}
+      100% { transform: scale(1.19);}
+    }
+    .hero-content {
+      z-index: 2;
+      position: relative;
+      text-align: center;
+      width: 100%;
+      padding: 0 14px;
+    }
+    .hero-content h1 {
+      font-size: 3.1rem;
+      margin: 0 0 16px 0;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-shadow: 0 2px 20px #d3000096;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: var(--special-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-fill-color: transparent;
+      background-clip: text;
+      display: inline-block;
+    }
+    .hero-content p {
+      font-size: 1.34rem;
+      max-width: 700px;
+      margin: 0 auto 0.2em auto;
+      font-weight: 600;
+      color: #fff;
+      text-shadow: 0 2px 20px #000c;
+      letter-spacing: 0.2px;
+    }
+    .cta-btn {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 15px 44px;
+      background: #fff;
+      color: var(--danger);
+      border: none;
+      border-radius: 30px;
+      font-size: 1.15rem;
+      font-weight: bold;
+      letter-spacing: 0.7px;
+      box-shadow: 0 2px 18px #0002;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s, transform 0.16s;
+    }
+    .cta-btn:hover, .cta-btn:focus {
+      background: var(--danger);
+      color: #fff;
+      transform: scale(1.07);
+    }
+    /* Breadcrumbs */
+    .breadcrumbs {
+      max-width: 1100px;
+      margin: 20px auto 0 auto;
+      font-size: 0.99rem;
+      color: #757575;
+      padding: 0 16px;
+    }
+    .breadcrumbs a {
+      color: #e32636;
+      text-decoration: underline;
+    }
+    .breadcrumbs i {
+      margin: 0 4px;
+      color: #bbb;
+    }
+    /* Main section */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: var(--border-radius);
+      box-shadow: 0 2px 22px #e326360c, 0 2px 18px #ffd60008;
+      padding: 36px 22px 32px 22px;
+      margin-top: -70px;
+      position: relative;
+      z-index: 2;
+    }
+    .section-title {
+      font-size: 2.25rem;
+      color: var(--danger);
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 900;
+      margin-bottom: 13px;
+      letter-spacing: 1.2px;
+    }
+    .section-desc {
+      color: #3c4c51;
+      font-size: 1.16rem;
+      margin-bottom: 28px;
+      max-width: 800px;
+      font-weight: 600;
+    }
+    /* Unique Offers */
+    .unique-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+      margin: 38px 0 22px 0;
+    }
+    .unique-card {
+      background: #f7f7fb;
+      border-radius: 19px;
+      box-shadow: 0 2px 14px #ffd60011;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      border: 2.5px solid #ffe6c7;
+      transition: border 0.2s, box-shadow 0.18s, transform 0.16s;
+      position: relative;
+      min-height: 350px;
+      cursor: pointer;
+    }
+    .unique-card:hover, .unique-card:focus {
+      border: 2.5px solid var(--danger);
+      box-shadow: 0 8px 32px #ffd60033, 0 2px 20px #e3263622;
+      transform: scale(1.03) translateY(-3px);
+      z-index: 2;
+    }
+    .unique-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-top-left-radius: 19px;
+      border-top-right-radius: 19px;
+    }
+    .unique-card-content {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 18px 18px 18px;
+    }
+    .unique-title {
+      font-size: 1.17rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--primary);
+    }
+    .unique-meta {
+      color: #e32636;
+      font-size: 0.98rem;
+      margin-bottom: 7px;
+      font-weight: 600;
+    }
+    .unique-desc {
+      font-size: 1.03rem;
+      color: #444;
+      margin: 0 0 16px 0;
+      line-height: 1.5;
+      flex: 1;
+    }
+    .unique-btn {
+      background: var(--danger);
+      color: #fff;
+      padding: 10px 0;
+      border: none;
+      border-radius: 18px;
+      font-weight: 600;
+      font-size: 1.08rem;
+      cursor: pointer;
+      text-align: center;
+      width: 100%;
+      margin-top: auto;
+      transition: background 0.15s, color 0.15s;
+      box-shadow: 0 2px 10px #ffd60033;
+    }
+    .unique-card:hover .unique-btn, .unique-card:focus .unique-btn {
+      background: var(--accent);
+      color: var(--danger);
+    }
+    /* Booking */
+    .book-section {
+      background: #fffbe8;
+      border-radius: 14px;
+      margin: 36px 0 0 0;
+      padding: 24px 20px 20px 20px;
+      box-shadow: 0 2px 12px #ffd60013;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 24px;
+      justify-content: space-between;
+      border: 2px solid #ffd600;
+    }
+    .price-block {
+      font-size: 1.22rem;
+      color: var(--danger);
+      font-weight: bold;
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+    .book-btn {
+      background: var(--danger);
+      color: #fff;
+      padding: 14px 38px;
+      border: none;
+      border-radius: 17px;
+      font-weight: 700;
+      font-size: 1.11rem;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s, transform 0.12s;
+      box-shadow: 0 2px 8px #e3263622;
+    }
+    .book-btn:hover, .book-btn:focus {
+      background: var(--primary);
+      color: #ffd600;
+      transform: scale(1.05);
+    }
+    /* Footer */
+    .apple-footer {
+      background: #121212;
+      color: #d1d1d1;
+      font-size: 1rem;
+      margin-top: 38px;
+      border-top: 1px solid #222;
+    }
+    .apple-footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 36px 18px 0 18px;
+    }
+    .apple-footer-cols {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 42px;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 30px;
+    }
+    .apple-footer-logo {
+      font-size: 1.6rem;
+      color: #ffd600;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-bottom: 11px;
+    }
+    .apple-footer-title {
+      color: #fff;
+      font-weight: 600;
+      margin-bottom: 9px;
+    }
+    .apple-footer-desc {
+      color: #d1d1d1;
+      margin-bottom: 8px;
+      font-size: 1.03rem;
+    }
+    .apple-footer-cols a {
+      color: #d1d1d1;
+      display: block;
+      margin-bottom: 7px;
+      text-decoration: none;
+      font-size: 1.01rem;
+      transition: color 0.15s;
+    }
+    .apple-footer-cols a:hover {
+      color: #ffd600;
+    }
+    .apple-footer-bottom {
+      text-align: center;
+      color: #888;
+      font-size: 0.99rem;
+      padding: 14px 0 18px 0;
+      border-top: 1px solid #232323;
+      letter-spacing: 0.5px;
+    }
+    @media (max-width: 950px) {
+      .container { padding: 22px 7px 20px 7px;}
+      .apple-footer-cols { flex-direction: column; gap: 20px; }
+    }
+    @media (max-width: 600px) {
+      .hero-content h1 { font-size: 1.35rem; }
+      .container { margin-top: -28px; }
+      .unique-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1>Special Experience</h1>
+      <p>
+        Honeymoon, photography, or something unique? <br>
+        Let us create your dream trip to Rwanda—fully tailored, exclusive, and unforgettable.
+      </p>
+      <a href="#book" class="cta-btn">Start Your Custom Journey</a>
+    </div>
+  </section>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs">
+    <a href="index.html">Home</a>
+    <i class="fas fa-angle-right"></i>
+    <a href="tour-packages.html">Tour Packages</a>
+    <i class="fas fa-angle-right"></i>
+    Special Experience
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+    <div class="section-title">Special Experience: Custom Kigali &amp; Beyond</div>
+    <div class="section-desc">
+      This is Rwanda, your way. Whether you want a romantic honeymoon, a private photography expedition, a culinary adventure, or a once-in-a-lifetime family reunion—our team will bring your vision to life. <br><br>
+      Browse our unique sample experiences below, or <a href="#book" style="color:var(--danger);font-weight:bold;">contact us</a> for a truly personalized journey.
+    </div>
+
+    <div class="unique-grid">
+      <!-- Honeymoon & Romance -->
+      <div class="unique-card" tabindex="0" onclick="window.location.href='honeymoon.html'">
+        <img class="unique-img" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Honeymoon in Rwanda">
+        <div class="unique-card-content">
+          <div class="unique-title">Honeymoon & Romance</div>
+          <div class="unique-meta">Private | Lake Kivu, Volcanoes, Kigali</div>
+          <div class="unique-desc">
+            Sunset cruises, romantic lodges, private gorilla trekking, and special surprises for your love story.
+          </div>
+          <span class="unique-btn">See Example</span>
+        </div>
+      </div>
+      <!-- Photography & Filmmaking -->
+      <div class="unique-card" tabindex="0" onclick="window.location.href='photography.html'">
+        <img class="unique-img" src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=800&q=80" alt="Photography Tour">
+        <div class="unique-card-content">
+          <div class="unique-title">Photography & Filmmaking</div>
+          <div class="unique-meta">Custom | All Rwanda</div>
+          <div class="unique-desc">
+            Guided access to the wildest places and most authentic faces—ideal for amateurs and pros.
+          </div>
+          <span class="unique-btn">See Example</span>
+        </div>
+      </div>
+      <!-- Culinary & Coffee Experiences -->
+      <div class="unique-card" tabindex="0" onclick="window.location.href='culinary.html'">
+        <img class="unique-img" src="https://images.unsplash.com/photo-1444065381814-865dc9da92c0?auto=format&fit=crop&w=800&q=80" alt="Culinary Tour">
+        <div class="unique-card-content">
+          <div class="unique-title">Culinary & Coffee</div>
+          <div class="unique-meta">Small Groups | Kigali, Huye, Lake Kivu</div>
+          <div class="unique-desc">
+            Private cooking lessons, street food tours, farm visits, and exclusive tastings with Rwanda’s best chefs.
+          </div>
+          <span class="unique-btn">See Example</span>
+        </div>
+      </div>
+      <!-- Family Reunion & VIP Gatherings -->
+      <div class="unique-card" tabindex="0" onclick="window.location.href='family-vip.html'">
+        <img class="unique-img" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80" alt="Family VIP">
+        <div class="unique-card-content">
+          <div class="unique-title">Family Reunion & VIP Gatherings</div>
+          <div class="unique-meta">Private | Custom Locations</div>
+          <div class="unique-desc">
+            Full itinerary design for milestone birthdays, reunions, or exclusive corporate/NGO retreats.
+          </div>
+          <span class="unique-btn">See Example</span>
+        </div>
+      </div>
+      <!-- Wellness & Mindfulness -->
+      <div class="unique-card" tabindex="0" onclick="window.location.href='wellness.html'">
+        <img class="unique-img" src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=800&q=80" alt="Wellness Retreat">
+        <div class="unique-card-content">
+          <div class="unique-title">Wellness & Mindfulness</div>
+          <div class="unique-meta">Retreat | Lake Kivu, Nyungwe, Kigali</div>
+          <div class="unique-desc">
+            Yoga retreats, spa days, guided forest bathing, and healthy gourmet cuisine in serene nature.
+          </div>
+          <span class="unique-btn">See Example</span>
+        </div>
+      </div>
+      <!-- Adventure Sports -->
+      <div class="unique-card" tabindex="0" onclick="window.location.href='adventure-sports.html'">
+        <img class="unique-img" src="https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&w=800&q=80" alt="Adventure Sports">
+        <div class="unique-card-content">
+          <div class="unique-title">Adventure Sports</div>
+          <div class="unique-meta">Custom | Lake Kivu, Virunga, Kigali</div>
+          <div class="unique-desc">
+            Mountain biking, kayaking, paragliding, volcano hikes—adrenaline for thrill seekers!
+          </div>
+          <span class="unique-btn">See Example</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="book-section" id="book">
+      <div>
+        <div class="price-block">Price: By Quotation Only</div>
+        <div>
+          Every Special Experience is fully custom—pricing depends on your itinerary, group size, and requested luxury. <br>
+          <strong>Let’s design your dream together!</strong>
+        </div>
+      </div>
+      <a href="mailto:pprwanda@outlook.com?subject=Special%20Experience%20Booking%20Request" class="book-btn">
+        Request Your Custom Experience
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="apple-footer">
+    <div class="apple-footer-content">
+      <div class="apple-footer-cols">
+        <div>
+          <div class="apple-footer-logo">PPRWANDA</div>
+          <div class="apple-footer-desc">Connecting Rwanda and Denmark with authentic, safe, and sustainable travel.</div>
+        </div>
+        <div>
+          <div class="apple-footer-title">Explore</div>
+          <a href="tour-packages.html">Tour Packages</a>
+          <a href="#">About Us</a>
+          <a href="#">Contact</a>
+          <a href="#">FAQ</a>
+        </div>
+        <div>
+          <div class="apple-footer-title">Legal</div>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Cookies</a>
+        </div>
+        <div>
+          <div class="apple-footer-title">Contact</div>
+          <div>📍 Kigali, Rwanda | Denmark</div>
+          <div>📞 +45 20865639</div>
+          <div>✉️ <a href="mailto:pprwanda@outlook.com">pprwanda@outlook.com</a></div>
+        </div>
+      </div>
+      <div class="apple-footer-bottom">
+        Copyright © 2025 PPRWANDA Tours. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

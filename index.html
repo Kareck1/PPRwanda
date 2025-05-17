@@ -1203,10 +1203,10 @@
 
 <!-- RWANDA GALLERY -->
 <!-- RWANDA GALLERY: Sticky Scroll-Jack Stacking Cards, Words Always Right, Dynamic BG, Back/Next Buttons, Bi-directional Scroll -->
+<!-- RWANDA GALLERY: True 3D Stacking Scroll, Scroll-Lock, Animating Card Stack -->
 <section id="gallery-section" style="padding:0; margin:0;">
   <div id="gallery-bg" style="transition: background 0.5s; min-height:100vh;">
     <div class="gallery-scroll-sticky">
-      <!-- Gallery Navigation Buttons -->
       <button id="galleryPrevBtn" class="gallery-btn gallery-btn-prev" aria-label="Previous Image">&larr;</button>
       <div class="gsap-stack-gallery" id="gsapStackGallery"></div>
       <div class="gsap-stack-caption" id="gsapStackCaption"></div>
@@ -1222,7 +1222,6 @@
 </section>
 <!-- GSAP CDN -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
 <script src="https://unpkg.com/color-thief-browser/dist/color-thief.umd.js"></script>
 <style>
 body { background: #111; }
@@ -1244,7 +1243,6 @@ body { background: #111; }
   top: 0;
   z-index: 10;
   background: transparent;
-  /* For mobile smoothness */
   touch-action: none;
   will-change: transform;
 }
@@ -1255,8 +1253,8 @@ body { background: #111; }
   max-width: 900px;
   height: 75vh;
   min-height: 250px;
-  max-height: 960px;
-  perspective: 1200px;
+  max-height: 660px;
+  perspective: 1400px;
   flex-shrink: 0;
   margin-right: 3vw;
   margin-left: 3vw;
@@ -1278,12 +1276,19 @@ body { background: #111; }
   cursor: pointer;
   will-change: transform, opacity;
   z-index: 1;
-  opacity: 0.86;
+  opacity: 0.90;
   border: 8px solid #fff;
   transition: box-shadow 0.2s, opacity 0.19s;
   display: flex;
   align-items: stretch;
   justify-content: stretch;
+  pointer-events: none;
+}
+.gsap-stack-card.active {
+  z-index: 10;
+  opacity: 1;
+  box-shadow: 0 30px 120px #ffd60055, 0 2px 64px #111a;
+  pointer-events: auto;
 }
 .gsap-stack-card img {
   width: 100%;
@@ -1293,11 +1298,6 @@ body { background: #111; }
   user-select: none;
   pointer-events: none;
   background: transparent;
-}
-.gsap-stack-card.active {
-  z-index: 10;
-  opacity: 1;
-  box-shadow: 0 30px 120px #ffd60055, 0 2px 64px #111a;
 }
 .gsap-stack-caption {
   flex: 1 1 0;
@@ -1533,6 +1533,7 @@ galleryStackData.forEach((item, idx) => {
   });
   stackGallery.appendChild(card);
 });
+
 function updateCaption(idx) {
   stackCaption.innerHTML = `
     <div class="gsap-caption-index">${idx+1} / ${galleryStackData.length}</div>
@@ -1540,7 +1541,6 @@ function updateCaption(idx) {
     <div class="gsap-caption-desc">${galleryStackData[idx].desc}</div>
     <button class="gsap-caption-btn" onclick="document.getElementById('gsapStackGallery').querySelector('.gsap-stack-card.active').dispatchEvent(new Event('dblclick'))">See Image</button>
   `;
-  // Update button disabled state
   galleryPrevBtn.disabled = (idx === 0);
   galleryNextBtn.disabled = (idx === galleryStackData.length-1);
 }
@@ -1565,12 +1565,94 @@ function setBgFromImg(idx) {
 updateCaption(0);
 setBgFromImg(0);
 
-// --- Sticky Scroll-Jack Logic ---
+// --- True 3D Stack Animation ---
 let currentStack = 0;
 let isAnimating = false;
 let galleryLocked = false;
 let galleryDone = false;
 let scrollableParent = window;
+
+function layoutCards(current) {
+  const cards = stackGallery.querySelectorAll('.gsap-stack-card');
+  cards.forEach((card, idx) => {
+    card.classList.remove('active');
+    let offset = idx - current;
+    if (offset === 0) {
+      // Active card
+      card.style.opacity = 1;
+      card.style.pointerEvents = "auto";
+      card.style.zIndex = 10;
+      card.classList.add('active');
+      gsap.set(card, {x:0, y:0, scale:1, rotateY: 0, boxShadow: "0 30px 120px #ffd60055, 0 2px 64px #111a"});
+    } else if (offset > 0 && offset < 4) {
+      // Cards to the right (next)
+      gsap.set(card, {
+        x: offset*38,
+        y: offset*24,
+        scale: 1-0.08*offset,
+        opacity: 0.8-0.08*offset,
+        zIndex: 5-offset,
+        rotateY: -9*offset,
+        boxShadow: "0 16px 64px #111b"
+      });
+      card.style.pointerEvents = "none";
+    } else if (offset < 0 && offset > -4) {
+      // Cards to the left (prev)
+      gsap.set(card, {
+        x: offset*38,
+        y: -offset*24,
+        scale: 1+0.02*offset,
+        opacity: 0.7+0.07*offset,
+        zIndex: 5+offset,
+        rotateY: 9*offset,
+        boxShadow: "0 8px 24px #111a"
+      });
+      card.style.pointerEvents = "none";
+    } else {
+      // Off stack
+      gsap.set(card, {x:0, y:0, scale:0.85, opacity: 0, zIndex: 1, rotateY:0});
+      card.style.pointerEvents = "none";
+    }
+  });
+}
+layoutCards(currentStack);
+
+function animateStack(nextIdx, direction) {
+  if(isAnimating || nextIdx<0 || nextIdx>=galleryStackData.length || nextIdx===currentStack) return;
+  isAnimating = true;
+  const cards = stackGallery.querySelectorAll('.gsap-stack-card');
+  const prevCard = cards[currentStack];
+  const nextCard = cards[nextIdx];
+
+  // Animate prev card OUT
+  gsap.to(prevCard, {
+    x: direction>0 ? -350 : 350,
+    y: direction>0 ? -120 : 120,
+    scale: 0.75,
+    opacity: 0,
+    rotateY: direction>0 ? 45 : -45,
+    zIndex: 1,
+    duration: 0.55,
+    ease: "power2.in",
+    onComplete: ()=> {
+      prevCard.classList.remove('active');
+      // After out, re-layout the stack
+      currentStack = nextIdx;
+      layoutCards(currentStack);
+      updateCaption(currentStack);
+      setBgFromImg(currentStack);
+      isAnimating = false;
+      galleryDone = currentStack === galleryStackData.length-1;
+    }
+  });
+
+  // Animate next card IN (from stack)
+  nextCard.classList.add('active');
+  gsap.fromTo(nextCard,
+    {x: direction>0 ? 350 : -350, y: direction>0 ? 120 : -120, scale: 0.75, opacity: 0, rotateY: direction>0 ? -45 : 45, zIndex: 10},
+    {x:0, y:0, scale:1, opacity: 1, rotateY: 0, zIndex: 10, duration: 0.63, ease: "power2.out"}
+  );
+}
 
 function getScrollableParent(node) {
   while(node && node !== document.body) {
@@ -1581,49 +1663,6 @@ function getScrollableParent(node) {
   return window;
 }
 
-function animateStack(nextIdx, direction) {
-  if(isAnimating || nextIdx<0 || nextIdx>=galleryStackData.length || nextIdx===currentStack) return;
-  isAnimating = true;
-  const cards = stackGallery.querySelectorAll('.gsap-stack-card');
-  const prevCard = cards[currentStack];
-  const nextCard = cards[nextIdx];
-
-  // Animate prev out
-  gsap.to(prevCard, {
-    x: direction>0 ? -180 : 180,
-    y: -120,
-    scale: 0.8,
-    opacity: 0,
-    rotateY: direction>0 ? 35 : -35,
-    duration: 0.48,
-    ease: "power2.in",
-    onComplete: ()=> {
-      prevCard.classList.remove('active');
-      prevCard.style.opacity = 0.7;
-      prevCard.style.transform = `scale(0.85) translateY(40px) translateX(${direction>0?-120:120}px) rotateY(${direction>0?20:-20}deg)`;
-    }
-  });
-
-  // Animate next in
-  nextCard.classList.add('active');
-  gsap.fromTo(nextCard,
-    {x: direction>0 ? 180 : -180, y: 120, scale: 0.85, opacity: 0.7, rotateY: direction>0 ? -35 : 35},
-    {x: 0, y: 0, scale: 1, opacity: 1, rotateY: 0, duration: 0.63, ease: "power2.out",
-     onComplete: ()=> {
-      isAnimating = false;
-      currentStack = nextIdx;
-      updateCaption(nextIdx);
-      setBgFromImg(nextIdx);
-      if (currentStack === galleryStackData.length-1) {
-        galleryDone = true;
-      } else {
-        galleryDone = false;
-      }
-    }
-  });
-}
-
-// Helper: lock scroll
 function lockScroll(e) {
   if (!galleryLocked) return;
   if (!galleryDone || (galleryDone && (e.deltaY || e.detail || 0)<0 && currentStack>0)) {
@@ -1634,13 +1673,11 @@ function lockScroll(e) {
   }
 }
 
-// When sticky section is in view, lock scroll
 function handleStickyLock() {
   const sticky = document.querySelector('.gallery-scroll-sticky');
   const rect = sticky.getBoundingClientRect();
   if(rect.top <= 0 && rect.bottom > window.innerHeight/2) {
     galleryLocked = true;
-    // If last image and user tries to scroll down, unlock
     if (galleryDone) galleryLocked = false;
     scrollableParent = getScrollableParent(sticky);
     scrollableParent.addEventListener('wheel', lockScroll, { passive: false });
@@ -1664,7 +1701,6 @@ function touchScrollLock(e) {
 window.addEventListener('scroll', handleStickyLock);
 window.addEventListener('resize', handleStickyLock);
 
-// Manual keyboard control (always works)
 window.addEventListener('keydown', function(e){
   if(isAnimating) return;
   if(document.activeElement.tagName==="INPUT"||document.activeElement.tagName==="TEXTAREA") return;
@@ -1674,8 +1710,6 @@ window.addEventListener('keydown', function(e){
     e.preventDefault();
   }
 });
-
-// Button navigation
 galleryPrevBtn.onclick = () => animateStack(currentStack-1, -1);
 galleryNextBtn.onclick = () => animateStack(currentStack+1, 1);
 
@@ -1701,7 +1735,8 @@ function closeModal() {
 window.addEventListener("keydown", function(e){
   if(modal.style.display==="flex" && (e.key==="Escape"||e.key===" "||e.key==="Enter")) closeModal();
 });
-// Initial sticky lock setup
+
+// Initial sticky lock setup & layout
 window.setTimeout(handleStickyLock, 500);
 </script>
 

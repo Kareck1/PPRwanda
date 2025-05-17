@@ -303,223 +303,285 @@
 
 
 
+
+                
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PPRWANDA | Discover Rwanda</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* General Layout */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover Rwanda's breathtaking landscapes, rich culture, and unforgettable adventures with PPRWANDA." />
+  <meta name="keywords" content="Rwanda travel, gorilla trekking, Kigali tours, Rwanda safaris, PPRWANDA" />
+  <meta name="author" content="PPRWANDA Tours" />
+  <title>PPRWANDA | Discover Rwanda</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      line-height: 1.6;
+    }
 
-        /* Hero Section */
-        .hero {
-            background: url('https://pprwandatours.com/wp-content/uploads/2024/12/hero-bg.jpg') center/cover no-repeat;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            animation: fadeIn 2s ease-in-out;
-        }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
 
-        .hero h1 {
-            font-size: 3rem;
-            opacity: 0;
-            animation: slideDown 1.5s ease-in-out forwards;
-        }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-        .hero p {
-            font-size: 1.2rem;
-            margin-top: 10px;
-            opacity: 0;
-            animation: slideUp 1.5s ease-in-out forwards;
-        }
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 300px; /* Adjusted height */
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
 
-        .cta-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 20px;
-            background: #ee6c4d;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: transform 0.3s;
-            opacity: 0;
-            animation: fadeInScale 1.5s ease-in-out forwards;
-        }
+    .video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
 
-        .cta-btn:hover {
-            transform: scale(1.1);
-        }
+    .video-background iframe {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
 
-        /* Packages Section */
-        .packages {
-            padding: 60px;
-            text-align: center;
-        }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 2;
+    }
 
-        .package-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 40px;
-        }
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      padding: 10px;
+      animation: fadeIn 2s ease-in-out;
+    }
 
-        .package {
-            width: 45%;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            background: white;
-            padding: 20px;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-            border-radius: 10px;
-            opacity: 0;
-            animation: slideIn 1.5s ease-in-out forwards;
-        }
+    .hero-content h1 {
+      font-size: 3rem;
+      margin: 0;
+      animation: slideDown 1.5s ease-in-out forwards;
+    }
 
-        .package:nth-child(even) {
-            flex-direction: row-reverse; /* Alternating left-right */
-        }
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      animation: slideUp 1.5s ease-in-out forwards;
+    }
 
-        .package img {
-            width: 200px;
-            height: 200px;
-            border-radius: 10px;
-            object-fit: cover;
-        }
+    .cta-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #ee6c4d;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: transform 0.3s;
+      animation: fadeInScale 1.5s ease-in-out forwards;
+    }
 
-        .package-content {
-            text-align: left;
-        }
+    .cta-btn:hover {
+      transform: scale(1.1);
+    }
 
-        .explore-btn {
-            display: inline-block;
-            background: #007bff;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
+    /* Tour Packages */
+    .packages {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: #fff;
+    }
 
-        .explore-btn:hover {
-            background: #0056b3;
-        }
+    .package-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
 
-        /* Responsive Mobile View */
-        @media (max-width: 768px) {
-            .package-container {
-                flex-direction: column;
-                align-items: center;
-            }
+    .package {
+      width: 300px;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      animation: fadeInUp 1.5s ease-in-out forwards;
+    }
 
-            .package {
-                width: 90%;
-                flex-direction: column;
-                text-align: center;
-            }
-        }
+    .package img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
 
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+    .package-content {
+      padding: 20px;
+    }
 
-        @keyframes slideDown {
-            from { transform: translateY(-50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
+    .package h3 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
 
-        @keyframes slideUp {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
+    .package p {
+      font-size: 1rem;
+      margin: 10px 0;
+    }
 
-        @keyframes fadeInScale {
-            from { transform: scale(0.8); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
+    .explore-btn {
+      display: inline-block;
+      background: #007bff;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
 
-        @keyframes slideIn {
-            from { transform: translateX(-50px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-    </style>
+    .explore-btn:hover {
+      background: #0056b3;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    footer .social-icons a {
+      margin: 0 10px;
+      font-size: 1.5rem;
+      color: white;
+      transition: color 0.3s;
+    }
+
+    footer .social-icons a:hover {
+      color: #ee6c4d;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInScale {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
 </head>
 <body>
 
-<!-- Hero Section -->
+<!-- Hero Section with Embedded YouTube Video -->
 <section class="hero">
+  <div class="video-background">
+    <iframe 
+      src="https://www.youtube.com/embed/Fm-geQD7Dkc?autoplay=1&mute=1&controls=0&loop=1&playlist=Fm-geQD7Dkc&modestbranding=1&showinfo=0"
+      frameborder="0" 
+      allow="autoplay; fullscreen" 
+      allowfullscreen
+    ></iframe>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
     <h1>Explore Rwanda Like Never Before</h1>
-    <p>Join our exclusive packages and discover the beauty of Rwanda.</p>
-    <a href="tour-packages.html" class="cta-btn">Browse Packages</a>
+    <p>Embark on unforgettable adventures with PPRWANDA Tours.</p>
+    <a href="#packages" class="cta-btn">Browse Our Packages</a>
+  </div>
 </section>
 
-<!-- Tour Packages -->
-<section class="packages">
-    <h2>Featured Tour Packages</h2>
-    <div class="package-container">
-        <div class="package">
-            <img src="https://pprwandatours.com/wp-content/uploads/2024/12/family-trip.png" alt="Family Trip">
-            <div class="package-content">
-                <h3>Family Trip</h3>
-                <p>Relax and enjoy Rwanda with your loved ones.</p>
-                <a href="family-trip.html" class="explore-btn">Explore</a>
-            </div>
-        </div>
-
-        <div class="package">
-            <img src="https://pprwandatours.com/wp-content/uploads/2024/12/group-tour.png" alt="Group Tour">
-            <div class="package-content">
-                <h3>Group Tour</h3>
-                <p>Adventure awaits for you and your friends.</p>
-                <a href="group-trip.html" class="explore-btn">Explore</a>
-            </div>
-        </div>
-
-        <div class="package">
-            <img src="https://pprwandatours.com/wp-content/uploads/2024/12/solo-tour.png" alt="Solo Journey">
-            <div class="package-content">
-                <h3>Solo Journey</h3>
-                <p>Discover Rwanda at your own pace.</p>
-                <a href="solo-journey.html" class="explore-btn">Explore</a>
-            </div>
-        </div>
-
-        <div class="package">
-            <img src="https://pprwandatours.com/wp-content/uploads/2024/12/luxury-trip.png" alt="Luxury Experience">
-            <div class="package-content">
-                <h3>Luxury Experience</h3>
-                <p>Indulge in an exclusive, high-end travel experience.</p>
-                <a href="luxury-trip.html" class="explore-btn">Explore</a>
-            </div>
-        </div>
+<!-- Tour Packages Section -->
+<section class="packages" id="packages">
+  <h2>Featured Tour Packages</h2>
+  <div class="package-container">
+    <div class="package">
+      <img src="https://pprwandatours.com/wp-content/uploads/2024/12/family-trip.png" alt="Family Trip">
+      <div class="package-content">
+        <h3>Family Trip</h3>
+        <p>Relax and enjoy Rwanda with your loved ones.</p>
+        <a href="family-trip.html" class="explore-btn">Explore</a>
+      </div>
     </div>
+    <div class="package">
+      <img src="https://pprwandatours.com/wp-content/uploads/2024/12/group-tour.png" alt="Group Tour">
+      <div class="package-content">
+        <h3>Group Tour</h3>
+        <p>Adventure awaits for you and your friends.</p>
+        <a href="group-trip.html" class="explore-btn">Explore</a>
+      </div>
+    </div>
+    <div class="package">
+      <img src="https://pprwandatours.com/wp-content/uploads/2024/12/solo-tour.png" alt="Solo Journey">
+      <div class="package-content">
+        <h3>Solo Journey</h3>
+        <p>Discover Rwanda at your own pace.</p>
+        <a href="solo-journey.html" class="explore-btn">Explore</a>
+      </div>
+    </div>
+    <div class="package">
+      <img src="https://pprwandatours.com/wp-content/uploads/2024/12/luxury-trip.png" alt="Luxury Experience">
+      <div class="package-content">
+        <h3>Luxury Experience</h3>
+        <p>Indulge in an exclusive, high-end travel experience.</p>
+        <a href="luxury-trip.html" class="explore-btn">Explore</a>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- Footer -->
 <footer>
-    <p>&copy; 2025 PPRWANDA. All Rights Reserved.</p>
+  <h3>Connect With Us</h3>
+  <p>&copy; 2025 PPRWANDA. All rights reserved.</p>
+  <div class="social-icons">
+    <a href="#">Facebook</a> |
+    <a href="#">Instagram</a> |
+    <a href="#">Twitter</a>
+  </div>
 </footer>
 
 </body>
 </html>
-
-
-
-
-                

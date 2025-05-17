@@ -652,551 +652,323 @@
 
 
 
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PPRWANDA | Travel Experiences</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --rwanda-blue: #00a9e0;
-      --rwanda-yellow: #ffd600;
-      --rwanda-green: #37b34a;
-      --denmark-red: #c60c30;
-      --gray-bg: #f7f8fa;
-      --card-shadow: 0 4px 14px rgba(0,0,0,0.10);
-      --main-gradient: linear-gradient(90deg, var(--rwanda-blue) 0%, var(--rwanda-yellow) 40%, var(--denmark-red) 100%);
-    }
-
-    body {
-      font-family: 'Montserrat', 'Raleway', Arial, sans-serif;
-      background: var(--gray-bg);
-      margin: 0;
-      color: #1a2836;
-    }
-    a { color: inherit; text-decoration: none; }
-    /* Main Intro */
-    .main-intro {
-      background: var(--main-gradient);
-      color: #fff;
-      padding: 48px 0 32px 0;
-      text-align: center;
-      box-shadow: 0 8px 32px #00a9e022;
-    }
-    .main-intro h1 {
-      font-size: 2.8rem;
-      font-weight: 800;
-      margin: 0 0 16px 0;
-      letter-spacing: 1.5px;
-      background: linear-gradient(90deg, #fff 60%, #ffd600 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 2px 2px 12px #0002;
-    }
-    .main-intro p {
-      font-size: 1.3rem;
-      margin: 0 0 22px 0;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      color: #f8f8e6;
-    }
-    .country-flags {
-      margin: 16px 0 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 14px;
-      font-size: 2.1rem;
-    }
-    .country-flags span {
-      font-size: 2rem;
-      margin: 0 6px;
-    }
-    /* Horizontal Company Scroller */
-    .company-scroller {
-      width: 100%;
-      overflow: hidden;
-      background: #fff;
-      padding: 18px 0;
-      box-shadow: 0 2px 12px #00a9e015;
-      margin-bottom: 24px;
-    }
-    .company-track {
-      display: flex;
-      gap: 54px;
-      animation: scrollLeft 35s linear infinite;
-      align-items: center;
-      will-change: transform;
-    }
-    @keyframes scrollLeft {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .company-logo {
-      height: 48px;
-      width: auto;
-      opacity: 0.86;
-      filter: grayscale(0.25);
-      margin: 0 12px;
-      transition: filter 0.2s, opacity 0.2s;
-    }
-    .company-logo:hover {
-      filter: none;
-      opacity: 1;
-    }
-    /* Section headings */
-    .section-title {
-      text-align: center;
-      font-size: 2.1rem;
-      color: var(--rwanda-blue);
-      font-weight: 800;
-      margin: 54px 0 10px 0;
-      letter-spacing: 1px;
-      position: relative;
-    }
-    .section-title:after {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 4px;
-      background: var(--denmark-red);
-      margin: 18px auto 0 auto;
-      border-radius: 2px;
-    }
-    .section-desc {
-      text-align: center;
-      color: #555;
-      max-width: 600px;
-      margin: 0 auto 32px auto;
-      font-size: 1.14rem;
-    }
-
-    /* Tourism Gallery */
-    .tourism-gallery {
-      display: flex;
-      gap: 22px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 36px;
-    }
-    .tourism-pic {
-      width: 240px;
-      height: 160px;
-      border-radius: 15px;
-      object-fit: cover;
-      box-shadow: 0 2px 14px #00a9e022;
-      transition: transform 0.2s;
-      border: 3px solid transparent;
-    }
-    .tourism-pic:hover {
-      transform: scale(1.07) rotate(-2deg);
-      border: 3px solid var(--denmark-red);
-      z-index: 2;
-    }
-
-    /* Card Grid */
-    .cards-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 32px;
-      max-width: 1250px;
-      margin: 0 auto 3rem auto;
-    }
-    .exp-card {
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: var(--card-shadow);
-      width: 340px;
-      min-height: 460px;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      cursor: pointer;
-      border: 1.5px solid #e5e5ee;
-      text-align: left;
-      position: relative;
-      transition: box-shadow 0.18s, border 0.18s, transform 0.21s;
-    }
-    .exp-card:hover, .exp-card:focus {
-      box-shadow: 0 8px 40px #00a9e033, 0 2px 24px #ffd60022;
-      border: 1.5px solid var(--rwanda-blue);
-      transform: scale(1.03);
-      z-index: 3;
-    }
-    .exp-card-image {
-      height: 170px;
-      background-size: cover;
-      background-position: center;
-      border-top-left-radius: 18px;
-      border-top-right-radius: 18px;
-      border-bottom: 2px solid #fafafa;
-    }
-    .exp-card-content {
-      padding: 21px 22px 18px 22px;
-      flex: 1 1 auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-    }
-    .exp-card-title {
-      font-size: 1.19rem;
-      color: var(--denmark-red);
-      font-weight: bold;
-      margin: 0 0 12px 0;
-      letter-spacing: 0.3px;
-    }
-    .exp-card-details {
-      display: flex;
-      gap: 14px;
-      font-size: 0.98rem;
-      margin-bottom: 8px;
-      color: #355070;
-      flex-wrap: wrap;
-    }
-    .exp-card-details span {
-      background: #f7f8fa;
-      border-radius: 8px;
-      padding: 2px 10px;
-      color: #222;
-      font-weight: 600;
-    }
-    .exp-card-features {
-      color: #355070;
-      font-size: 1.01rem;
-      margin: 0 0 12px 0;
-      padding-left: 18px;
-    }
-    .exp-card-price {
-      color: var(--rwanda-green);
-      font-weight: 800;
-      font-size: 1.13rem;
-      margin: 18px 0 10px 0;
-    }
-    .exp-card-btn {
-      background: var(--denmark-red);
-      color: #fff;
-      padding: 12px 0;
-      border: none;
-      border-radius: 19px;
-      font-weight: 700;
-      font-size: 1.08rem;
-      letter-spacing: 0.5px;
-      cursor: pointer;
-      text-align: center;
-      width: 100%;
-      margin-top: auto;
-      transition: background 0.15s, color 0.15s;
-      box-shadow: 0 2px 10px #ef476f33;
-    }
-    .exp-card-btn:hover, .exp-card-btn:focus {
-      background: var(--rwanda-yellow);
-      color: var(--denmark-red);
-    }
-    /* Responsive grid */
-    @media (max-width: 1000px) {
-      .cards-grid { gap: 20px; }
-      .exp-card { width: 95vw; max-width: 380px; }
-    }
-    @media (max-width: 650px) {
-      .main-intro h1 { font-size: 2rem; }
-      .tourism-pic { width:99vw; max-width:320px; height:130px; }
-      .cards-grid { flex-direction: column; align-items: center; }
-      .exp-card { width: 98vw; max-width: 98vw; }
-    }
-    /* Footer Styles */
-    footer {
-      background: #212f42;
-      color: #fff;
-      padding: 48px 0 0 0;
-      margin-top: 56px;
-      font-size: 1.07rem;
-      border-top: 3px solid #ef476f22;
-    }
-    .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 36px;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 0 18px;
-    }
-    .footer-logo {
-      font-size: 2.1rem;
-      color: #ffd166;
-      font-weight: bold;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-      text-shadow: 0 2px 6px #0003;
-    }
-    .footer-col {
-      flex: 1 1 160px;
-      margin-bottom: 18px;
-      min-width: 160px;
-    }
-    .footer-links a {
-      color: #fff;
-      display: block;
-      margin-bottom: 9px;
-      text-decoration: none;
-      font-size: 1.03rem;
-      border-radius: 12px;
-      padding: 2px 6px;
-      transition: background 0.2s, color 0.2s;
-    }
-    .footer-links a:hover {
-      background: #ef476f;
-      color: #ffd166;
-    }
-    .footer-contact {
-      color: #ffd166;
-      margin-bottom: 6px;
-    }
-    .footer-socials {
-      margin: 12px 0;
-      display: flex;
-      gap: 10px;
-    }
-    .footer-socials a {
-      color: #ff9900;
-      font-size: 1.6rem;
-      transition: color 0.2s;
-      background: #fff9e0;
-      border-radius: 50%;
-      width: 34px;
-      height: 34px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .footer-socials a:hover {
-      color: #ef476f;
-      background: #ffd166;
-    }
-    .footer-bottom {
-      text-align: center;
-      color: #bbb;
-      font-size: 0.98rem;
-      padding: 18px 0 12px 0;
-      border-top: 1px solid #435170;
-      margin-top: 16px;
-      letter-spacing: 0.5px;
-    }
-  </style>
-</head>
-<body>
-
-<!-- Intro Section -->
-<section class="main-intro">
-  <h1>
-    Discover Rwanda & Denmark Together
-  </h1>
-  <div class="country-flags">
-    <span title="Rwanda">🇷🇼</span>
-    <span style="font-size:1.2rem;font-weight:400;">meets</span>
-    <span title="Denmark">🇩🇰</span>
-  </div>
-  <p>
-    Welcome to PPRWANDA Tours — your bridge between Rwanda’s breathtaking nature, wildlife, and culture, and Denmark’s heritage of expert, ethical travel. With certified guides and trusted partners in both countries, we offer authentic journeys, family adventures, sustainable safaris, and unique experiences that connect you to the heart of Africa and the warmth of Scandinavia. 
-  </p>
-  <p>
-    <strong>Travel with confidence!</strong> Our collaborations with leading international and local companies ensure a seamless, safe, and memorable journey every step of the way.
-  </p>
-</section>
-
-<!-- Partner Company Scroller -->
-<div class="company-scroller" aria-label="Corroborating Partner Companies">
-  <div class="company-track">
-    <img src="https://seeklogo.com/images/T/TUI-logo-7F4D4B4B4E-seeklogo.com.png" alt="TUI" class="company-logo" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Tripadvisor_Logo_circle-green_horizontal-lockup_registered_RGB.svg/2560px-Tripadvisor_Logo_circle-green_horizontal-lockup_registered_RGB.svg.png" alt="TripAdvisor" class="company-logo" />
-    <img src="https://www.logo.wine/a/logo/Airbnb/Airbnb-Logo.wine.svg" alt="Airbnb" class="company-logo" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Booking.com_logo.svg" alt="Booking.com" class="company-logo" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Expedia_Logo.svg" alt="Expedia" class="company-logo" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/VisitDenmark_logo.svg" alt="VisitDenmark" class="company-logo" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Visit_Rwanda_Logo.svg" alt="Visit Rwanda" class="company-logo" />
-    <img src="https://seeklogo.com/images/S/safaricom-logo-3D94FC3A74-seeklogo.com.png" alt="Safaricom" class="company-logo" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/World_Wildlife_Fund_logo.svg" alt="WWF" class="company-logo" />
-    <!-- Repeat logos for continuous scrolling -->
-    <img src="https://seeklogo.com/images/T/TUI-logo-7F4D4B4B4E-seeklogo.com.png" alt="TUI" class="company-logo" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Tripadvisor_Logo_circle-green_horizontal-lockup_registered_RGB.svg/2560px-Tripadvisor_Logo_circle-green_horizontal-lockup_registered_RGB.svg.png" alt="TripAdvisor" class="company-logo" />
-    <img src="https://www.logo.wine/a/logo/Airbnb/Airbnb-Logo.wine.svg" alt="Airbnb" class="company-logo" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Booking.com_logo.svg" alt="Booking.com" class="company-logo" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Expedia_Logo.svg" alt="Expedia" class="company-logo" />
-  </div>
-</div>
-
-<!-- Tourism Gallery -->
-<section>
-  <div class="section-title">See Rwanda’s Wonders</div>
-  <div class="section-desc">
-    From the misty peaks of Volcanoes National Park to the vibrant streets of Kigali, discover real moments captured by our travelers.
-  </div>
-  <div class="tourism-gallery">
-    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Akagera Safari" class="tourism-pic" />
-    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80" alt="Lake Kivu Beach" class="tourism-pic" />
-    <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80" alt="Kigali City View" class="tourism-pic" />
-    <img src="https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&w=800&q=80" alt="Volcanoes National Park" class="tourism-pic" />
-    <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80" alt="Gorilla Trekking" class="tourism-pic" />
-    <img src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=800&q=80" alt="Local Culture" class="tourism-pic" />
-  </div>
-</section>
-
-<!-- Signature Experiences Section -->
-<section id="signature-experiences">
-  <div class="section-title">Signature Experiences</div>
-  <div class="section-desc">
-    Choose your perfect Rwandan adventure — every package can be tailored to your wishes. Click for more information or to start booking!
-  </div>
-  <div class="cards-grid">
-    <!-- Wildlife & Adventure -->
-    <div class="exp-card" tabindex="0" onclick="window.location.href='wildlife-adventure.html'">
-      <div class="exp-card-image" style="background-image:url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80');"></div>
-      <div class="exp-card-content">
-        <div class="exp-card-title">🦍 Wildlife & Adventure</div>
-        <div class="exp-card-details">
-          <span>⏰ 5 days</span>
-          <span>📍 Volcanoes NP, Akagera, Nyungwe</span>
-        </div>
-        <ul class="exp-card-features">
-          <li>Gorilla Trekking</li>
-          <li>Big Five Safari</li>
-          <li>Chimpanzees & Golden Monkey Tracking</li>
-        </ul>
-        <div class="exp-card-price">From 1,900,000 RWF</div>
-        <button class="exp-card-btn">Book This Package</button>
-      </div>
-    </div>
-    <!-- Nature & Eco-Tours -->
-    <div class="exp-card" tabindex="0" onclick="window.location.href='nature-eco-tours.html'">
-      <div class="exp-card-image" style="background-image:url('https://images.unsplash.com/photo-1444065381814-865dc9da92c0?auto=format&fit=crop&w=800&q=80');"></div>
-      <div class="exp-card-content">
-        <div class="exp-card-title">🌿 Nature & Eco-Tours</div>
-        <div class="exp-card-details">
-          <span>⏰ 4 days</span>
-          <span>📍 Lake Kivu, Nyungwe</span>
-        </div>
-        <ul class="exp-card-features">
-          <li>Canopy Walk</li>
-          <li>Lake Kivu Boat Cruise</li>
-          <li>Tea & Coffee Plantation Tours</li>
-        </ul>
-        <div class="exp-card-price">From 1,150,000 RWF</div>
-        <button class="exp-card-btn">Book This Package</button>
-      </div>
-    </div>
-    <!-- Culture & History -->
-    <div class="exp-card" tabindex="0" onclick="window.location.href='culture-history.html'">
-      <div class="exp-card-image" style="background-image:url('https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=800&q=80');"></div>
-      <div class="exp-card-content">
-        <div class="exp-card-title">🏛️ Culture & History</div>
-        <div class="exp-card-details">
-          <span>⏰ 3 days</span>
-          <span>📍 Kigali, Huye</span>
-        </div>
-        <ul class="exp-card-features">
-          <li>Kigali City Tour & Genocide Memorial</li>
-          <li>King’s Palace & Ethnographic Museum</li>
-        </ul>
-        <div class="exp-card-price">From 800,000 RWF</div>
-        <button class="exp-card-btn">Book This Package</button>
-      </div>
-    </div>
-    <!-- Special Experiences -->
-    <div class="exp-card" tabindex="0" onclick="window.location.href='special-experiences.html'">
-      <div class="exp-card-image" style="background-image:url('https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=800&q=80');"></div>
-      <div class="exp-card-content">
-        <div class="exp-card-title">💑 Special Experiences</div>
-        <div class="exp-card-details">
-          <span>⏰ Custom</span>
-          <span>📍 Kigali & Beyond</span>
-        </div>
-        <ul class="exp-card-features">
-          <li>Honeymoon Escape – Luxury Combo</li>
-          <li>Photography & Local Village Life</li>
-        </ul>
-        <div class="exp-card-price">From 2,300,000 RWF</div>
-        <button class="exp-card-btn">Book This Package</button>
-      </div>
-    </div>
-    <!-- Family Adventure -->
-    <div class="exp-card" tabindex="0" onclick="window.location.href='family-trip.html'">
-      <div class="exp-card-image" style="background-image:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80');"></div>
-      <div class="exp-card-content">
-        <div class="exp-card-title">👨‍👩‍👧‍👦 Family Adventure</div>
-        <div class="exp-card-details">
-          <span>⏰ 6 days</span>
-          <span>📍 Akagera, Lake Kivu</span>
-        </div>
-        <ul class="exp-card-features">
-          <li>Safari for all ages</li>
-          <li>Lake Kivu beaches</li>
-          <li>Cultural village visits</li>
-        </ul>
-        <div class="exp-card-price">From 1,700,000 RWF</div>
-        <button class="exp-card-btn">Book This Package</button>
-      </div>
-    </div>
-    <!-- Group Tours -->
-    <div class="exp-card" tabindex="0" onclick="window.location.href='group-trip.html'">
-      <div class="exp-card-image" style="background-image:url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80');"></div>
-      <div class="exp-card-content">
-        <div class="exp-card-title">👥 Group Tours</div>
-        <div class="exp-card-details">
-          <span>⏰ 5 days</span>
-          <span>📍 Kigali & National Parks</span>
-        </div>
-        <ul class="exp-card-features">
-          <li>Big Five Safari with friends</li>
-          <li>City & nature tours</li>
-        </ul>
-        <div class="exp-card-price">From 1,400,000 RWF</div>
-        <button class="exp-card-btn">Book This Package</button>
-      </div>
+<!-- MAIN INTRO -->
+<section style="background: url('https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=1400&q=80') center center/cover no-repeat; min-height: 260px; padding: 0;">
+  <div style="background: rgba(255,255,255,0.94); padding: 48px 0 16px 0;">
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+      <h1 style="font-family: 'Montserrat', Arial, sans-serif; font-size: 2.5rem; font-weight: 800; color: #222; margin-bottom: 0.5em;">
+        Discover Rwanda & Denmark Together
+      </h1>
+      <div style="font-size:2.1rem; margin-bottom: 0.2em;">🇷🇼 <span style="font-size:1.1rem;">meets</span> 🇩🇰</div>
+      <p style="color:#333; font-size:1.15rem; margin:0 auto 0.7em auto; max-width: 680px;">
+        Welcome to PPRWANDA Tours — your bridge between Rwanda’s breathtaking nature, wildlife, and culture, and Denmark’s heritage of expert, ethical travel. With certified guides and trusted partners in both countries, we offer authentic journeys, family adventures, sustainable safaris, and unique experiences that connect you to the heart of Africa and the warmth of Scandinavia.
+      </p>
+      <p style="color:#217a3a; font-size:1.08rem; font-weight:500; margin-bottom:0;">
+        Travel with confidence! Our collaborations with leading international and local companies ensure a seamless, safe, and memorable journey every step of the way.
+      </p>
     </div>
   </div>
 </section>
 
-<!-- Beautiful Footer -->
-<footer>
-  <div class="footer-content">
-    <div class="footer-col">
-      <div class="footer-logo">PPRWANDA</div>
-      <div style="margin-bottom:10px;">Experience Rwanda’s nature, culture and adventure – your way.</div>
-      <div class="footer-socials">
-        <a href="#" title="Facebook" aria-label="Facebook">🌐</a>
-        <a href="#" title="Instagram" aria-label="Instagram">📸</a>
-        <a href="#" title="WhatsApp" aria-label="WhatsApp">💬</a>
+<!-- SIGNATURE EXPERIENCES -->
+<section style="background: #f6f7f8; padding: 32px 0 32px 0;">
+  <div style="max-width: 1120px; margin: 0 auto;">
+    <h2 style="font-size:2rem; font-family:'Montserrat',Arial,sans-serif; color:#0a3c5b; font-weight:800; margin:0 0 12px 0; text-align:center;">
+      Signature Experiences
+    </h2>
+    <div style="height:4px;width:50px;background:#e32636;margin:0 auto 24px auto;border-radius:2px;"></div>
+    <p style="text-align:center; color:#444; max-width:600px; margin:0 auto 28px auto;">
+      Choose your perfect Rwandan adventure — every package can be tailored to your wishes. Click for more information or to start booking!
+    </p>
+    <div class="sig-grid">
+      <!-- Card 1 -->
+      <div class="sig-card">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Wildlife & Adventure">
+        <div class="sig-card-content">
+          <h3>Wildlife & Adventure</h3>
+          <div class="sig-card-meta">
+            <span>5 days</span>
+            <span>Volcanoes NP, Akagera</span>
+          </div>
+          <p>Gorilla trekking, safari drives, and hiking — the best of wild Rwanda for bold explorers!</p>
+          <button>Book meeting</button>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="sig-card">
+        <img src="https://images.unsplash.com/photo-1444065381814-865dc9da92c0?auto=format&fit=crop&w=600&q=80" alt="Nature & Eco-Tours">
+        <div class="sig-card-content">
+          <h3>Nature & Eco-Tours</h3>
+          <div class="sig-card-meta">
+            <span>4 days</span>
+            <span>Lake Kivu, Nyungwe</span>
+          </div>
+          <p>Canopy walk, boat cruise, tea & coffee tours. Discover Rwanda’s green heart, sustainably.</p>
+          <button>Book meeting</button>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="sig-card">
+        <img src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=600&q=80" alt="Culture & History">
+        <div class="sig-card-content">
+          <h3>Culture & History</h3>
+          <div class="sig-card-meta">
+            <span>3 days</span>
+            <span>Kigali, Huye</span>
+          </div>
+          <p>City tours, museums and cultural villages. Experience Rwanda’s story, past and present.</p>
+          <button>Book meeting</button>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="sig-card">
+        <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=600&q=80" alt="Special Experience">
+        <div class="sig-card-content">
+          <h3>Special Experience</h3>
+          <div class="sig-card-meta">
+            <span>Custom</span>
+            <span>Kigali & Beyond</span>
+          </div>
+          <p>Honeymoon, photography, or something unique? Let us create your dream trip to Rwanda!</p>
+          <button>Book meeting</button>
+        </div>
       </div>
     </div>
-    <div class="footer-col footer-links">
-      <strong>Quick Links</strong>
-      <a href="#signature-experiences">Signature Experiences</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact Us</a>
-      <a href="destinations.html">Destinations</a>
-      <a href="family-trip.html">Family Trip</a>
-      <a href="group-trip.html">Group Tours</a>
-    </div>
-    <div class="footer-col">
-      <strong>Contact</strong>
-      <div class="footer-contact">📍 Kigali, Rwanda | Denmark</div>
-      <div class="footer-contact">📞 +45 20865639</div>
-      <div class="footer-contact">✉️ <a href="mailto:pprwanda@outlook.com" style="color:#ffd166;">pprwanda@outlook.com</a></div>
+  </div>
+</section>
+<style>
+/* Signature Experience Cards */
+.sig-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 26px;
+}
+.sig-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 10px #0001;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.18s, border 0.18s;
+  border: 1.5px solid #f2f2f5;
+  min-height: 410px;
+}
+.sig-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+.sig-card-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 18px 16px 18px;
+}
+.sig-card h3 {
+  font-size: 1.15rem;
+  color: #e32636;
+  margin: 0 0 8px 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: bold;
+}
+.sig-card-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 0.97rem;
+  color: #17634a;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+.sig-card-meta span {
+  background: #f6f7f8;
+  border-radius: 7px;
+  padding: 2px 8px;
+}
+.sig-card p {
+  font-size: 0.99rem;
+  color: #374151;
+  margin: 0 0 18px 0;
+  line-height: 1.5;
+  flex: 1;
+}
+.sig-card button {
+  background: #217a3a;
+  color: #fff;
+  padding: 9px 0;
+  border: none;
+  border-radius: 19px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  box-shadow: 0 2px 10px #217a3a22;
+}
+.sig-card button:hover,
+.sig-card button:focus {
+  background: #ffd600;
+  color: #217a3a;
+}
+/* 2 per row on phone, 4 per row on desktop */
+@media (max-width: 900px) {
+  .sig-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .sig-grid { grid-template-columns: repeat(2, 1fr); }
+}
+/* 1 per row on very small screens */
+@media (max-width: 420px) {
+  .sig-grid { grid-template-columns: 1fr; }
+}
+</style>
+
+<!-- RWANDA GALLERY -->
+<section style="background: #fff; padding: 36px 0 26px 0;">
+  <div style="max-width: 1120px; margin:0 auto;">
+    <h2 style="font-size:2rem; font-family:'Montserrat',Arial,sans-serif; color:#0a3c5b; font-weight:800; margin:0 0 12px 0; text-align:center;">
+      See Rwanda’s Wonders
+    </h2>
+    <div style="height:4px;width:50px;background:#e32636;margin:0 auto 24px auto;border-radius:2px;"></div>
+    <div class="gallery-grid">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Safari" />
+      <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=600&q=80" alt="Lake Kivu" />
+      <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Mountains" />
+      <img src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=600&q=80" alt="Culture" />
+      <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=600&q=80" alt="Kigali" />
+      <img src="https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&w=600&q=80" alt="Volcanoes" />
+      <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=600&q=80" alt="Campfire" />
+      <img src="https://images.unsplash.com/photo-1444065381814-865dc9da92c0?auto=format&fit=crop&w=600&q=80" alt="Forest" />
     </div>
   </div>
-  <div class="footer-bottom">
-    Copyright © 2025 PPRWANDA Tours. All rights reserved.
+</section>
+<style>
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.gallery-grid img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px #0001;
+  transition: transform 0.16s;
+}
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 24px #ffd60055;
+}
+@media (max-width: 900px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 400px) {
+  .gallery-grid { grid-template-columns: 1fr; }
+}
+</style>
+
+<!-- APPLE-STYLE FOOTER -->
+<footer class="apple-footer">
+  <div class="apple-footer-content">
+    <div class="apple-footer-cols">
+      <div>
+        <div class="apple-footer-logo">PPRWANDA</div>
+        <div class="apple-footer-desc">Connecting Rwanda and Denmark with authentic, safe, and sustainable travel.</div>
+      </div>
+      <div>
+        <div class="apple-footer-title">Explore</div>
+        <a href="#signature-experiences">Packages</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <a href="#">FAQ</a>
+      </div>
+      <div>
+        <div class="apple-footer-title">Legal</div>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Cookies</a>
+      </div>
+      <div>
+        <div class="apple-footer-title">Contact</div>
+        <div>📍 Kigali, Rwanda | Denmark</div>
+        <div>📞 +45 20865639</div>
+        <div>✉️ <a href="mailto:pprwanda@outlook.com">pprwanda@outlook.com</a></div>
+      </div>
+    </div>
+    <div class="apple-footer-bottom">
+      Copyright © 2025 PPRWANDA Tours. All rights reserved.
+    </div>
   </div>
 </footer>
-</body>
-</html>
+<style>
+.apple-footer {
+  background: #121212;
+  color: #d1d1d1;
+  font-size: 1rem;
+  margin-top: 38px;
+  border-top: 1px solid #222;
+}
+.apple-footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 36px 18px 0 18px;
+}
+.apple-footer-cols {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 42px;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+.apple-footer-logo {
+  font-size: 1.6rem;
+  color: #ffd600;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 11px;
+}
+.apple-footer-title {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 9px;
+}
+.apple-footer-desc {
+  color: #d1d1d1;
+  margin-bottom: 8px;
+  font-size: 1.03rem;
+}
+.apple-footer-cols a {
+  color: #d1d1d1;
+  display: block;
+  margin-bottom: 7px;
+  text-decoration: none;
+  font-size: 1.01rem;
+  transition: color 0.15s;
+}
+.apple-footer-cols a:hover {
+  color: #ffd600;
+}
+.apple-footer-bottom {
+  text-align: center;
+  color: #888;
+  font-size: 0.99rem;
+  padding: 14px 0 18px 0;
+  border-top: 1px solid #232323;
+  letter-spacing: 0.5px;
+}
+@media (max-width: 900px) {
+  .apple-footer-cols {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+</style>
+
+
+

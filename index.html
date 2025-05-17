@@ -824,6 +824,208 @@
 }
 </style>
 
+
+
+<!-- Partner Companies Section -->
+<section style="background:#fff; padding: 30px 0 12px 0;">
+  <h2 style="text-align:center; font-family:'Montserrat',Arial,sans-serif; font-size:1.45rem; color:#1a2836; font-weight:800; margin-bottom:12px;">
+    Our Reputable Partners
+  </h2>
+  <p style="text-align:center; color:#444; margin:0 0 18px 0; font-size:1.04rem;">
+    We collaborate with leading global and local travel companies to ensure your journey is safe, seamless, and unforgettable.<br>
+    <span style="font-size:0.97rem;">(Click any logo to visit their official website)</span>
+  </p>
+  <div class="company-scroller" aria-label="Corroborating Partner Companies">
+    <button class="company-scroll-btn left" aria-label="Scroll left">&lt;</button>
+    <div class="company-track-wrapper" tabindex="0">
+      <div class="company-track">
+        <a href="https://www.tui.com/" target="_blank" rel="noopener" title="TUI">
+          <img src="https://seeklogo.com/images/T/TUI-logo-7F4D4B4B4E-seeklogo.com.png" alt="TUI" class="company-logo" />
+        </a>
+        <a href="https://www.tripadvisor.com/" target="_blank" rel="noopener" title="TripAdvisor">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Tripadvisor_Logo_circle-green_horizontal-lockup_registered_RGB.svg/2560px-Tripadvisor_Logo_circle-green_horizontal-lockup_registered_RGB.svg.png" alt="TripAdvisor" class="company-logo" />
+        </a>
+        <a href="https://www.airbnb.com/" target="_blank" rel="noopener" title="Airbnb">
+          <img src="https://www.logo.wine/a/logo/Airbnb/Airbnb-Logo.wine.svg" alt="Airbnb" class="company-logo" />
+        </a>
+        <a href="https://www.booking.com/" target="_blank" rel="noopener" title="Booking.com">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Booking.com_logo.svg" alt="Booking.com" class="company-logo" />
+        </a>
+        <a href="https://www.expedia.com/" target="_blank" rel="noopener" title="Expedia">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Expedia_Logo.svg" alt="Expedia" class="company-logo" />
+        </a>
+        <a href="https://www.visitdenmark.com/" target="_blank" rel="noopener" title="VisitDenmark">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/VisitDenmark_logo.svg" alt="VisitDenmark" class="company-logo" />
+        </a>
+        <a href="https://www.visitrwanda.com/" target="_blank" rel="noopener" title="Visit Rwanda">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Visit_Rwanda_Logo.svg" alt="Visit Rwanda" class="company-logo" />
+        </a>
+        <a href="https://www.safaricom.co.ke/" target="_blank" rel="noopener" title="Safaricom">
+          <img src="https://seeklogo.com/images/S/safaricom-logo-3D94FC3A74-seeklogo.com.png" alt="Safaricom" class="company-logo" />
+        </a>
+        <a href="https://www.worldwildlife.org/" target="_blank" rel="noopener" title="WWF">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/World_Wildlife_Fund_logo.svg" alt="WWF" class="company-logo" />
+        </a>
+        <!-- Repeat logos for infinite scroll -->
+        <a href="https://www.tui.com/" target="_blank" rel="noopener" title="TUI">
+          <img src="https://seeklogo.com/images/T/TUI-logo-7F4D4B4B4E-seeklogo.com.png" alt="TUI" class="company-logo" />
+        </a>
+        <a href="https://www.tripadvisor.com/" target="_blank" rel="noopener" title="TripAdvisor">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Tripadvisor_Logo_circle-green_horizontal-lockup_registered_RGB.svg/2560px-Tripadvisor_Logo_circle-green_horizontal-lockup_registered_RGB.svg.png" alt="TripAdvisor" class="company-logo" />
+        </a>
+        <a href="https://www.airbnb.com/" target="_blank" rel="noopener" title="Airbnb">
+          <img src="https://www.logo.wine/a/logo/Airbnb/Airbnb-Logo.wine.svg" alt="Airbnb" class="company-logo" />
+        </a>
+        <a href="https://www.booking.com/" target="_blank" rel="noopener" title="Booking.com">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Booking.com_logo.svg" alt="Booking.com" class="company-logo" />
+        </a>
+        <a href="https://www.expedia.com/" target="_blank" rel="noopener" title="Expedia">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Expedia_Logo.svg" alt="Expedia" class="company-logo" />
+        </a>
+      </div>
+    </div>
+    <button class="company-scroll-btn right" aria-label="Scroll right">&gt;</button>
+  </div>
+</section>
+
+<style>
+.company-scroller {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  padding: 8px 0 18px 0;
+  overflow: hidden;
+  user-select: none;
+}
+.company-track-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.company-track-wrapper::-webkit-scrollbar { display: none; }
+.company-track {
+  display: flex;
+  gap: 54px;
+  align-items: center;
+  will-change: transform;
+  animation: company-scroll 32s linear infinite;
+}
+.company-logo {
+  height: 46px;
+  width: auto;
+  opacity: 0.86;
+  filter: grayscale(0.25);
+  margin: 0 12px;
+  transition: filter 0.2s, opacity 0.2s, transform 0.18s;
+  flex-shrink: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.company-logo:hover {
+  filter: none;
+  opacity: 1;
+  transform: scale(1.08) rotate(-2deg);
+  box-shadow: 0 2px 10px #ffd60055;
+}
+.company-scroll-btn {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.92);
+  border: none;
+  color: #333;
+  font-size: 1.6rem;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  box-shadow: 0 2px 8px #0002;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s, color 0.18s, opacity 0.18s;
+  opacity: 0.55;
+}
+.company-scroll-btn:hover { background: #ffd600; color: #111; opacity: 1; }
+.company-scroll-btn.left { left: 6px; }
+.company-scroll-btn.right { right: 6px; }
+@keyframes company-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@media (max-width: 700px) {
+  .company-logo { height: 34px; }
+  .company-track { gap: 32px; }
+}
+</style>
+<script>
+(function(){
+  const track = document.querySelector('.company-track');
+  const wrapper = document.querySelector('.company-track-wrapper');
+  let autoScroll = true, speed = 1.1, requestId;
+
+  // Pause animation on hover or touch, resume on leave
+  wrapper.addEventListener('mouseenter', ()=>{ track.style.animationPlayState = 'paused'; autoScroll=false; });
+  wrapper.addEventListener('mouseleave', ()=>{ track.style.animationPlayState = 'running'; autoScroll=true; });
+  wrapper.addEventListener('touchstart', ()=>{ track.style.animationPlayState = 'paused'; autoScroll=false; });
+  wrapper.addEventListener('touchend', ()=>{ track.style.animationPlayState = 'running'; autoScroll=true; });
+
+  // Manual scroll left/right via buttons, and allow trackpad/hand scroll
+  function manualScroll(direction) {
+    autoScroll = false;
+    track.style.animationPlayState = 'paused';
+    let width = track.scrollWidth / 2;
+    let currentTx = getTranslateX();
+    let newTx = direction === 'left'
+      ? Math.max(currentTx - 160, -width)
+      : Math.min(currentTx + 160, 0);
+    setTranslateX(newTx);
+  }
+  function getTranslateX(){
+    let t = track.style.transform.match(/translateX\((-?\d+\.?\d*)px\)/);
+    return t ? parseFloat(t[1]) : 0;
+  }
+  function setTranslateX(val){
+    track.style.transform = `translateX(${val}px)`;
+  }
+  document.querySelector('.company-scroll-btn.left').onclick = ()=>manualScroll('right');
+  document.querySelector('.company-scroll-btn.right').onclick = ()=>manualScroll('left');
+
+  // Allow user to scroll with hand/trackpad/finger
+  let lastScrollLeft = 0;
+  wrapper.addEventListener('scroll', function(){
+    autoScroll = false;
+    track.style.animationPlayState = 'paused';
+    // Optionally, sync transform with scroll if you want more natural effect
+  });
+
+  // Keep auto-scrolling (loop) even after manual scroll
+  function animateScroll(){
+    if(!autoScroll) return;
+    let width = track.scrollWidth / 2;
+    let currentTx = getTranslateX();
+    let nextTx = currentTx - speed;
+    if(nextTx <= -width) nextTx = 0;
+    setTranslateX(nextTx);
+    requestId = requestAnimationFrame(animateScroll);
+  }
+  // Start JS auto-scroll (override CSS animation for full control)
+  track.style.animation = 'none';
+  setTranslateX(0);
+  requestId = requestAnimationFrame(animateScroll);
+
+  // Resume animation when leaving manual scroll
+  wrapper.addEventListener('mouseleave', ()=>{ autoScroll=true; requestId = requestAnimationFrame(animateScroll); });
+  wrapper.addEventListener('touchend', ()=>{ autoScroll=true; requestId = requestAnimationFrame(animateScroll); });
+})();
+</script>
+
+    
+
 <!-- RWANDA GALLERY -->
 <section style="background: #fff; padding: 36px 0 26px 0;">
   <div style="max-width: 1120px; margin:0 auto;">

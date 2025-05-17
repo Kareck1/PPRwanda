@@ -1,134 +1,673 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tour Packages | PPRWANDA</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #005f73;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-        .grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .card {
-            background-color: white;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-            width: 300px;
-            border-radius: 5px;
-            overflow: hidden;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        .card:hover {
-            transform: scale(1.05);
-        }
-        .card a {
-            text-decoration: none;
-            color: inherit;
-        }
-        .card img {
-            width: 100%;
-            height: 200px;
-            display: block;
-        }
-        .card-content {
-            padding: 15px;
-        }
-        .explore-btn {
-            display: inline-block;
-            background-color: #ee6c4d;
-            color: white;
-            padding: 10px 15px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .explore-btn:hover {
-            background-color: #bb4d33;
-        }
-        footer {
-            background-color: #005f73;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PPRWANDA | Tour Packages</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #005a36;
+      --accent: #ffd600;
+      --danger: #e32636;
+      --bg-light: #f8fafb;
+      --text-dark: #1a2836;
+      --card-shadow: 0 4px 22px rgba(0,0,0,0.10);
+      --border-radius: 18px;
+    }
+    body {
+      font-family: 'Montserrat', 'Raleway', Arial, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      margin: 0;
+      padding: 0;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      height: 48vw;
+      min-height: 360px;
+      max-height: 560px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      margin-bottom: 0;
+    }
+    .hero-bg {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: url('https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=1500&q=80') center center/cover no-repeat;
+      z-index: 1;
+      animation: hero-zoom 18s infinite alternate linear;
+      filter: brightness(0.62) saturate(1.1);
+      will-change: transform;
+    }
+    @keyframes hero-zoom {
+      0% { transform: scale(1);}
+      100% { transform: scale(1.15);}
+    }
+    .hero-content {
+      z-index: 2;
+      position: relative;
+      text-align: center;
+      width: 100%;
+      padding: 0 12px;
+    }
+    .hero-content h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin: 0 0 18px 0;
+      letter-spacing: 1.2px;
+      text-shadow: 0 2px 18px #002c2a96;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .hero-content p {
+      font-size: 1.22rem;
+      max-width: 600px;
+      margin: 0 auto;
+      font-weight: 500;
+      color: #fff;
+      text-shadow: 0 2px 12px #0008;
+    }
+    .cta-btn {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 13px 38px;
+      background: var(--accent);
+      color: var(--primary);
+      border: none;
+      border-radius: 30px;
+      font-size: 1.13rem;
+      font-weight: bold;
+      letter-spacing: 0.6px;
+      box-shadow: 0 2px 10px #0002;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s, transform 0.15s;
+    }
+    .cta-btn:hover, .cta-btn:focus {
+      background: var(--danger);
+      color: #fff;
+      transform: scale(1.04);
+    }
+
+    /* Section Titles */
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      color: var(--primary);
+      font-weight: 800;
+      margin: 54px 0 10px 0;
+      letter-spacing: 1px;
+      position: relative;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .section-title:after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--danger);
+      margin: 18px auto 0 auto;
+      border-radius: 2px;
+    }
+    .section-desc {
+      text-align: center;
+      color: #555;
+      max-width: 650px;
+      margin: 0 auto 32px auto;
+      font-size: 1.12rem;
+    }
+
+    /* Tour Packages Grid */
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 36px;
+      max-width: 1350px;
+      margin: 0 auto 62px auto;
+      padding: 0 12px;
+    }
+    .package-card {
+      background: #fff;
+      border-radius: var(--border-radius);
+      box-shadow: var(--card-shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.21s, border 0.21s, transform 0.18s;
+      border: 1.5px solid #e5e5ee;
+      position: relative;
+      min-height: 510px;
+      cursor: pointer;
+    }
+    .package-card:hover, .package-card:focus {
+      box-shadow: 0 8px 42px #00a9e033, 0 2px 24px #ffd60022;
+      border: 1.5px solid var(--primary);
+      transform: translateY(-6px) scale(1.025);
+      z-index: 3;
+    }
+    .package-carousel {
+      width: 100%;
+      height: 210px;
+      position: relative;
+      overflow: hidden;
+      background: #eee;
+    }
+    .carousel-img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      display: none;
+      position: absolute;
+      top: 0; left: 0;
+      border-top-left-radius: var(--border-radius);
+      border-top-right-radius: var(--border-radius);
+      transition: opacity 0.8s;
+    }
+    .carousel-img.active {
+      display: block;
+      opacity: 1;
+      z-index: 1;
+    }
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.86);
+      border: none;
+      color: var(--primary);
+      font-size: 1.35rem;
+      cursor: pointer;
+      z-index: 3;
+      transform: translateY(-50%);
+      opacity: 0.78;
+      transition: background 0.15s, color 0.15s, opacity 0.15s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .carousel-arrow:hover { background: var(--accent); color: var(--danger); opacity: 1; }
+    .carousel-arrow.left { left: 10px; }
+    .carousel-arrow.right { right: 10px; }
+
+    .package-content {
+      padding: 22px 22px 18px 22px;
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+    }
+    .package-title {
+      font-size: 1.19rem;
+      color: var(--danger);
+      font-weight: bold;
+      margin: 0 0 12px 0;
+      letter-spacing: 0.3px;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .package-meta {
+      display: flex;
+      gap: 14px;
+      font-size: 0.98rem;
+      margin-bottom: 8px;
+      color: #355070;
+      flex-wrap: wrap;
+    }
+    .package-meta span {
+      background: #f7f8fa;
+      border-radius: 8px;
+      padding: 2px 10px;
+      color: #222;
+      font-weight: 600;
+    }
+    .package-summary {
+      color: #355070;
+      font-size: 1.01rem;
+      margin: 0 0 14px 0;
+      flex: 1;
+      line-height: 1.55;
+    }
+    .package-price {
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 1.13rem;
+      margin: 9px 0 14px 0;
+    }
+    .package-btn {
+      background: var(--primary);
+      color: #fff;
+      padding: 12px 0;
+      border: none;
+      border-radius: 19px;
+      font-weight: 700;
+      font-size: 1.08rem;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      text-align: center;
+      width: 100%;
+      margin-top: auto;
+      transition: background 0.12s, color 0.12s;
+      box-shadow: 0 2px 10px #005a3633;
+    }
+    .package-btn:hover, .package-btn:focus {
+      background: var(--danger);
+      color: #ffd600;
+    }
+
+    /* Responsive grid */
+    @media (max-width: 1000px) {
+      .packages-grid { gap: 24px; }
+      .package-card { width: 98vw; max-width: 420px; }
+    }
+    @media (max-width: 650px) {
+      .hero-content h1 { font-size: 2rem; }
+      .packages-grid { grid-template-columns: 1fr 1fr; gap: 14px;}
+      .package-card { max-width: 99vw; }
+    }
+    @media (max-width: 500px) {
+      .packages-grid { grid-template-columns: 1fr; }
+      .hero-section { min-height: 180px; }
+    }
+
+    /* Simple Apple-Style Footer */
+    .apple-footer {
+      background: #121212;
+      color: #d1d1d1;
+      font-size: 1rem;
+      margin-top: 38px;
+      border-top: 1px solid #222;
+    }
+    .apple-footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 36px 18px 0 18px;
+    }
+    .apple-footer-cols {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 42px;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 30px;
+    }
+    .apple-footer-logo {
+      font-size: 1.6rem;
+      color: #ffd600;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-bottom: 11px;
+    }
+    .apple-footer-title {
+      color: #fff;
+      font-weight: 600;
+      margin-bottom: 9px;
+    }
+    .apple-footer-desc {
+      color: #d1d1d1;
+      margin-bottom: 8px;
+      font-size: 1.03rem;
+    }
+    .apple-footer-cols a {
+      color: #d1d1d1;
+      display: block;
+      margin-bottom: 7px;
+      text-decoration: none;
+      font-size: 1.01rem;
+      transition: color 0.15s;
+    }
+    .apple-footer-cols a:hover {
+      color: #ffd600;
+    }
+    .apple-footer-bottom {
+      text-align: center;
+      color: #888;
+      font-size: 0.99rem;
+      padding: 14px 0 18px 0;
+      border-top: 1px solid #232323;
+      letter-spacing: 0.5px;
+    }
+    @media (max-width: 900px) {
+      .apple-footer-cols {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-
-<header>
-    Explore Our Tour Packages
-</header>
-
-<div class="container">
-    <div class="grid">
-        <div class="card">
-            <a href="family-trip.html">
-                <img src="https://pprwandatours.com/wp-content/uploads/2024/12/family-trip.png" alt="Family Trip">
-                <div class="card-content">
-                    <h3>Family Trip</h3>
-                    <p>Enjoy a relaxing family adventure in Rwanda’s top destinations.</p>
-                    <span class="explore-btn">Explore</span>
-                </div>
-            </a>
-        </div>
-
-        <div class="card">
-            <a href="group-trip.html">
-                <img src="https://pprwandatours.com/wp-content/uploads/2024/12/group-tour.png" alt="Group Tour">
-                <div class="card-content">
-                    <h3>Group Tour</h3>
-                    <p>Experience Rwanda with friends or colleagues in an exciting group trip.</p>
-                    <span class="explore-btn">Explore</span>
-                </div>
-            </a>
-        </div>
-
-        <div class="card">
-            <a href="solo-journey.html">
-                <img src="https://pprwandatours.com/wp-content/uploads/2024/12/solo-tour.png" alt="Solo Journey">
-                <div class="card-content">
-                    <h3>Solo Journey</h3>
-                    <p>Embrace solo travel and explore Rwanda at your own pace.</p>
-                    <span class="explore-btn">Explore</span>
-                </div>
-            </a>
-        </div>
-
-        <div class="card">
-            <a href="luxury-trip.html">
-                <img src="https://pprwandatours.com/wp-content/uploads/2024/12/luxury-trip.png" alt="Luxury Experience">
-                <div class="card-content">
-                    <h3>Luxury Experience</h3>
-                    <p>Indulge in a premium travel experience with high-end accommodations.</p>
-                    <span class="explore-btn">Explore</span>
-                </div>
-            </a>
-        </div>
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1>Tour Packages in Rwanda</h1>
+      <p>
+        Discover the best of Rwanda with our carefully curated tour packages. From wildlife safaris and gorilla trekking to cultural journeys and lakeside escapes, every adventure is crafted for unforgettable memories. Browse, compare, and book your experience today!
+      </p>
+      <a href="#packages" class="cta-btn">Browse Our Packages</a>
     </div>
-</div>
+  </section>
 
-<footer>
-    <p>&copy; 2025 PPRWANDA. All Rights Reserved.</p>
-</footer>
+  <!-- PAGE INTRO CONTENT -->
+  <section style="background:#fff; padding:38px 0 32px 0;">
+    <div style="max-width: 850px; margin:0 auto; text-align:center;">
+      <h2 style="font-size: 1.5rem; font-weight:700; color: var(--primary); margin-bottom: 10px;">Explore Rwanda Your Way</h2>
+      <p style="font-size:1.11rem; color:#2c3e50;">
+        Whether you crave adventure, family fun, solo exploration, or serene lakeside relaxation, our packages are designed for every traveler. Each tour includes the best guides, trusted partners, and a blend of comfort and authenticity. <strong>Customize any trip</strong> or combine packages for a unique experience!
+      </p>
+    </div>
+  </section>
 
+  <!-- TOUR PACKAGES GRID -->
+  <section id="packages">
+    <div class="section-title">Our Tour Packages</div>
+    <div class="section-desc">
+      Click any package to see full itinerary details and start your booking. <br>
+      <span style="color: var(--danger);">More packages available on request—just ask!</span>
+    </div>
+    <div class="packages-grid">
+      <!-- Wildlife & Gorilla Adventure -->
+      <div class="package-card" tabindex="0" onclick="window.location.href='wildlife-gorilla.html'">
+        <div class="package-carousel" data-carousel>
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80" alt="Gorilla Trekking" class="carousel-img active">
+          <img src="https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&w=800&q=80" alt="Safari Jeep" class="carousel-img">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Akagera National Park" class="carousel-img">
+          <button class="carousel-arrow left" type="button">&#10094;</button>
+          <button class="carousel-arrow right" type="button">&#10095;</button>
+        </div>
+        <div class="package-content">
+          <div class="package-title">Wildlife & Gorilla Adventure</div>
+          <div class="package-meta">
+            <span>6 days</span>
+            <span>Volcanoes NP, Akagera NP</span>
+          </div>
+          <div class="package-summary">
+            Track mountain gorillas, enjoy thrilling safaris for lions and elephants, cruise Lake Ihema, and relax in comfort. Perfect for wildlife lovers!
+          </div>
+          <div class="package-price">From 2,400,000 RWF</div>
+          <button class="package-btn">See Details & Book</button>
+        </div>
+      </div>
+      <!-- Lake Kivu Relaxation -->
+      <div class="package-card" tabindex="0" onclick="window.location.href='lake-kivu.html'">
+        <div class="package-carousel" data-carousel>
+          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80" alt="Lake Kivu" class="carousel-img active">
+          <img src="https://images.unsplash.com/photo-1444065381814-865dc9da92c0?auto=format&fit=crop&w=800&q=80" alt="Eco-lodge" class="carousel-img">
+          <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=800&q=80" alt="Campfire by Lake" class="carousel-img">
+          <button class="carousel-arrow left" type="button">&#10094;</button>
+          <button class="carousel-arrow right" type="button">&#10095;</button>
+        </div>
+        <div class="package-content">
+          <div class="package-title">Lake Kivu Relaxation</div>
+          <div class="package-meta">
+            <span>4 days</span>
+            <span>Lake Kivu</span>
+          </div>
+          <div class="package-summary">
+            Unwind on Rwanda’s serene lakeshore. Enjoy boat cruises, swimming, cycling, and sunset views with premium lodges and local flavors.
+          </div>
+          <div class="package-price">From 1,180,000 RWF</div>
+          <button class="package-btn">See Details & Book</button>
+        </div>
+      </div>
+      <!-- Kigali City & Culture -->
+      <div class="package-card" tabindex="0" onclick="window.location.href='kigali-city-culture.html'">
+        <div class="package-carousel" data-carousel>
+          <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80" alt="Kigali City" class="carousel-img active">
+          <img src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=800&q=80" alt="Local Culture" class="carousel-img">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Palm Trees" class="carousel-img">
+          <button class="carousel-arrow left" type="button">&#10094;</button>
+          <button class="carousel-arrow right" type="button">&#10095;</button>
+        </div>
+        <div class="package-content">
+          <div class="package-title">Kigali City & Culture</div>
+          <div class="package-meta">
+            <span>3 days</span>
+            <span>Kigali, Huye</span>
+          </div>
+          <div class="package-summary">
+            Dive into Kigali’s art, coffee, and cuisine. Includes the Genocide Memorial, markets, museums, and a day trip to Huye’s historical sites.
+          </div>
+          <div class="package-price">From 800,000 RWF</div>
+          <button class="package-btn">See Details & Book</button>
+        </div>
+      </div>
+      <!-- Family Adventure -->
+      <div class="package-card" tabindex="0" onclick="window.location.href='family-adventure.html'">
+        <div class="package-carousel" data-carousel>
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Family Safari" class="carousel-img active">
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80" alt="Giraffes" class="carousel-img">
+          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80" alt="Beach" class="carousel-img">
+          <button class="carousel-arrow left" type="button">&#10094;</button>
+          <button class="carousel-arrow right" type="button">&#10095;</button>
+        </div>
+        <div class="package-content">
+          <div class="package-title">Family Adventure</div>
+          <div class="package-meta">
+            <span>5 days</span>
+            <span>Akagera, Lake Kivu</span>
+          </div>
+          <div class="package-summary">
+            Perfect for families: gentle safaris, lakeside fun, community visits, and engaging activities for all ages. Safe, exciting, and memorable!
+          </div>
+          <div class="package-price">From 1,350,000 RWF</div>
+          <button class="package-btn">See Details & Book</button>
+        </div>
+      </div>
+      <!-- Nyungwe Forest Canopy & Primates -->
+      <div class="package-card" tabindex="0" onclick="window.location.href='nyungwe-primates.html'">
+        <div class="package-carousel" data-carousel>
+          <img src="https://images.unsplash.com/photo-1444065381814-865dc9da92c0?auto=format&fit=crop&w=800&q=80" alt="Nyungwe Forest" class="carousel-img active">
+          <img src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=800&q=80" alt="Canopy Walk" class="carousel-img">
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80" alt="Chimpanzee Trek" class="carousel-img">
+          <button class="carousel-arrow left" type="button">&#10094;</button>
+          <button class="carousel-arrow right" type="button">&#10095;</button>
+        </div>
+        <div class="package-content">
+          <div class="package-title">Nyungwe Forest Canopy & Primates</div>
+          <div class="package-meta">
+            <span>4 days</span>
+            <span>Nyungwe NP</span>
+          </div>
+          <div class="package-summary">
+            Trek for chimpanzees, stroll the famous Canopy Walk, and discover the rainforest’s unique flora and birdlife.
+          </div>
+          <div class="package-price">From 1,250,000 RWF</div>
+          <button class="package-btn">See Details & Book</button>
+        </div>
+      </div>
+      <!-- Volcanoes National Park Golden Monkey Trek -->
+      <div class="package-card" tabindex="0" onclick="window.location.href='volcanoes-monkey.html'">
+        <div class="package-carousel" data-carousel>
+          <img src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=800&q=80" alt="Volcanoes Monkey" class="carousel-img active">
+          <img src="https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&w=800&q=80" alt="Volcanoes NP" class="carousel-img">
+          <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=800&q=80" alt="Monkey Trekking" class="carousel-img">
+          <button class="carousel-arrow left" type="button">&#10094;</button>
+          <button class="carousel-arrow right" type="button">&#10095;</button>
+        </div>
+        <div class="package-content">
+          <div class="package-title">Volcanoes Golden Monkey Trek</div>
+          <div class="package-meta">
+            <span>2 days</span>
+            <span>Volcanoes NP</span>
+          </div>
+          <div class="package-summary">
+            A short but magical adventure: see rare golden monkeys, enjoy mountain scenery, and visit local villages.
+          </div>
+          <div class="package-price">From 570,000 RWF</div>
+          <button class="package-btn">See Details & Book</button>
+        </div>
+      </div>
+      <!-- Cultural Immersion Experience -->
+      <div class="package-card" tabindex="0" onclick="window.location.href='cultural-immersion.html'">
+        <div class="package-carousel" data-carousel>
+          <img src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=800&q=80" alt="Cultural Dance" class="carousel-img active">
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80" alt="Village Visit" class="carousel-img">
+          <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80" alt="Kigali Culture" class="carousel-img">
+          <button class="carousel-arrow left" type="button">&#10094;</button>
+          <button class="carousel-arrow right" type="button">&#10095;</button>
+        </div>
+        <div class="package-content">
+          <div class="package-title">Cultural Immersion Experience</div>
+          <div class="package-meta">
+            <span>3 days</span>
+            <span>Kigali, Bugesera</span>
+          </div>
+          <div class="package-summary">
+            Live with a local family, learn weaving, drumming, and cooking. Attend a traditional dance and market day!
+          </div>
+          <div class="package-price">From 690,000 RWF</div>
+          <button class="package-btn">See Details & Book</button>
+        </div>
+      </div>
+      <!-- Birdwatching & Nature Photography -->
+      <div class="package-card" tabindex="0" onclick="window.location.href='birdwatching.html'">
+        <div class="package-carousel" data-carousel>
+          <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=800&q=80" alt="Birdwatching" class="carousel-img active">
+          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80" alt="Lake Birds" class="carousel-img">
+          <img src="https://images.unsplash.com/photo-1444065381814-865dc9da92c0?auto=format&fit=crop&w=800&q=80" alt="Wetlands" class="carousel-img">
+          <button class="carousel-arrow left" type="button">&#10094;</button>
+          <button class="carousel-arrow right" type="button">&#10095;</button>
+        </div>
+        <div class="package-content">
+          <div class="package-title">Birdwatching & Nature Photography</div>
+          <div class="package-meta">
+            <span>3 days</span>
+            <span>Akagera, Gishwati</span>
+          </div>
+          <div class="package-summary">
+            Guided birdwatching in Rwanda’s top spots. Capture shoebill, kingfisher, and rare species with expert help!
+          </div>
+          <div class="package-price">From 900,000 RWF</div>
+          <button class="package-btn">See Details & Book</button>
+        </div>
+      </div>
+      <!-- Adventure Biking & Hiking -->
+      <div class="package-card" tabindex="0" onclick="window.location.href='biking-hiking.html'">
+        <div class="package-carousel" data-carousel>
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80" alt="Biking" class="carousel-img active">
+          <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80" alt="Hiking" class="carousel-img">
+          <img src="https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&w=800&q=80" alt="Mountains" class="carousel-img">
+          <button class="carousel-arrow left" type="button">&#10094;</button>
+          <button class="carousel-arrow right" type="button">&#10095;</button>
+        </div>
+        <div class="package-content">
+          <div class="package-title">Adventure Biking & Hiking</div>
+          <div class="package-meta">
+            <span>4 days</span>
+            <span>Kigali, Congo Nile Trail</span>
+          </div>
+          <div class="package-summary">
+            Bike the legendary Congo Nile Trail, hike the Virunga foothills, and enjoy local hospitality along the way.
+          </div>
+          <div class="package-price">From 1,150,000 RWF</div>
+          <button class="package-btn">See Details & Book</button>
+        </div>
+      </div>
+      <!-- Custom & VIP Private Tours -->
+      <div class="package-card" tabindex="0" onclick="window.location.href='custom-vip.html'">
+        <div class="package-carousel" data-carousel>
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80" alt="VIP Tour" class="carousel-img active">
+          <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=800&q=80" alt="Helicopter Tour" class="carousel-img">
+          <img src="https://images.unsplash.com/photo-1444065381814-865dc9da92c0?auto=format&fit=crop&w=800&q=80" alt="Luxury Lodge" class="carousel-img">
+          <button class="carousel-arrow left" type="button">&#10094;</button>
+          <button class="carousel-arrow right" type="button">&#10095;</button>
+        </div>
+        <div class="package-content">
+          <div class="package-title">Custom & VIP Private Tours</div>
+          <div class="package-meta">
+            <span>Flexible</span>
+            <span>All Rwanda</span>
+          </div>
+          <div class="package-summary">
+            For those who want the best: custom itineraries, private guides, luxury vehicles, exclusive experiences. Your trip, your way.
+          </div>
+          <div class="package-price">From 3,900,000 RWF</div>
+          <button class="package-btn">See Details & Book</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="apple-footer">
+    <div class="apple-footer-content">
+      <div class="apple-footer-cols">
+        <div>
+          <div class="apple-footer-logo">PPRWANDA</div>
+          <div class="apple-footer-desc">Connecting Rwanda and Denmark with authentic, safe, and sustainable travel.</div>
+        </div>
+        <div>
+          <div class="apple-footer-title">Explore</div>
+          <a href="tour-packages.html">Tour Packages</a>
+          <a href="#">About Us</a>
+          <a href="#">Contact</a>
+          <a href="#">FAQ</a>
+        </div>
+        <div>
+          <div class="apple-footer-title">Legal</div>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Cookies</a>
+        </div>
+        <div>
+          <div class="apple-footer-title">Contact</div>
+          <div>📍 Kigali, Rwanda | Denmark</div>
+          <div>📞 +45 20865639</div>
+          <div>✉️ <a href="mailto:pprwanda@outlook.com">pprwanda@outlook.com</a></div>
+        </div>
+      </div>
+      <div class="apple-footer-bottom">
+        Copyright © 2025 PPRWANDA Tours. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Carousel functionality for all package cards
+    document.querySelectorAll('[data-carousel]').forEach(function(carousel) {
+      const imgs = carousel.querySelectorAll('.carousel-img');
+      const left = carousel.querySelector('.carousel-arrow.left');
+      const right = carousel.querySelector('.carousel-arrow.right');
+      let idx = 0;
+      // Show correct image
+      function update() {
+        imgs.forEach((img, i) => img.classList.toggle('active', i === idx));
+      }
+      // Next/Prev logic
+      right?.addEventListener('click', function(e){ e.stopPropagation(); idx = (idx+1)%imgs.length; update(); });
+      left?.addEventListener('click', function(e){ e.stopPropagation(); idx = (idx-1+imgs.length)%imgs.length; update(); });
+      // Auto-advance
+      setInterval(function(){
+        idx = (idx+1)%imgs.length;
+        update();
+      }, 4500 + Math.floor(Math.random()*1200));
+    });
+    // Make package card and button clickable
+    document.querySelectorAll('.package-card').forEach(function(card){
+      card.addEventListener('keydown', function(e){
+        if(e.key==='Enter'||e.key===' '){card.click();}
+      });
+      card.querySelector('.package-btn').onclick = function(e){
+        e.stopPropagation();
+        card.click();
+      };
+    });
+    // Smooth scroll for hero CTA
+    document.querySelectorAll('a.cta-btn[href^="#"]').forEach(function(btn){
+      btn.addEventListener('click', function(e){
+        const target = document.querySelector(btn.getAttribute('href'));
+        if(target){
+          e.preventDefault();
+          window.scrollTo({ top: target.offsetTop-35, behavior:'smooth' });
+        }
+      });
+    });
+  </script>
 </body>
 </html>

@@ -551,23 +551,112 @@
 </head>
 <body>
 
-<!-- Hero Section with Embedded YouTube Video -->
-<section class="hero">
-  <div class="video-background">
-    <iframe 
-      src="https://drive.google.com/file/d/1QTXP1iWPbEU3JqLxfNfMrSdCLSIydPCd/preview"
-      frameborder="0" 
-      allow="autoplay; fullscreen" 
-      allowfullscreen
-    ></iframe>
-  </div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h1>Explore Rwanda Like Never Before</h1>
-    <p>Embark on unforgettable adventures with PPRWANDA Tours.</p>
-    <a href="#packages" class="cta-btn">Browse Our Packages</a>
-  </div>
-</section>
+
+
+<!-- Hero Section with Embedded YouTube Video gorilla  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hero Section</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .image-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-image: url('https://images.blacktomato.com/2024/11/Rwanda-Hero-1.jpg?auto=compress%2Cformat&fit=crop&h=800&ixlib=php-3.3.1&q=82&w=1520&s=19c4211014bf6075bc7fd6d418f6263e');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4); /* dark overlay for readability */
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+
+    .hero-content p {
+      font-size: 1.2em;
+      margin-bottom: 1em;
+    }
+
+    .cta-btn {
+      background-color: #ff9900;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .cta-btn:hover {
+      background-color: #e68100;
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="image-background"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Explore Rwanda Like Never Before</h1>
+      <p>Embark on unforgettable adventures with PPRWANDA Tours.</p>
+      <a href="#packages" class="cta-btn">Browse Our Packages</a>
+    </div>
+  </section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- Tour Packages Section -->
 <section class="packages" id="packages">

@@ -375,6 +375,7 @@
 }
 
 /* Extra small screens: shrink hamburger further */
+
 @media (max-width: 420px) {
   .white-header {
     height: 100px !important;
@@ -388,27 +389,39 @@
     margin-left: 4px;
   }
   .burger_menu {
-    width: 32px;
-    height: 32px;
-    margin-right: 8px;
+    width: 60px;           /* Make it wider for a better touch target */
+    height: 100px;         /* Match header height */
+    margin-right: 16px;    /* Space it from the right edge */
+    display: flex;
+    align-items: center;   /* Vertically center the lines */
+    justify-content: center;
+    position: relative;
+    z-index: 1100;
+    cursor: pointer;
   }
   .burger_menu .lines,
   .burger_menu .lines:before,
   .burger_menu .lines:after {
-    height: 3px;
-    width: 20px;
-    left: 5px;
+    background: #fff;      /* White for visibility */
+    content: '';
+    display: block;
+    height: 6px;           /* Thicker lines for big size */
+    width: 16px;           /* Match the new width */
+    border-radius: 40px;
+    position: absolute;
+    left: 10px;
+    transition: all 1s cubic-bezier(.4,0,.2,1);
   }
   .burger_menu .lines {
-    top: 14px;
+    position: absolute;
+    top: 57px;             /* Vertically center (header is 100px) */
   }
   .burger_menu .lines:before {
-    top: -7px;
+    top: -10px;            /* Space up */
   }
   .burger_menu .lines:after {
-    top: 7px;
+    top: 10px;             /* Space down */
   }
-}
 
 /* Prevent content from hiding under the fixed header */
 @media (max-width: 700px) {

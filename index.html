@@ -328,7 +328,7 @@
   }
   .top-header-menu,
   .top-logo {
-    height: 54px !important;
+    height: 60px !important;
     display: flex;
     align-items: center;
   }
@@ -425,9 +425,80 @@
 </head>
 <body>
   <img 
-    src="https://github.com/Kareck1/PPRwandatestweb/raw/refs/heads/main/mountain%20logo.webp" 
-    alt="Mountain Logo" 
-    class="logo_img" 
+<!-- Place this in your HTML where the logo should appear -->
+<img 
+  src="https://github.com/Kareck1/PPRwandatestweb/raw/refs/heads/main/mountain%20logo.webp" 
+  alt="Mountain Logo" 
+  class="logo_img" 
+/>
+
+<!-- Place this <style> block in your <head> or just before </body> -->
+<style>
+.logo_img {
+  width: 60px;
+  height: 100px;
+  display: block;
+  margin: 5px auto;
+  border-radius: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  transition: box-shadow 0.3s, filter 0.2s, transform 0.4s cubic-bezier(0.5, 1.7, 0.6, 0.85);
+  will-change: transform, filter;
+  background: transparent;
+}
+
+/* Subtle glow on hover */
+.logo_img:hover {
+  box-shadow: 0 0 16px 2px #1aabe3, 0 4px 16px rgba(0,0,0,0.18);
+  filter: brightness(1.15) drop-shadow(0 0 10px #1aabe3aa);
+  animation: logo-hover-glow 0.7s;
+}
+
+@keyframes logo-hover-glow {
+  0%   { filter: brightness(1.1) drop-shadow(0 0 0px #1aabe3aa);}
+  60%  { filter: brightness(1.22) drop-shadow(0 0 18px #1aabe3cc);}
+  100% { filter: brightness(1.15) drop-shadow(0 0 10px #1aabe3aa);}
+}
+
+/* Bounce animation keyframes */
+@keyframes logo-bounce {
+  0%, 100% { transform: translateY(0) scale(1);}
+  20%      { transform: translateY(-12px) scale(1.07);}
+  40%      { transform: translateY(4px) scale(0.96);}
+  60%      { transform: translateY(-7px) scale(1.04);}
+  80%      { transform: translateY(2px) scale(0.99);}
+}
+
+/* Spin-pop animation keyframes */
+@keyframes logo-spin-pop {
+  0%   { transform: scale(1) rotate(0);}
+  60%  { transform: scale(1.2) rotate(270deg);}
+  80%  { transform: scale(0.94) rotate(340deg);}
+  100% { transform: scale(1) rotate(360deg);}
+}
+
+/* Animate class for click */
+.logo_img.logo-spin-pop {
+  animation: logo-spin-pop 0.9s cubic-bezier(.62,1.53,.54,.9);
+}
+</style>
+
+<!-- Place this script at the end of your body or after the logo image -->
+<script>
+const logo = document.querySelector('.logo_img');
+
+// Bounce every 4 seconds
+setInterval(() => {
+  logo.style.animation = 'logo-bounce 1.3s cubic-bezier(.62,1.53,.54,.9)';
+  setTimeout(() => logo.style.animation = '', 1300);
+}, 4000);
+
+// Animate (spin-pop) on click
+logo.addEventListener('click', () => {
+  logo.classList.add('logo-spin-pop');
+  setTimeout(() => logo.classList.remove('logo-spin-pop'), 900);
+});
+</script> 
   />
 </body>
 </html>

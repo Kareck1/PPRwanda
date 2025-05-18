@@ -304,12 +304,123 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Logo Display</title>
   <style>
-    .logo_img {
-      width: 100px0px; /* Adjust size here */
-      height: 100px;
-      display: block;
-      margin: 5px auto;
-    }
+.logo_img {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 5px auto;
+}
+
+/* Responsive/mobile styles for top bar */
+@media (max-width: 700px) {
+  .white-header {
+    position: fixed;                   /* Keep the bar at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 54px !important;
+    background: rgba(20, 20, 20, 0.48) !important; /* Transparent black */
+    min-height: 0 !important;
+    padding: 0 !important;
+    box-shadow: 0 1px 8px #0002;
+    z-index: 1000;                     /* Ensure bar stays on top */
+    width: 100vw;
+  }
+  .top-header-menu,
+  .top-logo {
+    height: 54px !important;
+    display: flex;
+    align-items: center;
+  }
+  .logo_img {
+    height: 36px !important;
+    width: auto !important;
+    margin: 0 0 0 12px;
+  }
+  /* Hamburger icon styling */
+  .burger_menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin: 0 16px 0 auto;
+    position: relative;
+    z-index: 1100;
+    cursor: pointer;
+  }
+  .burger_menu .lines,
+  .burger_menu .lines:before,
+  .burger_menu .lines:after {
+    background: #fff; /* White lines for visibility */
+    content: '';
+    display: block;
+    height: 3.5px;
+    width: 30px;
+    border-radius: 2px;
+    position: absolute;
+    left: 7px;
+    transition: all 0.2s cubic-bezier(.4,0,.2,1);
+  }
+  .burger_menu .lines {
+    position: absolute;
+    top: 20px;
+  }
+  .burger_menu .lines:before {
+    top: -10px;
+  }
+  .burger_menu .lines:after {
+    top: 10px;
+  }
+}
+
+/* Extra small screens: shrink hamburger further */
+@media (max-width: 420px) {
+  .white-header {
+    height: 44px !important;
+  }
+  .top-header-menu,
+  .top-logo {
+    height: 44px !important;
+  }
+  .logo_img {
+    height: 28px !important;
+    margin-left: 4px;
+  }
+  .burger_menu {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+  }
+  .burger_menu .lines,
+  .burger_menu .lines:before,
+  .burger_menu .lines:after {
+    height: 3px;
+    width: 20px;
+    left: 5px;
+  }
+  .burger_menu .lines {
+    top: 14px;
+  }
+  .burger_menu .lines:before {
+    top: -7px;
+  }
+  .burger_menu .lines:after {
+    top: 7px;
+  }
+}
+
+/* Prevent content from hiding under the fixed header */
+@media (max-width: 700px) {
+  body {
+    padding-top: 54px !important;
+  }
+}
+@media (max-width: 420px) {
+  body {
+    padding-top: 44px !important;
+  }
+}
   </style>
 </head>
 <body>

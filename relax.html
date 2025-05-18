@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Relax & Wellness Experiences | PPRWANDA Tours</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: linear-gradient(120deg, #e5ecef 0%, #f8fafb 100%);
+      min-height: 100vh;
+    }
+    .relax-hero {
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&auto=format&fit=crop&q=80') center/cover no-repeat;
+      min-height: 340px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      position: relative;
+      border-bottom-left-radius: 28px;
+      border-bottom-right-radius: 28px;
+      overflow: hidden;
+      animation: fadein 1.2s ease;
+    }
+    .relax-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(30deg, rgba(34,66,98,0.17) 50%, rgba(34,66,98,0.55) 100%);
+      z-index: 1;
+    }
+    .relax-hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 42px 38px 38px 38px;
+      color: #fff;
+      max-width: 600px;
+      animation: slideup 1.1s cubic-bezier(.63,.01,.36,1.18);
+    }
+    .relax-hero-content h1 {
+      font-size: 2.5rem;
+      margin: 0 0 18px 0;
+      font-weight: 900;
+      text-shadow: 0 2px 18px #0006;
+      letter-spacing: 1.2px;
+    }
+    .relax-hero-content p {
+      font-size: 1.13rem;
+      margin: 0 0 22px 0;
+      color: #ececec;
+      text-shadow: 0 2px 10px #0005;
+      font-weight: 400;
+    }
+    .relax-hero-btn {
+      background: #ffd600;
+      color: #0a3c5b;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 13px 34px;
+      border-radius: 26px;
+      text-decoration: none;
+      box-shadow: 0 2px 16px #ffd6003a;
+      text-align: center;
+      display: inline-block;
+      transition: background 0.15s, color 0.15s, box-shadow 0.18s;
+      border: none;
+      margin-top: 5px;
+      cursor: pointer;
+      animation: pulse 2.2s infinite;
+    }
+    .relax-hero-btn:hover {
+      background: #e32636;
+      color: #fff;
+      box-shadow: 0 8px 32px #e3263640;
+    }
+
+    @keyframes fadein {
+      0% { opacity: 0; transform: translateY(-32px);}
+      100% { opacity: 1; transform: translateY(0);}
+    }
+    @keyframes slideup {
+      0% { opacity: 0; transform: translateY(40px);}
+      100% { opacity: 1; transform: translateY(0);}
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 2px 16px #ffd6003a; }
+      50% { box-shadow: 0 2px 28px #ffd60099; }
+    }
+
+    .relax-section {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 42px 3vw 38px 3vw;
+      animation: fadein 1.2s;
+    }
+    .relax-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 24px;
+    }
+
+    @media (max-width: 1000px) {
+      .relax-grid { grid-template-columns: repeat(2, 1fr);}
+      .relax-hero-content { padding: 36px 22px 30px 22px; }
+    }
+    @media (max-width: 700px) {
+      .relax-grid { grid-template-columns: repeat(2, 1fr);}
+      .relax-hero { min-height: 220px;}
+      .relax-hero-content h1 { font-size: 1.48rem;}
+      .relax-hero-content { padding: 19px 11px 11px 14px;}
+    }
+    @media (max-width: 430px) {
+      .relax-grid { grid-template-columns: 1fr 1fr;}
+      .relax-hero-content h1 { font-size: 1.1rem;}
+      .relax-hero-content p { font-size: 0.91rem;}
+      .relax-hero-content { padding: 12px 3px 9px 8px;}
+    }
+    @media (max-width: 340px) {
+      .relax-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Card styles (same as main cards, with animation) */
+    .relax-card-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      border-radius: 18px;
+      overflow: hidden;
+      transition: transform 0.18s, box-shadow 0.18s;
+      animation: cardpop 1.1s cubic-bezier(.65,.1,.36,1.25);
+    }
+    .relax-card-link:hover,
+    .relax-card-link:focus {
+      transform: translateY(-8px) scale(1.03) rotate(-1.2deg);
+      box-shadow: 0 8px 32px #00a9e044, 0 2px 32px #e3263633;
+      z-index: 2;
+    }
+    @keyframes cardpop {
+      0% { opacity: 0; transform: scale(0.88);}
+      100% { opacity: 1; transform: scale(1);}
+    }
+    .relax-card {
+      position: relative;
+      min-height: 340px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 18px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+    }
+    .relax-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(34,66,98,0.11) 40%, rgba(34,66,98,0.75) 100%);
+      z-index: 1;
+    }
+    .relax-card-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding: 22px 22px 18px 22px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .relax-badge {
+      background: #269edc;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 4px 14px;
+      border-radius: 18px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 12px #269edc40;
+      display: inline-block;
+      animation: pulse 2s infinite;
+    }
+    .relax-badge.spa { background: #905ed0;}
+    .relax-badge.yoga { background: #5cb85c;}
+    .relax-badge.food { background: #ff9400;}
+    .relax-card-content h3 {
+      margin: 0 0 10px 0;
+      font-size: 1.19rem;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.37);
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .relax-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 1.04rem;
+      color: #ffd600;
+      margin-bottom: 12px;
+    }
+    .relax-meta-item {
+      background: rgba(0,0,0,0.18);
+      border-radius: 9px;
+      padding: 3px 9px 3px 7px;
+      display: flex;
+      align-items: center;
+      font-size: 0.97rem;
+      gap: 6px;
+    }
+    .relax-meta-item i {
+      color: #ffd600;
+      margin-right: 3px;
+      font-size: 1.07em;
+    }
+    .relax-desc {
+      font-size: 1.01rem;
+      margin: 0 0 17px 0;
+      line-height: 1.5;
+      color: #f7f7f7;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+      flex: 1;
+    }
+    .relax-action-btn {
+      display: inline-block;
+      background: #ffd600;
+      color: #0a3c5b;
+      font-weight: 600;
+      padding: 8px 28px;
+      border-radius: 18px;
+      font-size: 1.01rem;
+      margin-top: 2px;
+      text-align: center;
+      box-shadow: 0 2px 16px #ffd60022;
+      cursor: pointer;
+      transition: background 0.16s, color 0.16s;
+      border: none;
+      text-decoration: none;
+    }
+    .relax-card-link:hover .relax-action-btn,
+    .relax-card-link:focus .relax-action-btn {
+      background: #269edc;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="relax-hero">
+    <div class="relax-hero-content">
+      <h1>Relax & Wellness in Rwanda</h1>
+      <p>
+        Discover the ultimate in relaxation and well-being. From lakeside resorts and tranquil spas to yoga retreats, experience Rwanda’s most peaceful escapes and recharge your soul.
+      </p>
+      <a href="#relax-experiences" class="relax-hero-btn">Explore Experiences</a>
+    </div>
+  </section>
+
+  <!-- Relax Experiences Cards -->
+  <section class="relax-section" id="relax-experiences">
+    <h2 style="font-size:2rem; color:#0a3c5b; font-weight:800; margin-bottom:16px; text-align:center;">
+      Relaxation Experiences
+    </h2>
+    <div class="relax-grid">
+      <!-- Card 1 -->
+      <a href="https://www.lakekivuserena.com/" class="relax-card-link" target="_blank" rel="noopener">
+        <div class="relax-card" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&auto=format&fit=crop&q=60');">
+          <div class="relax-card-overlay"></div>
+          <div class="relax-card-content">
+            <div class="relax-badge">relax</div>
+            <h3>Lake Kivu Getaway</h3>
+            <div class="relax-meta">
+              <span class="relax-meta-item"><i class="fa-regular fa-clock"></i> 3 days</span>
+              <span class="relax-meta-item"><i class="fa-solid fa-location-dot"></i> Lake Kivu</span>
+            </div>
+            <p class="relax-desc">
+              Enjoy gentle waves, golden sunsets, and luxurious lakeside stays. Perfect for unwinding and reconnecting with nature.
+            </p>
+            <span class="relax-action-btn">View Retreat</span>
+          </div>
+        </div>
+      </a>
+      <!-- Card 2 -->
+      <a href="https://www.heavenrwanda.com/spa" class="relax-card-link" target="_blank" rel="noopener">
+        <div class="relax-card" style="background-image:url('https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&auto=format&fit=crop&q=60');">
+          <div class="relax-card-overlay"></div>
+          <div class="relax-card-content">
+            <div class="relax-badge spa">spa</div>
+            <h3>Heaven Spa & Wellness</h3>
+            <div class="relax-meta">
+              <span class="relax-meta-item"><i class="fa-regular fa-clock"></i> 1 day</span>
+              <span class="relax-meta-item"><i class="fa-solid fa-location-dot"></i> Kigali City</span>
+            </div>
+            <p class="relax-desc">
+              Experience soothing massages, aromatherapy, and holistic treatments in Kigali’s most serene spa environment.
+            </p>
+            <span class="relax-action-btn">Book Spa</span>
+          </div>
+        </div>
+      </a>
+      <!-- Card 3 -->
+      <a href="https://www.nyungweforestlodge.com/" class="relax-card-link" target="_blank" rel="noopener">
+        <div class="relax-card" style="background-image:url('https://images.unsplash.com/photo-1519864600265-abb23847ef2c?w=800&auto=format&fit=crop&q=60');">
+          <div class="relax-card-overlay"></div>
+          <div class="relax-card-content">
+            <div class="relax-badge nature">Nature</div>
+            <h3>Nyungwe Forest Retreat</h3>
+            <div class="relax-meta">
+              <span class="relax-meta-item"><i class="fa-regular fa-clock"></i> 2 days</span>
+              <span class="relax-meta-item"><i class="fa-solid fa-location-dot"></i> Nyungwe Forest</span>
+            </div>
+            <p class="relax-desc">
+              Immerse yourself in the lush rainforest, with guided walks, birdwatching, and restorative forest bathing.
+            </p>
+            <span class="relax-action-btn">Retreat Info</span>
+          </div>
+        </div>
+      </a>
+      <!-- Card 4 -->
+      <a href="https://www.oneandonlyresorts.com/nyungwe-house" class="relax-card-link" target="_blank" rel="noopener">
+        <div class="relax-card" style="background-image:url('https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?w=800&auto=format&fit=crop&q=60');">
+          <div class="relax-card-overlay"></div>
+          <div class="relax-card-content">
+            <div class="relax-badge yoga">Yoga</div>
+            <h3>Yoga in the Wild</h3>
+            <div class="relax-meta">
+              <span class="relax-meta-item"><i class="fa-regular fa-clock"></i> 2 days</span>
+              <span class="relax-meta-item"><i class="fa-solid fa-location-dot"></i> Nyungwe House</span>
+            </div>
+            <p class="relax-desc">
+              Practice yoga at sunrise surrounded by tranquil forest, led by expert instructors for all levels.
+            </p>
+            <span class="relax-action-btn">Join Session</span>
+          </div>
+        </div>
+      </a>
+      <!-- Card 5 -->
+      <a href="https://www.serenahotels.com/lakekivu" class="relax-card-link" target="_blank" rel="noopener">
+        <div class="relax-card" style="background-image:url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=800&auto=format&fit=crop&q=60');">
+          <div class="relax-card-overlay"></div>
+          <div class="relax-card-content">
+            <div class="relax-badge food">Cuisine</div>
+            <h3>Lakeside Cuisine</h3>
+            <div class="relax-meta">
+              <span class="relax-meta-item"><i class="fa-regular fa-clock"></i> 1 day</span>
+              <span class="relax-meta-item"><i class="fa-solid fa-location-dot"></i> Lake Kivu Resort</span>
+            </div>
+            <p class="relax-desc">
+              Dine with spectacular water views. Enjoy fresh local dishes and sunset cocktails by the lake.
+            </p>
+            <span class="relax-action-btn">View Menu</span>
+          </div>
+        </div>
+      </a>
+      <!-- Card 6 -->
+      <a href="https://www.tripadvisor.com/Attraction_Review-g293829-d8820453-Reviews-Kivu_Paradise_Resort-Rubavu_Western_Province.html" class="relax-card-link" target="_blank" rel="noopener">
+        <div class="relax-card" style="background-image:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&auto=format&fit=crop&q=60');">
+          <div class="relax-card-overlay"></div>
+          <div class="relax-card-content">
+            <div class="relax-badge relax">Relax</div>
+            <h3>Kivu Paradise Resort</h3>
+            <div class="relax-meta">
+              <span class="relax-meta-item"><i class="fa-regular fa-clock"></i> Flexible</span>
+              <span class="relax-meta-item"><i class="fa-solid fa-location-dot"></i> Rubavu</span>
+            </div>
+            <p class="relax-desc">
+              Swim, sunbathe, and unwind in tropical gardens with pools, hammocks, and private cabanas.
+            </p>
+            <span class="relax-action-btn">See Details</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+</body>
+</html>

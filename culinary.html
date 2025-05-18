@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Culinary & Cuisine Experiences | PPRWANDA Tours</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: linear-gradient(120deg, #faf6f2 0%, #f8fafb 100%);
+      min-height: 100vh;
+    }
+    .culinary-hero {
+      background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&auto=format&fit=crop&q=80') center/cover no-repeat;
+      min-height: 340px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      position: relative;
+      border-bottom-left-radius: 28px;
+      border-bottom-right-radius: 28px;
+      overflow: hidden;
+      animation: fadein 1.2s ease;
+    }
+    .culinary-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(30deg, rgba(0,0,0,0.07) 40%, rgba(186, 113, 46, 0.68) 100%);
+      z-index: 1;
+    }
+    .culinary-hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 42px 38px 38px 38px;
+      color: #fff;
+      max-width: 600px;
+      animation: slideup 1.1s cubic-bezier(.63,.01,.36,1.18);
+    }
+    .culinary-hero-content h1 {
+      font-size: 2.5rem;
+      margin: 0 0 18px 0;
+      font-weight: 900;
+      text-shadow: 0 2px 18px #0006;
+      letter-spacing: 1.2px;
+    }
+    .culinary-hero-content p {
+      font-size: 1.13rem;
+      margin: 0 0 22px 0;
+      color: #ffe6c0;
+      text-shadow: 0 2px 10px #0005;
+      font-weight: 400;
+    }
+    .culinary-hero-btn {
+      background: #ff9400;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 13px 34px;
+      border-radius: 26px;
+      text-decoration: none;
+      box-shadow: 0 2px 16px #ff94003a;
+      text-align: center;
+      display: inline-block;
+      transition: background 0.15s, color 0.15s, box-shadow 0.18s;
+      border: none;
+      margin-top: 5px;
+      cursor: pointer;
+      animation: pulse 2.2s infinite;
+    }
+    .culinary-hero-btn:hover {
+      background: #e32636;
+      color: #fff;
+      box-shadow: 0 8px 32px #e3263640;
+    }
+
+    @keyframes fadein {
+      0% { opacity: 0; transform: translateY(-32px);}
+      100% { opacity: 1; transform: translateY(0);}
+    }
+    @keyframes slideup {
+      0% { opacity: 0; transform: translateY(40px);}
+      100% { opacity: 1; transform: translateY(0);}
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 2px 16px #ff94003a; }
+      50% { box-shadow: 0 2px 28px #ff940099; }
+    }
+
+    .culinary-section {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 42px 3vw 38px 3vw;
+      animation: fadein 1.2s;
+    }
+    .culinary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 24px;
+    }
+
+    @media (max-width: 1000px) {
+      .culinary-grid { grid-template-columns: repeat(2, 1fr);}
+      .culinary-hero-content { padding: 36px 22px 30px 22px; }
+    }
+    @media (max-width: 700px) {
+      .culinary-grid { grid-template-columns: repeat(2, 1fr);}
+      .culinary-hero { min-height: 220px;}
+      .culinary-hero-content h1 { font-size: 1.48rem;}
+      .culinary-hero-content { padding: 19px 11px 11px 14px;}
+    }
+    @media (max-width: 430px) {
+      .culinary-grid { grid-template-columns: 1fr 1fr;}
+      .culinary-hero-content h1 { font-size: 1.1rem;}
+      .culinary-hero-content p { font-size: 0.91rem;}
+      .culinary-hero-content { padding: 12px 3px 9px 8px;}
+    }
+    @media (max-width: 340px) {
+      .culinary-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Card styles (animated, vivid, creative) */
+    .culinary-card-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      border-radius: 18px;
+      overflow: hidden;
+      transition: transform 0.18s, box-shadow 0.18s;
+      animation: cardpop 1.05s cubic-bezier(.65,.1,.36,1.25);
+    }
+    .culinary-card-link:hover,
+    .culinary-card-link:focus {
+      transform: translateY(-8px) scale(1.05) rotate(-0.8deg);
+      box-shadow: 0 10px 36px #ff940066, 0 2px 32px #e3263633;
+      z-index: 2;
+    }
+    @keyframes cardpop {
+      0% { opacity: 0; transform: scale(0.88);}
+      100% { opacity: 1; transform: scale(1);}
+    }
+    .culinary-card {
+      position: relative;
+      min-height: 340px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 18px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+    }
+    .culinary-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,148,0,0.13) 32%, rgba(34,66,98,0.79) 100%);
+      z-index: 1;
+    }
+    .culinary-card-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding: 22px 22px 18px 22px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .culinary-badge {
+      background: #ff9400;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 4px 14px;
+      border-radius: 18px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 12px #ff940040;
+      display: inline-block;
+      animation: pulse 2.1s infinite;
+    }
+    .culinary-badge.fine { background: #e32636; }
+    .culinary-badge.local { background: #217a3a; }
+    .culinary-badge.coffee { background: #905ed0; }
+    .culinary-badge.hotel { background: #ffb400; color: #0a3c5b;}
+    .culinary-badge.cocktail { background: #269edc; }
+    .culinary-badge.market { background: #5cb85c; }
+    .culinary-card-content h3 {
+      margin: 0 0 10px 0;
+      font-size: 1.13rem;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.37);
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .culinary-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 1.03rem;
+      color: #ffd600;
+      margin-bottom: 12px;
+    }
+    .culinary-meta-item {
+      background: rgba(0,0,0,0.21);
+      border-radius: 9px;
+      padding: 3px 9px 3px 7px;
+      display: flex;
+      align-items: center;
+      font-size: 0.95rem;
+      gap: 6px;
+    }
+    .culinary-meta-item i {
+      color: #ffd600;
+      margin-right: 3px;
+      font-size: 1.07em;
+    }
+    .culinary-desc {
+      font-size: 1.01rem;
+      margin: 0 0 17px 0;
+      line-height: 1.5;
+      color: #f7f7f7;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+      flex: 1;
+    }
+    .culinary-action-btn {
+      display: inline-block;
+      background: #ff9400;
+      color: #fff;
+      font-weight: 600;
+      padding: 8px 28px;
+      border-radius: 18px;
+      font-size: 1.01rem;
+      margin-top: 2px;
+      text-align: center;
+      box-shadow: 0 2px 16px #ff940022;
+      cursor: pointer;
+      transition: background 0.16s, color 0.16s;
+      border: none;
+      text-decoration: none;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .culinary-card-link:hover .culinary-action-btn,
+    .culinary-card-link:focus .culinary-action-btn {
+      background: #e32636;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="culinary-hero">
+    <div class="culinary-hero-content">
+      <h1>Culinary & Cuisine Experiences</h1>
+      <p>
+        Embark on a flavorful journey through Rwanda’s best restaurants, hotels, coffee spots, and vibrant markets. Savor, discover, and celebrate the tastes that make Rwanda unique!
+      </p>
+      <a href="#culinary-experiences" class="culinary-hero-btn">View Experiences</a>
+    </div>
+  </section>
+
+  <!-- Culinary Experiences Cards -->
+  <section class="culinary-section" id="culinary-experiences">
+    <h2 style="font-size:2rem; color:#ba712e; font-weight:800; margin-bottom:16px; text-align:center; letter-spacing:0.5px;">
+      Culinary Hotspots & Tasting Tours
+    </h2>
+    <div class="culinary-grid">
+      <!-- Card 1: Fine Dining -->
+      <a href="https://www.havenhotels.com/rwanda/finedining" class="culinary-card-link" target="_blank" rel="noopener">
+        <div class="culinary-card" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop&q=60');">
+          <div class="culinary-card-overlay"></div>
+          <div class="culinary-card-content">
+            <div class="culinary-badge fine">Fine Dining</div>
+            <h3>The Hut Restaurant</h3>
+            <div class="culinary-meta">
+              <span class="culinary-meta-item"><i class="fa-regular fa-clock"></i> 6pm-11pm</span>
+              <span class="culinary-meta-item"><i class="fa-solid fa-location-dot"></i> Kigali City</span>
+            </div>
+            <p class="culinary-desc">
+              Award-winning cuisine and stylish ambiance. Savor contemporary African and international dishes.
+            </p>
+            <span class="culinary-action-btn">Reserve Table</span>
+          </div>
+        </div>
+      </a>
+      <!-- Card 2: Local Eats -->
+      <a href="https://www.heavenrwanda.com/" class="culinary-card-link" target="_blank" rel="noopener">
+        <div class="culinary-card" style="background-image:url('https://images.unsplash.com/photo-1447078806655-40579c2520d6?w=800&auto=format&fit=crop&q=60');">
+          <div class="culinary-card-overlay"></div>
+          <div class="culinary-card-content">
+            <div class="culinary-badge local">Local</div>
+            <h3>Heaven Restaurant</h3>
+            <div class="culinary-meta">
+              <span class="culinary-meta-item"><i class="fa-regular fa-clock"></i> 12pm-10pm</span>
+              <span class="culinary-meta-item"><i class="fa-solid fa-location-dot"></i> Kigali City</span>
+            </div>
+            <p class="culinary-desc">
+              Enjoy farm-to-table Rwandan dishes, lush gardens, and a vibrant local atmosphere.
+            </p>
+            <span class="culinary-action-btn">See Menu</span>
+          </div>
+        </div>
+      </a>
+      <!-- Card 3: Coffee Experience -->
+      <a href="https://www.questioncoffee.com/" class="culinary-card-link" target="_blank" rel="noopener">
+        <div class="culinary-card" style="background-image:url('https://images.unsplash.com/photo-1502741338009-cac2772e18bc?w=800&auto=format&fit=crop&q=60');">
+          <div class="culinary-card-overlay"></div>
+          <div class="culinary-card-content">
+            <div class="culinary-badge coffee">Coffee</div>
+            <h3>Question Coffee Café</h3>
+            <div class="culinary-meta">
+              <span class="culinary-meta-item"><i class="fa-regular fa-clock"></i> 7am-7pm</span>
+              <span class="culinary-meta-item"><i class="fa-solid fa-location-dot"></i> Kigali City</span>
+            </div>
+            <p class="culinary-desc">
+              Experience Rwanda’s coffee culture. Barista workshops, tastings, and single-origin brews.
+            </p>
+            <span class="culinary-action-btn">Coffee Tour</span>
+          </div>
+        </div>
+      </a>
+      <!-- Card 4: Luxury Hotel -->
+      <a href="https://www.marriott.com/en-us/hotels/kglmc-kigali-marriott-hotel/" class="culinary-card-link" target="_blank" rel="noopener">
+        <div class="culinary-card" style="background-image:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&auto=format&fit=crop&q=60');">
+          <div class="culinary-card-overlay"></div>
+          <div class="culinary-card-content">
+            <div class="culinary-badge hotel">Hotel</div>
+            <h3>Kigali Marriott Hotel</h3>
+            <div class="culinary-meta">
+              <span class="culinary-meta-item"><i class="fa-regular fa-clock"></i> 24/7</span>
+              <span class="culinary-meta-item"><i class="fa-solid fa-location-dot"></i> Kigali</span>
+            </div>
+            <p class="culinary-desc">
+              Five-star dining, rooftop cocktails, and elegant rooms. Indulge in luxury and hospitality.
+            </p>
+            <span class="culinary-action-btn">Book Hotel</span>
+          </div>
+        </div>
+      </a>
+      <!-- Card 5: Cocktails & Views -->
+      <a href="https://rooftop-bar.com/kigali" class="culinary-card-link" target="_blank" rel="noopener">
+        <div class="culinary-card" style="background-image:url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=800&auto=format&fit=crop&q=60');">
+          <div class="culinary-card-overlay"></div>
+          <div class="culinary-card-content">
+            <div class="culinary-badge cocktail">Cocktail</div>
+            <h3>Ubumwe Grande Rooftop</h3>
+            <div class="culinary-meta">
+              <span class="culinary-meta-item"><i class="fa-regular fa-clock"></i> 4pm–12am</span>
+              <span class="culinary-meta-item"><i class="fa-solid fa-location-dot"></i> City Center</span>
+            </div>
+            <p class="culinary-desc">
+              Sip signature cocktails and enjoy panoramic city views above the lights of Kigali.
+            </p>
+            <span class="culinary-action-btn">Reserve Lounge</span>
+          </div>
+        </div>
+      </a>
+      <!-- Card 6: Market Tour -->
+      <a href="https://www.tripadvisor.com/Attraction_Review-g293829-d13005238-Reviews-Kimironko_Market-Kigali_Kigali_Province.html" class="culinary-card-link" target="_blank" rel="noopener">
+        <div class="culinary-card" style="background-image:url('https://images.unsplash.com/photo-1465101162946-4377e57745c3?w=800&auto=format&fit=crop&q=60');">
+          <div class="culinary-card-overlay"></div>
+          <div class="culinary-card-content">
+            <div class="culinary-badge market">Market</div>
+            <h3>Kimironko Market Tour</h3>
+            <div class="culinary-meta">
+              <span class="culinary-meta-item"><i class="fa-regular fa-clock"></i> 9am–5pm</span>
+              <span class="culinary-meta-item"><i class="fa-solid fa-location-dot"></i> Kimironko</span>
+            </div>
+            <p class="culinary-desc">
+              Taste, explore, and shop with local guides. Fresh produce, vibrant stalls, and food tastings galore!
+            </p>
+            <span class="culinary-action-btn">Join Tour</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+</body>
+</html>

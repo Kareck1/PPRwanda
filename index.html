@@ -721,10 +721,15 @@ logo.addEventListener('click', () => {
 
 
 
-
 <section class="hero">
   <div class="hero-slider">
-    <div class="hero-slide active" style="background-image: url('https://visitrwanda.com/wp-content/uploads/fly-images/1212/Visit-Rwanda_-Kigali-Convention-Centre-1280x853.jpg');"></div>
+    <!-- First slide is now a video -->
+    <div class="hero-slide active">
+      <video autoplay loop muted playsinline style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
     <div class="hero-slide" style="background-image: url('https://visitrwanda.com/wp-content/uploads/fly-images/2098/Kigali-Economic-Zone-Credit-Mazimpaka-JeanPierre-1280x853.jpg');"></div>
     <div class="hero-slide" style="background-image: url('https://visitrwanda.com/wp-content/uploads/fly-images/1630/Visit-Rwanda-NH_OO_Lifestyle_Canopy_Walk_0657_MASTER-700x467.jpg');"></div>
     <div class="hero-slide" style="background-image: url('https://rwandaecocompany.com/wp-content/uploads/2022/02/lake-kivu-shores.jpg');"></div>

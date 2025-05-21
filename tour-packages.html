@@ -1,3 +1,4 @@
+
         <link rel="stylesheet" id="dvteam_fix-css" href="https://visitrwanda.com/wp-content/plugins/dvteam/css/fix.css?ver=1.0" type="text/css" media="all" />
         <link rel="stylesheet" id="formcraft-common-css" href="https://visitrwanda.com/wp-content/plugins/formcraft3/dist/formcraft-common.css?ver=3.8.16" type="text/css" media="all" />
         <link rel="stylesheet" id="formcraft-form-css" href="https://visitrwanda.com/wp-content/plugins/formcraft3/dist/form.css?ver=3.8.16" type="text/css" media="all" />
@@ -208,7 +209,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Logo Display</title>
+  <title>PPRWANDATOURS</title>
   <style>
 .logo_img {
   width: 100px;
@@ -258,15 +259,15 @@
   .burger_menu .lines,
   .burger_menu .lines:before,
   .burger_menu .lines:after {
-    background: #fff; /* White lines for visibility */
+    background: #db5a6b; /* red lines for visibility */
     content: '';
     display: block;
-    height: 3.5px;
-    width: 30px;
-    border-radius: 2px;
+    height: 6px; 
+    width: 16px;
+    border-radius: 40px;
     position: absolute;
-    left: 7px;
-    transition: all 0.2s cubic-bezier(.4,0,.2,1);
+    left: 10px;
+    transition: all 1s cubic-bezier(.4,0,.2,1);
   }
   .burger_menu .lines {
     position: absolute;
@@ -308,7 +309,7 @@
   .burger_menu .lines,
   .burger_menu .lines:before,
   .burger_menu .lines:after {
-    background: #db5a6b;      /* White for visibility */
+    background: #db5a6b;      /* red for visibility */
     content: '';
     display: block;
     height: 6px;           /* Thicker lines for big size */
@@ -449,7 +450,6 @@ logo.addEventListener('click', () => {
 
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -493,7 +493,7 @@ logo.addEventListener('click', () => {
     .hero-bg {
       position: absolute;
       top: 0; left: 0; width: 100%; height: 100%;
-      background: url('https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=1500&q=80') center center/cover no-repeat;
+      background: url('https://images.unsplash.com/photo-1598605170898-853b9ae903fc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cndhbmRhfGVufDB8fDB8fHww') center center/cover no-repeat;
       z-index: 1;
       animation: hero-zoom 18s infinite alternate linear;
       filter: brightness(0.62) saturate(1.1);
@@ -509,6 +509,8 @@ logo.addEventListener('click', () => {
       text-align: center;
       width: 100%;
       padding: 0 12px;
+      max-width: 600px; /* Max width to prevent stretching on large screens */
+      margin: 0 auto;
     }
     .hero-content h1 {
       font-size: 2.8rem;
@@ -517,14 +519,16 @@ logo.addEventListener('click', () => {
       letter-spacing: 1.2px;
       text-shadow: 0 2px 18px #002c2a96;
       font-family: 'Montserrat', Arial, sans-serif;
+      word-wrap: break-word; /* Prevents long words from overflowing */
     }
     .hero-content p {
       font-size: 1.22rem;
-      max-width: 600px;
+      max-width: 500px;
       margin: 0 auto;
       font-weight: 500;
-      color: #fff;
+      color: white;
       text-shadow: 0 2px 12px #0008;
+      word-wrap: break-word; /* Prevents long words from overflowing */
     }
     .cta-btn {
       display: inline-block;
@@ -541,6 +545,39 @@ logo.addEventListener('click', () => {
       cursor: pointer;
       transition: background 0.15s, color 0.15s, transform 0.15s;
     }
+
+    /* Mobile and tablet responsiveness */
+    @media screen and (max-width: 768px) {
+      .hero-section {
+        height: auto; /* Adjust height for smaller screens */
+        padding: 50px 0; /* Add padding to create space */
+      }
+      .hero-bg {
+        filter: brightness(0.5); /* Adjust background brightness for readability */
+      }
+      .hero-content h1 {
+        font-size: 2rem; /* Smaller font size on mobile */
+      }
+      .hero-content p {
+        font-size: 1rem; /* Smaller font size for text */
+      }
+      .cta-btn {
+        padding: 10px 30px;
+        font-size: 1rem;
+      }
+    }
+
+    /* Extra small mobile screens */
+    @media screen and (max-width: 480px) {
+      .hero-content h1 {
+        font-size: 1.6rem; /* Further decrease font size for smaller screens */
+      }
+      .hero-content p {
+        font-size: 0.9rem; /* Smaller font size for text */
+      }
+    }
+  
+
     .cta-btn:hover, .cta-btn:focus {
       background: var(--danger);
       color: #fff;
@@ -911,9 +948,11 @@ logo.addEventListener('click', () => {
     <div class="hero-bg"></div>
     <div class="hero-content">
       <h1>Tour Packages in Rwanda</h1>
-      <p>
-        Discover the best of Rwanda with our carefully curated tour packages. From wildlife safaris and gorilla trekking to cultural journeys and lakeside escapes, every adventure is crafted for unforgettable memories. Browse, compare, and book your experience today!
-      </p>
+      
+       <p> Discover the best of Rwanda with our carefully curated tour packages.</p>
+        <p>From wildlife safaris and gorilla trekking to cultural journeys and lakeside escapes, every adventure is crafted </p>
+       <p> for unforgettable memories. Browse, compare, and book your experience today!</p>
+      
       <a href="#packages" class="cta-btn">Browse Our Packages</a>
     </div>
   </section>

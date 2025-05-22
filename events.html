@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | PPR Wanda Tours</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #009e49;      /* Rwanda green */
+            --secondary: #ef3340;    /* Denmark red */
+            --accent: #ffd100;       /* Rwanda yellow */
+            --sky: #87ceeb;          /* Light blue, tourism/sky */
+            --cream: #fff9f1;        /* Soft background */
+            --white: #fff;
+            --text: #233;
+        }
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: var(--cream);
+            color: var(--text);
+        }
+        .header {
+            background: linear-gradient(90deg, var(--sky) 60%, var(--accent) 100%);
+            color: var(--primary);
+            padding: 48px 0 32px 0;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.7rem;
+            font-family: 'Pacifico', cursive;
+            color: var(--primary);
+            letter-spacing: 2px;
+        }
+        .header p {
+            margin: 18px auto 0 auto;
+            font-size: 1.18rem;
+            max-width: 700px;
+            color: #2a3e3a;
+            font-weight: 500;
+        }
+        .events-section {
+            margin: 40px auto 0 auto;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+        .section-title {
+            font-size: 2.1rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin: 36px 0 16px 0;
+            border-left: 7px solid var(--primary);
+            padding-left: 12px;
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+        .event-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 32px;
+            margin-bottom: 35px;
+        }
+        .event-card {
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0,158,73,0.07);
+            overflow: hidden;
+            transition: box-shadow 0.2s, transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+        .event-card:hover {
+            box-shadow: 0 8px 32px rgba(0,158,73,0.16);
+            transform: scale(1.025);
+        }
+        .event-img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+        }
+        .event-info {
+            padding: 22px 18px 16px 18px;
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .event-date {
+            background: var(--accent);
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1rem;
+            border-radius: 8px;
+            padding: 4px 15px;
+            margin-bottom: 14px;
+            align-self: flex-start;
+        }
+        .event-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin: 0 0 8px 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+        .event-location {
+            font-size: 0.99rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .event-desc {
+            color: #3d3d3d;
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+        }
+        .gallery-section {
+            margin-top: 48px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+        .gallery-img {
+            width: 100%;
+            border-radius: 14px;
+            height: 175px;
+            object-fit: cover;
+            box-shadow: 0 2px 10px #b0e2c6;
+        }
+        .past-events-section {
+            margin-top: 48px;
+        }
+        .past-event-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 26px;
+        }
+        .past-event-card {
+            background: var(--white);
+            border-radius: 14px;
+            box-shadow: 0 2px 14px #e1e1e1;
+            padding: 10px 10px 18px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: box-shadow 0.2s;
+        }
+        .past-event-img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .past-event-title {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.08rem;
+            margin: 12px 0 4px 0;
+            text-align: center;
+        }
+        .past-event-desc {
+            font-size: 0.97rem;
+            color: #444;
+            text-align: center;
+        }
+        .cta-section {
+            background: linear-gradient(90deg, var(--accent), var(--sky));
+            color: var(--primary);
+            padding: 32px 24px;
+            border-radius: 18px;
+            text-align: center;
+            margin: 56px 0 36px 0;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 4px 18px #e9f7f3;
+        }
+        .cta-section h2 {
+            margin-top: 0;
+            font-size: 2rem;
+            font-family: 'Pacifico', cursive;
+        }
+        .cta-section p {
+            font-size: 1.13rem;
+            margin-bottom: 14px;
+        }
+        .cta-section a {
+            display: inline-block;
+            background: var(--secondary);
+            color: var(--white);
+            font-weight: 700;
+            text-decoration: none;
+            padding: 12px 32px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            margin-top: 8px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .cta-section a:hover {
+            background: var(--primary);
+            color: var(--accent);
+        }
+        @media (max-width: 700px) {
+            .header h1 { font-size: 1.7rem; }
+            .section-title { font-size: 1.2rem;}
+            .event-grid, .gallery-grid, .past-event-list { grid-template-columns: 1fr; }
+            .event-card, .past-event-card { padding: 12px 6px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Events & Experiences</h1>
+        <p>
+            Join us for vibrant, memorable, and authentic experiences! Explore our upcoming events and look back on our favorite moments from past tours, festivals, and community gatherings. <br>
+            <span style="color:var(--secondary); font-weight:600;">Celebrating the spirit of Rwanda, Denmark, and global friendship!</span>
+        </p>
+    </div>
+
+    <div class="events-section">
+        <div class="section-title">Upcoming Events</div>
+        <div class="event-grid">
+            <div class="event-card">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Gorilla Trekking Adventure" class="event-img">
+                <div class="event-info">
+                    <div class="event-date">June 15-21, 2025</div>
+                    <div class="event-title">Gorilla Trekking Adventure</div>
+                    <div class="event-location">Volcanoes National Park, Rwanda</div>
+                    <div class="event-desc">Experience the thrill of tracking mountain gorillas in their natural habitat. Includes guided tours, cultural evenings, and more.</div>
+                </div>
+            </div>
+            <div class="event-card">
+                <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Rwanda-Denmark Cultural Festival" class="event-img">
+                <div class="event-info">
+                    <div class="event-date">July 10-14, 2025</div>
+                    <div class="event-title">Rwanda-Denmark Cultural Festival</div>
+                    <div class="event-location">Kigali & Online</div>
+                    <div class="event-desc">A celebration of friendship: music, food, art, and workshops highlighting the best of Rwandan and Danish culture.</div>
+                </div>
+            </div>
+            <div class="event-card">
+                <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=600&q=80" alt="Green Tourism Forum" class="event-img">
+                <div class="event-info">
+                    <div class="event-date">August 3-5, 2025</div>
+                    <div class="event-title">Green Tourism Forum</div>
+                    <div class="event-location">Rubavu, Lake Kivu</div>
+                    <div class="event-desc">Join sustainability leaders and entrepreneurs for talks, eco-tours, and hands-on conservation activities.</div>
+                </div>
+            </div>
+            <div class="event-card">
+                <img src="https://images.unsplash.com/photo-1482062364825-616fd23b8fc1?auto=format&fit=crop&w=600&q=80" alt="Coffee & Tea Expo" class="event-img">
+                <div class="event-info">
+                    <div class="event-date">September 18-20, 2025</div>
+                    <div class="event-title">Rwanda Coffee & Tea Expo</div>
+                    <div class="event-location">Kigali Convention Centre</div>
+                    <div class="event-desc">Taste, learn, and connect with Rwanda’s world-renowned coffee and tea producers. Includes tastings, workshops, and live demos.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title gallery-section">Moments from Past Events</div>
+        <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=400&q=80" alt="Past Event 1" class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Past Event 2" class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?auto=format&fit=crop&w=400&q=80" alt="Past Event 3" class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=400&q=80" alt="Past Event 4" class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1469398715555-76331a0b1b49?auto=format&fit=crop&w=400&q=80" alt="Past Event 5" class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1509228468518-c5eeecbff44a?auto=format&fit=crop&w=400&q=80" alt="Past Event 6" class="gallery-img">
+        </div>
+
+        <div class="section-title past-events-section">Past Events & Highlights</div>
+        <div class="past-event-list">
+            <div class="past-event-card">
+                <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3c8b?auto=format&fit=crop&w=400&q=80" alt="Kwita Izina 2024" class="past-event-img">
+                <div class="past-event-title">Kwita Izina 2024</div>
+                <div class="past-event-desc">Participated in Rwanda’s gorilla naming ceremony, featuring music, dance, and conservation activities with international guests.</div>
+            </div>
+            <div class="past-event-card">
+                <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3c8b?auto=format&fit=crop&w=400&q=80" alt="Nyungwe Adventure" class="past-event-img">
+                <div class="past-event-title">Nyungwe Adventure</div>
+                <div class="past-event-desc">Guided group hikes and canopy walks through Nyungwe National Park’s breathtaking rainforest, spotting chimpanzees and rare birds.</div>
+            </div>
+            <div class="past-event-card">
+                <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=400&q=80" alt="Danish Delegation Visit" class="past-event-img">
+                <div class="past-event-title">Danish Delegation Visit</div>
+                <div class="past-event-desc">Welcomed Danish tourism professionals for a cultural exchange and business networking program in Kigali and Musanze.</div>
+            </div>
+            <div class="past-event-card">
+                <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=400&q=80" alt="Community Clean-Up Day" class="past-event-img">
+                <div class="past-event-title">Community Clean-Up Day</div>
+                <div class="past-event-desc">Coordinated local volunteers to clean up Lake Kivu beaches and plant trees, supporting environmental sustainability and community spirit.</div>
+            </div>
+            <div class="past-event-card">
+                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Kigali Night Walks" class="past-event-img">
+                <div class="past-event-title">Kigali Night Walks</div>
+                <div class="past-event-desc">Organized safe and vibrant night-time city tours, exploring Kigali’s food, music, and art scenes.</div>
+            </div>
+            <div class="past-event-card">
+                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Lake Kivu Boat Festival" class="past-event-img">
+                <div class="past-event-title">Lake Kivu Boat Festival</div>
+                <div class="past-event-desc">Hosted water sports, live concerts, and local cuisine tastings, bringing together communities from Rwanda and visiting tourists.</div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Feature Your Event!</h2>
+            <p>Are you organizing a festival, adventure, or cultural gathering in Rwanda or Denmark? Partner with us to reach more travelers, promote your event, and create lifelong memories together.</p>
+            <a href="mailto:info@pprwandatours.com?subject=Event Partnership">Contact Us</a>
+        </div>
+    </div>
+</body>
+</html>

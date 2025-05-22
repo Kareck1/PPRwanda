@@ -4,201 +4,533 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Partnerships | PPR Wanda Tours</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Quicksand:wght@700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #2269a7;
-            --secondary: #f9b233;
-            --background: #f7f9fa;
-            --text: #232b2b;
-            --accent: #e3eff9;
-            --card-bg: #fff;
-            --card-shadow: 0 4px 16px rgba(34, 105, 167, 0.08);
+            --dk-red: #eb3340;
+            --rw-yellow: #ffd100;
+            --sky: #6ec1e4;
+            --deep-blue: #234c8a;
+            --soft-bg: #f6f8fb;
+            --white: #fff;
+            --shadow: 0 4px 32px 0 rgba(35,76,138,0.07);
+            --shadow-lg: 0 8px 32px 0 rgba(35,76,138,0.19);
+            --text: #222e39;
+            --subtle: #73809a;
+            --section-gap: 70px;
         }
         body {
             margin: 0;
             font-family: 'Montserrat', Arial, sans-serif;
-            background: var(--background);
+            background: var(--soft-bg);
             color: var(--text);
         }
-        .header {
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 40px 0 30px 0;
+        header {
+            background: linear-gradient(120deg, var(--sky) 0%, var(--dk-red) 120%);
+            color: var(--white);
+            padding: 58px 0 38px 0;
             text-align: center;
+            border-bottom-left-radius: 90px 40px;
+            border-bottom-right-radius: 90px 40px;
+            box-shadow: var(--shadow-lg);
         }
-        .header h1 {
-            margin: 0;
-            font-size: 2.8rem;
-            font-weight: 700;
+        header h1 {
+            font-family: 'Quicksand', cursive, Arial, sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
             letter-spacing: 2px;
         }
-        .header p {
-            margin: 16px auto 0 auto;
-            font-size: 1.25rem;
+        header p {
+            font-size: 1.18rem;
             max-width: 700px;
+            margin: 0 auto;
+            color: var(--rw-yellow);
             font-weight: 500;
         }
-        .partners-section {
-            margin: 40px auto;
-            max-width: 1200px;
-            padding: 0 20px;
+        .intro-section {
+            text-align: center;
+            max-width: 800px;
+            margin: 38px auto 20px auto;
+            font-size: 1.18rem;
+            color: var(--deep-blue);
         }
         .section-title {
+            font-family: 'Quicksand', Arial, sans-serif;
             font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 12px;
-            border-left: 6px solid var(--secondary);
-            padding-left: 10px;
+            color: var(--deep-blue);
+            margin: var(--section-gap) 0 25px 0;
+            padding-left: 8px;
+            border-left: 7px solid var(--rw-yellow);
+            letter-spacing: 1.8px;
         }
-        .partner-list {
+        .partner-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 38px;
         }
         .partner-card {
-            background: var(--card-bg);
-            border-radius: 16px;
-            box-shadow: var(--card-shadow);
-            padding: 30px 24px 24px 24px;
+            background: var(--white);
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: box-shadow 0.18s, transform 0.18s;
+            padding-bottom: 8px;
+        }
+        .partner-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-6px) scale(1.012);
+        }
+        .partner-logo {
+            width: 110px;
+            height: 110px;
+            margin: 24px auto 12px auto;
+            object-fit: contain;
+            border-radius: 50%;
+            background: var(--soft-bg);
+            box-shadow: 0 2px 12px #dde8f7;
+            display: block;
+        }
+        .partner-info {
+            padding: 0 26px 20px 26px;
+            flex: 1 1 auto;
             display: flex;
             flex-direction: column;
             align-items: center;
-            transition: transform 0.2s, box-shadow 0.2s;
         }
-        .partner-card:hover {
-            transform: translateY(-6px) scale(1.03);
-            box-shadow: 0 8px 28px rgba(34, 105, 167, 0.20);
-        }
-        .partner-logo {
-            width: 85px;
-            height: 85px;
-            object-fit: contain;
-            margin-bottom: 18px;
-            border-radius: 50%;
-            box-shadow: 0 2px 6px #e3eff9;
-            background: var(--accent);
-            padding: 10px;
-        }
-        .partner-card h3 {
-            margin: 0 0 8px 0;
-            font-size: 1.2rem;
-            color: var(--primary);
+        .partner-title {
+            font-size: 1.22rem;
+            color: var(--deep-blue);
             font-weight: 700;
+            margin-bottom: 7px;
+            text-align: center;
         }
-        .partner-card p {
+        .partner-desc {
+            color: var(--subtle);
+            font-size: 1.04rem;
+            margin-bottom: 7px;
+            text-align: center;
+        }
+        .partner-link {
+            color: var(--white);
+            background: var(--deep-blue);
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 7px;
+            padding: 7px 20px;
             font-size: 1rem;
-            margin: 0;
-            color: #444;
-            text-align: center;
+            margin-top: 8px;
+            box-shadow: 0 1px 7px #e0d9a7;
+            transition: background 0.19s, color 0.19s;
         }
-        .cta-section {
-            background: var(--primary);
-            color: white;
-            padding: 30px 20px;
-            border-radius: 18px;
+        .partner-link:hover {
+            background: var(--rw-yellow);
+            color: var(--deep-blue);
+        }
+        /* Partnership Benefits */
+        .benefits-section {
+            background: var(--white);
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+            max-width: 1100px;
+            margin: var(--section-gap) auto;
+            padding: 44px 6vw 34px 6vw;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 32px;
+        }
+        .benefit-block {
+            flex: 1 1 250px;
+            min-width: 230px;
+            max-width: 320px;
             text-align: center;
-            margin: 42px 0 32px 0;
+            margin: 0 auto;
+        }
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--dk-red);
+            margin-bottom: 10px;
+        }
+        .benefit-title {
+            font-weight: 700;
+            font-size: 1.18rem;
+            color: var(--deep-blue);
+            margin-bottom: 7px;
+        }
+        .benefit-desc {
+            font-size: 1.04rem;
+            color: var(--subtle);
+        }
+        /* Partner Stories */
+        .stories-section {
+            margin: var(--section-gap) auto;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+        .story-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+            gap: 40px;
+        }
+        .story-card {
+            background: var(--white);
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: box-shadow 0.18s, transform 0.18s;
+        }
+        .story-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-6px) scale(1.01);
+        }
+        .story-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: var(--soft-bg);
+            cursor: pointer;
+            transition: filter 0.15s;
+        }
+        .story-img:hover {
+            filter: brightness(0.93);
+        }
+        .story-info {
+            padding: 22px 18px 18px 22px;
+            flex: 1 1 auto;
+        }
+        .story-title {
+            font-size: 1.22rem;
+            color: var(--deep-blue);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .story-desc {
+            font-size: 1.04rem;
+            color: var(--subtle);
+        }
+        /* Gallery styles */
+        .gallery-section {
+            margin-top: var(--section-gap);
+        }
+        .gallery-title {
+            font-family: 'Quicksand', Arial, sans-serif;
+            font-size: 1.35rem;
+            color: var(--dk-red);
+            margin-bottom: 18px;
+            margin-left: 4px;
+            letter-spacing: 1.3px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 22px;
+        }
+        .gallery-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            background: var(--soft-bg);
+            cursor: pointer;
+            transition: filter 0.16s;
+        }
+        .gallery-img:hover {
+            filter: brightness(0.96) saturate(1.1);
+        }
+        /* Call to Action */
+        .cta-section {
+            margin: var(--section-gap) auto 0 auto;
+            background: linear-gradient(90deg, var(--rw-yellow) 30%, var(--sky) 100%);
+            color: var(--deep-blue);
+            border-radius: 22px;
+            padding: 38px 20px;
+            text-align: center;
+            box-shadow: 0 2px 18px #e1e8f7a2;
             max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
         }
         .cta-section h2 {
-            margin-top: 0;
+            margin: 0 0 13px 0;
             font-size: 2rem;
+            font-family: 'Quicksand', cursive, Arial, sans-serif;
         }
         .cta-section p {
             font-size: 1.15rem;
-            margin-bottom: 14px;
+            margin-bottom: 18px;
         }
         .cta-section a {
             display: inline-block;
-            background: var(--secondary);
-            color: var(--text);
+            background: var(--deep-blue);
+            color: var(--white);
             font-weight: 700;
             text-decoration: none;
-            padding: 12px 32px;
+            padding: 13px 36px;
             border-radius: 8px;
-            font-size: 1.1rem;
+            font-size: 1.12rem;
+            margin-top: 12px;
             transition: background 0.2s, color 0.2s;
         }
         .cta-section a:hover {
-            background: #ffce5a;
-            color: var(--primary);
+            background: var(--dk-red);
+            color: var(--rw-yellow);
+        }
+        /* Featured Logos Bar */
+        .brands-bar {
+            background: #fff;
+            padding: 24px 0;
+            margin-top: 0;
+            border-top: 1.5px solid #dde8f7;
+            display: flex;
+            gap: 38px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .brand-logo {
+            height: 42px;
+            object-fit: contain;
+            filter: grayscale(0.3) contrast(1.08);
+            opacity: 0.84;
+            transition: filter 0.16s, opacity 0.16s;
+        }
+        .brand-logo:hover {
+            filter: none;
+            opacity: 1;
+        }
+        /* Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: rgba(34,46,57,0.92);
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox.active {
+            display: flex;
+        }
+        .lightbox-img {
+            max-width: 94vw;
+            max-height: 87vh;
+            border-radius: 14px;
+            box-shadow: 0 8px 36px #0009;
+            background: var(--white);
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 40px;
+            right: 60px;
+            font-size: 2.2rem;
+            color: var(--rw-yellow);
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            z-index: 1050;
+            filter: drop-shadow(0 0 4px #222);
+        }
+        @media (max-width: 900px) {
+            .benefits-section { flex-direction: column; gap: 18px;}
+            .benefit-block {max-width: 100%;}
+            .partner-grid, .story-grid, .gallery-grid { grid-template-columns: 1fr; }
         }
         @media (max-width: 600px) {
-            .header h1 { font-size: 2rem; }
-            .section-title { font-size: 1.3rem; }
-            .partner-card { padding: 18px 8px; }
+            header h1 { font-size: 1.3rem; }
+            .section-title, .cta-section h2 { font-size: 1.13rem;}
+            .intro-section { font-size: 1rem;}
+            .gallery-img { height: 120px;}
+            .partner-logo { width: 70px; height: 70px;}
         }
     </style>
 </head>
 <body>
-
-    <div class="header">
-        <h1>Our Partnerships</h1>
+    <header>
+        <h1>Partner With Us</h1>
+        <p>Collaboration for a brighter, more sustainable future in Rwanda, Denmark, and beyond.</p>
+    </header>
+    <div class="intro-section">
         <p>
-            At PPR Wanda Tours, we believe in the power of collaboration. Our partners help us deliver authentic, memorable, and sustainable travel experiences across Rwanda and beyond.
+            PPR Wanda Tours thrives on the power of strategic partnerships. By working with global and local organizations, we create meaningful travel experiences, support local communities, and champion sustainable tourism. Explore our network, see our impact, and discover why partnering with us is a win for all!
         </p>
     </div>
-
-    <div class="partners-section">
+    <main>
         <div class="section-title">Featured Partners</div>
-        <div class="partner-list">
-            <!-- Example Partner Card 1 -->
+        <div class="partner-grid">
             <div class="partner-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Rwanda_Development_Board_logo.png" alt="Rwanda Development Board" class="partner-logo">
-                <h3>Rwanda Development Board</h3>
-                <p>We collaborate closely with the RDB to promote Rwanda’s tourism, conservation, and sustainable economic growth.</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Rwanda_Development_Board_logo.png" alt="Rwanda Development Board" class="partner-logo lightboxable">
+                <div class="partner-info">
+                    <div class="partner-title">Rwanda Development Board</div>
+                    <div class="partner-desc">Strategic ally for national economic growth, conservation, and tourism expansion in Rwanda.</div>
+                    <a class="partner-link" href="https://rdb.rw/" target="_blank">Learn more</a>
+                </div>
             </div>
-            <!-- Example Partner Card 2 -->
             <div class="partner-card">
-                <img src="https://www.visitrwanda.com/wp-content/themes/rdb/img/visit-rwanda-logo.svg" alt="Visit Rwanda" class="partner-logo">
-                <h3>Visit Rwanda</h3>
-                <p>Our partnership with Visit Rwanda lets us offer exclusive access and insights into Rwanda’s top destinations and cultural events.</p>
+                <img src="https://www.visitrwanda.com/wp-content/themes/rdb/img/visit-rwanda-logo.svg" alt="Visit Rwanda" class="partner-logo lightboxable">
+                <div class="partner-info">
+                    <div class="partner-title">Visit Rwanda</div>
+                    <div class="partner-desc">Delivering exclusive access to Rwanda’s top sites and cultural events for our travelers and partners.</div>
+                    <a class="partner-link" href="https://visitrwanda.com/" target="_blank">Learn more</a>
+                </div>
             </div>
-            <!-- Example Partner Card 3 -->
             <div class="partner-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/African_Wildlife_Foundation_logo.png" alt="African Wildlife Foundation" class="partner-logo">
-                <h3>African Wildlife Foundation</h3>
-                <p>Committed to responsible tourism, we support wildlife conservation and community development in partnership with AWF.</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/African_Wildlife_Foundation_logo.png" alt="African Wildlife Foundation" class="partner-logo lightboxable">
+                <div class="partner-info">
+                    <div class="partner-title">African Wildlife Foundation</div>
+                    <div class="partner-desc">Joint initiatives for conservation, education, and community empowerment.</div>
+                    <a class="partner-link" href="https://awf.org/" target="_blank">Learn more</a>
+                </div>
             </div>
-            <!-- Example Partner Card 4 -->
             <div class="partner-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Air_Rwanda_logo.png" alt="RwandAir" class="partner-logo">
-                <h3>RwandAir</h3>
-                <p>Our collaboration with RwandAir ensures seamless travel options and special offers for our tour guests.</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Air_Rwanda_logo.png" alt="RwandAir" class="partner-logo lightboxable">
+                <div class="partner-info">
+                    <div class="partner-title">RwandAir</div>
+                    <div class="partner-desc">Seamless travel and unique offers for our guests, powered by Rwanda’s national carrier.</div>
+                    <a class="partner-link" href="https://rwandair.com/" target="_blank">Learn more</a>
+                </div>
             </div>
-            <!-- Example Partner Card 5 -->
             <div class="partner-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/UNESCO_logo.svg" alt="UNESCO" class="partner-logo">
-                <h3>UNESCO</h3>
-                <p>We work with UNESCO to protect and promote Rwanda’s world heritage sites and cultural treasures.</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/UNESCO_logo.svg" alt="UNESCO" class="partner-logo lightboxable">
+                <div class="partner-info">
+                    <div class="partner-title">UNESCO</div>
+                    <div class="partner-desc">Celebrating and preserving Rwanda’s world heritage sites and cultural treasures together.</div>
+                    <a class="partner-link" href="https://en.unesco.org/countries/rwanda" target="_blank">Learn more</a>
+                </div>
             </div>
-            <!-- Example Partner Card 6 -->
             <div class="partner-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/World_Bank_logo.svg" alt="World Bank" class="partner-logo">
-                <h3>World Bank</h3>
-                <p>Supporting sustainable tourism development, our partnership with the World Bank helps empower local communities.</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/World_Bank_logo.svg" alt="World Bank" class="partner-logo lightboxable">
+                <div class="partner-info">
+                    <div class="partner-title">World Bank</div>
+                    <div class="partner-desc">Sustainable tourism and local growth supported by innovation and investment.</div>
+                    <a class="partner-link" href="https://www.worldbank.org/en/country/rwanda" target="_blank">Learn more</a>
+                </div>
             </div>
         </div>
 
-        <div class="section-title">Why Partner With Us?</div>
-        <ul style="font-size:1.08rem; line-height:1.85; color:#205176; margin-bottom: 36px; margin-left: 20px;">
-            <li><strong>Trusted Network:</strong> Join a reputable ecosystem of tourism, hospitality, and conservation leaders.</li>
-            <li><strong>Global Impact:</strong> Amplify your reach and impact by collaborating on conservation, education, and community projects.</li>
-            <li><strong>Innovation:</strong> Co-create unique travel experiences and sustainable solutions for visitors and local communities.</li>
-            <li><strong>Mutual Growth:</strong> Expand opportunities, share expertise, and unlock new markets together.</li>
-        </ul>
+        <div class="benefits-section">
+            <div class="benefit-block">
+                <div class="benefit-icon">🤝</div>
+                <div class="benefit-title">Trusted Network</div>
+                <div class="benefit-desc">Partner with leading organizations in tourism, hospitality, and conservation, gaining access to a reputable ecosystem.</div>
+            </div>
+            <div class="benefit-block">
+                <div class="benefit-icon">🌍</div>
+                <div class="benefit-title">Global Impact</div>
+                <div class="benefit-desc">Amplify your reach and create lasting change by collaborating on conservation, education, and community projects worldwide.</div>
+            </div>
+            <div class="benefit-block">
+                <div class="benefit-icon">💡</div>
+                <div class="benefit-title">Innovative Experiences</div>
+                <div class="benefit-desc">Co-create unique travel products and sustainable solutions, blending Nordic innovation with Rwandan authenticity.</div>
+            </div>
+            <div class="benefit-block">
+                <div class="benefit-icon">📈</div>
+                <div class="benefit-title">Mutual Growth</div>
+                <div class="benefit-desc">Unlock new opportunities, share expertise, and expand into new markets together.</div>
+            </div>
+            <div class="benefit-block">
+                <div class="benefit-icon">🌱</div>
+                <div class="benefit-title">Positive Sustainability</div>
+                <div class="benefit-desc">All partnerships support our vision of responsible tourism, environmental care, and community empowerment.</div>
+            </div>
+        </div>
 
+        <div class="stories-section">
+            <div class="section-title">Partnering in Action</div>
+            <div class="story-grid">
+                <div class="story-card">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Conservation Impact" class="story-img lightboxable">
+                    <div class="story-info">
+                        <div class="story-title">Conservation in Volcanoes National Park</div>
+                        <div class="story-desc">In partnership with AWF and local communities, we helped fund anti-poaching patrols and education programs, resulting in increased gorilla populations and new eco-tourism jobs.</div>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80" alt="Denmark Exchange" class="story-img lightboxable">
+                    <div class="story-info">
+                        <div class="story-title">Rwanda–Denmark Cultural Exchange</div>
+                        <div class="story-desc">Our cross-cultural events with Danish partners fostered creative collaboration, youth workshops, and joint tourism campaigns that reached thousands in both countries.</div>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=80" alt="Women in Tourism" class="story-img lightboxable">
+                    <div class="story-info">
+                        <div class="story-title">Women in Tourism</div>
+                        <div class="story-desc">With UNESCO and RDB, we implemented training for women guides and entrepreneurs, increasing female representation and leadership in Rwanda’s tourism sector.</div>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <img src="https://images.unsplash.com/photo-1469398715555-76331a0b1b49?auto=format&fit=crop&w=800&q=80" alt="Sustainable Lodges" class="story-img lightboxable">
+                    <div class="story-info">
+                        <div class="story-title">Building Sustainable Lodges</div>
+                        <div class="story-desc">Our eco-lodges, developed with World Bank support, use local materials and solar power, providing jobs and protecting Rwanda’s landscapes.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-section">
+            <div class="gallery-title">Partnership Highlights Gallery</div>
+            <div class="gallery-grid">
+                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="Partner Event 1" class="gallery-img lightboxable">
+                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80" alt="Partner Event 2" class="gallery-img lightboxable">
+                <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=800&q=80" alt="Partner Event 3" class="gallery-img lightboxable">
+                <img src="https://images.unsplash.com/photo-1509228468518-c5eeecbff44a?auto=format&fit=crop&w=800&q=80" alt="Partner Event 4" class="gallery-img lightboxable">
+            </div>
+        </div>
         <div class="cta-section">
-            <h2>Become a Partner</h2>
-            <p>Interested in collaborating with PPR Wanda Tours? We’re always open to new partnerships that align with our values. Let’s build something amazing together!</p>
-            <a href="mailto:info@pprwandatours.com?subject=Partnership Inquiry">Contact Us</a>
+            <h2>Ready to Partner With Us?</h2>
+            <p>
+                Join our network of innovators, conservationists, and travel leaders. Whether you're a tour operator, NGO, business, or government agency, let's create lasting impact together.
+            </p>
+            <a href="mailto:info@pprwandatours.com?subject=Partnership Inquiry">Become a Partner</a>
         </div>
+    </main>
+    <div class="brands-bar">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Rwanda_Development_Board_logo.png" alt="Rwanda Development Board" class="brand-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Visit_Rwanda_logo.svg" alt="Visit Rwanda" class="brand-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/TV_2_Danmark_logo.svg" alt="TV2 Denmark" class="brand-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/African_Wildlife_Foundation_logo.png" alt="African Wildlife Foundation" class="brand-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/UNESCO_logo.svg" alt="UNESCO" class="brand-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/BBC_logo_%281997-2021%29.svg" alt="BBC" class="brand-logo">
     </div>
-
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" title="Close">&times;</button>
+        <img src="" alt="Fullscreen image" class="lightbox-img" id="lightboxImg">
+    </div>
+    <script>
+        // Lightbox for gallery and partner logos
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxClose = document.getElementById('lightboxClose');
+        document.querySelectorAll('.lightboxable').forEach(img => {
+            let lastTap = 0;
+            img.addEventListener('click', e => {
+                const now = new Date().getTime();
+                if (now - lastTap < 400) {
+                    // Double Tap
+                    lightboxImg.src = img.src;
+                    lightbox.classList.add('active');
+                }
+                lastTap = now;
+            });
+            img.addEventListener('dblclick', e => {
+                lightboxImg.src = img.src;
+                lightbox.classList.add('active');
+            });
+        });
+        lightboxClose.onclick = () => lightbox.classList.remove('active');
+        lightbox.onclick = (e) => {
+            if (e.target === lightbox) lightbox.classList.remove('active');
+        };
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "Escape") lightbox.classList.remove('active');
+        });
+    </script>
 </body>
 </html>

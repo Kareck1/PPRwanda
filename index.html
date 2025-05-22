@@ -2402,102 +2402,148 @@ window.addEventListener("keydown", function(e){
 window.setTimeout(handleStickyLock, 500);
 </script>
 
-<!-- APPLE-STYLE FOOTER -->
-<footer class="apple-footer">
-  <div class="apple-footer-content">
-    <div class="apple-footer-cols">
-      <div>
-        <div class="apple-footer-logo">PPRWANDA</div>
-        <div class="apple-footer-desc">Connecting Rwanda and Denmark with authentic, safe, and sustainable travel.</div>
+
+
+
+
+
+
+    
+<footer style="background:#f4f4f4; color:#333; font-family: Arial, sans-serif; padding:40px 20px; box-sizing: border-box;">
+  <style>
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap; /* no wrapping */
+      width: 100%;
+      overflow: hidden; /* no scroll */
+    }
+
+    .footer-column {
+      flex: 1 1 0; /* flex-grow:1, flex-shrink:1, flex-basis:0 */
+      padding: 0 10px;
+      box-sizing: border-box;
+      white-space: normal;
+      min-width: 0; /* allow shrinking below default */
+      word-break: break-word; /* break long words */
+    }
+
+    .footer-column h3 {
+      color: #0066cc;
+      margin-bottom: 15px;
+      font-size: 17px;
+      white-space: normal;
+    }
+
+    .footer-column p,
+    .footer-column a {
+      color: #555;
+      font-size: 15px;
+      text-decoration: none;
+      white-space: normal;
+      word-break: break-word;
+    }
+
+    .footer-column a:hover {
+      color: #0066cc;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 10px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin-right: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    .footer-flags img {
+      width: 32px;
+      height: 22px;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding: 20px 10px;
+      background-color: #ddd;
+      font-size: 14px;
+      margin-top: 30px;
+      white-space: normal;
+    }
+
+    /* Optional: reduce font size on very small screens */
+    @media (max-width: 320px) {
+      .footer-column h3 {
+        font-size: 15px;
+      }
+      .footer-column p,
+      .footer-column a {
+        font-size: 13px;
+      }
+    }
+  </style>
+
+  <div class="footer-container">
+
+    <div class="footer-column">
+      <h3>About PPRwanda Tours</h3>
+      <p>Explore Rwanda’s nature and Denmark’s charm with local expert guides.</p>
+      <div class="footer-flags">
+        <img src="https://flagcdn.com/w40/rw.png" alt="Rwanda Flag" />
+        <img src="https://flagcdn.com/w40/dk.png" alt="Denmark Flag" />
       </div>
-      <div>
-        <div class="apple-footer-title">Explore</div>
-        <a href="#signature-experiences">Packages</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact</a>
-        <a href="#">FAQ</a>
-      </div>
-      <div>
-        <div class="apple-footer-title">Legal</div>
-        <a href="#">Terms & Conditions</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Cookies</a>
-      </div>
-      <div>
-        <div class="apple-footer-title">Contact</div>
-        <div>📍 Kigali, Rwanda | Denmark</div>
-        <div>📞 +45 20865639</div>
-        <div>✉️ <a href="mailto:pprwanda@outlook.com">pprwanda@outlook.com</a></div>
+      <div class="social-icons" style="margin-top: 15px;">
+        <a href="https://facebook.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" /></a>
+        <a href="https://instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/24/733/733558.png" alt="Instagram" /></a>
+        <a href="https://twitter.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="Twitter" /></a>
+        <a href="https://youtube.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/24/733/733646.png" alt="YouTube" /></a>
       </div>
     </div>
-    <div class="apple-footer-bottom">
-      Copyright © 2025 PPRWANDA Tours. All rights reserved.
+
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#tours">Tours</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
     </div>
+
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p>Email: info@pprwandatours.com</p>
+      <p>Phone: +250 123 456 789</p>
+      <p>Address: Kigali, Rwanda</p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Explore More</h3>
+      <ul>
+        <li><a href="#gallery">Photo Gallery</a></li>
+        <li><a href="#blog">Travel Blog</a></li>
+        <li><a href="#partners">Partners</a></li>
+        <li><a href="#reviews">Customer Reviews</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 PPRwanda Tours. All rights reserved. | Made with love in Rwanda 🇷🇼 & Denmark 🇩🇰
   </div>
 </footer>
-<style>
-.apple-footer {
-  background: #121212;
-  color: #d1d1d1;
-  font-size: 1rem;
-  margin-top: 38px;
-  border-top: 1px solid #222;
-}
-.apple-footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 36px 18px 0 18px;
-}
-.apple-footer-cols {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 42px;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 30px;
-}
-.apple-footer-logo {
-  font-size: 1.6rem;
-  color: #ffd600;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-bottom: 11px;
-}
-.apple-footer-title {
-  color: #fff;
-  font-weight: 600;
-  margin-bottom: 9px;
-}
-.apple-footer-desc {
-  color: #d1d1d1;
-  margin-bottom: 8px;
-  font-size: 1.03rem;
-}
-.apple-footer-cols a {
-  color: #d1d1d1;
-  display: block;
-  margin-bottom: 7px;
-  text-decoration: none;
-  font-size: 1.01rem;
-  transition: color 0.15s;
-}
-.apple-footer-cols a:hover {
-  color: #ffd600;
-}
-.apple-footer-bottom {
-  text-align: center;
-  color: #888;
-  font-size: 0.99rem;
-  padding: 14px 0 18px 0;
-  border-top: 1px solid #232323;
-  letter-spacing: 0.5px;
-}
-@media (max-width: 900px) {
-  .apple-footer-cols {
-    flex-direction: column;
-    gap: 20px;
-  }
-}
-</style>
-
-

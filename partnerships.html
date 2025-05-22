@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partnerships | PPR Wanda Tours</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2269a7;
+            --secondary: #f9b233;
+            --background: #f7f9fa;
+            --text: #232b2b;
+            --accent: #e3eff9;
+            --card-bg: #fff;
+            --card-shadow: 0 4px 16px rgba(34, 105, 167, 0.08);
+        }
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: var(--background);
+            color: var(--text);
+        }
+        .header {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 40px 0 30px 0;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        .header p {
+            margin: 16px auto 0 auto;
+            font-size: 1.25rem;
+            max-width: 700px;
+            font-weight: 500;
+        }
+        .partners-section {
+            margin: 40px auto;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 12px;
+            border-left: 6px solid var(--secondary);
+            padding-left: 10px;
+        }
+        .partner-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .partner-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+            padding: 30px 24px 24px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .partner-card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 8px 28px rgba(34, 105, 167, 0.20);
+        }
+        .partner-logo {
+            width: 85px;
+            height: 85px;
+            object-fit: contain;
+            margin-bottom: 18px;
+            border-radius: 50%;
+            box-shadow: 0 2px 6px #e3eff9;
+            background: var(--accent);
+            padding: 10px;
+        }
+        .partner-card h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.2rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+        .partner-card p {
+            font-size: 1rem;
+            margin: 0;
+            color: #444;
+            text-align: center;
+        }
+        .cta-section {
+            background: var(--primary);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 18px;
+            text-align: center;
+            margin: 42px 0 32px 0;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-section h2 {
+            margin-top: 0;
+            font-size: 2rem;
+        }
+        .cta-section p {
+            font-size: 1.15rem;
+            margin-bottom: 14px;
+        }
+        .cta-section a {
+            display: inline-block;
+            background: var(--secondary);
+            color: var(--text);
+            font-weight: 700;
+            text-decoration: none;
+            padding: 12px 32px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            transition: background 0.2s, color 0.2s;
+        }
+        .cta-section a:hover {
+            background: #ffce5a;
+            color: var(--primary);
+        }
+        @media (max-width: 600px) {
+            .header h1 { font-size: 2rem; }
+            .section-title { font-size: 1.3rem; }
+            .partner-card { padding: 18px 8px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Our Partnerships</h1>
+        <p>
+            At PPR Wanda Tours, we believe in the power of collaboration. Our partners help us deliver authentic, memorable, and sustainable travel experiences across Rwanda and beyond.
+        </p>
+    </div>
+
+    <div class="partners-section">
+        <div class="section-title">Featured Partners</div>
+        <div class="partner-list">
+            <!-- Example Partner Card 1 -->
+            <div class="partner-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Rwanda_Development_Board_logo.png" alt="Rwanda Development Board" class="partner-logo">
+                <h3>Rwanda Development Board</h3>
+                <p>We collaborate closely with the RDB to promote Rwanda’s tourism, conservation, and sustainable economic growth.</p>
+            </div>
+            <!-- Example Partner Card 2 -->
+            <div class="partner-card">
+                <img src="https://www.visitrwanda.com/wp-content/themes/rdb/img/visit-rwanda-logo.svg" alt="Visit Rwanda" class="partner-logo">
+                <h3>Visit Rwanda</h3>
+                <p>Our partnership with Visit Rwanda lets us offer exclusive access and insights into Rwanda’s top destinations and cultural events.</p>
+            </div>
+            <!-- Example Partner Card 3 -->
+            <div class="partner-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/African_Wildlife_Foundation_logo.png" alt="African Wildlife Foundation" class="partner-logo">
+                <h3>African Wildlife Foundation</h3>
+                <p>Committed to responsible tourism, we support wildlife conservation and community development in partnership with AWF.</p>
+            </div>
+            <!-- Example Partner Card 4 -->
+            <div class="partner-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Air_Rwanda_logo.png" alt="RwandAir" class="partner-logo">
+                <h3>RwandAir</h3>
+                <p>Our collaboration with RwandAir ensures seamless travel options and special offers for our tour guests.</p>
+            </div>
+            <!-- Example Partner Card 5 -->
+            <div class="partner-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/UNESCO_logo.svg" alt="UNESCO" class="partner-logo">
+                <h3>UNESCO</h3>
+                <p>We work with UNESCO to protect and promote Rwanda’s world heritage sites and cultural treasures.</p>
+            </div>
+            <!-- Example Partner Card 6 -->
+            <div class="partner-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/World_Bank_logo.svg" alt="World Bank" class="partner-logo">
+                <h3>World Bank</h3>
+                <p>Supporting sustainable tourism development, our partnership with the World Bank helps empower local communities.</p>
+            </div>
+        </div>
+
+        <div class="section-title">Why Partner With Us?</div>
+        <ul style="font-size:1.08rem; line-height:1.85; color:#205176; margin-bottom: 36px; margin-left: 20px;">
+            <li><strong>Trusted Network:</strong> Join a reputable ecosystem of tourism, hospitality, and conservation leaders.</li>
+            <li><strong>Global Impact:</strong> Amplify your reach and impact by collaborating on conservation, education, and community projects.</li>
+            <li><strong>Innovation:</strong> Co-create unique travel experiences and sustainable solutions for visitors and local communities.</li>
+            <li><strong>Mutual Growth:</strong> Expand opportunities, share expertise, and unlock new markets together.</li>
+        </ul>
+
+        <div class="cta-section">
+            <h2>Become a Partner</h2>
+            <p>Interested in collaborating with PPR Wanda Tours? We’re always open to new partnerships that align with our values. Let’s build something amazing together!</p>
+            <a href="mailto:info@pprwandatours.com?subject=Partnership Inquiry">Contact Us</a>
+        </div>
+    </div>
+
+</body>
+</html>

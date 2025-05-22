@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media | PPR Wanda Tours</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Quicksand:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rw-green: #009e49;
+            --rw-yellow: #ffd100;
+            --dk-red: #ef3340;
+            --sky-blue: #87ceeb;
+            --cloud: #f8fafd;
+            --deep-blue: #2563eb;
+            --accent: #fff9f1;
+            --white: #fff;
+            --shadow: 0 2px 16px rgba(39, 134, 208, 0.09);
+        }
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: var(--cloud);
+            color: #232b2b;
+        }
+        header {
+            background: linear-gradient(100deg, var(--sky-blue) 0%, var(--rw-yellow) 80%);
+            padding: 50px 0 38px 0;
+            text-align: center;
+            border-bottom-left-radius: 80px 30px;
+            border-bottom-right-radius: 80px 30px;
+            box-shadow: 0 4px 18px #e7f8f3;
+        }
+        header h1 {
+            font-family: 'Quicksand', cursive, Arial, sans-serif;
+            font-size: 2.6rem;
+            color: var(--rw-green);
+            margin-bottom: 8px;
+        }
+        header p {
+            font-size: 1.2rem;
+            color: var(--dk-red);
+            font-weight: 700;
+            margin: 0 auto 0 auto;
+            letter-spacing: 1.2px;
+        }
+        .highlight-bar {
+            background: var(--rw-green);
+            color: var(--white);
+            text-align: center;
+            font-size: 1.08rem;
+            padding: 9px 0 7px 0;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+        }
+        .media-section {
+            max-width: 1200px;
+            margin: 38px auto 0 auto;
+            padding: 0 22px;
+        }
+        .section-title {
+            font-family: 'Quicksand', Arial, sans-serif;
+            font-size: 2rem;
+            color: var(--deep-blue);
+            margin-bottom: 18px;
+            padding-left: 8px;
+            border-left: 7px solid var(--rw-yellow);
+            letter-spacing: 1.8px;
+        }
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 32px;
+        }
+        .media-card {
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: transform 0.13s, box-shadow 0.13s;
+            display: flex;
+            flex-direction: column;
+        }
+        .media-card:hover {
+            transform: translateY(-4px) scale(1.017);
+            box-shadow: 0 5px 26px #c5eaff;
+        }
+        .media-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: var(--cloud);
+        }
+        .media-info {
+            padding: 18px 16px 14px 16px;
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .media-title {
+            font-size: 1.18rem;
+            color: var(--rw-green);
+            font-weight: 700;
+            margin: 0 0 7px 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+        .media-meta {
+            font-size: 0.95rem;
+            color: var(--dk-red);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .media-desc {
+            font-size: 1.01rem;
+            color: #405;
+            margin-bottom: 7px;
+        }
+        .media-link {
+            color: var(--deep-blue);
+            background: var(--rw-yellow);
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 7px;
+            padding: 6px 18px;
+            align-self: flex-start;
+            font-size: 1rem;
+            margin-top: 8px;
+            box-shadow: 0 1px 7px #e0d9a7;
+            transition: background 0.19s, color 0.19s;
+        }
+        .media-link:hover {
+            background: var(--rw-green);
+            color: var(--rw-yellow);
+        }
+        .video-section {
+            margin-top: 48px;
+        }
+        .videos-title {
+            font-family: 'Quicksand', Arial, sans-serif;
+            font-size: 1.5rem;
+            color: var(--dk-red);
+            margin-bottom: 15px;
+            margin-left: 4px;
+            letter-spacing: 1.6px;
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        .video-embed {
+            border-radius: 16px;
+            overflow: hidden;
+            background: #ddefff;
+            box-shadow: 0 2px 12px #bde5d5;
+            width: 100%;
+            aspect-ratio: 16/9;
+            border: none;
+        }
+        .gallery-section {
+            margin-top: 55px;
+        }
+        .gallery-title {
+            font-family: 'Quicksand', Arial, sans-serif;
+            font-size: 1.3rem;
+            color: var(--rw-yellow);
+            margin-bottom: 8px;
+            margin-left: 4px;
+            letter-spacing: 1.3px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 15px;
+        }
+        .gallery-img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 1px 7px #e0ffef;
+        }
+        @media (max-width: 700px) {
+            header h1 { font-size: 1.45rem; }
+            .section-title, .videos-title { font-size: 1.1rem;}
+            .media-grid, .video-grid, .gallery-grid { grid-template-columns: 1fr; }
+            .media-card, .media-info { padding: 10px 6px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Media & Press</h1>
+        <p>Stories, highlights, and the beauty of Rwanda & Denmark—captured for you by PPR Wanda Tours.</p>
+    </header>
+    <div class="highlight-bar">
+        Explore our gallery, watch our journeys, and find us in the news!
+    </div>
+    <main class="media-section">
+        <div class="section-title">Latest Features & Press</div>
+        <div class="media-grid">
+            <div class="media-card">
+                <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3c8b?auto=format&fit=crop&w=600&q=80" alt="National Geographic Feature" class="media-img">
+                <div class="media-info">
+                    <div class="media-title">National Geographic: "The Heart of Rwanda"</div>
+                    <div class="media-meta">National Geographic · April 2025</div>
+                    <div class="media-desc">PPR Wanda Tours featured as a leader in sustainable gorilla trekking and cultural immersion.</div>
+                    <a class="media-link" href="https://www.nationalgeographic.com/" target="_blank">Read Article</a>
+                </div>
+            </div>
+            <div class="media-card">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Visit Rwanda TV" class="media-img">
+                <div class="media-info">
+                    <div class="media-title">Visit Rwanda TV: "Adventure Across Rwanda"</div>
+                    <div class="media-meta">Visit Rwanda TV · March 2025</div>
+                    <div class="media-desc">A documentary featuring our unique tours, partnerships, and happy travelers in Rwanda’s top destinations.</div>
+                    <a class="media-link" href="https://www.visitrwanda.com/" target="_blank">Watch Episode</a>
+                </div>
+            </div>
+            <div class="media-card">
+                <img src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?auto=format&fit=crop&w=600&q=80" alt="Kigali Times" class="media-img">
+                <div class="media-info">
+                    <div class="media-title">Kigali Times: "Bridging Denmark & Rwanda"</div>
+                    <div class="media-meta">Kigali Times · January 2025</div>
+                    <div class="media-desc">Read about our Denmark-Rwanda travel exchange and its positive impact on local communities.</div>
+                    <a class="media-link" href="#" target="_blank">Read More</a>
+                </div>
+            </div>
+            <div class="media-card">
+                <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=600&q=80" alt="Denmark Travel Magazine" class="media-img">
+                <div class="media-info">
+                    <div class="media-title">Denmark Travel Magazine: "Rwanda’s Green Tourism"</div>
+                    <div class="media-meta">DTM · July 2024</div>
+                    <div class="media-desc">A feature on eco-friendly travel with PPR Wanda Tours and our Danish partners.</div>
+                    <a class="media-link" href="#" target="_blank">Read Article</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-section">
+            <div class="videos-title">Watch Our Stories</div>
+            <div class="video-grid">
+                <iframe class="video-embed" src="https://www.youtube.com/embed/0k4bR3PW2xM" title="Journey Through Rwanda"></iframe>
+                <iframe class="video-embed" src="https://www.youtube.com/embed/EcLr2XQGq6U" title="Cultural Exchange: Rwanda & Denmark"></iframe>
+                <iframe class="video-embed" src="https://www.youtube.com/embed/6p0ANj1YwLk" title="Sustainable Tourism with PPR Wanda"></iframe>
+            </div>
+        </div>
+
+        <div class="gallery-section">
+            <div class="gallery-title">Photo Gallery</div>
+            <div class="gallery-grid">
+                <img src="https://images.unsplash.com/photo-1509228468518-c5eeecbff44a?auto=format&fit=crop&w=400&q=80" alt="Gorilla Trek" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Lake Kivu Boat Festival" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=400&q=80" alt="Cultural Dance" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1469398715555-76331a0b1b49?auto=format&fit=crop&w=400&q=80" alt="Danish Delegation" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=400&q=80" alt="Kigali City" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Tea Fields Rwanda" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Nyungwe Forest" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3c8b?auto=format&fit=crop&w=400&q=80" alt="Community Project" class="gallery-img">
+            </div>
+        </div>
+    </main>
+</body>
+</html>

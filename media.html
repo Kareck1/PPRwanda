@@ -7,121 +7,126 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Quicksand:wght@700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --rw-green: #009e49;
+            --dk-red: #eb3340;
             --rw-yellow: #ffd100;
-            --dk-red: #ef3340;
-            --sky-blue: #87ceeb;
-            --cloud: #f8fafd;
-            --deep-blue: #2563eb;
-            --accent: #fff9f1;
+            --sky: #6ec1e4;
+            --deep-blue: #234c8a;
+            --soft-bg: #f6f8fb;
             --white: #fff;
-            --shadow: 0 2px 16px rgba(39, 134, 208, 0.09);
+            --shadow: 0 4px 32px 0 rgba(35,76,138,0.07);
+            --shadow-lg: 0 8px 32px 0 rgba(35,76,138,0.19);
+            --text: #222e39;
+            --subtle: #73809a;
+            --star: #ffc700;
         }
         body {
+            background: var(--soft-bg);
             margin: 0;
             font-family: 'Montserrat', Arial, sans-serif;
-            background: var(--cloud);
-            color: #232b2b;
+            color: var(--text);
         }
         header {
-            background: linear-gradient(100deg, var(--sky-blue) 0%, var(--rw-yellow) 80%);
-            padding: 50px 0 38px 0;
+            background: linear-gradient(120deg, var(--sky) 0%, var(--dk-red) 120%);
+            color: var(--white);
+            padding: 58px 0 40px 0;
             text-align: center;
-            border-bottom-left-radius: 80px 30px;
-            border-bottom-right-radius: 80px 30px;
-            box-shadow: 0 4px 18px #e7f8f3;
+            border-bottom-left-radius: 90px 40px;
+            border-bottom-right-radius: 90px 40px;
+            box-shadow: var(--shadow-lg);
         }
         header h1 {
             font-family: 'Quicksand', cursive, Arial, sans-serif;
-            font-size: 2.6rem;
-            color: var(--rw-green);
-            margin-bottom: 8px;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
         }
         header p {
-            font-size: 1.2rem;
-            color: var(--dk-red);
-            font-weight: 700;
-            margin: 0 auto 0 auto;
-            letter-spacing: 1.2px;
+            font-size: 1.18rem;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 500;
+            color: var(--rw-yellow);
         }
-        .highlight-bar {
-            background: var(--rw-green);
-            color: var(--white);
+        .intro-section {
             text-align: center;
-            font-size: 1.08rem;
-            padding: 9px 0 7px 0;
-            font-weight: 700;
-            letter-spacing: 1.5px;
+            max-width: 700px;
+            margin: 38px auto 20px auto;
+            font-size: 1.18rem;
+            color: var(--deep-blue);
         }
         .media-section {
             max-width: 1200px;
-            margin: 38px auto 0 auto;
-            padding: 0 22px;
+            margin: 0 auto 0 auto;
+            padding: 0 18px;
         }
         .section-title {
             font-family: 'Quicksand', Arial, sans-serif;
             font-size: 2rem;
             color: var(--deep-blue);
-            margin-bottom: 18px;
+            margin: 48px 0 25px 0;
             padding-left: 8px;
             border-left: 7px solid var(--rw-yellow);
             letter-spacing: 1.8px;
         }
         .media-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 32px;
+            grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
+            gap: 40px;
         }
         .media-card {
             background: var(--white);
-            border-radius: 16px;
+            border-radius: 19px;
             box-shadow: var(--shadow);
             overflow: hidden;
-            transition: transform 0.13s, box-shadow 0.13s;
             display: flex;
             flex-direction: column;
+            transition: box-shadow 0.18s, transform 0.18s;
         }
         .media-card:hover {
-            transform: translateY(-4px) scale(1.017);
-            box-shadow: 0 5px 26px #c5eaff;
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-6px) scale(1.01);
         }
         .media-img {
             width: 100%;
-            height: 200px;
+            height: 320px;
             object-fit: cover;
-            background: var(--cloud);
+            background: var(--soft-bg);
+            cursor: pointer;
+            transition: filter 0.15s;
+        }
+        .media-img:hover {
+            filter: brightness(0.93);
         }
         .media-info {
-            padding: 18px 16px 14px 16px;
+            padding: 24px 20px 18px 22px;
             flex: 1 1 auto;
             display: flex;
             flex-direction: column;
         }
         .media-title {
-            font-size: 1.18rem;
-            color: var(--rw-green);
+            font-size: 1.32rem;
+            color: var(--deep-blue);
             font-weight: 700;
-            margin: 0 0 7px 0;
-            font-family: 'Montserrat', Arial, sans-serif;
+            margin-bottom: 6px;
         }
         .media-meta {
-            font-size: 0.95rem;
+            font-size: 0.98rem;
             color: var(--dk-red);
             font-weight: 600;
             margin-bottom: 5px;
         }
         .media-desc {
-            font-size: 1.01rem;
-            color: #405;
-            margin-bottom: 7px;
+            font-size: 1.05rem;
+            color: var(--subtle);
+            margin-bottom: 10px;
         }
         .media-link {
-            color: var(--deep-blue);
-            background: var(--rw-yellow);
+            color: var(--white);
+            background: var(--deep-blue);
             font-weight: 700;
             text-decoration: none;
             border-radius: 7px;
-            padding: 6px 18px;
+            padding: 8px 21px;
             align-self: flex-start;
             font-size: 1rem;
             margin-top: 8px;
@@ -129,136 +134,318 @@
             transition: background 0.19s, color 0.19s;
         }
         .media-link:hover {
-            background: var(--rw-green);
-            color: var(--rw-yellow);
+            background: var(--rw-yellow);
+            color: var(--deep-blue);
         }
-        .video-section {
-            margin-top: 48px;
-        }
-        .videos-title {
-            font-family: 'Quicksand', Arial, sans-serif;
-            font-size: 1.5rem;
-            color: var(--dk-red);
-            margin-bottom: 15px;
-            margin-left: 4px;
-            letter-spacing: 1.6px;
-        }
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
-        .video-embed {
-            border-radius: 16px;
-            overflow: hidden;
-            background: #ddefff;
-            box-shadow: 0 2px 12px #bde5d5;
-            width: 100%;
-            aspect-ratio: 16/9;
-            border: none;
-        }
+
         .gallery-section {
-            margin-top: 55px;
+            margin-top: 65px;
         }
         .gallery-title {
             font-family: 'Quicksand', Arial, sans-serif;
-            font-size: 1.3rem;
-            color: var(--rw-yellow);
-            margin-bottom: 8px;
+            font-size: 1.35rem;
+            color: var(--dk-red);
+            margin-bottom: 18px;
             margin-left: 4px;
             letter-spacing: 1.3px;
         }
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 22px;
         }
         .gallery-img {
             width: 100%;
-            height: 120px;
+            height: 300px;
             object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 1px 7px #e0ffef;
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            background: var(--soft-bg);
+            cursor: pointer;
+            transition: filter 0.16s;
         }
-        @media (max-width: 700px) {
-            header h1 { font-size: 1.45rem; }
-            .section-title, .videos-title { font-size: 1.1rem;}
-            .media-grid, .video-grid, .gallery-grid { grid-template-columns: 1fr; }
-            .media-card, .media-info { padding: 10px 6px; }
+        .gallery-img:hover {
+            filter: brightness(0.96) saturate(1.1);
+        }
+
+        /* Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: rgba(34,46,57,0.92);
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox.active {
+            display: flex;
+        }
+        .lightbox-img {
+            max-width: 94vw;
+            max-height: 87vh;
+            border-radius: 14px;
+            box-shadow: 0 8px 36px #0009;
+            background: var(--white);
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 40px;
+            right: 60px;
+            font-size: 2.2rem;
+            color: var(--rw-yellow);
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            z-index: 1050;
+            filter: drop-shadow(0 0 4px #222);
+        }
+        /* Testimonials & Ratings */
+        .testimonials-section {
+            background: linear-gradient(120deg, var(--sky) 40%, var(--rw-yellow) 140%);
+            margin-top: 70px;
+            padding: 50px 0 40px 0;
+            border-radius: 38px 38px 0 0;
+            box-shadow: 0 -4px 18px #abcdff3a;
+            text-align: center;
+        }
+        .testimonials-title {
+            font-family: 'Quicksand', Arial, sans-serif;
+            font-size: 2rem;
+            color: var(--deep-blue);
+            margin-bottom: 32px;
+            letter-spacing: 1.5px;
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 34px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 3px 12px #e5e5e5;
+            padding: 34px 22px 26px 22px;
+            text-align: left;
+            position: relative;
+        }
+        .testimonial-quote {
+            font-size: 1.15rem;
+            color: #2d2d3a;
+            margin-bottom: 14px;
+            font-style: italic;
+        }
+        .testimonial-user {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .testimonial-avatar {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--rw-yellow);
+        }
+        .testimonial-name {
+            font-weight: 700;
+            color: var(--deep-blue);
+            font-size: 1.08rem;
+        }
+        .testimonial-rating {
+            margin-top: 4px;
+            color: var(--star);
+            font-size: 1.19rem;
+        }
+        /* Featured Logos Bar */
+        .brands-bar {
+            background: #fff;
+            padding: 24px 0;
+            margin-top: 0;
+            border-top: 1.5px solid #dde8f7;
+            display: flex;
+            gap: 38px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .brand-logo {
+            height: 42px;
+            object-fit: contain;
+            filter: grayscale(0.3) contrast(1.08);
+            opacity: 0.84;
+            transition: filter 0.16s, opacity 0.16s;
+        }
+        .brand-logo:hover {
+            filter: none;
+            opacity: 1;
+        }
+        @media (max-width: 800px) {
+            .media-grid, .gallery-grid, .testimonials-grid { grid-template-columns: 1fr; }
+            .media-card, .testimonial-card { padding: 16px 7px;}
+            .gallery-img, .media-img { height: 220px; }
+        }
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.3rem; }
+            .section-title, .testimonials-title { font-size: 1.16rem;}
+            .intro-section { font-size: 1rem;}
+            .gallery-img, .media-img { height: 150px;}
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Media & Press</h1>
-        <p>Stories, highlights, and the beauty of Rwanda & Denmark—captured for you by PPR Wanda Tours.</p>
+        <h1>Media & Highlights</h1>
+        <p>Discover our stories, press features, and the beauty of Rwanda & Denmark through PPR Wanda Tours.</p>
     </header>
-    <div class="highlight-bar">
-        Explore our gallery, watch our journeys, and find us in the news!
+    <div class="intro-section">
+        <p>Welcome to our media hub! Here you’ll find inspiring stories from our adventures, glowing press coverage, and a gallery of moments that capture the heart of our tours. Dive in and experience why travelers love exploring with us!</p>
     </div>
     <main class="media-section">
-        <div class="section-title">Latest Features & Press</div>
+        <div class="section-title">In the Press</div>
         <div class="media-grid">
             <div class="media-card">
-                <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3c8b?auto=format&fit=crop&w=600&q=80" alt="National Geographic Feature" class="media-img">
+                <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3c8b?auto=format&fit=crop&w=800&q=80" alt="National Geographic Feature" class="media-img lightboxable">
                 <div class="media-info">
                     <div class="media-title">National Geographic: "The Heart of Rwanda"</div>
                     <div class="media-meta">National Geographic · April 2025</div>
-                    <div class="media-desc">PPR Wanda Tours featured as a leader in sustainable gorilla trekking and cultural immersion.</div>
+                    <div class="media-desc">PPR Wanda Tours is recognized for our commitment to authentic cultural experiences and eco-friendly gorilla trekking. <br>This feature explores our unique approach to connecting travelers with Rwanda’s wonders, while preserving its natural beauty.</div>
                     <a class="media-link" href="https://www.nationalgeographic.com/" target="_blank">Read Article</a>
                 </div>
             </div>
             <div class="media-card">
-                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Visit Rwanda TV" class="media-img">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Visit Rwanda TV" class="media-img lightboxable">
                 <div class="media-info">
                     <div class="media-title">Visit Rwanda TV: "Adventure Across Rwanda"</div>
                     <div class="media-meta">Visit Rwanda TV · March 2025</div>
-                    <div class="media-desc">A documentary featuring our unique tours, partnerships, and happy travelers in Rwanda’s top destinations.</div>
+                    <div class="media-desc">A documentary following our travelers as they discover Rwanda’s wildlife, culture, and warm hospitality, from city streets to lush national parks.</div>
                     <a class="media-link" href="https://www.visitrwanda.com/" target="_blank">Watch Episode</a>
                 </div>
             </div>
             <div class="media-card">
-                <img src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?auto=format&fit=crop&w=600&q=80" alt="Kigali Times" class="media-img">
+                <img src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?auto=format&fit=crop&w=800&q=80" alt="Kigali Times" class="media-img lightboxable">
                 <div class="media-info">
                     <div class="media-title">Kigali Times: "Bridging Denmark & Rwanda"</div>
                     <div class="media-meta">Kigali Times · January 2025</div>
-                    <div class="media-desc">Read about our Denmark-Rwanda travel exchange and its positive impact on local communities.</div>
+                    <div class="media-desc">Our special Denmark–Rwanda travel exchange program is highlighted, showcasing positive cross-cultural connections, sustainable tourism, and community impact.</div>
                     <a class="media-link" href="#" target="_blank">Read More</a>
                 </div>
             </div>
             <div class="media-card">
-                <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=600&q=80" alt="Denmark Travel Magazine" class="media-img">
+                <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=800&q=80" alt="Denmark Travel Magazine" class="media-img lightboxable">
                 <div class="media-info">
                     <div class="media-title">Denmark Travel Magazine: "Rwanda’s Green Tourism"</div>
                     <div class="media-meta">DTM · July 2024</div>
-                    <div class="media-desc">A feature on eco-friendly travel with PPR Wanda Tours and our Danish partners.</div>
+                    <div class="media-desc">A spotlight on our eco-friendly tours, partnerships with Danish companies, and our mission to blend Nordic innovation with African adventure.</div>
                     <a class="media-link" href="#" target="_blank">Read Article</a>
                 </div>
-            </div>
-        </div>
-
-        <div class="video-section">
-            <div class="videos-title">Watch Our Stories</div>
-            <div class="video-grid">
-                <iframe class="video-embed" src="https://www.youtube.com/embed/0k4bR3PW2xM" title="Journey Through Rwanda"></iframe>
-                <iframe class="video-embed" src="https://www.youtube.com/embed/EcLr2XQGq6U" title="Cultural Exchange: Rwanda & Denmark"></iframe>
-                <iframe class="video-embed" src="https://www.youtube.com/embed/6p0ANj1YwLk" title="Sustainable Tourism with PPR Wanda"></iframe>
             </div>
         </div>
 
         <div class="gallery-section">
             <div class="gallery-title">Photo Gallery</div>
             <div class="gallery-grid">
-                <img src="https://images.unsplash.com/photo-1509228468518-c5eeecbff44a?auto=format&fit=crop&w=400&q=80" alt="Gorilla Trek" class="gallery-img">
-                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Lake Kivu Boat Festival" class="gallery-img">
-                <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=400&q=80" alt="Cultural Dance" class="gallery-img">
-                <img src="https://images.unsplash.com/photo-1469398715555-76331a0b1b49?auto=format&fit=crop&w=400&q=80" alt="Danish Delegation" class="gallery-img">
-                <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=400&q=80" alt="Kigali City" class="gallery-img">
-                <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Tea Fields Rwanda" class="gallery-img">
-                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Nyungwe Forest" class="gallery-img">
-                <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3c8b?auto=format&fit=crop&w=400&q=80" alt="Community Project" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1509228468518-c5eeecbff44a?auto=format&fit=crop&w=800&q=80" alt="Gorilla Trek" class="gallery-img lightboxable">
+                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80" alt="Lake Kivu Boat Festival" class="gallery-img lightboxable">
+                <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=80" alt="Cultural Dance" class="gallery-img lightboxable">
+                <img src="https://images.unsplash.com/photo-1469398715555-76331a0b1b49?auto=format&fit=crop&w=800&q=80" alt="Danish Delegation" class="gallery-img lightboxable">
+                <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=800&q=80" alt="Kigali City" class="gallery-img lightboxable">
+                <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80" alt="Tea Fields Rwanda" class="gallery-img lightboxable">
+                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="Nyungwe Forest" class="gallery-img lightboxable">
+                <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3c8b?auto=format&fit=crop&w=800&q=80" alt="Community Project" class="gallery-img lightboxable">
             </div>
         </div>
     </main>
+
+    <div class="testimonials-section">
+        <div class="testimonials-title">What Our Travelers Say</div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-quote">“This was the adventure of a lifetime! From the gorilla trek to the local food, everything was perfectly organized and we felt truly cared for.”</div>
+                <div class="testimonial-user">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" class="testimonial-avatar" alt="Traveler photo">
+                    <div>
+                        <div class="testimonial-name">Anna S., Denmark</div>
+                        <div class="testimonial-rating">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-quote">“A beautiful blend of Rwandan warmth and Danish professionalism. We learned so much about both cultures. Highly recommended!”</div>
+                <div class="testimonial-user">
+                    <img src="https://randomuser.me/api/portraits/men/45.jpg" class="testimonial-avatar" alt="Traveler photo">
+                    <div>
+                        <div class="testimonial-name">Lars M., Copenhagen</div>
+                        <div class="testimonial-rating">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-quote">“The guides were amazing and the photo ops were endless. Our family loved every minute. Thank you for a magical trip!”</div>
+                <div class="testimonial-user">
+                    <img src="https://randomuser.me/api/portraits/women/24.jpg" class="testimonial-avatar" alt="Traveler photo">
+                    <div>
+                        <div class="testimonial-name">Beata N., Poland</div>
+                        <div class="testimonial-rating">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-quote">“We felt safe and inspired throughout. Loved seeing both the wild side of Rwanda and the cosmopolitan city life!”</div>
+                <div class="testimonial-user">
+                    <img src="https://randomuser.me/api/portraits/men/12.jpg" class="testimonial-avatar" alt="Traveler photo">
+                    <div>
+                        <div class="testimonial-name">Mike J., UK</div>
+                        <div class="testimonial-rating">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="brands-bar">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Rwanda_Development_Board_logo.png" alt="Rwanda Development Board" class="brand-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Visit_Rwanda_logo.svg" alt="Visit Rwanda" class="brand-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/TV_2_Danmark_logo.svg" alt="TV2 Denmark" class="brand-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/African_Wildlife_Foundation_logo.png" alt="African Wildlife Foundation" class="brand-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/UNESCO_logo.svg" alt="UNESCO" class="brand-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/BBC_logo_%281997-2021%29.svg" alt="BBC" class="brand-logo">
+    </div>
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" title="Close">&times;</button>
+        <img src="" alt="Fullscreen image" class="lightbox-img" id="lightboxImg">
+    </div>
+    <script>
+        // Lightbox functionality for both gallery and media images
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxClose = document.getElementById('lightboxClose');
+        document.querySelectorAll('.lightboxable').forEach(img => {
+            let lastTap = 0;
+            img.addEventListener('click', e => {
+                const now = new Date().getTime();
+                if (now - lastTap < 400) {
+                    // Double Tap
+                    lightboxImg.src = img.src;
+                    lightbox.classList.add('active');
+                }
+                lastTap = now;
+            });
+            img.addEventListener('dblclick', e => {
+                lightboxImg.src = img.src;
+                lightbox.classList.add('active');
+            });
+        });
+        lightboxClose.onclick = () => lightbox.classList.remove('active');
+        lightbox.onclick = (e) => {
+            if (e.target === lightbox) lightbox.classList.remove('active');
+        };
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "Escape") lightbox.classList.remove('active');
+        });
+    </script>
 </body>
 </html>

@@ -807,7 +807,7 @@ logo.addEventListener('click', () => {
     <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1662612732223-1fe6ea43263e?q=80&w=1482&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
     <div class="hero-slide" style="background-image: url('https://github.com/Kareck1/PPRwandatestweb/blob/main/photo.jpg?raw=true');"></div>
     <div class="hero-overlay"></div>
-    <div class="hero-content">
+    <div class="hero-content not-selectable">
       <h1>Explore Rwanda Like Never Before</h1>
       <p>Embark on unforgettable adventures with <span class="brand">PPRWANDA Tours</span>.</p>
       <a href="tour-packages.html" class="cta-btn">Browse Our Packages</a>
@@ -842,6 +842,9 @@ body {
   text-align: center;
   color: white;
   margin-top: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 .hero-slider {
@@ -901,6 +904,18 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.hero-content h1,
+.hero-content p,
+.hero-content .brand,
+.cta-btn {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 .hero-content h1 {
@@ -1018,12 +1033,11 @@ document.addEventListener("DOMContentLoaded", function () {
   let isSliding = false;
 
   function showSlide(n, direction = 0) {
-    if (isSliding || n === current) return; // prevent rapid double
+    if (isSliding || n === current) return;
     isSliding = true;
 
-    // Animation direction: -1 (left/back), 1 (right/forward), 0 (no anim)
     slides.forEach((slide, i) => {
-      slide.classList.remove('slide-left', 'slide-right'); // cleanup
+      slide.classList.remove('slide-left', 'slide-right');
       if (i === current && i !== n) {
         slide.classList.add(direction === 1 ? 'slide-left' : direction === -1 ? 'slide-right' : '');
         setTimeout(() => slide.classList.remove('slide-left', 'slide-right'), 600);
@@ -1087,6 +1101,28 @@ document.addEventListener("DOMContentLoaded", function () {
       else { prevSlide(); resetTimer(); }
     }
   });
+
+  // Mouse drag navigation
+  let isDragging = false;
+  let dragStartX = null;
+  let dragEndX = null;
+  slider.addEventListener('mousedown', function(e) {
+    isDragging = true;
+    dragStartX = e.screenX;
+  });
+  slider.addEventListener('mouseup', function(e) {
+    if (!isDragging) return;
+    dragEndX = e.screenX;
+    if (Math.abs(dragEndX - dragStartX) > 40) {
+      if (dragEndX < dragStartX) { nextSlide(); resetTimer(); }
+      else { prevSlide(); resetTimer(); }
+    }
+    isDragging = false;
+  });
+  slider.addEventListener('mouseleave', function() { isDragging = false; });
+
+  // Prevent accidental text selection during drag
+  slider.addEventListener('dragstart', e => e.preventDefault());
 
   // Ensure correct slide and timer on load
   showSlide(0, 0);

@@ -809,7 +809,7 @@ logo.addEventListener('click', () => {
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>Explore Rwanda Like Never Before</h1>
-      <p>Embark on unforgettable adventures with PPRWANDA Tours.</p>
+      <p>Embark on unforgettable adventures with <span class="brand">PPRWANDA Tours</span>.</p>
       <a href="tour-packages.html" class="cta-btn">Browse Our Packages</a>
     </div>
     <div class="hero-indicators">
@@ -821,15 +821,17 @@ logo.addEventListener('click', () => {
     </div>
   </div>
 </section>
-
 <style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap');
+
 body {
   margin: 0;
   padding: 0;
-  background: #141414; /* dark upper surface */
+  background: #141414;
+  font-family: 'Montserrat', Arial, sans-serif;
+  box-sizing: border-box;
 }
 
-/* HERO STYLES */
 .hero {
   position: relative;
   height: 805px;
@@ -855,61 +857,102 @@ body {
   background-position: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.7s;
   z-index: 1;
+  transition: opacity 1.2s cubic-bezier(0.4, 0.8, 0.6, 1), transform 1.2s cubic-bezier(0.4, 0.8, 0.6, 1);
+  transform: scale(1.04) translateX(0);
 }
 .hero-slide.active {
   opacity: 1;
   pointer-events: auto;
   z-index: 2;
+  transform: scale(1) translateX(0);
+  animation: heroFadeIn 1s;
+}
+.hero-slide.slide-left {
+  transform: translateX(-100vw);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.7s;
+}
+.hero-slide.slide-right {
+  transform: translateX(100vw);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.7s;
+}
+
+@keyframes heroFadeIn {
+  from { opacity: 0; transform: scale(1.06);}
+  to { opacity: 1; transform: scale(1);}
 }
 
 .hero-content {
   position: absolute;
-  top: 48%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -52%);
   z-index: 4;
-  padding: 10px 18px;
-  width: 100%;
-  max-width: 650px;
-  animation: fadeIn 2s ease-in-out;
+  width: 98vw;
+  max-width: 640px;
+  padding: 32px 8vw 36px 8vw;
+  background: rgba(20, 20, 20, 0.18);
+  border-radius: 16px;
+  box-shadow: 0 8px 36px 6px rgba(0,0,0,0.13);
+  backdrop-filter: blur(1.5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
+
 .hero-content h1 {
   font-size: 2.7rem;
-  margin: 0;
-  animation: slideDown 1.5s ease-in-out forwards;
+  margin: 0 0 14px 0;
   color: #c91038;
-  font-weight: bold;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.17);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  line-height: 1.1;
 }
 .hero-content p {
-  font-size: 1.2rem;
-  margin-top: 10px;
-  animation: slideUp 1.5s ease-in-out forwards;
+  font-size: 1.22rem;
+  margin: 0 0 24px 0;
+  color: #fff;
   text-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  font-weight: 400;
+}
+.hero-content .brand {
+  color: #ee6c4d;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 .cta-btn {
   display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
+  margin-top: 4px;
+  padding: 13px 34px;
   background: #ee6c4d;
   color: white;
-  border-radius: 5px;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1.15rem;
   font-weight: bold;
-  transition: transform 0.3s, background 0.2s;
+  letter-spacing: 0.03em;
+  transition: transform 0.25s, background 0.21s;
   animation: fadeInScale 1.5s ease-in-out forwards;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.11);
+  cursor: pointer;
 }
-.cta-btn:hover {
-  transform: scale(1.1);
+.cta-btn:hover, .cta-btn:focus {
+  transform: scale(1.08);
   background: #c91038;
+  outline: none;
 }
 .hero-indicators {
   position: absolute;
-  bottom: 28px; left: 0; right: 0;
+  bottom: 90px;
+  left: 0; right: 0;
   text-align: center;
   z-index: 5;
+  user-select: none;
 }
 .hero-dot {
   display: inline-block;
@@ -919,11 +962,14 @@ body {
   border: 2px solid #fff;
   background: transparent;
   cursor: pointer;
-  transition: background 0.3s, border-color 0.3s;
+  transition: background 0.5s, border-color 0.5s, box-shadow 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+  vertical-align: middle;
 }
 .hero-dot.active {
-  background: #f5000c;
+  background: #7a0516;
   border-color: #ee6c4d;
+  box-shadow: 0 0 0 3px #fff2;
 }
 
 /* Animations */
@@ -944,90 +990,109 @@ body {
   to { transform: scale(1); opacity: 1; }
 }
 
-/* RESPONSIVE: HERO IS PULLED DOWN ON MOBILE BY MARGIN-TOP */
-@media (max-width: 700px) {
-  body {
-    background: #181818;
-  }
-  .hero {
-    height: 600px;
-    margin-top: 0px;
-  }
-  .hero-content {
-    top: 65%;
-    max-width: 96vw;
-    padding: 0 7vw;
-  }
-  .hero-content h1 {
-    font-size: 1.5rem;
-  }
-  .hero-content p {
-    font-size: 1rem;
-  }
-  .cta-btn {
-    padding: 10px 14px;
-    font-size: 1rem;
-  }
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero { height: 540px; }
+  .hero-content { max-width: 98vw; padding: 17px 2vw 17px 2vw;}
+  .hero-content h1 { font-size: 1.7rem; }
+  .hero-content p { font-size: 1rem;}
+  .cta-btn { font-size: 1rem; padding: 11px 22px;}
+  .hero-indicators { bottom: 50px;}
 }
-@media (max-width: 450px) {
-  body {
-    background: #151515;
-  }
-  .hero {
-    height: 300px;
-    margin-top: 0px;
-  }
-  .hero-content {
-    top: 55%;
-    max-width: 99vw;
-    padding: 0 1vw;
-  }
-  .hero-content h1 {
-    font-size: 1.1rem;
-  }
-  .hero-content p {
-    font-size: 0.9rem;
-  }
-  .cta-btn {
-    padding: 8px 10px;
-    font-size: 0.9rem;
-  }
+@media (max-width: 600px) {
+  .hero { height: 320px;}
+  .hero-content { top: 53%; padding: 8px 1vw;}
+  .hero-content h1 { font-size: 1.08rem;}
+  .hero-content p { font-size: 0.89rem;}
+  .cta-btn { font-size: 0.89rem; padding: 8px 12px;}
+  .hero-indicators { bottom: 26px;}
 }
 </style>
-
 <script>
-const slides = document.querySelectorAll('.hero-slide');
-const dots = document.querySelectorAll('.hero-dot');
-let current = 0;
-let sliderTimer = null;
+document.addEventListener("DOMContentLoaded", function () {
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.hero-dot');
+  let current = 0;
+  let sliderTimer = null;
+  const slideDuration = 180000; // 3 minutes in ms
+  let isSliding = false;
 
-function showSlide(n) {
-  slides.forEach((slide, i) => {
-    slide.classList.toggle('active', i === n);
+  function showSlide(n, direction = 0) {
+    if (isSliding || n === current) return; // prevent rapid double
+    isSliding = true;
+
+    // Animation direction: -1 (left/back), 1 (right/forward), 0 (no anim)
+    slides.forEach((slide, i) => {
+      slide.classList.remove('slide-left', 'slide-right'); // cleanup
+      if (i === current && i !== n) {
+        slide.classList.add(direction === 1 ? 'slide-left' : direction === -1 ? 'slide-right' : '');
+        setTimeout(() => slide.classList.remove('slide-left', 'slide-right'), 600);
+      }
+    });
+
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === n);
+    });
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === n);
+    });
+    current = n;
+    setTimeout(() => { isSliding = false; }, 500);
+  }
+
+  function nextSlide() {
+    let next = (current + 1) % slides.length;
+    showSlide(next, 1);
+  }
+  function prevSlide() {
+    let prev = (current - 1 + slides.length) % slides.length;
+    showSlide(prev, -1);
+  }
+
+  function resetTimer() {
+    if (sliderTimer) clearInterval(sliderTimer);
+    sliderTimer = setInterval(nextSlide, slideDuration);
+  }
+
+  // Dot click event
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      let n = parseInt(dot.getAttribute('data-slide'));
+      let dir = n > current ? 1 : -1;
+      showSlide(n, dir);
+      resetTimer();
+    });
   });
-  dots.forEach((dot, i) => {
-    dot.classList.toggle('active', i === n);
+
+  // Keyboard navigation
+  document.addEventListener('keydown', e => {
+    if (e.key === "ArrowRight") {
+      nextSlide(); resetTimer();
+    } else if (e.key === "ArrowLeft") {
+      prevSlide(); resetTimer();
+    }
   });
-  current = n;
-}
-function nextSlide() {
-  let next = (current + 1) % slides.length;
-  showSlide(next);
-}
-function resetTimer() {
-  if (sliderTimer) clearInterval(sliderTimer);
-  sliderTimer = setInterval(nextSlide, 6000);
-}
-dots.forEach(dot => {
-  dot.addEventListener('click', () => {
-    let n = parseInt(dot.getAttribute('data-slide'));
-    showSlide(n);
-    resetTimer();
+
+  // Touch/Swipe navigation
+  let touchStartX = null;
+  let touchEndX = null;
+  const slider = document.querySelector('.hero-slider');
+  slider.addEventListener('touchstart', function(e) {
+    touchStartX = e.changedTouches[0].screenX;
   });
+  slider.addEventListener('touchend', function(e) {
+    touchEndX = e.changedTouches[0].screenX;
+    if (Math.abs(touchEndX - touchStartX) > 40) {
+      if (touchEndX < touchStartX) { nextSlide(); resetTimer(); }
+      else { prevSlide(); resetTimer(); }
+    }
+  });
+
+  // Ensure correct slide and timer on load
+  showSlide(0, 0);
+  resetTimer();
 });
-resetTimer();
 </script>
-
 
 
 

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sitemap | PPR Wanda Tours</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      background: #f8fafd;
+      color: #174275;
+      min-height: 100vh;
+    }
+    header.hero {
+      background: linear-gradient(90deg, #327dba 0%, #38e7a7 100%);
+      color: #fff;
+      text-align: center;
+      padding: 54px 16px 34px 16px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-flags {
+      position: absolute;
+      top: 18px;
+      right: 28px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      opacity: 0.9;
+    }
+    .hero-flag {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 2.5px solid #fff;
+      background: #fff;
+      box-shadow: 0 2px 12px #204a7e33;
+      object-fit: cover;
+      display: inline-block;
+    }
+    .hero h1 {
+      font-size: 2.3rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: 0.01em;
+      margin-top: 0;
+    }
+    .hero p {
+      font-size: 1.12rem;
+      font-weight: 500;
+      margin: 0 auto 0 auto;
+      max-width: 640px;
+      color: #eafff6;
+      text-shadow: 0 2px 18px #327dba66;
+    }
+    .section-content {
+      max-width: 900px;
+      background: #fff;
+      margin: 50px auto 0 auto;
+      border-radius: 18px;
+      box-shadow: 0 2px 22px #bedfff33;
+      padding: 38px 38px 38px 38px;
+      text-align: left;
+      position: relative;
+    }
+    .sitemap-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 44px 80px;
+      margin: 34px 0 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .sitemap-col {
+      min-width: 220px;
+      flex: 1 1 220px;
+    }
+    .sitemap-col h2 {
+      color: #327dba;
+      font-size: 1.17em;
+      margin-bottom: 10px;
+      margin-top: 0;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .sitemap-links {
+      padding: 0;
+      list-style: none;
+    }
+    .sitemap-links li {
+      margin-bottom: 12px;
+    }
+    .sitemap-links a {
+      color: #174275;
+      text-decoration: none;
+      font-size: 1.06em;
+      transition: color 0.13s;
+    }
+    .sitemap-links a:hover {
+      color: #38e7a7;
+      text-decoration: underline;
+    }
+    .sitemap-icons {
+      margin-left: 7px;
+      color: #327dba;
+      font-size: 1em;
+      opacity: 0.8;
+    }
+    @media (max-width: 900px) {
+      .section-content { padding: 22px 7vw;}
+      .sitemap-list { flex-direction: column; gap: 38px;}
+      .sitemap-col { min-width: 0;}
+    }
+    @media (max-width: 700px) {
+      header.hero {padding: 44px 5vw 24px 5vw;}
+      .hero h1 {font-size: 1.3em;}
+      .hero-flags {top: 12px; right: 10px;}
+      .hero-flag {width: 24px; height: 24px;}
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-flags">
+      <img src="https://hatscripts.github.io/circle-flags/flags/rw.svg" alt="Rwanda flag" class="hero-flag" title="Rwanda">
+      <img src="https://hatscripts.github.io/circle-flags/flags/dk.svg" alt="Denmark flag" class="hero-flag" title="Denmark">
+    </div>
+    <h1>Sitemap</h1>
+    <p>
+      Find your way around PPR Wanda Tours.<br>
+      All main pages, policies, and resources at a glance.
+    </p>
+  </header>
+  <section class="section-content">
+    <div class="sitemap-list">
+      <div class="sitemap-col">
+        <h2><i class="fas fa-home sitemap-icons"></i> Main Pages</h2>
+        <ul class="sitemap-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tours.html">Tours</a></li>
+          <li><a href="sustainability.html">Sustainability</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="sitemap-col">
+        <h2><i class="fas fa-question-circle sitemap-icons"></i> Help &amp; Support</h2>
+        <ul class="sitemap-links">
+          <li><a href="support.html">Support Center</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="sitemap-col">
+        <h2><i class="fas fa-cogs sitemap-icons"></i> Functionalities</h2>
+        <ul class="sitemap-links">
+          <li><a href="bookings.html">Bookings <span style="color:#bedfff;">(coming soon)</span></a></li>
+          <li><a href="custom-tours.html">Custom Tours <span style="color:#bedfff;">(coming soon)</span></a></li>
+          <li><a href="group-tours.html">Group Tours <span style="color:#bedfff;">(coming soon)</span></a></li>
+          <li><a href="events.html">Events &amp; Experiences <span style="color:#bedfff;">(coming soon)</span></a></li>
+        </ul>
+      </div>
+      <div class="sitemap-col">
+        <h2><i class="fas fa-share-alt sitemap-icons"></i> Social &amp; External</h2>
+        <ul class="sitemap-links">
+          <li><a href="https://facebook.com/pprwandatours" target="_blank">Facebook</a></li>
+          <li><a href="https://instagram.com/pprwandatours" target="_blank">Instagram</a></li>
+          <li><a href="https://linkedin.com/company/pprwandatours" target="_blank">LinkedIn</a></li>
+          <li><a href="https://twitter.com/pprwandatours" target="_blank">X (Twitter)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="margin-top:44px;font-size:1.04em;color:#174275;text-align:center;">
+      <i class="fas fa-map-marked-alt" style="color:#38e7a7;"></i>
+      <span>More features and pages are coming soon!</span>
+    </div>
+  </section>
+</body>
+</html>

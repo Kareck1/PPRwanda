@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tours | PPR Wanda Tours</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      background: #f8fafd;
+      color: #174275;
+      min-height: 100vh;
+    }
+    header.hero {
+      background: linear-gradient(90deg, #327dba 0%, #d11e2b 100%);
+      color: #fff;
+      text-align: center;
+      padding: 54px 16px 34px 16px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-flags {
+      position: absolute;
+      top: 18px;
+      right: 28px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      opacity: 0.9;
+    }
+    .hero-flag {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 2.5px solid #fff;
+      background: #fff;
+      box-shadow: 0 2px 12px #204a7e33;
+      object-fit: cover;
+      display: inline-block;
+    }
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: 0.01em;
+      margin-top: 0;
+    }
+    .hero p {
+      font-size: 1.15rem;
+      font-weight: 500;
+      margin: 0 auto 0 auto;
+      max-width: 640px;
+      color: #f8fafd;
+      text-shadow: 0 2px 18px #327dba66;
+    }
+    .section-content {
+      max-width: 650px;
+      background: #fff;
+      margin: 50px auto 0 auto;
+      border-radius: 18px;
+      box-shadow: 0 2px 22px #bedfff33;
+      padding: 36px 36px 36px 36px;
+      text-align: left;
+      position: relative;
+    }
+    .section-content h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #327dba;
+      margin-bottom: 10px;
+      letter-spacing: 0.01em;
+    }
+    .section-content p {
+      font-size: 1.08rem;
+      line-height: 1.7;
+      color: #174275;
+    }
+    .no-tours {
+      text-align: center;
+      margin: 48px 0 0 0;
+    }
+    .no-tours-icon {
+      font-size: 3.2em;
+      color: #bedfff;
+      margin-bottom: 18px;
+      display: block;
+    }
+    .notify-box {
+      margin: 34px auto 0 auto;
+      background: #f8fafd;
+      border: 1.3px solid #327dba33;
+      border-radius: 12px;
+      padding: 18px 18px 14px 18px;
+      text-align: center;
+      max-width: 470px;
+      color: #2877c7;
+      font-size: 1.05em;
+      font-weight: 600;
+      box-shadow: 0 1px 8px #327dba13;
+    }
+    .notify-box a {
+      color: #d11e2b;
+      text-decoration: underline;
+      margin-left: 6px;
+    }
+    @media (max-width: 700px) {
+      .section-content { padding: 22px 7vw;}
+      header.hero {padding: 44px 5vw 26px 5vw;}
+      .hero h1 {font-size: 1.7em;}
+      .hero-flags {top: 12px; right: 10px;}
+      .hero-flag {width: 24px; height: 24px;}
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-flags">
+      <img src="https://hatscripts.github.io/circle-flags/flags/rw.svg" alt="Rwanda flag" class="hero-flag" title="Rwanda">
+      <img src="https://hatscripts.github.io/circle-flags/flags/dk.svg" alt="Denmark flag" class="hero-flag" title="Denmark">
+    </div>
+    <h1>Our Tours</h1>
+    <p>
+      Explore the beauty of Rwanda and Denmark with PPR Wanda Tours.<br>
+      Unique experiences, crafted with care—coming soon!
+    </p>
+  </header>
+
+  <section class="section-content">
+    <h2>Current Tours</h2>
+    <div class="no-tours">
+      <span class="no-tours-icon"><i class="fas fa-map-signs"></i></span>
+      <p>
+        There are no new tours available at the moment.<br>
+        Please check back soon for updates from our Rwanda and Denmark teams.
+      </p>
+    </div>
+    <div class="notify-box">
+      Have questions, or want a custom tour?<br>
+      Email us at <a href="mailto:info@pprwandatours.com">info@pprwandatours.com</a><br>
+      or follow us on <a href="https://facebook.com/pprwandatours" target="_blank">Facebook</a> for announcements.
+    </div>
+  </section>
+</body>
+</html>

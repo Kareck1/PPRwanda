@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us | PPR Wanda Tours</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      background: #f8fafd;
+      color: #174275;
+      min-height: 100vh;
+    }
+    header.hero {
+      background: linear-gradient(90deg, #327dba 0%, #d11e2b 100%);
+      color: #fff;
+      text-align: center;
+      padding: 54px 16px 34px 16px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-flags {
+      position: absolute;
+      top: 18px;
+      right: 28px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      opacity: 0.9;
+    }
+    .hero-flag {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 2.5px solid #fff;
+      background: #fff;
+      box-shadow: 0 2px 12px #204a7e33;
+      object-fit: cover;
+      display: inline-block;
+    }
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: 0.01em;
+      margin-top: 0;
+    }
+    .hero p {
+      font-size: 1.15rem;
+      font-weight: 500;
+      margin: 0 auto 0 auto;
+      max-width: 640px;
+      color: #f8fafd;
+      text-shadow: 0 2px 18px #327dba66;
+    }
+    .section-content {
+      max-width: 650px;
+      background: #fff;
+      margin: 50px auto 0 auto;
+      border-radius: 18px;
+      box-shadow: 0 2px 22px #bedfff33;
+      padding: 36px 36px 36px 36px;
+      text-align: left;
+      position: relative;
+    }
+    .section-content h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #327dba;
+      margin-bottom: 10px;
+      letter-spacing: 0.01em;
+    }
+    .contact-list {
+      padding: 0;
+      margin: 25px 0 0 0;
+      list-style: none;
+      font-size: 1.08rem;
+    }
+    .contact-list li {
+      margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+    .contact-list i {
+      font-size: 1.38em;
+      color: #d11e2b;
+      width: 32px;
+      text-align: center;
+    }
+    .social-bar {
+      margin-top: 28px;
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+    .social-bar a {
+      color: #2877c7;
+      background: #eaf6fd;
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.23em;
+      border: 1.5px solid #bedfff;
+      text-decoration: none;
+      transition: background 0.13s, color 0.13s;
+      box-shadow: 0 2px 10px #bedfff22;
+    }
+    .social-bar a:hover {
+      background: #d11e2b;
+      color: #fff;
+      border-color: #d11e2b;
+    }
+    .contact-form-box {
+      margin-top: 38px;
+      padding: 24px 20px 20px 20px;
+      background: #f8fafd;
+      border-radius: 12px;
+      border: 1.3px solid #327dba33;
+      box-shadow: 0 1px 8px #327dba13;
+    }
+    .contact-form-box label {
+      font-weight: 600;
+      color: #174275;
+      display: block;
+      margin-bottom: 5px;
+      font-size: 1.03em;
+    }
+    .contact-form-box input,
+    .contact-form-box textarea {
+      width: 100%;
+      padding: 9px 10px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1em;
+      border: 1.2px solid #bedfff;
+      border-radius: 7px;
+      margin-bottom: 16px;
+      background: #fff;
+      color: #174275;
+      resize: vertical;
+      transition: border 0.13s;
+    }
+    .contact-form-box input:focus,
+    .contact-form-box textarea:focus {
+      border: 1.2px solid #327dba;
+      outline: none;
+    }
+    .contact-form-box button {
+      background: linear-gradient(90deg, #327dba 0%, #d11e2b 100%);
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.07em;
+      border: none;
+      border-radius: 7px;
+      padding: 11px 32px;
+      cursor: pointer;
+      margin-top: 6px;
+      transition: background 0.17s, color 0.12s;
+      box-shadow: 0 1px 7px #bedfff33;
+    }
+    .contact-form-box button:hover {
+      background: #d11e2b;
+      color: #fff;
+    }
+    .form-success {
+      color: #2877c7;
+      background: #eaf6fd;
+      border: 1.3px solid #bedfff;
+      padding: 14px 10px;
+      border-radius: 7px;
+      margin-bottom: 14px;
+      display: none;
+    }
+    @media (max-width: 700px) {
+      .section-content { padding: 22px 7vw;}
+      header.hero {padding: 44px 5vw 26px 5vw;}
+      .hero h1 {font-size: 1.6em;}
+      .hero-flags {top: 12px; right: 10px;}
+      .hero-flag {width: 24px; height: 24px;}
+      .social-bar a {width: 32px; height: 32px; font-size: 1.01em;}
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-flags">
+      <img src="https://hatscripts.github.io/circle-flags/flags/rw.svg" alt="Rwanda flag" class="hero-flag" title="Rwanda">
+      <img src="https://hatscripts.github.io/circle-flags/flags/dk.svg" alt="Denmark flag" class="hero-flag" title="Denmark">
+    </div>
+    <h1>Contact Us</h1>
+    <p>
+      We would love to hear from you!<br>
+      Reach out for questions, partnerships, or travel dreams between Rwanda and Denmark.
+    </p>
+  </header>
+
+  <section class="section-content">
+    <h2>Get In Touch</h2>
+    <ul class="contact-list">
+      <li><i class="fas fa-envelope"></i>
+        <span>Email: <a href="mailto:info@pprwandatours.com" style="color:#d11e2b;text-decoration:underline;">info@pprwandatours.com</a></span>
+      </li>
+      <li><i class="fab fa-whatsapp"></i>
+        <span>WhatsApp: <a href="https://wa.me/250788123456" style="color:#2877c7;text-decoration:underline;" target="_blank">+250 788 123 456</a></span>
+      </li>
+      <li><i class="fas fa-phone"></i>
+        <span>Denmark: <a href="tel:+4520123456" style="color:#2877c7;text-decoration:underline;">+45 20 12 34 56</a></span>
+      </li>
+      <li><i class="fas fa-map-marker-alt"></i>
+        <span>Rwanda Office: Kigali, Rwanda</span>
+      </li>
+      <li><i class="fas fa-map-marker-alt"></i>
+        <span>Denmark Office: Copenhagen, Denmark</span>
+      </li>
+    </ul>
+    <div class="social-bar">
+      <a href="https://facebook.com/pprwandatours" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com/pprwandatours" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com/company/pprwandatours" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://twitter.com/pprwandatours" target="_blank" title="Twitter"><i class="fab fa-x-twitter"></i></a>
+    </div>
+    <div class="contact-form-box">
+      <div class="form-success" id="formSuccess">
+        <i class="fas fa-check-circle"></i> Thank you for contacting us! We will reply soon.
+      </div>
+      <form id="contactForm" autocomplete="off">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your name">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@email.com">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required placeholder="How can we help you?"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+  <script>
+    // Demo contact form handler (does not actually send email)
+    document.getElementById('contactForm').onsubmit = function(e) {
+      e.preventDefault();
+      document.getElementById('formSuccess').style.display = 'block';
+      this.reset();
+      setTimeout(function() {
+        document.getElementById('formSuccess').style.display = 'none';
+      }, 4000);
+    };
+  </script>
+</body>
+</html>

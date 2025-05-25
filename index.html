@@ -2295,12 +2295,69 @@ document.addEventListener("DOMContentLoaded", function () {
 
     
 <!-- Partner Companies Section -->
-  Our Reputable Partners
-</h2>
-<p style="text-align:center; color:#444; margin:0 0 18px 0; font-size:1.04rem;">
-  We collaborate with leading global and local travel companies to ensure your journey is safe, seamless, and unforgettable.<br>
-  <span style="font-size:0.97rem;">(Click any logo to visit their official website)</span>
-</p>
+<!-- Partner Companies Section -->
+<style>
+  /* General Section Styling */
+  .partner-section {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #f9f9f9; /* Soft light background for the section */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    max-width: 800px;
+    margin: 0 auto; /* Center the section */
+  }
+
+  /* Title Styling */
+  .partner-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #b71c1c; /* Deep red, inspired by Denmark's flag */
+    font-size: 2rem;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* Paragraph Styling */
+  .partner-section p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    color: #4e4e4e; /* Neutral dark grey for readability */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 20px;
+  }
+
+  /* Smaller text (in span) under the paragraph */
+  .partner-section p span {
+    font-size: 0.9rem;
+    color: #00695c; /* Muted teal, inspired by Rwanda's flag */
+    margin-top: 6px;
+    display: block;
+    font-style: italic;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .partner-section h2 {
+      font-size: 1.6rem; /* Slightly smaller title for mobile */
+    }
+
+    .partner-section p {
+      font-size: 0.95rem; /* Slightly smaller paragraph text */
+    }
+  }
+</style>
+
+<div class="partner-section">
+  <h2>Our Reputable Partners</h2>
+  <p>
+    We collaborate with leading global and local travel companies to ensure your journey is safe, seamless, and unforgettable.<br>
+    <span>(Click any logo to visit their official website)</span>
+  </p>
+</div>
+
 <div class="company-scroller" aria-label="Corroborating Partner Companies">
   <button class="company-scroll-btn left" aria-label="Scroll left">&lt;</button>
   <div class="company-track-wrapper" tabindex="0">

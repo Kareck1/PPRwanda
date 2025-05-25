@@ -1288,14 +1288,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-
-
-
-
-
-
-
 <!-- FONT IMPORT (Nunito for friendly/premium appearance) -->
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&display=swap" rel="stylesheet">
 
@@ -1425,7 +1417,8 @@ document.addEventListener("DOMContentLoaded", function () {
     background: var(--sh-cta-red);
     color: #fffbe6;
   }
-  .sh-hero-image-side {
+  /* Carousel styles */
+  .sh-hero-carousel-wrapper {
     display: block;
     min-width: 220px;
     flex: 1 1 360px;
@@ -1433,10 +1426,49 @@ document.addEventListener("DOMContentLoaded", function () {
     height: 240px;
     margin-left: 38px;
     border-radius: 24px;
-    background: url('https://github.com/Kareck1/PPRwandatestweb/blob/main/photo.jpg?raw=true') center center/cover no-repeat;
     box-shadow: 0 4px 22px #2b513222;
-    opacity: 0.93;
-    transition: opacity 0.5s;
+    position: relative;
+    overflow: hidden;
+    background: #e7efe4;
+  }
+  .sh-hero-carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    position: absolute;
+    top: 0; left: 0;
+    opacity: 0;
+    transition: opacity 0.6s cubic-bezier(.7,1.4,.7,1.1);
+    z-index: 1;
+  }
+  .sh-hero-carousel-img.sh-active {
+    opacity: 1;
+    z-index: 2;
+  }
+  .sh-hero-carousel-controls {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+  }
+  .sh-hero-carousel-dot {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background: #2b5132cc;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: background 0.22s, border 0.22s, opacity 0.22s;
+  }
+  .sh-hero-carousel-dot.sh-active {
+    background: #dcc941;
+    border: 2px solid #2b5132;
+    opacity: 1;
   }
   .sh-hero-animate {
     opacity: 1 !important;
@@ -1448,7 +1480,7 @@ document.addEventListener("DOMContentLoaded", function () {
       margin-left: calc(var(--sh-side-padding) / 2);
     }
     .sh-hero-headline { font-size: 2.1rem; }
-    .sh-hero-image-side { display: none; }
+    .sh-hero-carousel-wrapper { margin-left: 16px; min-width: 160px; max-width: 320px; height: 180px; }
   }
   @media (max-width: 700px) {
     .sh-hero-side-inner {
@@ -1463,7 +1495,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .sh-hero-flags { font-size: 1.05rem;}
     .sh-hero-desc, .sh-hero-highlight { font-size: 0.97rem;}
     .sh-hero-cta { font-size: 0.98rem;}
-    .sh-hero-image-side { display: none; }
+    .sh-hero-carousel-wrapper { display: none; }
   }
 </style>
 
@@ -1485,7 +1517,35 @@ document.addEventListener("DOMContentLoaded", function () {
         Start Your Adventure
       </button>
     </div>
-    <div class="sh-hero-image-side" aria-hidden="true"></div>
+    <!-- Carousel replaces static image here -->
+    <div class="sh-hero-carousel-wrapper" aria-label="Tour Images Carousel">
+      <img 
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKTSn1UGuWJ_DsEV24pQEEdycs6vtAdtpkA&s"
+        alt="Rwanda landscape 1"
+        class="sh-hero-carousel-img sh-active"
+        data-index="0"
+        loading="lazy"
+      />
+      <img 
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5WvPSun53ZORn2xZA8_3akTb-qw0puEkBtg&s"
+        alt="Rwanda landscape 2"
+        class="sh-hero-carousel-img"
+        data-index="1"
+        loading="lazy"
+      />
+      <img 
+        src="https://www.asiliaafrica.com/wp-content/uploads/2024/04/The-lush-Rwandan-landscape-with-Volacones-National-Park-in-the-distance.jpg"
+        alt="Volcanoes National Park Rwanda"
+        class="sh-hero-carousel-img"
+        data-index="2"
+        loading="lazy"
+      />
+      <div class="sh-hero-carousel-controls">
+        <button class="sh-hero-carousel-dot sh-active" aria-label="Show image 1" data-index="0"></button>
+        <button class="sh-hero-carousel-dot" aria-label="Show image 2" data-index="1"></button>
+        <button class="sh-hero-carousel-dot" aria-label="Show image 3" data-index="2"></button>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -1498,7 +1558,7 @@ document.addEventListener("DOMContentLoaded", function () {
       '.sh-hero-highlight',
       '.sh-hero-desc',
       '.sh-hero-cta',
-      '.sh-hero-image-side'
+      '.sh-hero-carousel-wrapper'
     ].map(sel => document.querySelector(sel)).filter(Boolean);
 
     if (!("IntersectionObserver" in window)) {
@@ -1519,7 +1579,45 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(hero);
   }
   window.addEventListener('DOMContentLoaded', sh_animateHero);
+
+  // Carousel JS
+  (function() {
+    const imgs = Array.from(document.querySelectorAll('.sh-hero-carousel-img'));
+    const dots = Array.from(document.querySelectorAll('.sh-hero-carousel-dot'));
+    let idx = 0, timer = null;
+
+    function show(i) {
+      imgs.forEach((img, j) => img.classList.toggle('sh-active', j === i));
+      dots.forEach((dot, j) => dot.classList.toggle('sh-active', j === i));
+      idx = i;
+    }
+
+    function next() {
+      show((idx + 1) % imgs.length);
+    }
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        show(Number(dot.dataset.index));
+        if (timer) {
+          clearInterval(timer);
+          timer = setInterval(next, 4800);
+        }
+      });
+    });
+
+    timer = setInterval(next, 4800);
+
+    // Optional: Pause on hover
+    const wrapper = document.querySelector('.sh-hero-carousel-wrapper');
+    wrapper.addEventListener('mouseenter', () => timer && clearInterval(timer));
+    wrapper.addEventListener('mouseleave', () => timer = setInterval(next, 4800));
+  })();
 </script>
+
+
+
+
 
 
 

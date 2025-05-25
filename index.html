@@ -1297,32 +1297,62 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-<!-- MAIN INTRO -->
-<section style="background: url('https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=1400&q=80') center center/cover no-repeat; min-height: 260px; padding: 0;">
-  <div style="background: rgba(255,255,255,0.94); padding: 48px 0 16px 0;">
-    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-      <h1 style="font-family: 'Montserrat', Arial, sans-serif; font-size: 2.5rem; font-weight: 800; color: #222; margin-bottom: 0.5em;">
+<!-- FONT IMPORT (place this in your <head>) -->
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- HERO INTRO -->
+<section style="background: url('https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=1400&q=80') center center/cover no-repeat; min-height: 340px; padding: 0;">
+  <div style="background: rgba(255,255,255,0.96); padding: 64px 0 32px 0;">
+    <div style="max-width: 920px; margin: 0 auto; padding: 0 24px; text-align: left;">
+      <h1 class="fade-in" style="font-family: 'DM Sans', sans-serif; font-size: 2.25rem; font-weight: 700; color: #1b2c48; margin-bottom: 0.4em;">
         Discover Rwanda & Denmark Together
       </h1>
-      <div style="font-size:2.1rem; margin-bottom: 0.2em;">🇷🇼 <span style="font-size:1.1rem;">meets</span> 🇩🇰</div>
-      <p style="color:#333; font-size:1.15rem; margin:0 auto 0.7em auto; max-width: 680px;">
-        Welcome to PPRWANDA Tours — your bridge between Rwanda’s breathtaking nature, wildlife, and culture, and Denmark’s heritage of expert, ethical travel. With certified guides and trusted partners in both countries, we offer authentic journeys, family adventures, sustainable safaris, and unique experiences that connect you to the heart of Africa and the warmth of Scandinavia.
+      <div class="fade-in" style="font-family: 'DM Sans', sans-serif; font-size: 1.6rem; margin-bottom: 1.2em; color: #d12b38;">
+        🇷🇼 <span style="font-size: 1.05rem; color: #444;">meets</span> 🇩🇰
+      </div>
+      <p class="fade-in" style="font-family: 'DM Sans', sans-serif; color: #2c2c2c; font-size: 1.05rem; line-height: 1.6; max-width: 680px; margin-bottom: 1em;">
+        Welcome to <strong style="color:#005f73;">PPRWANDA Tours</strong> — your bridge between Rwanda’s breathtaking nature, wildlife, and culture, and Denmark’s legacy of expert, ethical travel. Certified guides and trusted partners ensure every moment is authentic and unforgettable.
       </p>
-      <p style="color:#217a3a; font-size:1.08rem; font-weight:500; margin-bottom:0;">
-        Travel with confidence! Our collaborations with leading international and local companies ensure a seamless, safe, and memorable journey every step of the way.
+      <p class="fade-in" style="font-family: 'DM Sans', sans-serif; color:#007f5f; font-size:1rem; font-weight:500; margin-bottom:0; line-height: 1.5;">
+        Travel with confidence — we work with top international & local partners for a seamless, safe, and meaningful journey.
       </p>
     </div>
   </div>
 </section>
 
-<div style="max-width: 1200px; margin: 0 auto;">
-  <h2 style="font-size:2rem; font-family:'Montserrat',Arial,sans-serif; color:#0a3c5b; font-weight:800; margin:0 0 12px 0; text-align:center;">
+<!-- SIGNATURE EXPERIENCES SECTION -->
+<div style="max-width: 1200px; margin: 0 auto; padding: 32px 24px;">
+  <h2 class="fade-in" style="font-size:1.85rem; font-family:'DM Sans', sans-serif; color:#1b2c48; font-weight:700; margin-bottom: 8px;">
     Signature Experiences
   </h2>
-  <div style="height:4px;width:50px;background:#e32636;margin:0 auto 24px auto;border-radius:2px;"></div>
-  <p style="text-align:center; color:#444; max-width:600px; margin:0 auto 28px auto;">
-    Choose your perfect Rwandan adventure — every package can be tailored to your wishes. Click a card for more information or to start booking!
+  <div class="fade-in" style="height: 4px; width: 60px; background: linear-gradient(90deg, #d12b38, #217a3a); margin: 0 0 24px 0; border-radius: 2px;"></div>
+  <p class="fade-in" style="font-family: 'DM Sans', sans-serif; color:#444; max-width:600px; font-size:1rem; line-height:1.6;">
+    Choose your perfect Rwandan adventure — every journey is tailor-made. Click a card to explore more or start planning now!
   </p>
+</div>
+
+<!-- FADE-IN ANIMATION STYLE -->
+<style>
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.9s ease forwards;
+  }
+  .fade-in:nth-child(2) { animation-delay: 0.2s; }
+  .fade-in:nth-child(3) { animation-delay: 0.4s; }
+  .fade-in:nth-child(4) { animation-delay: 0.6s; }
+  .fade-in:nth-child(5) { animation-delay: 0.8s; }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+
+  
   <div class="pro-sig-grid">
     <!-- Card 1 -->
     <a href="wildlife.html" class="pro-sig-card-link">

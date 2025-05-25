@@ -1297,28 +1297,208 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-<!-- FONT IMPORT (place this in your <head>) -->
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- FONT IMPORT -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&display=swap" rel="stylesheet">
 
-<!-- HERO INTRO -->
-<section style="background: url('https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=1400&q=80') center center/cover no-repeat; min-height: 340px; padding: 0;">
-  <div style="background: rgba(255,255,255,0.96); padding: 64px 0 32px 0;">
-    <div style="max-width: 920px; margin: 0 auto; padding: 0 24px; text-align: left;">
-      <h1 class="fade-in" style="font-family: 'DM Sans', sans-serif; font-size: 2.25rem; font-weight: 700; color: #1b2c48; margin-bottom: 0.4em;">
-        Discover Rwanda & Denmark Together
-      </h1>
-      <div class="fade-in" style="font-family: 'DM Sans', sans-serif; font-size: 1.6rem; margin-bottom: 1.2em; color: #d12b38;">
-        🇷🇼 <span style="font-size: 1.05rem; color: #444;">meets</span> 🇩🇰
-      </div>
-      <p class="fade-in" style="font-family: 'DM Sans', sans-serif; color: #2c2c2c; font-size: 1.05rem; line-height: 1.6; max-width: 680px; margin-bottom: 1em;">
-        Welcome to <strong style="color:#005f73;">PPRWANDA Tours</strong> — your bridge between Rwanda’s breathtaking nature, wildlife, and culture, and Denmark’s legacy of expert, ethical travel. Certified guides and trusted partners ensure every moment is authentic and unforgettable.
-      </p>
-      <p class="fade-in" style="font-family: 'DM Sans', sans-serif; color:#007f5f; font-size:1rem; font-weight:500; margin-bottom:0; line-height: 1.5;">
-        Travel with confidence — we work with top international & local partners for a seamless, safe, and meaningful journey.
-      </p>
+<style>
+  :root {
+    /* Rwanda: #20603d (green), #f9dd16 (yellow), #00a1de (sky blue)
+       Denmark: #c60c30 (red), #fff (white)
+       Site: Muted, not bright */
+    --rw-green: #2b5132;
+    --rw-yellow: #dcc941;
+    --rw-blue: #478db4;
+    --dk-red: #b7282e;
+    --dk-white: #f5f5f5;
+    --text-dark: #222b32;
+    --desc-gray: #444e57;
+    --bg: #fcfcfc;
+    --cta-green: #2b5132;
+    --cta-red: #b7282e;
+    --cta-white: #fff;
+  }
+  body {
+    font-family: 'Nunito', 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background: var(--bg);
+  }
+  .hero-compact {
+    margin: 0;
+    padding: 24px 0 0 0;
+    width: 100%;
+    max-width: none;
+  }
+  .hero-compact-inner {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 0 2vw;
+    min-width: 0;
+  }
+  .hero-headline {
+    font-family: 'Nunito', 'Segoe UI', Arial, sans-serif;
+    font-size: clamp(1.25rem, 2.7vw, 2.1rem);
+    font-weight: 900;
+    color: var(--rw-green);
+    margin-bottom: 0.08em;
+    margin-top: 0;
+    line-height: 1.09;
+    text-align: left;
+    letter-spacing: -0.01em;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.45s, transform 0.5s cubic-bezier(.7,1.4,.7,1.1);
+    background: none;
+  }
+  .hero-flags {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: clamp(0.99rem, 1.3vw, 1.18rem);
+    font-weight: 800;
+    color: var(--dk-red);
+    margin-bottom: 0.6em;
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.5s 0.12s, transform 0.5s 0.12s cubic-bezier(.7,1.4,.7,1.1);
+  }
+  .hero-flags span {
+    color: var(--rw-yellow);
+    font-weight: 700;
+    opacity: 0.81;
+    font-size: 1em;
+    letter-spacing: 0.01em;
+  }
+  .hero-highlight {
+    font-size: clamp(0.98rem, 1vw, 1.09rem);
+    color: var(--rw-blue);
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    margin-top: 0;
+    letter-spacing: 0.01em;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.5s 0.18s, transform 0.5s 0.18s cubic-bezier(.7,1.4,.7,1.1);
+  }
+  .hero-desc {
+    color: var(--desc-gray);
+    font-size: clamp(0.93rem, 0.93vw, 1.03rem);
+    font-weight: 700;
+    line-height: 1.65;
+    margin: 0 0 0.7em 0;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s 0.25s, transform 0.5s 0.25s cubic-bezier(.7,1.4,.7,1.1);
+  }
+  .hero-desc strong {
+    color: var(--dk-red);
+    font-weight: 900;
+  }
+  .hero-cta {
+    display: inline-block;
+    margin: 1em 0 0 0;
+    padding: 0.57em 1.5em;
+    background: var(--cta-green);
+    color: var(--cta-white);
+    font-weight: 800;
+    font-size: 1em;
+    border: none;
+    border-radius: 1.3em;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    box-shadow: 0 2px 12px #2b513218;
+    transition: background 0.19s, color 0.19s, opacity 0.5s 0.32s, transform 0.5s 0.32s cubic-bezier(.7,1.4,.7,1.1);
+    opacity: 0;
+    transform: translateY(7px);
+  }
+  .hero-cta:hover {
+    background: var(--cta-red);
+    color: #fffbe6;
+  }
+  /* Animate in on scroll */
+  .hero-animate {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  /* Responsiveness: keep compact, never sprawling or oversized */
+  @media (min-width: 1100px) {
+    .hero-compact-inner {
+      max-width: 420px;
+    }
+    .hero-headline { font-size: 2rem; }
+  }
+  @media (max-width: 700px) {
+    .hero-compact-inner {
+      padding-left: 1vw;
+      padding-right: 1vw;
+    }
+    .hero-headline { font-size: 1.07rem; }
+    .hero-flags { font-size: 0.85rem;}
+    .hero-desc, .hero-highlight { font-size: 0.91rem;}
+    .hero-cta { font-size: 0.97rem;}
+  }
+  @media (max-width: 480px) {
+    .hero-compact-inner { max-width: 97vw;}
+  }
+</style>
+
+<div class="hero-compact">
+  <div class="hero-compact-inner">
+    <h1 class="hero-headline">Bridge Two Worlds. Travel One Story.</h1>
+    <div class="hero-flags">🇷🇼 <span>meets</span> 🇩🇰</div>
+    <div class="hero-highlight">
+      Where the heart of Africa and the spirit of Scandinavia unite for remarkable journeys.
     </div>
+    <div class="hero-desc">
+      <strong>PPRWANDA Tours</strong> blends Rwanda's wild beauty with Denmark's passion for discovery.<br>
+      Uncover new cultures, taste, and adventure—together, in safety and style.
+    </div>
+    <button class="hero-cta" onclick="window.location.href='tours.html'">
+      Start Your Adventure
+    </button>
   </div>
-</section>
+</div>
+
+<script>
+  // Animate hero section on scroll-in (and on load if visible)
+  function animateHero() {
+    const els = [
+      '.hero-headline',
+      '.hero-flags',
+      '.hero-highlight',
+      '.hero-desc',
+      '.hero-cta'
+    ].map(sel => document.querySelector(sel)).filter(Boolean);
+
+    if (!("IntersectionObserver" in window)) {
+      els.forEach((el,i) => setTimeout(() => el.classList.add('hero-animate'), i*90));
+      return;
+    }
+    let triggered = false;
+    const hero = document.querySelector('.hero-compact');
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting && !triggered) {
+        els.forEach((el,i) => setTimeout(() => el.classList.add('hero-animate'), i*80));
+        triggered = true;
+      } else if (!entries[0].isIntersecting && triggered) {
+        els.forEach(el => el.classList.remove('hero-animate'));
+        triggered = false;
+      }
+    }, { threshold: 0.2 });
+    observer.observe(hero);
+  }
+  window.addEventListener('DOMContentLoaded', animateHero);
+</script>
+
+
+
+
+
+
+
+
+  
 
 <!-- SIGNATURE EXPERIENCES SECTION -->
 <div style="max-width: 1200px; margin: 0 auto; padding: 32px 24px;">

@@ -1296,113 +1296,122 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-<!-- FONT IMPORT -->
+<!-- FONT IMPORT (Nunito for friendly/premium appearance) -->
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&display=swap" rel="stylesheet">
 
 <style>
   :root {
-    /* Rwanda: #20603d (green), #f9dd16 (yellow), #00a1de (sky blue)
-       Denmark: #c60c30 (red), #fff (white)
-       Site: Muted, not bright */
-    --rw-green: #2b5132;
-    --rw-yellow: #dcc941;
-    --rw-blue: #478db4;
-    --dk-red: #b7282e;
-    --dk-white: #f5f5f5;
-    --text-dark: #222b32;
-    --desc-gray: #444e57;
-    --bg: #fcfcfc;
-    --cta-green: #2b5132;
-    --cta-red: #b7282e;
-    --cta-white: #fff;
+    /* Custom prefix: sh- for side hero */
+    --sh-rw-green: #2b5132;
+    --sh-rw-yellow: #dcc941;
+    --sh-rw-blue: #478db4;
+    --sh-dk-red: #b7282e;
+    --sh-dk-white: #f5f5f5;
+    --sh-text-dark: #1b2f19;
+    --sh-desc-gray: #444e57;
+    --sh-bg: #fcfcfc;
+    --sh-cta-green: #2b5132;
+    --sh-cta-red: #b7282e;
+    --sh-cta-white: #fff;
+    --sh-side-padding: clamp(22px, 7vw, 110px);
   }
-  body {
-    font-family: 'Nunito', 'Segoe UI', Arial, sans-serif;
+  .sh-hero-side {
     margin: 0;
-    background: var(--bg);
-  }
-  .hero-compact {
-    margin: 0;
-    padding: 24px 0 0 0;
+    padding: 44px 0 0 0;
     width: 100%;
-    max-width: none;
+    background: linear-gradient(90deg, #f7fbe7 60%, #fcfcfc 100%);
+    /* Subtle fade from left */
   }
-  .hero-compact-inner {
-    max-width: 520px;
-    margin: 0 auto;
-    padding: 0 2vw;
+  .sh-hero-side-inner {
+    max-width: 1100px;
+    margin-left: var(--sh-side-padding);
+    margin-right: auto;
+    padding: 0;
     min-width: 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
   }
-  .hero-headline {
+  .sh-hero-content {
+    flex: 1 1 520px;
+    min-width: 320px;
+    max-width: 700px;
+    padding: 0;
+  }
+  .sh-hero-headline {
     font-family: 'Nunito', 'Segoe UI', Arial, sans-serif;
-    font-size: clamp(1.25rem, 2.7vw, 2.1rem);
+    font-size: clamp(2rem, 3vw, 3.4rem);
     font-weight: 900;
-    color: var(--rw-green);
-    margin-bottom: 0.08em;
+    color: var(--sh-rw-green);
+    margin-bottom: 0.1em;
     margin-top: 0;
-    line-height: 1.09;
+    line-height: 1.1;
     text-align: left;
     letter-spacing: -0.01em;
+    word-break: break-word;
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.45s, transform 0.5s cubic-bezier(.7,1.4,.7,1.1);
-    background: none;
+    transform: translateX(-24px);
+    transition: opacity 0.5s, transform 0.6s cubic-bezier(.7,1.4,.7,1.1);
+    max-width: 820px;
   }
-  .hero-flags {
+  .sh-hero-flags {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: clamp(0.99rem, 1.3vw, 1.18rem);
-    font-weight: 800;
-    color: var(--dk-red);
-    margin-bottom: 0.6em;
-    opacity: 0;
-    transform: translateY(14px);
-    transition: opacity 0.5s 0.12s, transform 0.5s 0.12s cubic-bezier(.7,1.4,.7,1.1);
-  }
-  .hero-flags span {
-    color: var(--rw-yellow);
-    font-weight: 700;
-    opacity: 0.81;
-    font-size: 1em;
-    letter-spacing: 0.01em;
-  }
-  .hero-highlight {
-    font-size: clamp(0.98rem, 1vw, 1.09rem);
-    color: var(--rw-blue);
-    font-weight: 700;
+    gap: 13px;
+    font-size: clamp(1.25rem, 1.6vw, 1.75rem);
+    font-weight: 900;
+    color: var(--sh-dk-red);
     margin-bottom: 0.5em;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.5s 0.10s, transform 0.5s 0.10s cubic-bezier(.7,1.4,.7,1.1);
+    letter-spacing: 0.03em;
+    text-shadow: 0 2px 8px #00000008;
+  }
+  .sh-hero-flags span {
+    color: var(--sh-rw-yellow);
+    font-weight: 900;
+    opacity: 0.81;
+    font-size: 1.02em;
+    letter-spacing: 0.02em;
+    margin: 0 4px;
+  }
+  .sh-hero-highlight {
+    font-size: clamp(1.05rem, 1.09vw, 1.22rem);
+    color: var(--sh-rw-blue);
+    font-weight: 700;
+    margin-bottom: 0.35em;
     margin-top: 0;
     letter-spacing: 0.01em;
     text-align: left;
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateX(-14px);
     transition: opacity 0.5s 0.18s, transform 0.5s 0.18s cubic-bezier(.7,1.4,.7,1.1);
   }
-  .hero-desc {
-    color: var(--desc-gray);
-    font-size: clamp(0.93rem, 0.93vw, 1.03rem);
+  .sh-hero-desc {
+    color: var(--sh-desc-gray);
+    font-size: clamp(1.01rem, 0.93vw, 1.10rem);
     font-weight: 700;
-    line-height: 1.65;
+    line-height: 1.7;
     margin: 0 0 0.7em 0;
     text-align: left;
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateX(-10px);
     transition: opacity 0.5s 0.25s, transform 0.5s 0.25s cubic-bezier(.7,1.4,.7,1.1);
+    max-width: 95%;
   }
-  .hero-desc strong {
-    color: var(--dk-red);
+  .sh-hero-desc strong {
+    color: var(--sh-dk-red);
     font-weight: 900;
   }
-  .hero-cta {
+  .sh-hero-cta {
     display: inline-block;
     margin: 1em 0 0 0;
-    padding: 0.57em 1.5em;
-    background: var(--cta-green);
-    color: var(--cta-white);
-    font-weight: 800;
-    font-size: 1em;
+    padding: 0.57em 1.7em;
+    background: var(--sh-cta-green);
+    color: var(--sh-cta-white);
+    font-weight: 900;
+    font-size: 1.09em;
     border: none;
     border-radius: 1.3em;
     cursor: pointer;
@@ -1410,91 +1419,107 @@ document.addEventListener("DOMContentLoaded", function () {
     box-shadow: 0 2px 12px #2b513218;
     transition: background 0.19s, color 0.19s, opacity 0.5s 0.32s, transform 0.5s 0.32s cubic-bezier(.7,1.4,.7,1.1);
     opacity: 0;
-    transform: translateY(7px);
+    transform: translateX(-7px);
   }
-  .hero-cta:hover {
-    background: var(--cta-red);
+  .sh-hero-cta:hover {
+    background: var(--sh-cta-red);
     color: #fffbe6;
   }
-  /* Animate in on scroll */
-  .hero-animate {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
+  .sh-hero-image-side {
+    display: block;
+    min-width: 220px;
+    flex: 1 1 360px;
+    max-width: 420px;
+    height: 240px;
+    margin-left: 38px;
+    border-radius: 24px;
+    background: url('https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=800&q=80') center center/cover no-repeat;
+    box-shadow: 0 4px 22px #2b513222;
+    opacity: 0.93;
+    transition: opacity 0.5s;
   }
-  /* Responsiveness: keep compact, never sprawling or oversized */
-  @media (min-width: 1100px) {
-    .hero-compact-inner {
-      max-width: 420px;
+  .sh-hero-animate {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+  }
+  @media (max-width: 1100px) {
+    .sh-hero-side-inner {
+      max-width: 99vw;
+      margin-left: calc(var(--sh-side-padding) / 2);
     }
-    .hero-headline { font-size: 2rem; }
+    .sh-hero-headline { font-size: 2.1rem; }
+    .sh-hero-image-side { display: none; }
   }
   @media (max-width: 700px) {
-    .hero-compact-inner {
-      padding-left: 1vw;
-      padding-right: 1vw;
+    .sh-hero-side-inner {
+      flex-direction: column;
+      gap: 0;
+      margin-left: 0;
+      padding-left: 6vw;
+      padding-right: 2vw;
     }
-    .hero-headline { font-size: 1.07rem; }
-    .hero-flags { font-size: 0.85rem;}
-    .hero-desc, .hero-highlight { font-size: 0.91rem;}
-    .hero-cta { font-size: 0.97rem;}
-  }
-  @media (max-width: 480px) {
-    .hero-compact-inner { max-width: 97vw;}
+    .sh-hero-content { max-width: 97vw; }
+    .sh-hero-headline { font-size: 1.32rem; }
+    .sh-hero-flags { font-size: 1.05rem;}
+    .sh-hero-desc, .sh-hero-highlight { font-size: 0.97rem;}
+    .sh-hero-cta { font-size: 0.98rem;}
+    .sh-hero-image-side { display: none; }
   }
 </style>
 
-<div class="hero-compact">
-  <div class="hero-compact-inner">
-    <h1 class="hero-headline">Bridge Two Worlds. Travel One Story.</h1>
-    <div class="hero-flags">🇷🇼 <span>meets</span> 🇩🇰</div>
-    <div class="hero-highlight">
-      Where the heart of Africa and the spirit of Scandinavia unite for remarkable journeys.
+<div class="sh-hero-side">
+  <div class="sh-hero-side-inner">
+    <div class="sh-hero-content">
+      <h1 class="sh-hero-headline">
+        Bridge Two Worlds.<br>Travel One Story.
+      </h1>
+      <div class="sh-hero-flags">🇷🇼 <span>meets</span> 🇩🇰</div>
+      <div class="sh-hero-highlight">
+        Where the heart of Africa and the spirit of Scandinavia unite for remarkable journeys.
+      </div>
+      <div class="sh-hero-desc">
+        <strong>PPRWANDA Tours</strong> blends Rwanda’s wild beauty with Denmark’s passion for discovery.<br>
+        Uncover new cultures, taste, and adventure—together, in safety and style.
+      </div>
+      <button class="sh-hero-cta" onclick="window.location.href='tours.html'">
+        Start Your Adventure
+      </button>
     </div>
-    <div class="hero-desc">
-      <strong>PPRWANDA Tours</strong> blends Rwanda's wild beauty with Denmark's passion for discovery.<br>
-      Uncover new cultures, taste, and adventure—together, in safety and style.
-    </div>
-    <button class="hero-cta" onclick="window.location.href='tours.html'">
-      Start Your Adventure
-    </button>
+    <div class="sh-hero-image-side" aria-hidden="true"></div>
   </div>
 </div>
 
 <script>
   // Animate hero section on scroll-in (and on load if visible)
-  function animateHero() {
+  function sh_animateHero() {
     const els = [
-      '.hero-headline',
-      '.hero-flags',
-      '.hero-highlight',
-      '.hero-desc',
-      '.hero-cta'
+      '.sh-hero-headline',
+      '.sh-hero-flags',
+      '.sh-hero-highlight',
+      '.sh-hero-desc',
+      '.sh-hero-cta',
+      '.sh-hero-image-side'
     ].map(sel => document.querySelector(sel)).filter(Boolean);
 
     if (!("IntersectionObserver" in window)) {
-      els.forEach((el,i) => setTimeout(() => el.classList.add('hero-animate'), i*90));
+      els.forEach((el,i) => setTimeout(() => el.classList.add('sh-hero-animate'), i*90));
       return;
     }
     let triggered = false;
-    const hero = document.querySelector('.hero-compact');
+    const hero = document.querySelector('.sh-hero-side');
     const observer = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting && !triggered) {
-        els.forEach((el,i) => setTimeout(() => el.classList.add('hero-animate'), i*80));
+        els.forEach((el,i) => setTimeout(() => el.classList.add('sh-hero-animate'), i*80));
         triggered = true;
       } else if (!entries[0].isIntersecting && triggered) {
-        els.forEach(el => el.classList.remove('hero-animate'));
+        els.forEach(el => el.classList.remove('sh-hero-animate'));
         triggered = false;
       }
     }, { threshold: 0.2 });
     observer.observe(hero);
   }
-  window.addEventListener('DOMContentLoaded', animateHero);
+  window.addEventListener('DOMContentLoaded', sh_animateHero);
 </script>
-
-
-
-
-
 
 
 

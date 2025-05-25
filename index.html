@@ -1918,10 +1918,104 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+<!-- MODERN CARD CAROUSEL css - FULL BACKGROUND IMAGE, EXTENDS TO SIDE, ANIMATED TEXT LEFT (only on large screens), no white bg, creative, new color scheme -->
+<!-- FONT IMPORT (Nunito for friendly/premium appearance) -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&display=swap" rel="stylesheet">
 
+<style>
+  /* General layout for the section */
+  .discover-rwanda-section {
+    width: 100%;
+    padding: 60px 20px; /* Adjust the padding to position content */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Align content vertically */
+  }
+
+  .discover-rwanda-container {
+    display: flex;
+    justify-content: center; /* Keeps title and button in a straight line */
+    align-items: center;
+    gap: 20px; /* Space between title and button */
+  }
+
+  .discover-rwanda-title {
+    font-family: 'Nunito', 'Segoe UI', Arial, sans-serif;
+    font-size: clamp(1.8rem, 5vw, 2.8rem); /* Shrinks based on screen width */
+    font-weight: 900;
+    color: #2b5132; /* Dark green */
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    opacity: 0;
+    transform: translateY(-20px); /* Starts slightly above its final position */
+    transition: opacity 0.5s, transform 0.6s cubic-bezier(.7, 1.4, .7, 1.1);
+  }
+
+  .discover-rwanda-cta {
+    padding: 0.6em 1.8em; /* Adjust button size */
+    background: #2b5132; /* Dark green */
+    color: white;
+    font-weight: 700;
+    font-size: clamp(1rem, 3vw, 1.3rem); /* Shrinks based on screen width */
+    border: none;
+    border-radius: 1.3em;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(43, 81, 50, 0.1);
+    opacity: 0;
+    transform: translateY(-10px); /* Starts slightly above its final position */
+    transition: background 0.19s, opacity 0.5s 0.32s, transform 0.5s 0.32s cubic-bezier(.7, 1.4, .7, 1.1);
+  }
+
+  .discover-rwanda-cta:hover {
+    background: #b7282e; /* Dark Red */
+  }
+
+  /* Animation for the title and button */
+  .discover-rwanda-animate {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .discover-rwanda-title {
+      font-size: clamp(1.5rem, 5vw, 2rem); /* Adjust for smaller screens */
+    }
+
+    .discover-rwanda-cta {
+      font-size: clamp(0.9rem, 3vw, 1.1rem);
+    }
+  }
+</style>
+
+<!-- HTML Structure -->
+<div class="discover-rwanda-section">
+  <div class="discover-rwanda-container">
+    <h1 class="discover-rwanda-title discover-rwanda-animate">
+      Discover Rwanda: Your Perfect Trip Awaits
+    </h1>
+    <button class="discover-rwanda-cta discover-rwanda-animate" onclick="window.location.href='tour-packages.html'">
+      View More Packages
+    </button>
+  </div>
+</div>
+
+<script>
+  // Add animation delay for smooth transition of text and button
+  document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(function () {
+      document.querySelector('.discover-rwanda-title').classList.add('discover-rwanda-animate');
+      document.querySelector('.discover-rwanda-cta').classList.add('discover-rwanda-animate');
+    }, 100);
+  });
+</script>
 
         
 
+
+
+
+  
 <!-- MODERN CARD CAROUSEL - FULL BACKGROUND IMAGE, EXTENDS TO SIDE, ANIMATED TEXT LEFT (only on large screens), no white bg, creative, new color scheme -->
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Montserrat:wght@700&display=swap" rel="stylesheet">
 <style>

@@ -1935,17 +1935,19 @@ body { background: #eef2f6; }
   letter-spacing: 1.1px;
   animation: badge-pop .7s cubic-bezier(.19,1.08,.52,1.19);
 }
-.travel-badge.adventure    { background: linear-gradient(90deg, #0a8b62 0%, #3db3bb 100%); }
-.travel-badge.nature       { background: linear-gradient(90deg, #217a3a 0%, #4fd1c5 100%); }
-.travel-badge.culture      { background: linear-gradient(90deg, #5b1f5e 0%, #3db3bb 100%); }
-.travel-badge.special      { background: linear-gradient(90deg, #278bba 0%, #a6e5f7 100%); }
-.travel-badge.food         { background: linear-gradient(90deg, #178c7e 0%, #4fd1c5 100%); }
-.travel-badge.relax        { background: linear-gradient(90deg, #1e90bb 0%, #a0e3f7 100%); }
-.travel-badge.family       { background: linear-gradient(90deg, #0089ba 0%, #6adec2 100%);}
-.travel-badge.group        { background: linear-gradient(90deg, #278bba 0%, #72d4ec 100%);}
-.travel-badge.lecture      { background: linear-gradient(90deg, #0f4667 0%, #47c7e5 100%);}
-.travel-badge.solo         { background: linear-gradient(90deg, #31337e 0%, #3db3bb 100%);}
-.travel-badge.luxury       { background: linear-gradient(90deg, #008cba 0%, #b9e4eb 100%);}
+.travel-badge.adventure,
+.travel-badge.nature,
+.travel-badge.culture,
+.travel-badge.special,
+.travel-badge.food,
+.travel-badge.relax,
+.travel-badge.family,
+.travel-badge.group,
+.travel-badge.lecture,
+.travel-badge.solo,
+.travel-badge.luxury {
+  background: linear-gradient(90deg, rgba(161,0,37,0.7) 0%, rgba(161,0,37,0.2) 100%);
+}
 @keyframes badge-pop {
   0% { transform: scale(0.45) translateY(-18px); opacity: 0; }
   100% { transform: scale(1) translateY(0); opacity: 1;}

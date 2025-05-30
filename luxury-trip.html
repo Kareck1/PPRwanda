@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Luxury Trips | PPRwanda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts for Scandinavian style -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root {
+      --dk-red: #a51c30;
+      --dk-red-light: #e9d6d3;
+      --dk-blue: #1b365d;
+      --dk-blue-light: #e5e9f1;
+      --dk-white: #f9f9f7;
+      --dk-grey: #f2f2f2;
+      --dk-shadow: 0 6px 36px rgba(27,54,93,0.07);
+      --dk-accent: #d5bfa3;
+      --transition: .6s cubic-bezier(.23,1,.32,1);
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--dk-white);
+      font-family: 'Roboto', Arial, sans-serif;
+      color: #23272b;
+    }
+    header {
+      background: linear-gradient(120deg, var(--dk-blue) 0%, var(--dk-blue-light) 100%);
+      color: var(--dk-white);
+      min-height: 420px;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      box-shadow: var(--dk-shadow);
+      z-index: 1;
+    }
+    .hero-content {
+      max-width: 860px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+      padding: 72px 10vw 48px 10vw;
+      animation: fadeIn 1.3s;
+      min-height: 290px;
+    }
+    .hero-title {
+      font-size: 2.8rem;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 700;
+      margin-bottom: 19px;
+      text-shadow: 0 2px 12px rgba(27,54,93,0.08);
+      letter-spacing: 2px;
+    }
+    .hero-desc {
+      font-size: 1.3rem;
+      margin-bottom: 32px;
+      line-height: 1.5;
+      color: var(--dk-accent);
+      min-height: 52px;
+    }
+    .hero-cta {
+      display: inline-block;
+      background: var(--dk-red);
+      color: var(--dk-white);
+      font-weight: bold;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      padding: 14px 34px;
+      text-decoration: none;
+      box-shadow: 0 2px 14px rgba(27,54,93,0.11);
+      margin-bottom: 16px;
+      margin-top: 10px;
+      transition: background .2s, transform .25s;
+      border: none;
+      cursor: pointer;
+    }
+    .hero-cta:hover { background: #d12e47; transform: scale(1.05);}
+    .hero-bg-shape {
+      position: absolute;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      z-index: 1;
+      pointer-events: none;
+      animation: floatingBG 14s ease-in-out infinite alternate;
+    }
+    @keyframes floatingBG {
+      from { transform: scale(1) translateY(0);}
+      to { transform: scale(1.03) translateY(18px);}
+    }
+    /* LUXURY EXPERIENCES */
+    .luxury-section {
+      background: var(--dk-grey);
+      padding: 70px 7vw 56px 7vw;
+      border-radius: 0 0 44px 44px/0 0 22px 22px;
+      margin-top: -24px;
+      box-shadow: 0 10px 32px -12px #1b365d0e;
+      position: relative;
+      z-index: 2;
+      animation: fadeIn 2s;
+    }
+    .luxury-title {
+      text-align: center;
+      color: var(--dk-blue);
+      font-size: 2.05rem;
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin-bottom: 22px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+    }
+    .luxury-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 38px;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    .luxury-card {
+      background: var(--dk-white);
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(27,54,93,0.09);
+      width: 355px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow .3s, transform .3s;
+      animation: slideUp 1.2s;
+      position: relative;
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(64px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .luxury-card:hover {
+      box-shadow: 0 12px 40px rgba(27,54,93,0.18);
+      transform: scale(1.03) translateY(-7px);
+    }
+    .luxury-img {
+      width: 100%;
+      height: 215px;
+      object-fit: cover;
+      background: #e8e8ea;
+      filter: brightness(0.93) saturate(1.04);
+      transition: filter .4s;
+    }
+    .luxury-card:hover .luxury-img {
+      filter: brightness(1) saturate(1.12);
+    }
+    .luxury-content {
+      padding: 26px 22px 20px 22px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .luxury-title-small {
+      font-size: 1.19rem;
+      font-family: 'Montserrat', Arial, sans-serif;
+      color: var(--dk-blue);
+      margin-bottom: 8px;
+      font-weight: 700;
+      letter-spacing: .5px;
+    }
+    .luxury-badge {
+      display: inline-block;
+      background: var(--dk-red);
+      color: var(--dk-white);
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: 14px;
+      padding: 3px 13px;
+      margin-bottom: 7px;
+      margin-right: 8px;
+      letter-spacing: .5px;
+      box-shadow: 0 2px 8px #a51c3017;
+      vertical-align: middle;
+    }
+    .luxury-desc {
+      font-size: 1.05rem;
+      color: #3b3f44;
+      line-height: 1.6;
+      flex: 1;
+    }
+    .luxury-info {
+      font-size: 0.97rem;
+      color: var(--dk-blue);
+      margin-top: 6px;
+      font-style: italic;
+      opacity: .82;
+    }
+    .luxury-cta {
+      background: var(--dk-blue);
+      color: var(--dk-white);
+      border-radius: 18px;
+      border: none;
+      padding: 10px 0;
+      width: 100%;
+      margin-top: 14px;
+      cursor: pointer;
+      font-size: 1.02rem;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 600;
+      transition: background .2s;
+      box-shadow: 0 2px 8px #1b365d18;
+    }
+    .luxury-cta:hover { background: var(--dk-red); }
+    /* Highlights, Testimonials, FAQ, etc. can be added as needed */
+    @media (max-width: 900px) {
+      .luxury-list {
+        flex-direction: column;
+        align-items: center;
+      }
+      .luxury-section {
+        padding-left: 4vw;
+        padding-right: 4vw;
+      }
+    }
+    @media (max-width: 540px) {
+      .hero-title { font-size: 1.3rem;}
+      .luxury-title { font-size: 1.1rem;}
+      .luxury-card { width: 95vw; }
+      .luxury-img { height: 140px;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero-content">
+      <div class="hero-title">The Art of Luxury Travel in Denmark</div>
+      <div class="hero-desc">
+        Immerse yourself in a world of sophistication and comfort. Our luxury trips blend Denmark’s best destinations with first-class service, private experiences, and exclusive offers for the discerning traveler.
+      </div>
+      <a class="hero-cta" href="#luxury">Discover Exclusive Packages</a>
+    </div>
+    <svg class="hero-bg-shape" viewBox="0 0 1600 350" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,120 C400,200 1200,0 1600,120 L1600,0 L0,0 Z" fill="#d5bfa3" fill-opacity="0.13"/>
+      <circle cx="300" cy="80" r="38" fill="#a51c30" fill-opacity="0.12"/>
+      <circle cx="1400" cy="50" r="52" fill="#a51c30" fill-opacity="0.10"/>
+      <circle cx="900" cy="120" r="36" fill="#1b365d" fill-opacity="0.10"/>
+    </svg>
+  </header>
+  <main>
+    <section id="luxury" class="luxury-section">
+      <div class="luxury-title">Our Signature Luxury Experiences</div>
+      <div class="luxury-list">
+        <div class="luxury-card">
+          <img class="luxury-img" src="https://images.unsplash.com/photo-1482062364825-616fd23b8fc1?auto=format&fit=crop&w=800&q=80" alt="Luxury Castle Stay">
+          <div class="luxury-content">
+            <span class="luxury-badge"><i class="fa-solid fa-crown"></i> Royal Stay</span>
+            <div class="luxury-title-small">Live Like Royalty: Castle Retreat</div>
+            <div class="luxury-desc">
+              Stay in a historic Danish castle with private suites, gourmet dining, and exclusive butler service. Enjoy personalized tours and private access to royal gardens.
+            </div>
+            <div class="luxury-info"><i class="fa-solid fa-user-tie"></i> Private, all-inclusive, 3-7 nights</div>
+            <button class="luxury-cta">Request Invitation</button>
+          </div>
+        </div>
+        <div class="luxury-card">
+          <img class="luxury-img" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Luxury Yacht Experience">
+          <div class="luxury-content">
+            <span class="luxury-badge" style="background:#51a5ae;"><i class="fa-solid fa-ship"></i> Yacht</span>
+            <div class="luxury-title-small">Private Yacht Voyage</div>
+            <div class="luxury-desc">
+              Set sail along Denmark’s scenic coast on a crewed luxury yacht. Indulge in sunset dinners, on-board spa treatments, and stops at exclusive island resorts.
+            </div>
+            <div class="luxury-info"><i class="fa-solid fa-water"></i> Tailored, 2-5 days</div>
+            <button class="luxury-cta">Book Now</button>
+          </div>
+        </div>
+        <div class="luxury-card">
+          <img class="luxury-img" src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80" alt="Luxury Wellness">
+          <div class="luxury-content">
+            <span class="luxury-badge" style="background:#b05a29;"><i class="fa-solid fa-spa"></i> Wellness</span>
+            <div class="luxury-title-small">Nordic Spa & Wellness Escape</div>
+            <div class="luxury-desc">
+              Rejuvenate in the finest Danish spas with thermal baths, sea-view saunas, massage therapies and gourmet organic cuisine in tranquil, scenic settings.
+            </div>
+            <div class="luxury-info"><i class="fa-solid fa-leaf"></i> Wellness-focused, 2-4 days</div>
+            <button class="luxury-cta">Enquire Now</button>
+          </div>
+        </div>
+        <div class="luxury-card">
+          <img class="luxury-img" src="https://images.unsplash.com/photo-1465101178521-c1a9136a6a0b?auto=format&fit=crop&w=800&q=80" alt="Luxury Island Retreat">
+          <div class="luxury-content">
+            <span class="luxury-badge" style="background:var(--dk-accent);color:var(--dk-blue);"><i class="fa-solid fa-gem"></i> Exclusive</span>
+            <div class="luxury-title-small">Secluded Island Hideaway</div>
+            <div class="luxury-desc">
+              Escape to a private villa on one of Denmark’s untouched islands. Enjoy private chefs, guided nature walks, and bespoke adventures, all in complete privacy.
+            </div>
+            <div class="luxury-info"><i class="fa-solid fa-mountain-sun"></i> Ultimate privacy, 3-7 nights</div>
+            <button class="luxury-cta">Reserve Villa</button>
+          </div>
+        </div>
+        <div class="luxury-card">
+          <img class="luxury-img" src="https://images.unsplash.com/photo-1416339306562-f3d12fefd36f?auto=format&fit=crop&w=800&q=80" alt="Luxury Gastronomy">
+          <div class="luxury-content">
+            <span class="luxury-badge" style="background:#d5bfa3;color:var(--dk-blue);"><i class="fa-solid fa-utensils"></i> Gourmet</span>
+            <div class="luxury-title-small">Michelin-Star Gastronomy Tour</div>
+            <div class="luxury-desc">
+              Savor Denmark’s culinary excellence with a tour of Michelin-starred restaurants, private tastings, and exclusive chef’s table experiences.
+            </div>
+            <div class="luxury-info"><i class="fa-solid fa-glass-cheers"></i> Foodie, 1-3 days</div>
+            <button class="luxury-cta">Taste Luxury</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Optionally: add testimonials, highlights, FAQ, etc. -->
+  </main>
+  <footer style="background:var(--dk-blue); color:var(--dk-white); text-align:center; padding:24px 0; margin-top:48px; font-size:1rem;">
+    &copy; 2025 PPRwanda. Luxury Experiences Inspired by Denmark.
+  </footer>
+  <script>
+    // Animate luxury cards in with delay
+    document.querySelectorAll('.luxury-card').forEach((card, i) => {
+      card.style.animationDelay = (i * 0.18 + .1) + 's';
+    });
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

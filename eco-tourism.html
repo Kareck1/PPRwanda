@@ -12,7 +12,7 @@
       padding: 0;
     }
     .eco-header {
-      background: linear-gradient(90deg, #a10025 0%, #a10025 100%);
+      background: #20422f;
       color: #fff;
       padding: 32px 0 24px 0;
       text-align: center;
@@ -25,9 +25,8 @@
     .eco-header p {
       margin: 0;
       font-size: 1.15rem;
-      color: #ffe2ef;
+      color: #b7dbc4;
     }
-
     .eco-tourism-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
@@ -36,7 +35,6 @@
       margin: 38px auto 38px auto;
       padding: 0 18px;
     }
-
     .travel-card {
       background: #fff;
       border-radius: 20px;
@@ -58,8 +56,8 @@
       display: block;
     }
     .travel-badge.eco {
-      background: linear-gradient(90deg, rgba(161,0,37,0.7) 0%, rgba(161,0,37,0.4) 100%);
-      color: #fff;
+      background: rgba(32, 66, 47, 0.12);
+      color: #20422f;
       font-size: 1.1rem;
       padding: 0.45em 1.2em;
       border-radius: 18px;
@@ -72,6 +70,7 @@
       top: 0;
       left: 0;
       z-index: 2;
+      border: 1px solid #c1e3d1;
     }
     @media (max-width: 768px) {
       .travel-badge.eco {
@@ -102,7 +101,7 @@
     }
     .travel-card-content .travel-subtitle {
       font-size: .92em;
-      color: #278bba;
+      color: #497a5e;
       font-weight: bold;
       margin-bottom: 2px;
       display: block;
@@ -112,7 +111,7 @@
       display: flex;
       gap: 11px;
       font-size: .99rem;
-      color: #278bba;
+      color: #497a5e;
       margin-bottom: 13px;
       flex-wrap: wrap;
     }
@@ -138,7 +137,7 @@
       margin-top: auto;
     }
     .book-btn {
-      background: #a10025;
+      background: #20422f;
       color: #fff;
       border: none;
       border-radius: 13px;
@@ -150,15 +149,72 @@
       transition: background 0.13s;
     }
     .book-btn:hover {
-      background: #d71a4e;
+      background: #497a5e;
+    }
+    /* Add section styling */
+    .eco-section {
+      max-width: 900px;
+      margin: 0 auto 36px auto;
+      padding: 0 18px;
+      background: #f0f7f2;
+      border-left: 4px solid #20422f;
+      border-radius: 12px;
+    }
+    .eco-section h2 {
+      color: #20422f;
+      font-size: 1.38rem;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+    .eco-section ul {
+      margin: 0 0 0 24px;
+      padding: 0;
+    }
+    .eco-section li {
+      margin-bottom: 8px;
+      color: #234c35;
+      font-size: 1.07rem;
+    }
+    .eco-section p {
+      color: #234c35;
+      margin: 0 0 10px 0;
+      font-size: 1.05rem;
     }
   </style>
 </head>
 <body>
   <div class="eco-header">
-    <h1>Eco-Tourism Experiences</h1>
+    <h1>Eco-Tourism Experiences in Rwanda</h1>
     <p>Explore Rwanda’s breathtaking nature, wildlife, and conservation initiatives with these eco-friendly tours.</p>
   </div>
+  
+  <div class="eco-section">
+    <h2>About Eco-Tourism in Rwanda</h2>
+    <p>
+      Rwanda is a global leader in sustainable tourism, protecting unique biodiversity and empowering local communities.
+      Eco-tourism in Rwanda offers visitors a chance to discover pristine rainforests, volcanic landscapes, rare wildlife and to participate in conservation efforts, all while supporting responsible travel.
+    </p>
+  </div>
+  <div class="eco-section">
+    <h2>Why Choose Eco-Tourism?</h2>
+    <ul>
+      <li><b>Conservation:</b> Support the protection of endangered species and habitats.</li>
+      <li><b>Community:</b> Experience local culture and contribute to rural livelihoods.</li>
+      <li><b>Adventure:</b> Enjoy guided walks, treks, and activities in nature-rich settings.</li>
+      <li><b>Sustainability:</b> Travel with minimal environmental impact.</li>
+    </ul>
+  </div>
+  <div class="eco-section">
+    <h2>What to Expect</h2>
+    <ul>
+      <li>Guided forest treks, canopy walks, and birdwatching</li>
+      <li>Visits to community projects and eco-lodges</li>
+      <li>Opportunities to plant trees and learn about conservation</li>
+      <li>Authentic Rwandan hospitality and cuisine</li>
+      <li>Stunning landscapes: lakes, rainforests, volcanoes, and more</li>
+    </ul>
+  </div>
+  
   <div class="eco-tourism-grid">
     <!-- Card 1 -->
     <div class="travel-card">

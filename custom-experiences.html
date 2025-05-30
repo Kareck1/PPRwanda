@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom Experiences | PPRwanda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts for Scandinavian style -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --denmark-red: #c60c30;
+      --denmark-white: #f7f7f7;
+      --denmark-blue: #003399;
+      --denmark-grey: #e5e5e5;
+      --hero-dot: #c60c30;
+    }
+    body {
+      margin: 0;
+      font-family: 'Roboto', Arial, sans-serif;
+      background: var(--denmark-white);
+      color: #222;
+    }
+    header {
+      background: var(--denmark-red);
+      color: var(--denmark-white);
+      padding: 40px 0 20px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-title {
+      font-size: 3rem;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+    .hero-desc {
+      font-size: 1.35rem;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+    /* Hero dots */
+    .hero-dots {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin-top: 16px;
+    }
+    .hero-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--hero-dot);
+      opacity: 0.8;
+      transition: background 0.3s, opacity 0.3s;
+      border: 3px solid var(--denmark-white);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    }
+    .hero-dot.active {
+      background: var(--denmark-blue);
+      opacity: 1;
+    }
+    /* Hero background shapes */
+    .hero-bg-shape {
+      position: absolute;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+    /* Offers section */
+    .offers-section {
+      background: var(--denmark-grey);
+      padding: 60px 10vw 40px 10vw;
+      border-radius: 0 0 60px 60px/0 0 30px 30px;
+    }
+    .offers-title {
+      text-align: center;
+      color: var(--denmark-blue);
+      font-size: 2.3rem;
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin-bottom: 40px;
+      font-weight: 700;
+    }
+    .offers-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 36px;
+      justify-content: center;
+    }
+    .offer-card {
+      background: var(--denmark-white);
+      border-radius: 18px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      width: 350px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s;
+    }
+    .offer-card:hover {
+      transform: translateY(-7px) scale(1.025);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+    }
+    .offer-image {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      background: #ddd;
+    }
+    .offer-content {
+      padding: 22px;
+      flex: 1;
+    }
+    .offer-title {
+      font-size: 1.35rem;
+      font-family: 'Montserrat', Arial, sans-serif;
+      color: var(--denmark-red);
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .offer-desc {
+      font-size: 1.04rem;
+      color: #444;
+      line-height: 1.5;
+    }
+    /* Specials text section */
+    .specials-section {
+      padding: 64px 10vw 48px 10vw;
+      background: var(--denmark-white);
+    }
+    .specials-title {
+      text-align: center;
+      font-size: 2rem;
+      color: var(--denmark-red);
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin-bottom: 26px;
+    }
+    .specials-list {
+      font-size: 1.18rem;
+      color: #262626;
+      max-width: 850px;
+      margin: 0 auto;
+      line-height: 1.7;
+      list-style: disc inside;
+      padding: 0 0 0 16px;
+    }
+    /* Responsive styles */
+    @media (max-width: 900px) {
+      .offers-list {
+        flex-direction: column;
+        align-items: center;
+      }
+      .offers-section, .specials-section {
+        padding-left: 4vw;
+        padding-right: 4vw;
+      }
+    }
+    @media (max-width: 500px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+      .offers-title, .specials-title {
+        font-size: 1.2rem;
+      }
+      .offer-card {
+        width: 95vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero-content">
+      <div class="hero-title">Discover Custom Experiences in Denmark</div>
+      <div class="hero-desc">
+        Dive into a world of unforgettable moments. From breathtaking landscapes to exclusive city escapes, our custom experiences are tailored for you! Explore special offers and unique adventures—designed with the colors and spirit of Denmark.
+      </div>
+      <div class="hero-dots">
+        <div class="hero-dot active"></div>
+        <div class="hero-dot"></div>
+        <div class="hero-dot"></div>
+      </div>
+    </div>
+    <!-- Decorative background SVG -->
+    <svg class="hero-bg-shape" viewBox="0 0 1600 350" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,120 C400,200 1200,0 1600,120 L1600,0 L0,0 Z" fill="#003399" fill-opacity="0.12"/>
+      <circle cx="300" cy="80" r="38" fill="#c60c30" fill-opacity="0.18"/>
+      <circle cx="1400" cy="50" r="52" fill="#c60c30" fill-opacity="0.12"/>
+    </svg>
+  </header>
+
+  <section class="offers-section">
+    <div class="offers-title">Special Offers &amp; Unique Experiences</div>
+    <div class="offers-list">
+      <!-- Offer 1 -->
+      <div class="offer-card">
+        <img class="offer-image" src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=700&q=80" alt="Danish Coastline">
+        <div class="offer-content">
+          <div class="offer-title">Nordic Seaside Retreat</div>
+          <div class="offer-desc">
+            Relax at Denmark’s beautiful coastal resorts, with private saunas, guided beach walks, and local gourmet seafood dinners. <b>Book now and get complimentary spa treatments!</b>
+          </div>
+        </div>
+      </div>
+      <!-- Offer 2 -->
+      <div class="offer-card">
+        <img class="offer-image" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=700&q=80" alt="Copenhagen City">
+        <div class="offer-content">
+          <div class="offer-title">Copenhagen Urban Adventure</div>
+          <div class="offer-desc">
+            Explore Copenhagen’s hidden gems with a private local guide! Includes bike rentals, entry to New Nordic art galleries, and a coffee tasting at Denmark’s best cafés.
+          </div>
+        </div>
+      </div>
+      <!-- Offer 3 -->
+      <div class="offer-card">
+        <img class="offer-image" src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=700&q=80" alt="Danish Castles">
+        <div class="offer-content">
+          <div class="offer-title">Royal Castles & History Tour</div>
+          <div class="offer-desc">
+            Step into Denmark’s royal past! Visit magnificent castles, enjoy a Viking museum tour, and savor a medieval-style feast. <b>Exclusive: Free entry for children under 12 this season!</b>
+          </div>
+        </div>
+      </div>
+      <!-- Offer 4 -->
+      <div class="offer-card">
+        <img class="offer-image" src="https://images.unsplash.com/photo-1464547323743-4edd0cd0c746?auto=format&fit=crop&w=700&q=80" alt="Danish Nature">
+        <div class="offer-content">
+          <div class="offer-title">Nature & Wildlife Expedition</div>
+          <div class="offer-desc">
+            Guided hikes in Denmark’s national parks, bird-watching on the fjords, and a night in a luxury eco-lodge. <b>Special: Book as a group & save 20%!</b>
+          </div>
+        </div>
+      </div>
+      <!-- Offer 5 -->
+      <div class="offer-card">
+        <img class="offer-image" src="https://images.unsplash.com/photo-1416339306562-f3d12fefd36f?auto=format&fit=crop&w=700&q=80" alt="Danish Cuisine">
+        <div class="offer-content">
+          <div class="offer-title">Culinary Journey: Taste of Denmark</div>
+          <div class="offer-desc">
+            Savor Denmark’s famous open sandwiches (smørrebrød), visit organic farms, and learn Nordic cooking from master chefs. <b>Includes a wine pairing dinner for two!</b>
+          </div>
+        </div>
+      </div>
+      <!-- Offer 6 -->
+      <div class="offer-card">
+        <img class="offer-image" src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=700&q=80" alt="Hygge Experience">
+        <div class="offer-content">
+          <div class="offer-title">Hygge Home Experience</div>
+          <div class="offer-desc">
+            Experience true Danish hygge with a cozy home stay, candlelit evenings, and personalized city walks. <b>Gift basket with Danish treats included!</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="specials-section">
+    <div class="specials-title">Why Choose Our Experiences?</div>
+    <ul class="specials-list">
+      <li><b>Limited Time Offers:</b> Each adventure is available for this season only—don’t miss out!</li>
+      <li><b>Locally Curated:</b> All experiences are designed by local Danish experts for authenticity.</li>
+      <li><b>Flexible Booking:</b> Free cancellations up to 48 hours before your experience.</li>
+      <li><b>Family Friendly:</b> Activities for all ages, from castle tours to nature hikes.</li>
+      <li><b>Group Discounts:</b> Traveling with friends or family? Enjoy up to 30% off group bookings!</li>
+      <li><b>Eco-Conscious:</b> We support sustainable tourism and green experiences across Denmark.</li>
+      <li><b>VIP Perks:</b> Early check-in, late check-out, and exclusive welcome gifts for every guest.</li>
+      <li><b>24/7 Support:</b> Our team is always ready to help you make the most of your stay.</li>
+      <li><b>Photo Memories:</b> Complimentary professional photoshoots for select experiences!</li>
+      <li><b>Custom Requests:</b> Want something unique? Contact us for tailored adventures.</li>
+    </ul>
+  </section>
+
+  <footer style="background:var(--denmark-blue); color:var(--denmark-white); text-align:center; padding:24px 0; margin-top:48px; font-size:1rem;">
+    &copy; 2025 PPRwanda. Custom Experiences Inspired by Denmark.
+  </footer>
+
+  <!-- Optional: Hero dot carousel simulation -->
+  <script>
+    const dots = document.querySelectorAll('.hero-dot');
+    let active = 0;
+    setInterval(() => {
+      dots[active].classList.remove('active');
+      active = (active + 1) % dots.length;
+      dots[active].classList.add('active');
+    }, 2200);
+  </script>
+</body>
+</html>

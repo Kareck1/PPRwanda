@@ -929,105 +929,105 @@ logo.addEventListener('click', () => {
       
 
 <!-- BEGIN Language Switcher: Copy everything below and paste where you want the language buttons -->
-<!-- BEGIN Language Switcher (Robust & Reliable) -->
-<div class="language-switcher">
-  <button type="button" class="flag-btn" data-lang="en" title="English">
-    <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/gb.svg" alt="English" width="32" height="32" />
-  </button>
-  <button type="button" class="flag-btn" data-lang="fr" title="Français">
-    <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/fr.svg" alt="Français" width="32" height="32" />
-  </button>
-  <button type="button" class="flag-btn" data-lang="da" title="Dansk">
-    <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/dk.svg" alt="Dansk" width="32" height="32" />
-  </button>
-</div>
-<!-- Optional: If you want a visible dropdown, just leave the widget unhidden -->
-<div id="google_translate_element"></div>
-<style>
-.language-switcher {
-  display: flex;
-  gap: 28px;
-  align-items: center;
-  z-index: 10;
-  margin-bottom: 1em;
-}
-.language-switcher .flag-btn {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-.language-switcher .flag-btn img {
-  display: block;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-.language-switcher .flag-btn:hover img {
-  box-shadow: 0 0 0 2px #007bff;
-  transform: scale(1.1);
-}
-@media (max-width: 600px) {
-  .language-switcher {
-    gap: 10px;
-  }
-}
-/* Hide Google Translate banner and branding, but NOT the dropdown */
-.goog-te-banner-frame.skiptranslate,
-#goog-gt-tt,
-.goog-logo-link,
-.goog-te-banner-frame,
-.goog-te-spinner-pos {
-  display: none !important;
-}
-body { top: 0px !important; }
-</style>
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'en',
-    includedLanguages: 'en,fr,da',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-    autoDisplay: false
-  }, 'google_translate_element');
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Switcher</title>
+    <style>
+        .language-switcher {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            z-index: 10;
+            margin-bottom: 1em;
+        }
+        .language-switcher .flag-btn {
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+        }
+        .language-switcher .flag-btn img {
+            display: block;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .language-switcher .flag-btn:hover img {
+            box-shadow: 0 0 0 2px #007bff;
+            transform: scale(1.1);
+        }
+        @media (max-width: 600px) {
+            .language-switcher {
+                gap: 10px;
+            }
+        }
+        /* Hide Google Translate banner & dropdown */
+        .goog-te-banner-frame, .goog-te-gadget {
+            display: none !important;
+        }
+        body {
+            top: 0px !important;
+        }
+    </style>
+</head>
+<body>
 
-// Wait for the Google Translate dropdown, then set the language
-function setLanguage(lang) {
-  localStorage.setItem('siteLang', lang);
-  var interval = setInterval(function() {
-    var combo = document.querySelector('.goog-te-combo');
-    if (combo) {
-      combo.value = lang;
-      combo.dispatchEvent(new Event('change'));
-      clearInterval(interval);
-    }
-  }, 100);
-}
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="flag-btn" data-lang="en" title="English">
+            <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/gb.svg" alt="English" width="32" height="32">
+        </button>
+        <button class="flag-btn" data-lang="fr" title="Français">
+            <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/fr.svg" alt="Français" width="32" height="32">
+        </button>
+        <button class="flag-btn" data-lang="da" title="Dansk">
+            <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/dk.svg" alt="Dansk" width="32" height="32">
+        </button>
+    </div>
 
-window.addEventListener('DOMContentLoaded', function() {
-  // Restore saved language on load
-  var savedLang = localStorage.getItem('siteLang');
-  if (savedLang) {
-    var interval = setInterval(function() {
-      var combo = document.querySelector('.goog-te-combo');
-      if (combo) {
-        combo.value = savedLang;
-        combo.dispatchEvent(new Event('change'));
-        clearInterval(interval);
-      }
-    }, 100);
-  }
-  // Flag button click event
-  document.querySelectorAll('.language-switcher .flag-btn').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      setLanguage(btn.getAttribute('data-lang'));
-    });
-  });
-});
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <div id="google_translate_element" style="display:none;"></div>
+
+    <script>
+        function googleTranslateInit() {
+            new google.translate.TranslateElement({ pageLanguage: "en", includedLanguages: "en,fr,da" }, "google_translate_element");
+        }
+
+        function switchLanguage(lang) {
+            const iframe = document.querySelector(".goog-te-banner-frame");
+            if (iframe) iframe.style.display = "none"; // Hide banner
+
+            const select = document.querySelector(".goog-te-combo");
+            if (select) {
+                select.value = lang;
+                select.dispatchEvent(new Event("change"));
+            }
+        }
+
+        document.querySelectorAll(".flag-btn").forEach(button => {
+            button.addEventListener("click", function () {
+                const langCode = this.getAttribute("data-lang");
+                localStorage.setItem("preferredLanguage", langCode);
+                switchLanguage(langCode);
+            });
+        });
+
+        const script = document.createElement("script");
+        script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateInit";
+        document.body.appendChild(script);
+
+        setTimeout(() => {
+            const savedLang = localStorage.getItem("preferredLanguage");
+            if (savedLang) switchLanguage(savedLang);
+        }, 2000);
+    </script>
+
+</body>
+</html>
+
 <!-- END Language Switcher -->
 
 

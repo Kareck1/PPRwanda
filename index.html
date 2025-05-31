@@ -992,19 +992,40 @@ logo.addEventListener('click', () => {
     <div id="google_translate_element" style="display:none;"></div>
 
     <script>
+        function loadGoogleTranslate() {
+            const script = document.createElement("script");
+            script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateInit";
+            document.body.appendChild(script);
+        }
+
         function googleTranslateInit() {
-            new google.translate.TranslateElement({ pageLanguage: "en", includedLanguages: "en,fr,da" }, "google_translate_element");
+            new google.translate.TranslateElement({
+                pageLanguage: "en",
+                includedLanguages: "en,fr,da"
+            }, "google_translate_element");
         }
 
         function switchLanguage(lang) {
-            const iframe = document.querySelector(".goog-te-banner-frame");
-            if (iframe) iframe.style.display = "none"; // Hide banner
-
-            const select = document.querySelector(".goog-te-combo");
-            if (select) {
-                select.value = lang;
-                select.dispatchEvent(new Event("change"));
+            if (lang === "en") {
+                location.reload(); // Reload the page to reset it to original English
+                return;
             }
+
+            if (!window.googleTranslateLoaded) {
+                window.googleTranslateLoaded = true;
+                loadGoogleTranslate(); // Load Google Translate only when needed
+            }
+
+            setTimeout(() => {
+                const iframe = document.querySelector(".goog-te-banner-frame");
+                if (iframe) iframe.style.display = "none"; // Hide banner
+
+                const select = document.querySelector(".goog-te-combo");
+                if (select) {
+                    select.value = lang;
+                    select.dispatchEvent(new Event("change"));
+                }
+            }, 2000);
         }
 
         document.querySelectorAll(".flag-btn").forEach(button => {
@@ -1015,18 +1036,11 @@ logo.addEventListener('click', () => {
             });
         });
 
-        const script = document.createElement("script");
-        script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateInit";
-        document.body.appendChild(script);
-
-        setTimeout(() => {
-            const savedLang = localStorage.getItem("preferredLanguage");
-            if (savedLang) switchLanguage(savedLang);
-        }, 2000);
     </script>
 
 </body>
 </html>
+
 
 <!-- END Language Switcher -->
 

@@ -921,8 +921,15 @@ logo.addEventListener('click', () => {
     <div class="hero-content not-selectable">
 
 
+
+
+
+
+
+      
+
 <!-- BEGIN Language Switcher: Copy everything below and paste where you want the language buttons -->
-<!-- BEGIN Language Switcher: Robust & Reliable -->
+<!-- BEGIN Language Switcher (Robust & Reliable) -->
 <div class="language-switcher">
   <button type="button" class="flag-btn" data-lang="en" title="English">
     <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/gb.svg" alt="English" width="32" height="32" />
@@ -934,12 +941,15 @@ logo.addEventListener('click', () => {
     <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/dk.svg" alt="Dansk" width="32" height="32" />
   </button>
 </div>
+<!-- Optional: If you want a visible dropdown, just leave the widget unhidden -->
+<div id="google_translate_element"></div>
 <style>
 .language-switcher {
   display: flex;
   gap: 28px;
   align-items: center;
   z-index: 10;
+  margin-bottom: 1em;
 }
 .language-switcher .flag-btn {
   background: none;
@@ -963,13 +973,9 @@ logo.addEventListener('click', () => {
     gap: 10px;
   }
 }
-/* Hide Google Translate branding and bar */
+/* Hide Google Translate banner and branding, but NOT the dropdown */
 .goog-te-banner-frame.skiptranslate,
-.goog-te-gadget-icon,
-.goog-te-menu-value,
-.goog-te-gadget-simple,
 #goog-gt-tt,
-.goog-te-balloon-frame,
 .goog-logo-link,
 .goog-te-banner-frame,
 .goog-te-spinner-pos {
@@ -977,7 +983,6 @@ logo.addEventListener('click', () => {
 }
 body { top: 0px !important; }
 </style>
-<div id="google_translate_element" style="display:none;"></div>
 <script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({
@@ -988,9 +993,9 @@ function googleTranslateElementInit() {
   }, 'google_translate_element');
 }
 
+// Wait for the Google Translate dropdown, then set the language
 function setLanguage(lang) {
   localStorage.setItem('siteLang', lang);
-  // Wait for Google Translate dropdown to show up, then set language
   var interval = setInterval(function() {
     var combo = document.querySelector('.goog-te-combo');
     if (combo) {
@@ -1024,7 +1029,13 @@ window.addEventListener('DOMContentLoaded', function() {
 </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <!-- END Language Switcher -->
-<!-- END Language Switcher -->
+
+
+
+
+
+
+
       
       
       <h1>Explore Rwanda Like Never Before</h1>

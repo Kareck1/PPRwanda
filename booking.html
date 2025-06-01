@@ -1,39 +1,214 @@
-<form action="https://formspree.io/f/xvgrpezg" method="POST">
-  <h2>Book Your Rwanda Tour</h2>
-  <label>Full Name:
-    <input type="text" name="Full Name" required>
-  </label><br>
-  <label>Email Address:
-    <input type="email" name="Email" required>
-  </label><br>
-  <label>Phone Number:
-    <input type="tel" name="Phone">
-  </label><br>
-  <label>Country:
-    <input type="text" name="Country" required>
-  </label><br>
-  <label>Number of Travelers:
-    <input type="number" name="Travelers" min="1" required>
-  </label><br>
-  <label>Tour Package:
-    <select name="Package" required>
-      <option value="">Select a package</option>
-      <option value="Gorilla Trekking">Gorilla Trekking</option>
-      <option value="Kigali City Tour">Kigali City Tour</option>
-      <option value="Akagera Safari">Akagera Safari</option>
-      <option value="Cultural Experience">Cultural Experience</option>
-      <option value="Custom">Custom Tour</option>
-    </select>
-  </label><br>
-  <label>Arrival Date:
-    <input type="date" name="Arrival Date" required>
-  </label><br>
-  <label>Departure Date:
-    <input type="date" name="Departure Date">
-  </label><br>
-  <label>Additional Message:
-    <textarea name="Message" rows="4"></textarea>
-  </label><br>
-  <input type="hidden" name="_redirect" value="https://pprwandatours.com/thank-you.html">
-  <button type="submit">Book My Journey</button>
-</form>
+<!-- Flag CDN for country flags -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css"/>
+<style>
+.booking-form-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 28px 28px 32px 28px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.13), 0 2px 8px rgba(0,0,0,0.04);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  animation: fadeIn 1s;
+}
+@keyframes fadeIn {
+  from { opacity:0; transform:translateY(40px);}
+  to { opacity:1; transform:translateY(0);}
+}
+.booking-form-container h2 {
+  text-align: center;
+  color: #009688;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+  font-size: 1.5em;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 8px;
+}
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 13px 12px 13px 12px;
+  border: 1.4px solid #b7c4c9;
+  border-radius: 7px;
+  background: #f9fbfc;
+  font-size: 1rem;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+  outline: none;
+  appearance: none;
+}
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  border-color: #009688;
+  box-shadow: 0 0 0 2px #00968822;
+  background: #f1fdfc;
+}
+.booking-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+.booking-form label.floating-label {
+  position: absolute;
+  left: 14px;
+  top: 15px;
+  background: #fff;
+  padding: 0 4px;
+  color: #777;
+  font-size: 1em;
+  pointer-events: none;
+  transition: 0.18s;
+}
+.booking-form input:focus + .floating-label,
+.booking-form input:not(:placeholder-shown) + .floating-label,
+.booking-form textarea:focus + .floating-label,
+.booking-form textarea:not(:placeholder-shown) + .floating-label,
+.booking-form select:focus + .floating-label,
+.booking-form select:not([value=""]) + .floating-label {
+  top: -11px;
+  left: 8px;
+  font-size: 0.85em;
+  color: #009688;
+  background: #fff;
+}
+.booking-form select[multiple] {
+  height: 110px;
+}
+.country-select-wrapper {
+  position: relative;
+}
+.country-flag {
+  position: absolute;
+  left: 13px;
+  top: 18px;
+  font-size: 1.08em;
+  pointer-events: none;
+  transition: 0.2s;
+}
+.country-select {
+  padding-left: 38px !important;
+}
+.booking-form button {
+  width: 100%;
+  padding: 13px 0;
+  background: linear-gradient(90deg, #009688 60%, #2ec4b6);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: 1.13rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: background 0.18s, transform 0.14s;
+  letter-spacing: 0.1em;
+  box-shadow: 0 2px 12px #00968822;
+}
+.booking-form button:hover {
+  background: linear-gradient(90deg, #00796b 60%, #22b1a6);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.select-multiline option:before {
+  content: attr(data-icon);
+  margin-right: 6px;
+}
+
+@media (max-width: 600px) {
+  .booking-form-container { padding: 13px 2vw 16px 2vw; }
+}
+</style>
+
+<div class="booking-form-container">
+  <form class="booking-form" action="https://formspree.io/f/xvgrpezg" method="POST" autocomplete="on">
+    <h2>Book Your Rwanda Tour</h2>
+    <div class="form-group">
+      <input type="text" name="Full Name" id="fullname" placeholder=" " required autocomplete="name">
+      <label class="floating-label" for="fullname">Full Name</label>
+    </div>
+    <div class="form-group">
+      <input type="email" name="Email" id="email" placeholder=" " required autocomplete="email">
+      <label class="floating-label" for="email">Email Address</label>
+    </div>
+    <div class="form-group">
+      <input type="tel" name="Phone" id="phone" placeholder=" " autocomplete="tel">
+      <label class="floating-label" for="phone">Phone Number</label>
+    </div>
+    <div class="form-group country-select-wrapper">
+      <span id="flag" class="country-flag fi fi-rw"></span>
+      <select name="Country" id="country" class="country-select" required>
+        <option value="">Select your country</option>
+        <option value="Rwanda" data-flag="rw">&#127479;&#127484; Rwanda</option>
+        <option value="Kenya" data-flag="ke">&#127472;&#127487; Kenya</option>
+        <option value="Uganda" data-flag="ug">&#127484;&#127468; Uganda</option>
+        <option value="Tanzania" data-flag="tz">&#127481;&#127481; Tanzania</option>
+        <option value="Burundi" data-flag="bi">&#127463;&#127470; Burundi</option>
+        <option value="South Africa" data-flag="za">&#127487;&#127462; South Africa</option>
+        <option value="Nigeria" data-flag="ng">&#127475;&#127468; Nigeria</option>
+        <option value="United States" data-flag="us">&#127482;&#127480; United States</option>
+        <option value="United Kingdom" data-flag="gb">&#127468;&#127463; United Kingdom</option>
+        <option value="France" data-flag="fr">&#127467;&#127479; France</option>
+        <option value="Germany" data-flag="de">&#127465;&#127466; Germany</option>
+        <option value="China" data-flag="cn">&#127464;&#127475; China</option>
+        <option value="India" data-flag="in">&#127470;&#127475; India</option>
+        <option value="Japan" data-flag="jp">&#127471;&#127477; Japan</option>
+        <option value="Other" data-flag="un">&#127760; Other</option>
+      </select>
+      <label class="floating-label" for="country">Country</label>
+    </div>
+    <div class="form-group">
+      <input type="number" name="Travelers" id="travelers" min="1" max="30" step="1" placeholder=" " required>
+      <label class="floating-label" for="travelers">Number of Travelers</label>
+    </div>
+    <div class="form-group">
+      <select name="Package" id="package" required>
+        <option value="">Select a package</option>
+        <option value="Gorilla Trekking">&#128018; Gorilla Trekking</option>
+        <option value="Kigali City Tour">&#127963; Kigali City Tour</option>
+        <option value="Akagera Safari">&#128007; Akagera Safari</option>
+        <option value="Cultural Experience">&#127752; Cultural Experience</option>
+        <option value="Bird Watching">&#128038; Bird Watching</option>
+        <option value="Hiking & Adventure">&#129495; Hiking & Adventure</option>
+        <option value="Lake Kivu Escape">&#127754; Lake Kivu Escape</option>
+        <option value="Golden Monkey Trek">&#128053; Golden Monkey Trek</option>
+        <option value="Chimpanzee Tracking">&#128018; Chimpanzee Tracking</option>
+        <option value="Custom">&#9881;&#65039; Custom Tour</option>
+      </select>
+      <label class="floating-label" for="package">Tour Package</label>
+    </div>
+    <div class="form-group">
+      <input type="date" name="Arrival Date" id="arrival" placeholder=" " required>
+      <label class="floating-label" for="arrival">Arrival Date</label>
+    </div>
+    <div class="form-group">
+      <input type="date" name="Departure Date" id="departure" placeholder=" ">
+      <label class="floating-label" for="departure">Departure Date</label>
+    </div>
+    <div class="form-group">
+      <textarea name="Message" id="message" rows="4" placeholder=" "></textarea>
+      <label class="floating-label" for="message">Additional Message</label>
+    </div>
+    <input type="hidden" name="_redirect" value="https://pprwandatours.com/thank-you.html">
+    <button type="submit">Book My Journey 🚀</button>
+  </form>
+</div>
+<script>
+// Country flag logic
+const countries = document.getElementById('country');
+const flagSpan = document.getElementById('flag');
+countries.addEventListener('change', function() {
+  const option = countries.options[countries.selectedIndex];
+  const flag = option.getAttribute('data-flag');
+  flagSpan.className = 'country-flag fi fi-' + (flag ? flag : 'un');
+});
+</script>

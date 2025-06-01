@@ -1,1 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Luxury Travel Experiences | PPR Wanda Tours</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #e95f3c;
+      --secondary: #009e49;
+      --accent: #ffd100;
+      --black: #181818;
+      --gold: #f6e27a;
+      --beige: #f9f6ef;
+      --white: #fff;
+      --shadow: 0 8px 32px #e95f3c22;
+      --gradient: linear-gradient(120deg, #fffbe8 0%, #f9f6ef 100%);
+    }
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: var(--beige);
+      color: var(--black);
+      margin: 0;
+      padding: 0;
+      letter-spacing: 0.01em;
+    }
+    header {
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 8vw 16px 8vw;
+      box-shadow: 0 2px 14px #0001;
+      position: relative;
+      z-index: 10;
+    }
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .logo-img {
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+      border-radius: 14px;
+    }
+    .brand-title {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.45rem;
+      color: var(--primary);
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    nav {
+      display: flex;
+      gap: 30px;
+    }
+    nav a {
+      color: var(--black);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.07rem;
+      transition: color .18s;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+    }
+    nav a.active, nav a:hover {
+      color: var(--primary);
+      border-bottom: 2px solid var(--accent);
+    }
+    /* HERO */
+    .lux-hero {
+      min-height: 540px;
+      background: 
+        linear-gradient(116deg, #fffbe8 60%, #f6e27a 100%),
+        url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 56px 0 56px 8vw;
+      position: relative;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .lux-hero-art-bg {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 55vw;
+      height: 100%;
+      background: linear-gradient(100deg, #fffbe8cc 20%, #ffd10055 80%);
+      z-index: 1;
+      pointer-events: none;
+      clip-path: ellipse(59% 69% at 60% 50%);
+    }
+    .lux-hero-content {
+      max-width: 600px;
+      position: relative;
+      z-index: 2;
+    }
+    .lux-hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.7rem;
+      color: var(--black);
+      margin-bottom: 18px;
+      letter-spacing: .5px;
+      font-weight: 700;
+      line-height: 1.18;
+      background: linear-gradient(90deg, #e95f3c 40%, #ffd100 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .lux-hero-desc {
+      font-size: 1.23rem;
+      color: #322;
+      margin-bottom: 32px;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+    .lux-btns {
+      display: flex;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+    .lux-btn, .lux-btn-outline {
+      padding: 14px 38px;
+      border-radius: 7px;
+      font-weight: 700;
+      font-size: 1.11rem;
+      border: none;
+      cursor: pointer;
+      transition: background .18s, color .18s;
+      text-decoration: none;
+      outline: none;
+      display: inline-block;
+      box-shadow: 0 4px 14px #ffd10025;
+      letter-spacing: .05em;
+    }
+    .lux-btn {
+      background: var(--primary);
+      color: var(--white);
+    }
+    .lux-btn:hover {
+      background: var(--accent);
+      color: var(--primary);
+    }
+    .lux-btn-outline {
+      background: var(--white);
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+    .lux-btn-outline:hover {
+      background: var(--primary);
+      color: var(--white);
+    }
+    /* Floating gold icon */
+    .lux-icon-floating {
+      font-size: 3.5rem;
+      color: var(--gold);
+      position: absolute;
+      top: 30px;
+      right: 12vw;
+      opacity: 0.8;
+      z-index: 2;
+      animation: floaty 3.5s infinite ease-in-out;
+      pointer-events: none;
+    }
+    @keyframes floaty {
+      0%,100% { transform: translateY(0);}
+      50% { transform: translateY(-18px);}
+    }
+    /* EXPERIENCES SECTION */
+    .lux-section {
+      background: var(--white);
+      padding: 62px 8vw 38px 8vw;
+      text-align: center;
+      box-shadow: var(--shadow);
+      margin-top: -55px;
+      border-radius: 29px;
+      margin-bottom: 56px;
+      position: relative;
+      z-index: 2;
+    }
+    .lux-section-title {
+      color: var(--primary);
+      font-size: 2.1rem;
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      margin-bottom: 14px;
+      letter-spacing: 1.5px;
+    }
+    .lux-section-desc {
+      color: #333;
+      font-size: 1.13rem;
+      max-width: 740px;
+      margin: 0 auto 35px auto;
+      font-weight: 500;
+    }
+    .lux-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 36px;
+      justify-content: center;
+      margin-top: 10px;
+      margin-bottom: 24px;
+    }
+    .lux-card {
+      background: var(--beige);
+      border: 2px solid var(--accent);
+      border-radius: 17px;
+      overflow: hidden;
+      box-shadow: 0 2px 18px #ffd10022;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow .2s, border .2s;
+      position: relative;
+      min-height: 370px;
+    }
+    .lux-card:hover {
+      box-shadow: 0 8px 24px #e95f3c22;
+      border-color: var(--primary);
+    }
+    .lux-card-media {
+      width: 100%;
+      height: 185px;
+      object-fit: cover;
+      background: #eee;
+      border-bottom: 1px solid #fffbe8;
+    }
+    .lux-card-content {
+      padding: 22px 18px 18px 18px;
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .lux-card-title {
+      font-size: 1.19rem;
+      color: var(--primary);
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    .lux-card-desc {
+      font-size: 1.04rem;
+      color: #444;
+      margin-bottom: 16px;
+      flex: 1;
+    }
+    .lux-card-link {
+      color: var(--secondary);
+      font-weight: 600;
+      text-decoration: underline;
+      font-size: 0.99rem;
+      margin-top: 7px;
+      align-self: flex-end;
+      transition: color .14s;
+    }
+    .lux-card-link:hover {
+      color: var(--primary);
+    }
+    .lux-card-corner {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 44px;
+      height: 44px;
+      background: var(--accent);
+      border-top-left-radius: 44px;
+      z-index: 2;
+      opacity: .8;
+    }
+    /* LUXURY SERVICES */
+    .lux-extra-services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 23px;
+      margin: 50px 0 0 0;
+    }
+    .lux-service {
+      background: #fffdf5;
+      border-radius: 14px;
+      box-shadow: 0 2px 10px #ffd10033;
+      padding: 26px 28px;
+      max-width: 320px;
+      min-width: 220px;
+      width: 100%;
+      border-left: 4px solid var(--primary);
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+    }
+    .lux-service i {
+      font-size: 1.6rem;
+      color: var(--gold);
+      margin-bottom: 9px;
+      min-width: 32px;
+    }
+    .lux-service-title {
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 4px;
+      font-size: 1.08rem;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .lux-service-desc {
+      color: #333;
+      font-size: 0.99rem;
+    }
+    /* VIDEO EXPERIENCE */
+    .lux-video-section {
+      margin: 70px auto 40px auto;
+      background: #fff;
+      border-radius: 22px;
+      box-shadow: 0 4px 22px #ffd10033;
+      padding: 38px 18vw;
+      max-width: 1280px;
+      text-align: center;
+    }
+    .lux-video-title {
+      font-size: 1.45rem;
+      color: var(--primary);
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+    .lux-video-frame {
+      border-radius: 14px;
+      box-shadow: 0 2px 16px #ffd10044;
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      margin: 0 auto;
+      border: none;
+    }
+    .lux-video-caption {
+      font-size: 0.99rem;
+      color: #222;
+      margin: 14px 0 0 0;
+      font-style: italic;
+    }
+    /* CTA */
+    .lux-cta {
+      background: var(--primary);
+      color: #fff;
+      border-radius: 16px;
+      margin: 60px auto 30px auto;
+      padding: 40px 24px;
+      max-width: 900px;
+      text-align: center;
+      box-shadow: 0 4px 16px #e95f3c22;
+    }
+    .lux-cta-title {
+      font-size: 2rem;
+      font-family: 'Pacifico', cursive;
+      margin-bottom: 12px;
+      color: var(--accent);
+      letter-spacing: 2px;
+      text-shadow: 0 2px 12px #0003;
+    }
+    .lux-cta-desc {
+      font-size: 1.11rem;
+      margin-bottom: 16px;
+      color: #fff;
+    }
+    .lux-cta-btn {
+      padding: 13px 38px;
+      background: var(--accent);
+      color: var(--primary);
+      border: none;
+      border-radius: 8px;
+      font-size: 1.09rem;
+      font-weight: 800;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background .17s, color .17s;
+      box-shadow: 0 2px 8px #ffd10044;
+    }
+    .lux-cta-btn:hover {
+      background: var(--white);
+      color: var(--primary);
+    }
+    footer {
+      background: #222;
+      color: var(--white);
+      padding: 38px 10vw 30px 10vw;
+      text-align: center;
+      font-size: 1rem;
+    }
+    .footer-social {
+      margin: 16px 0 0 0;
+      font-size: 1.3rem;
+      letter-spacing: 16px;
+    }
+    .footer-social a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .footer-social a:hover {
+      color: var(--primary);
+    }
+    @media (max-width: 1100px) {
+      .lux-video-section {
+        padding: 38px 2vw;
+      }
+    }
+    @media (max-width: 700px) {
+      .lux-section { padding: 28px 2vw 22px 2vw; }
+      .lux-video-section { padding: 18px 1vw; }
+      .lux-video-frame { height: 180px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-section">
+      <img src="https://github.com/Kareck1/PPRwandatestweb/raw/refs/heads/main/mountain%20logo.webp" alt="Mountain Logo" class="logo-img" />
+      <span class="brand-title">PPR WANDA TOURS</span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="tours.html">Tours</a>
+      <a href="events.html">Events</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="booking.html">Booking</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
+  <!-- HERO -->
+  <section class="lux-hero">
+    <div class="lux-hero-art-bg"></div>
+    <i class="fa-solid fa-crown lux-icon-floating"></i>
+    <div class="lux-hero-content">
+      <div class="lux-hero-title">Live the Extraordinary</div>
+      <div class="lux-hero-desc">
+        Elevate your journey with our bespoke luxury experiences. Whether you crave private gorilla safaris, champagne lake cruises, helicopter transfers, or exclusive culinary moments—PPR Wanda Tours crafts every detail for the most discerning traveler. Welcome to a world where every moment is golden.
+      </div>
+      <div class="lux-btns">
+        <a href="booking.html" class="lux-btn">Book a Luxury Experience</a>
+        <a href="tours.html" class="lux-btn-outline">Browse All Tours</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE EXPERIENCES -->
+  <section class="lux-section">
+    <div class="lux-section-title">Signature Luxury Experiences</div>
+    <div class="lux-section-desc">
+      Discover our most celebrated exclusives. Each is tailored for privacy, serenity, and grandeur—designed just for you.
+    </div>
+    <div class="lux-cards">
+      <div class="lux-card">
+        <img src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?auto=format&fit=crop&w=600&q=80" alt="Private Gorilla Trekking" class="lux-card-media" />
+        <div class="lux-card-content">
+          <div class="lux-card-title">Private Gorilla Trekking</div>
+          <div class="lux-card-desc">Encounter Rwanda’s mountain gorillas in a private group, guided by experts, with VIP park access and post-trek champagne.</div>
+          <a href="wildlife.html" class="lux-card-link">See Wildlife Luxury</a>
+        </div>
+        <div class="lux-card-corner"></div>
+      </div>
+      <div class="lux-card">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="Lakeside Villas" class="lux-card-media" />
+        <div class="lux-card-content">
+          <div class="lux-card-title">Lakeside Villas & Spas</div>
+          <div class="lux-card-desc">Relax in secluded villas on Lake Kivu, with infinity pools, personal chefs, and sunset cruises at your leisure.</div>
+          <a href="relax.html" class="lux-card-link">Discover Relaxation</a>
+        </div>
+        <div class="lux-card-corner"></div>
+      </div>
+      <div class="lux-card">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" alt="Helicopter Scenic Flights" class="lux-card-media" />
+        <div class="lux-card-content">
+          <div class="lux-card-title">Helicopter Scenic Flights</div>
+          <div class="lux-card-desc">Arrive in style with private helicopter transfers to volcanoes, lakes, and hidden gems—no lines, no wait, only wonder.</div>
+          <a href="custom-experiences.html" class="lux-card-link">Custom Experiences</a>
+        </div>
+        <div class="lux-card-corner"></div>
+      </div>
+      <div class="lux-card">
+        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=600&q=80" alt="Private Dining & Chef" class="lux-card-media" />
+        <div class="lux-card-content">
+          <div class="lux-card-title">Private Chef & Fine Dining</div>
+          <div class="lux-card-desc">Savour multi-course meals prepared by renowned chefs, with wine pairings and local delicacies—served wherever you desire.</div>
+          <a href="culinary.html" class="lux-card-link">Luxury Culinary</a>
+        </div>
+        <div class="lux-card-corner"></div>
+      </div>
+    </div>
+    <div class="lux-section-desc" style="margin-top:40px;">
+      Want something special? Ask us for family retreats, anniversary escapes, exclusive events, or a tailored adventure.
+    </div>
+
+    <!-- MORE LUXURY SERVICES -->
+    <div class="lux-extra-services">
+      <div class="lux-service">
+        <i class="fa-solid fa-glass-cheers"></i>
+        <div class="lux-service-title">Dedicated Concierge</div>
+        <div class="lux-service-desc">24/7 personal assistance for every detail—from spa bookings to private celebrations.</div>
+      </div>
+      <div class="lux-service">
+        <i class="fa-solid fa-car-side"></i>
+        <div class="lux-service-title">Luxury Transfers</div>
+        <div class="lux-service-desc">Travel in comfort with chauffeured limousines, classic cars, or luxury SUVs at your call.</div>
+      </div>
+      <div class="lux-service">
+        <i class="fa-solid fa-spa"></i>
+        <div class="lux-service-title">Wellness & Spa Retreats</div>
+        <div class="lux-service-desc">Signature spa treatments, yoga, and wellness rituals in breathtaking natural settings.</div>
+      </div>
+      <div class="lux-service">
+        <i class="fa-solid fa-gem"></i>
+        <div class="lux-service-title">VIP Access & Events</div>
+        <div class="lux-service-desc">Invitations to private galas, art showings, and cultural events—just for you.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO EXPERIENCE -->
+  <section class="lux-video-section">
+    <div class="lux-video-title">A Glimpse Into Luxury</div>
+    <video class="lux-video-frame" controls poster="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?auto=format&fit=crop&w=600&q=80">
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="lux-video-caption">Moments from our most exclusive journeys.</div>
+  </section>
+
+  <!-- CTA -->
+  <div class="lux-cta">
+    <div class="lux-cta-title">Your Private Luxury, Awaits</div>
+    <div class="lux-cta-desc">Contact our luxury travel designers to craft your perfect, personalized escape in Rwanda, Denmark, or beyond.</div>
+    <a href="booking.html" class="lux-cta-btn">Start Your Journey</a>
+    <div style="margin-top:18px;font-size:1.02rem;">
+      <b>Email:</b> <a href="mailto:info@pprwandatours.com" style="color:#ffd100;text-decoration:underline;">info@pprwandatours.com</a>
+      &nbsp; | &nbsp;
+      <b>WhatsApp:</b> <a href="https://wa.me/250788123456" style="color:#ffd100;text-decoration:underline;">+250 788 123 456</a>
+    </div>
+  </div>
+  <footer>
+    &copy; 2025 PPR Wanda Tours. All rights reserved.<br>
+    <span class="footer-social">
+      <a href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+    </span>
+  </footer>
+</body>
+</html>

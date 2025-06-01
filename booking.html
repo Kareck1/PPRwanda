@@ -1,214 +1,511 @@
-<!-- Flag CDN for country flags -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css"/>
-<style>
-.booking-form-container {
-  max-width: 500px;
-  margin: 40px auto;
-  padding: 28px 28px 32px 28px;
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.13), 0 2px 8px rgba(0,0,0,0.04);
-  font-family: 'Segoe UI', Arial, sans-serif;
-  animation: fadeIn 1s;
-}
-@keyframes fadeIn {
-  from { opacity:0; transform:translateY(40px);}
-  to { opacity:1; transform:translateY(0);}
-}
-.booking-form-container h2 {
-  text-align: center;
-  color: #009688;
-  margin-bottom: 18px;
-  letter-spacing: 0.5px;
-  font-size: 1.5em;
-  font-family: 'Montserrat', Arial, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Your Rwanda Experience</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"/>
+  <style>
+    :root {
+      --dk-red: #c60c30;
+      --rw-blue: #2062a6;
+      --rw-yellow: #f9d616;
+      --rw-green: #1eb53a;
+      --bg: #f8fafc;
+      --text: #203040;
+      --section: #e8f0f5;
+      --card: #fff;
+      --shadow: 0 7px 32px #16406518;
+      --accent: #2062a6;
+      --accent2: #1eb53a;
+      --accent3: #c60c30;
+    }
+    body {
+      background: linear-gradient(120deg, #e8f0f5 0%, #f8fafc 100%);
+      font-family: 'Inter', Arial, sans-serif;
+      color: var(--text);
+      margin: 0; padding: 0;
+      min-height: 100vh;
+    }
+    .booking-container {
+      max-width: 620px;
+      margin: 40px auto;
+      background: var(--card);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 32px 28px 22px 28px;
+    }
+    .booking-title {
+      text-align: center;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--dk-red);
+      letter-spacing: .7px;
+      margin-bottom: 7px;
+    }
+    .booking-desc {
+      text-align: center;
+      color: var(--rw-blue);
+      font-size: 1.12rem;
+      margin-bottom: 20px;
+    }
+    .section-title {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 1.11rem;
+      color: var(--rw-green);
+      margin: 28px 0 7px 0;
+      font-weight: 700;
+      border-bottom: 1.5px solid var(--section);
+      padding-bottom: 2px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .booking-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 2px;
+    }
+    .form-row {
+      display: flex;
+      gap: 15px;
+    }
+    .form-row > .form-group {
+      flex: 1;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 2px;
+    }
+    .form-group label {
+      font-weight: 700;
+      color: var(--accent);
+      font-size: 1rem;
+      margin-bottom: 2px;
+    }
+    .form-group label .required {
+      color: var(--dk-red);
+      margin-left: 2px;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+      background: var(--bg);
+      border: 1.2px solid #c2d6e6;
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 1.06rem;
+      font-family: inherit;
+      outline: none;
+      color: var(--text);
+      transition: border 0.19s, box-shadow 0.19s;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: var(--rw-yellow);
+      box-shadow: 0 2px 12px #f9d61624;
+    }
+    .form-group textarea {
+      min-height: 54px;
+      max-height: 180px;
+      resize: vertical;
+    }
+    .choices__inner {
+      background: var(--bg) !important;
+      border-radius: 10px !important;
+      border: 1.2px solid #c2d6e6 !important;
+      font-size: 1.06rem !important;
+      color: var(--text) !important;
+      min-height: 44px;
+    }
+    .choices__list--dropdown, .choices__list[aria-expanded] {
+      border-radius: 0 0 10px 10px !important;
+      box-shadow: 0 10px 30px #2062a61b;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    .switch-field {
+      display: flex;
+      gap: 10px;
+    }
+    .switch-radio input[type="radio"] {
+      display: none;
+    }
+    .switch-radio label {
+      background: #e8f0f5;
+      color: var(--rw-green);
+      border-radius: 14px;
+      padding: 4px 16px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1.1px solid var(--rw-green);
+      font-size: 0.97rem;
+      transition: background 0.15s, color 0.15s;
+    }
+    .switch-radio input[type="radio"]:checked + label {
+      background: var(--rw-green);
+      color: #fff;
+      border-color: var(--rw-green);
+    }
+    .addon-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 13px;
+      margin-top: 4px;
+    }
+    .addon-checkbox {
+      background: #f8fafb;
+      border: 1.1px solid #c2d6e6;
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 0.99rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      min-width: 170px;
+    }
+    .addon-checkbox input[type="checkbox"] {
+      accent-color: var(--rw-blue);
+      margin-right: 4px;
+    }
+    .agreement-group {
+      margin: 13px 0 3px 0;
+      font-size: 0.99rem;
+      color: #446;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .agreement-group label {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-weight: 500;
+    }
+    .agreement-group input[type="checkbox"] {
+      accent-color: var(--dk-red);
+      transform: scale(1.1);
+    }
+    .agreement-group a {
+      color: var(--accent2);
+      text-decoration: underline;
+    }
+    .booking-form-btn {
+      background: linear-gradient(90deg, var(--rw-blue) 0%, var(--dk-red) 100%);
+      color: #fff;
+      font-weight: 800;
+      padding: 12px 0;
+      border-radius: 16px;
+      font-size: 1.07rem;
+      text-align: center;
+      box-shadow: 0 2px 14px #2062a61c;
+      cursor: pointer;
+      border: none;
+      letter-spacing: 0.2px;
+      margin-top: 7px;
+      transition: background 0.15s, box-shadow 0.15s;
+      width: 100%;
+    }
+    .booking-form-btn:hover {
+      background: linear-gradient(90deg, var(--dk-red) 0%, var(--rw-blue) 100%);
+      box-shadow: 0 4px 20px #c60c302c;
+    }
+    .booking-success {
+      display: none;
+      text-align: center;
+      margin-top: 22px;
+      color: var(--rw-green);
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+    @media (max-width: 700px) {
+      .booking-container { padding: 13px 2vw 10px 2vw; }
+      .booking-title { font-size: 1.27rem;}
+      .form-row { flex-direction: column; gap: 0;}
+      .form-group { font-size: 1rem; }
+      .addon-group { min-width: 0; }
+    }
+  </style>
+</head>
+<body>
+<form class="booking-container" id="bookingForm"
+      action="https://formspree.io/f/xvgrpezg" method="POST" autocomplete="off">
+  <div class="booking-title">
+    <i class="fa-solid fa-earth-africa" style="color:var(--rw-yellow);margin-right:10px;"></i>
+    Book Your Rwanda Experience
+  </div>
+  <div class="booking-desc">
+    Plan your Rwanda journey with the Denmark specialist.<br>
+    <span style="color:var(--dk-red);font-weight:600;">Danish & Rwandan guests welcome!</span>
+  </div>
+  <div class="booking-form">
 
-.booking-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.form-group {
-  position: relative;
-  margin-bottom: 8px;
-}
-.booking-form input,
-.booking-form select,
-.booking-form textarea {
-  width: 100%;
-  padding: 13px 12px 13px 12px;
-  border: 1.4px solid #b7c4c9;
-  border-radius: 7px;
-  background: #f9fbfc;
-  font-size: 1rem;
-  transition: border 0.2s, box-shadow 0.2s;
-  box-sizing: border-box;
-  outline: none;
-  appearance: none;
-}
-.booking-form input:focus,
-.booking-form select:focus,
-.booking-form textarea:focus {
-  border-color: #009688;
-  box-shadow: 0 0 0 2px #00968822;
-  background: #f1fdfc;
-}
-.booking-form textarea {
-  min-height: 80px;
-  resize: vertical;
-}
-.booking-form label.floating-label {
-  position: absolute;
-  left: 14px;
-  top: 15px;
-  background: #fff;
-  padding: 0 4px;
-  color: #777;
-  font-size: 1em;
-  pointer-events: none;
-  transition: 0.18s;
-}
-.booking-form input:focus + .floating-label,
-.booking-form input:not(:placeholder-shown) + .floating-label,
-.booking-form textarea:focus + .floating-label,
-.booking-form textarea:not(:placeholder-shown) + .floating-label,
-.booking-form select:focus + .floating-label,
-.booking-form select:not([value=""]) + .floating-label {
-  top: -11px;
-  left: 8px;
-  font-size: 0.85em;
-  color: #009688;
-  background: #fff;
-}
-.booking-form select[multiple] {
-  height: 110px;
-}
-.country-select-wrapper {
-  position: relative;
-}
-.country-flag {
-  position: absolute;
-  left: 13px;
-  top: 18px;
-  font-size: 1.08em;
-  pointer-events: none;
-  transition: 0.2s;
-}
-.country-select {
-  padding-left: 38px !important;
-}
-.booking-form button {
-  width: 100%;
-  padding: 13px 0;
-  background: linear-gradient(90deg, #009688 60%, #2ec4b6);
-  color: #fff;
-  border: none;
-  border-radius: 7px;
-  font-size: 1.13rem;
-  font-weight: 700;
-  cursor: pointer;
-  margin-top: 6px;
-  transition: background 0.18s, transform 0.14s;
-  letter-spacing: 0.1em;
-  box-shadow: 0 2px 12px #00968822;
-}
-.booking-form button:hover {
-  background: linear-gradient(90deg, #00796b 60%, #22b1a6);
-  transform: translateY(-2px) scale(1.03);
-}
-
-.select-multiline option:before {
-  content: attr(data-icon);
-  margin-right: 6px;
-}
-
-@media (max-width: 600px) {
-  .booking-form-container { padding: 13px 2vw 16px 2vw; }
-}
-</style>
-
-<div class="booking-form-container">
-  <form class="booking-form" action="https://formspree.io/f/xvgrpezg" method="POST" autocomplete="on">
-    <h2>Book Your Rwanda Tour</h2>
-    <div class="form-group">
-      <input type="text" name="Full Name" id="fullname" placeholder=" " required autocomplete="name">
-      <label class="floating-label" for="fullname">Full Name</label>
+    <!-- 1. Personal Information -->
+    <div class="section-title"><i class="fa-solid fa-user"></i> Personal Information</div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="fullName">Full Name <span class="required">*</span></label>
+        <input type="text" id="fullName" name="Full Name" required placeholder="Your full name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address <span class="required">*</span></label>
+        <input type="email" id="email" name="Email" required placeholder="you@email.com">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="phone">Phone Number <span class="required">*</span></label>
+        <input type="tel" id="phone" name="Phone" required placeholder="+45 12 34 56 78" value="+45 ">
+      </div>
+      <div class="form-group">
+        <label for="nationality">Nationality <span class="required">*</span></label>
+        <select id="nationality" name="Nationality" required>
+          <option value="Denmark" selected>Denmark</option>
+          <option value="Rwanda">Rwanda</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
     </div>
     <div class="form-group">
-      <input type="email" name="Email" id="email" placeholder=" " required autocomplete="email">
-      <label class="floating-label" for="email">Email Address</label>
+      <label for="passport">Passport Number (optional)</label>
+      <input type="text" id="passport" name="Passport Number" placeholder="Optional">
+    </div>
+
+    <!-- 2. Traveler Details -->
+    <div class="section-title"><i class="fa-solid fa-users"></i> Traveler Details</div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="numAdults">Number of Adults</label>
+        <select id="numAdults" name="Number of Adults" required>
+          <option value="">Select</option>
+          <option>1</option><option>2</option><option>3</option>
+          <option>4</option><option>5</option><option>6</option>
+          <option>7</option><option>8</option><option>9</option><option>10</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="numChildren">Number of Children</label>
+        <select id="numChildren" name="Number of Children">
+          <option value="0">0</option>
+          <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="childrenAges">Ages of Children</label>
+        <input type="text" id="childrenAges" name="Ages of Children" placeholder="e.g. 6, 8">
+      </div>
     </div>
     <div class="form-group">
-      <input type="tel" name="Phone" id="phone" placeholder=" " autocomplete="tel">
-      <label class="floating-label" for="phone">Phone Number</label>
-    </div>
-    <div class="form-group country-select-wrapper">
-      <span id="flag" class="country-flag fi fi-rw"></span>
-      <select name="Country" id="country" class="country-select" required>
-        <option value="">Select your country</option>
-        <option value="Rwanda" data-flag="rw">&#127479;&#127484; Rwanda</option>
-        <option value="Kenya" data-flag="ke">&#127472;&#127487; Kenya</option>
-        <option value="Uganda" data-flag="ug">&#127484;&#127468; Uganda</option>
-        <option value="Tanzania" data-flag="tz">&#127481;&#127481; Tanzania</option>
-        <option value="Burundi" data-flag="bi">&#127463;&#127470; Burundi</option>
-        <option value="South Africa" data-flag="za">&#127487;&#127462; South Africa</option>
-        <option value="Nigeria" data-flag="ng">&#127475;&#127468; Nigeria</option>
-        <option value="United States" data-flag="us">&#127482;&#127480; United States</option>
-        <option value="United Kingdom" data-flag="gb">&#127468;&#127463; United Kingdom</option>
-        <option value="France" data-flag="fr">&#127467;&#127479; France</option>
-        <option value="Germany" data-flag="de">&#127465;&#127466; Germany</option>
-        <option value="China" data-flag="cn">&#127464;&#127475; China</option>
-        <option value="India" data-flag="in">&#127470;&#127475; India</option>
-        <option value="Japan" data-flag="jp">&#127471;&#127477; Japan</option>
-        <option value="Other" data-flag="un">&#127760; Other</option>
+      <label for="travelerType">Type of Traveler <span class="required">*</span></label>
+      <select id="travelerType" name="Traveler Type" required>
+        <option value="">-- Choose --</option>
+        <option value="Solo">Solo</option>
+        <option value="Couple">Couple</option>
+        <option value="Family">Family</option>
+        <option value="Group">Group</option>
+        <option value="School Trip">School Trip</option>
+        <option value="Corporate Retreat">Corporate Retreat</option>
       </select>
-      <label class="floating-label" for="country">Country</label>
+    </div>
+
+    <!-- 3. Travel Dates & Duration -->
+    <div class="section-title"><i class="fa-solid fa-calendar-days"></i> Travel Dates & Duration</div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="departureDate">Preferred Departure Date <span class="required">*</span></label>
+        <input type="date" id="departureDate" name="Preferred Departure Date" required>
+      </div>
+      <div class="form-group">
+        <label for="tripDuration">Duration of Stay <span class="required">*</span></label>
+        <select id="tripDuration" name="Trip Duration" required>
+          <option value="">Select</option>
+          <option>5 days</option>
+          <option>7 days</option>
+          <option>10 days</option>
+          <option>14 days</option>
+          <option>Custom</option>
+        </select>
+      </div>
     </div>
     <div class="form-group">
-      <input type="number" name="Travelers" id="travelers" min="1" max="30" step="1" placeholder=" " required>
-      <label class="floating-label" for="travelers">Number of Travelers</label>
+      <span>Are your dates flexible?</span>
+      <div class="switch-field">
+        <span class="switch-radio">
+          <input type="radio" id="datesFlexibleYes" name="Dates Flexible" value="Yes" required>
+          <label for="datesFlexibleYes">Yes</label>
+        </span>
+        <span class="switch-radio">
+          <input type="radio" id="datesFlexibleNo" name="Dates Flexible" value="No" required>
+          <label for="datesFlexibleNo">No</label>
+        </span>
+      </div>
     </div>
+
+    <!-- 4. Flight Details (Optional) -->
+    <div class="section-title"><i class="fa-solid fa-plane"></i> Flight Details (Optional)</div>
     <div class="form-group">
-      <select name="Package" id="package" required>
-        <option value="">Select a package</option>
-        <option value="Gorilla Trekking">&#128018; Gorilla Trekking</option>
-        <option value="Kigali City Tour">&#127963; Kigali City Tour</option>
-        <option value="Akagera Safari">&#128007; Akagera Safari</option>
-        <option value="Cultural Experience">&#127752; Cultural Experience</option>
-        <option value="Bird Watching">&#128038; Bird Watching</option>
-        <option value="Hiking & Adventure">&#129495; Hiking & Adventure</option>
-        <option value="Lake Kivu Escape">&#127754; Lake Kivu Escape</option>
-        <option value="Golden Monkey Trek">&#128053; Golden Monkey Trek</option>
-        <option value="Chimpanzee Tracking">&#128018; Chimpanzee Tracking</option>
-        <option value="Custom">&#9881;&#65039; Custom Tour</option>
+      <span>Need help booking flights?</span>
+      <div class="switch-field">
+        <span class="switch-radio">
+          <input type="radio" id="flightHelpYes" name="Flight Help" value="Yes">
+          <label for="flightHelpYes">Yes</label>
+        </span>
+        <span class="switch-radio">
+          <input type="radio" id="flightHelpNo" name="Flight Help" value="No">
+          <label for="flightHelpNo">No</label>
+        </span>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="departureAirport">Preferred Departure Airport</label>
+        <input type="text" id="departureAirport" name="Preferred Departure Airport" placeholder="e.g. Copenhagen, Billund">
+      </div>
+      <div class="form-group">
+        <label for="returnAirport">Return Airport (if different)</label>
+        <input type="text" id="returnAirport" name="Return Airport" placeholder="Optional">
+      </div>
+    </div>
+
+    <!-- 5. Tour Type / Packages -->
+    <div class="section-title"><i class="fa-solid fa-compass"></i> Tour Type & Packages</div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="tourType">Preferred Tour Type</label>
+        <select id="tourType" name="Tour Type" required>
+          <option value="">-- Choose --</option>
+          <option>Wildlife Safari</option>
+          <option>Culture & History</option>
+          <option>Volcano Hiking</option>
+          <option>Gorilla Trekking</option>
+          <option>Bird Watching</option>
+          <option>Educational Trip</option>
+          <option>Relaxation</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="interestLevel">Interest Level</label>
+        <select id="interestLevel" name="Interest Level" required>
+          <option value="">-- Choose --</option>
+          <option>Mildly Interested</option>
+          <option>Interested</option>
+          <option>Very Interested</option>
+          <option>Bucket List</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="selectPackage">Select a Package</label>
+        <select id="selectPackage" name="Selected Package">
+          <option value="">Optional</option>
+          <option>7-day Culture Tour</option>
+          <option>5-day Safari + Gorilla Trek</option>
+          <option>Volcano & Lake Adventure</option>
+          <option>Custom</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- 6. Budget -->
+    <div class="section-title"><i class="fa-solid fa-euro-sign"></i> Budget</div>
+    <div class="form-group">
+      <label>Estimated Budget Per Person (€)</label>
+      <select name="Budget" required>
+        <option value="">Select</option>
+        <option>€1,000–1,500 (Budget)</option>
+        <option>€1,500–2,500 (Mid-range)</option>
+        <option>€2,500+ (Luxury)</option>
+        <option>Not sure, recommend me</option>
       </select>
-      <label class="floating-label" for="package">Tour Package</label>
     </div>
-    <div class="form-group">
-      <input type="date" name="Arrival Date" id="arrival" placeholder=" " required>
-      <label class="floating-label" for="arrival">Arrival Date</label>
+
+    <!-- 7. Extras & Add-ons -->
+    <div class="section-title"><i class="fa-solid fa-gift"></i> Extras & Add-ons</div>
+    <div class="form-group addon-group">
+      <label class="addon-checkbox">
+        <input type="checkbox" name="Add-ons" value="Gorilla Permit (€1,500/person)">
+        <span>Gorilla Permit (€1,500/person)</span>
+      </label>
+      <label class="addon-checkbox">
+        <input type="checkbox" name="Add-ons" value="Kivu Boat Cruise (€120)">
+        <span>Kivu Boat Cruise (€120)</span>
+      </label>
+      <label class="addon-checkbox">
+        <input type="checkbox" name="Add-ons" value="Cultural Dance Show (€50)">
+        <span>Cultural Dance Show (€50)</span>
+      </label>
+      <label class="addon-checkbox">
+        <input type="checkbox" name="Add-ons" value="Travel Insurance (+€80)">
+        <span>Travel Insurance (+€80)</span>
+      </label>
+      <label class="addon-checkbox">
+        <input type="checkbox" name="Add-ons" value="Sim Card + Data Package (€20)">
+        <span>Sim Card + Data Package (€20)</span>
+      </label>
     </div>
+
+    <!-- 8. Special Requests or Notes -->
+    <div class="section-title"><i class="fa-solid fa-message"></i> Special Requests / Notes</div>
     <div class="form-group">
-      <input type="date" name="Departure Date" id="departure" placeholder=" ">
-      <label class="floating-label" for="departure">Departure Date</label>
+      <textarea id="specialRequests" name="Special Requests" placeholder="Let us know if there's anything else..."></textarea>
     </div>
-    <div class="form-group">
-      <textarea name="Message" id="message" rows="4" placeholder=" "></textarea>
-      <label class="floating-label" for="message">Additional Message</label>
+
+    <!-- 9. Confirmation & Agreement -->
+    <div class="section-title"><i class="fa-solid fa-check-circle"></i> Confirmation & Agreement</div>
+    <div class="agreement-group">
+      <label>
+        <input type="checkbox" name="Confirm Info" required>
+        I confirm that the information provided is accurate.
+      </label>
+      <label>
+        <input type="checkbox" name="Agree Terms" required>
+        I agree to the <a href="/terms" target="_blank">terms and conditions</a>.
+      </label>
+      <label>
+        <input type="checkbox" name="Acknowledge Policy" required>
+        I understand cancellation & refund policies.
+      </label>
     </div>
     <input type="hidden" name="_redirect" value="https://pprwandatours.com/thank-you.html">
-    <button type="submit">Book My Journey 🚀</button>
-  </form>
-</div>
+    <button type="submit" class="booking-form-btn"><i class="fa-solid fa-plane-departure" style="margin-right:9px;"></i>Book My Journey</button>
+    <div class="booking-success" id="bookingSuccess">
+      <i class="fa-solid fa-circle-check"></i> Thank you! Your booking request was submitted.<br>
+      Our team will contact you soon.
+    </div>
+  </div>
+</form>
 <script>
-// Country flag logic
-const countries = document.getElementById('country');
-const flagSpan = document.getElementById('flag');
-countries.addEventListener('change', function() {
-  const option = countries.options[countries.selectedIndex];
-  const flag = option.getAttribute('data-flag');
-  flagSpan.className = 'country-flag fi fi-' + (flag ? flag : 'un');
-});
+  // Set min date to today for departureDate
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  const mm = String(today.getMonth() + 1).padStart(2, '0');
+  const dd = String(today.getDate()).padStart(2, '0');
+  const minDate = `${yyyy}-${mm}-${dd}`;
+  document.getElementById('departureDate').setAttribute('min', minDate);
+
+  // Animate label color on focus
+  document.querySelectorAll('.form-group input,.form-group select,.form-group textarea').forEach(el=>{
+    el.addEventListener('focus',function(){
+      this.parentNode.querySelector('label')?.style && (this.parentNode.querySelector('label').style.color = 'var(--rw-yellow)');
+    });
+    el.addEventListener('blur',function(){
+      this.parentNode.querySelector('label')?.style && (this.parentNode.querySelector('label').style.color = 'var(--accent)');
+    });
+  });
+
+  // Show success message (simulate for demonstration)
+  document.getElementById('bookingForm').addEventListener('submit', function(e){
+    setTimeout(function() {
+      document.getElementById('bookingSuccess').style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setTimeout(()=>{document.getElementById('bookingSuccess').style.display = 'none';}, 9000);
+    }, 400);
+  });
 </script>
+</body>
+</html>

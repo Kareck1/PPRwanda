@@ -3,291 +3,308 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Luxury Travel Experiences | PPR Wanda Tours</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <title>Luxury Tours & Experiences | PPR Wanda Tours</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root {
       --primary: #e95f3c;
       --secondary: #009e49;
       --accent: #ffd100;
-      --black: #181818;
-      --gold: #f6e27a;
-      --beige: #f9f6ef;
       --white: #fff;
+      --background: #f7fafc;
+      --text: #222;
+      --header-bg: #143144;
       --shadow: 0 8px 32px #e95f3c22;
-      --gradient: linear-gradient(120deg, #fffbe8 0%, #f9f6ef 100%);
     }
     body {
       font-family: 'Montserrat', Arial, sans-serif;
-      background: var(--beige);
-      color: var(--black);
+      background: var(--background);
+      color: var(--text);
       margin: 0;
       padding: 0;
-      letter-spacing: 0.01em;
     }
     header {
-      background: var(--white);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 24px 8vw 16px 8vw;
-      box-shadow: 0 2px 14px #0001;
+      background: var(--header-bg);
+      color: var(--white);
+      padding: 0;
       position: relative;
       z-index: 10;
     }
-    .logo-section {
+    .navbar {
       display: flex;
       align-items: center;
-      gap: 14px;
+      justify-content: space-between;
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 28px 24px 20px 24px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
     .logo-img {
-      width: 54px;
-      height: 54px;
-      object-fit: contain;
-      border-radius: 14px;
+      width: 44px;
+      height: 44px;
+      border-radius: 11px;
+      object-fit: cover;
     }
-    .brand-title {
+    .logo-title {
       font-family: 'Pacifico', cursive;
-      font-size: 1.45rem;
-      color: var(--primary);
+      font-size: 1.47rem;
       font-weight: 700;
-      letter-spacing: 1px;
+      color: var(--accent);
+      letter-spacing: 0.5px;
     }
     nav {
       display: flex;
       gap: 30px;
+      align-items: center;
     }
     nav a {
-      color: var(--black);
+      color: #fff;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 500;
       font-size: 1.07rem;
       transition: color .18s;
-      padding-bottom: 2px;
       border-bottom: 2px solid transparent;
+      padding-bottom: 2px;
     }
     nav a.active, nav a:hover {
-      color: var(--primary);
+      color: var(--accent);
       border-bottom: 2px solid var(--accent);
     }
-    /* HERO */
-    .lux-hero {
-      min-height: 540px;
-      background: 
-        linear-gradient(116deg, #fffbe8 60%, #f6e27a 100%),
-        url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      padding: 56px 0 56px 8vw;
-      position: relative;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-    .lux-hero-art-bg {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      width: 55vw;
-      height: 100%;
-      background: linear-gradient(100deg, #fffbe8cc 20%, #ffd10055 80%);
-      z-index: 1;
-      pointer-events: none;
-      clip-path: ellipse(59% 69% at 60% 50%);
-    }
-    .lux-hero-content {
-      max-width: 600px;
-      position: relative;
-      z-index: 2;
-    }
-    .lux-hero-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.7rem;
-      color: var(--black);
-      margin-bottom: 18px;
-      letter-spacing: .5px;
-      font-weight: 700;
-      line-height: 1.18;
-      background: linear-gradient(90deg, #e95f3c 40%, #ffd100 80%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .lux-hero-desc {
-      font-size: 1.23rem;
-      color: #322;
-      margin-bottom: 32px;
-      font-weight: 500;
-      line-height: 1.6;
-    }
-    .lux-btns {
-      display: flex;
-      gap: 18px;
-      margin-bottom: 18px;
-    }
-    .lux-btn, .lux-btn-outline {
-      padding: 14px 38px;
-      border-radius: 7px;
-      font-weight: 700;
-      font-size: 1.11rem;
-      border: none;
-      cursor: pointer;
-      transition: background .18s, color .18s;
-      text-decoration: none;
-      outline: none;
-      display: inline-block;
-      box-shadow: 0 4px 14px #ffd10025;
-      letter-spacing: .05em;
-    }
-    .lux-btn {
+    .add-listing-btn {
       background: var(--primary);
-      color: var(--white);
+      color: #fff;
+      font-weight: 700;
+      padding: 11px 28px;
+      border-radius: 7px;
+      border: none;
+      font-size: 1.05rem;
+      margin-left: 18px;
+      cursor: pointer;
+      transition: background .18s;
+      text-decoration: none;
     }
-    .lux-btn:hover {
+    .add-listing-btn:hover {
       background: var(--accent);
       color: var(--primary);
     }
-    .lux-btn-outline {
-      background: var(--white);
-      color: var(--primary);
-      border: 2px solid var(--primary);
-    }
-    .lux-btn-outline:hover {
-      background: var(--primary);
-      color: var(--white);
-    }
-    /* Floating gold icon */
-    .lux-icon-floating {
-      font-size: 3.5rem;
-      color: var(--gold);
-      position: absolute;
-      top: 30px;
-      right: 12vw;
-      opacity: 0.8;
-      z-index: 2;
-      animation: floaty 3.5s infinite ease-in-out;
-      pointer-events: none;
-    }
-    @keyframes floaty {
-      0%,100% { transform: translateY(0);}
-      50% { transform: translateY(-18px);}
-    }
-    /* EXPERIENCES SECTION */
-    .lux-section {
-      background: var(--white);
-      padding: 62px 8vw 38px 8vw;
-      text-align: center;
-      box-shadow: var(--shadow);
-      margin-top: -55px;
-      border-radius: 29px;
-      margin-bottom: 56px;
-      position: relative;
-      z-index: 2;
-    }
-    .lux-section-title {
-      color: var(--primary);
-      font-size: 2.1rem;
-      font-family: 'Playfair Display', serif;
-      font-weight: 800;
-      margin-bottom: 14px;
-      letter-spacing: 1.5px;
-    }
-    .lux-section-desc {
-      color: #333;
-      font-size: 1.13rem;
-      max-width: 740px;
-      margin: 0 auto 35px auto;
-      font-weight: 500;
-    }
-    .lux-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 36px;
-      justify-content: center;
-      margin-top: 10px;
-      margin-bottom: 24px;
-    }
-    .lux-card {
-      background: var(--beige);
-      border: 2px solid var(--accent);
-      border-radius: 17px;
-      overflow: hidden;
-      box-shadow: 0 2px 18px #ffd10022;
+    /* HERO SECTION */
+    .lux-hero {
+      background: linear-gradient(120deg,rgba(20,49,68,0.8) 0%,rgba(20,49,68,0.52) 100%), url("https://images.unsplash.com/photo-1509228468518-c5eeecbff44a?auto=format&fit=crop&w=1200&q=80") center/cover no-repeat;
+      min-height: 480px;
       display: flex;
       flex-direction: column;
-      transition: box-shadow .2s, border .2s;
+      align-items: center;
+      justify-content: flex-start;
       position: relative;
-      min-height: 370px;
+      text-align: center;
+      padding-top: 68px;
+      padding-bottom: 68px;
     }
-    .lux-card:hover {
-      box-shadow: 0 8px 24px #e95f3c22;
+    .lux-hero-headline {
+      font-size: 2.7rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 8px;
+      margin-top: 12px;
+      letter-spacing: 1.5px;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .lux-hero-tagline {
+      font-size: 2.1rem;
+      font-family: 'Pacifico', cursive;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 16px;
+      letter-spacing: 1.2px;
+    }
+    .lux-hero-desc {
+      color: #f1f1f1;
+      font-size: 1.18rem;
+      max-width: 700px;
+      margin: 0 auto 40px auto;
+      font-weight: 500;
+    }
+    .lux-search-bar {
+      display: flex;
+      background: var(--white);
+      border-radius: 13px;
+      box-shadow: 0 6px 22px #14314433;
+      max-width: 660px;
+      margin: 0 auto 24px auto;
+      overflow: hidden;
+    }
+    .lux-search-bar input, .lux-search-bar select {
+      border: none;
+      outline: none;
+      font-size: 1.07rem;
+      padding: 18px 16px;
+      flex: 1;
+      background: #f7fafc;
+      color: var(--text);
+      min-width: 0;
+    }
+    .lux-search-bar select {
+      min-width: 120px;
+    }
+    .lux-search-bar button {
+      background: var(--primary);
+      color: #fff;
+      font-weight: 700;
+      border: none;
+      font-size: 1.09rem;
+      padding: 0 34px;
+      cursor: pointer;
+      transition: background .18s;
+    }
+    .lux-search-bar button:hover {
+      background: var(--accent);
+      color: var(--primary);
+    }
+    .lux-highlight-filters {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 18px;
+    }
+    .lux-highlight-btn {
+      background: var(--white);
+      color: var(--primary);
+      border: 1.5px solid var(--accent);
+      border-radius: 7px;
+      padding: 10px 26px;
+      font-weight: 600;
+      font-size: 1.06rem;
+      cursor: pointer;
+      margin-bottom: 8px;
+      transition: background .18s, color .18s, border .18s;
+    }
+    .lux-highlight-btn:hover {
+      background: var(--primary);
+      color: var(--white);
       border-color: var(--primary);
     }
-    .lux-card-media {
-      width: 100%;
-      height: 185px;
-      object-fit: cover;
-      background: #eee;
-      border-bottom: 1px solid #fffbe8;
+    /* LUXURY EXPERIENCE CARDS */
+    .lux-experiences-section {
+      background: var(--background);
+      padding: 68px 6vw 16px 6vw;
+      text-align: center;
     }
-    .lux-card-content {
-      padding: 22px 18px 18px 18px;
+    .lux-experiences-title {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 12px;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .lux-experiences-desc {
+      font-size: 1.19rem;
+      max-width: 700px;
+      margin: 0 auto 38px auto;
+      color: #333;
+    }
+    .lux-experiences-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 34px;
+      justify-content: center;
+      margin-bottom: 26px;
+    }
+    .lux-experience-card {
+      background: var(--white);
+      border-radius: 17px;
+      box-shadow: 0 4px 18px #14314411;
+      flex: 1 1 250px;
+      min-width: 265px;
+      max-width: 340px;
+      padding: 0 0 24px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      border-top: 4px solid var(--accent);
+      transition: box-shadow .2s, border-color .2s;
+      position: relative;
+    }
+    .lux-experience-card:hover {
+      box-shadow: 0 10px 28px #e95f3c33;
+      border-top: 4px solid var(--primary);
+    }
+    .lux-experience-img {
+      width: 100%;
+      height: 165px;
+      object-fit: cover;
+      border-radius: 17px 17px 0 0;
+      margin-bottom: 0;
+    }
+    .lux-experience-content {
+      padding: 20px 18px 0 18px;
       flex: 1 1 auto;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
+      align-items: flex-start;
     }
-    .lux-card-title {
-      font-size: 1.19rem;
-      color: var(--primary);
-      font-family: 'Playfair Display', serif;
+    .lux-experience-title {
+      font-size: 1.13rem;
       font-weight: 700;
-      margin-bottom: 5px;
+      color: var(--primary);
+      margin-bottom: 7px;
+      letter-spacing: 0.2px;
     }
-    .lux-card-desc {
-      font-size: 1.04rem;
+    .lux-experience-desc {
+      font-size: 0.98rem;
       color: #444;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       flex: 1;
     }
-    .lux-card-link {
+    .lux-experience-link {
       color: var(--secondary);
       font-weight: 600;
       text-decoration: underline;
       font-size: 0.99rem;
-      margin-top: 7px;
+      margin-top: 3px;
       align-self: flex-end;
       transition: color .14s;
     }
-    .lux-card-link:hover {
+    .lux-experience-link:hover {
       color: var(--primary);
     }
-    .lux-card-corner {
+    .lux-experience-corner {
       position: absolute;
       right: 0;
       bottom: 0;
-      width: 44px;
-      height: 44px;
+      width: 38px;
+      height: 38px;
       background: var(--accent);
-      border-top-left-radius: 44px;
+      border-top-left-radius: 38px;
       z-index: 2;
-      opacity: .8;
+      opacity: .7;
     }
     /* LUXURY SERVICES */
-    .lux-extra-services {
+    .lux-services-title {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 50px 0 16px 0;
+      text-align: center;
+      letter-spacing: 1px;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .lux-services-cards {
       display: flex;
       flex-wrap: wrap;
+      gap: 34px;
       justify-content: center;
-      gap: 23px;
-      margin: 50px 0 0 0;
+      margin-bottom: 26px;
     }
-    .lux-service {
+    .lux-services-card {
       background: #fffdf5;
       border-radius: 14px;
       box-shadow: 0 2px 10px #ffd10033;
-      padding: 26px 28px;
+      padding: 28px 22px 22px 22px;
       max-width: 320px;
       min-width: 220px;
       width: 100%;
@@ -298,26 +315,25 @@
       align-items: flex-start;
       position: relative;
     }
-    .lux-service i {
-      font-size: 1.6rem;
-      color: var(--gold);
-      margin-bottom: 9px;
+    .lux-services-icon {
+      font-size: 1.8rem;
+      color: var(--accent);
+      margin-bottom: 12px;
       min-width: 32px;
     }
-    .lux-service-title {
+    .lux-services-title-card {
       font-weight: 700;
       color: var(--primary);
-      margin-bottom: 4px;
-      font-size: 1.08rem;
-      font-family: 'Montserrat', Arial, sans-serif;
+      margin-bottom: 6px;
+      font-size: 1.12rem;
     }
-    .lux-service-desc {
+    .lux-services-desc {
       color: #333;
-      font-size: 0.99rem;
+      font-size: 1.01rem;
     }
-    /* VIDEO EXPERIENCE */
+    /* VIDEO */
     .lux-video-section {
-      margin: 70px auto 40px auto;
+      margin: 80px auto 40px auto;
       background: #fff;
       border-radius: 22px;
       box-shadow: 0 4px 22px #ffd10033;
@@ -328,7 +344,7 @@
     .lux-video-title {
       font-size: 1.45rem;
       color: var(--primary);
-      font-family: 'Playfair Display', serif;
+      font-family: 'Pacifico', cursive;
       font-weight: 700;
       margin-bottom: 18px;
     }
@@ -347,46 +363,26 @@
       margin: 14px 0 0 0;
       font-style: italic;
     }
-    /* CTA */
-    .lux-cta {
-      background: var(--primary);
-      color: #fff;
-      border-radius: 16px;
-      margin: 60px auto 30px auto;
-      padding: 40px 24px;
-      max-width: 900px;
-      text-align: center;
-      box-shadow: 0 4px 16px #e95f3c22;
+    /* RESPONSIVE */
+    @media (max-width: 1050px) {
+      .lux-features, .lux-experiences-cards, .lux-services-cards { gap: 18px;}
     }
-    .lux-cta-title {
-      font-size: 2rem;
-      font-family: 'Pacifico', cursive;
-      margin-bottom: 12px;
-      color: var(--accent);
-      letter-spacing: 2px;
-      text-shadow: 0 2px 12px #0003;
+    @media (max-width: 900px) {
+      .navbar { flex-direction: column; gap: 12px;}
+      .lux-features, .lux-experiences-cards, .lux-services-cards { flex-direction: column; gap: 18px;}
+      .lux-feature-card, .lux-experience-card, .lux-services-card { max-width: 98vw; }
+      .lux-video-section { padding: 38px 2vw; }
     }
-    .lux-cta-desc {
-      font-size: 1.11rem;
-      margin-bottom: 16px;
-      color: #fff;
-    }
-    .lux-cta-btn {
-      padding: 13px 38px;
-      background: var(--accent);
-      color: var(--primary);
-      border: none;
-      border-radius: 8px;
-      font-size: 1.09rem;
-      font-weight: 800;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background .17s, color .17s;
-      box-shadow: 0 2px 8px #ffd10044;
-    }
-    .lux-cta-btn:hover {
-      background: var(--white);
-      color: var(--primary);
+    @media (max-width: 700px) {
+      .lux-hero { padding-top: 36px; padding-bottom: 32px;}
+      .lux-hero-headline { font-size: 1.45rem;}
+      .lux-hero-tagline { font-size: 1.1rem;}
+      .lux-hero-desc { font-size: 1.01rem;}
+      .lux-search-bar input, .lux-search-bar select { font-size: 0.98rem; padding: 11px 6px;}
+      .lux-search-bar button { font-size: 1.01rem; padding: 0 18px;}
+      .lux-feature-title { font-size: 1.09rem;}
+      .lux-video-section { padding: 18px 1vw; }
+      .lux-video-frame { height: 180px; }
     }
     footer {
       background: #222;
@@ -394,10 +390,11 @@
       padding: 38px 10vw 30px 10vw;
       text-align: center;
       font-size: 1rem;
+      margin-top: 60px;
     }
     .footer-social {
       margin: 16px 0 0 0;
-      font-size: 1.3rem;
+      font-size: 1.22rem;
       letter-spacing: 16px;
     }
     .footer-social a {
@@ -408,125 +405,166 @@
     .footer-social a:hover {
       color: var(--primary);
     }
-    @media (max-width: 1100px) {
-      .lux-video-section {
-        padding: 38px 2vw;
-      }
-    }
-    @media (max-width: 700px) {
-      .lux-section { padding: 28px 2vw 22px 2vw; }
-      .lux-video-section { padding: 18px 1vw; }
-      .lux-video-frame { height: 180px; }
-    }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo-section">
-      <img src="https://github.com/Kareck1/PPRwandatestweb/raw/refs/heads/main/mountain%20logo.webp" alt="Mountain Logo" class="logo-img" />
-      <span class="brand-title">PPR WANDA TOURS</span>
+    <div class="navbar">
+      <div class="logo">
+        <img src="https://github.com/Kareck1/PPRwandatestweb/raw/refs/heads/main/mountain%20logo.webp" alt="Mountain Logo" class="logo-img" />
+        <span class="logo-title">PPR WANDA TOURS</span>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="tours.html">Tours</a>
+        <a href="events.html">Events</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="booking.html">Booking</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="booking.html" class="add-listing-btn">Luxury Booking</a>
     </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="tours.html">Tours</a>
-      <a href="events.html">Events</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="booking.html">Booking</a>
-      <a href="contact.html">Contact</a>
-    </nav>
   </header>
 
-  <!-- HERO -->
   <section class="lux-hero">
-    <div class="lux-hero-art-bg"></div>
-    <i class="fa-solid fa-crown lux-icon-floating"></i>
-    <div class="lux-hero-content">
-      <div class="lux-hero-title">Live the Extraordinary</div>
-      <div class="lux-hero-desc">
-        Elevate your journey with our bespoke luxury experiences. Whether you crave private gorilla safaris, champagne lake cruises, helicopter transfers, or exclusive culinary moments—PPR Wanda Tours crafts every detail for the most discerning traveler. Welcome to a world where every moment is golden.
-      </div>
-      <div class="lux-btns">
-        <a href="booking.html" class="lux-btn">Book a Luxury Experience</a>
-        <a href="tours.html" class="lux-btn-outline">Browse All Tours</a>
-      </div>
+    <div class="lux-hero-headline">Explore<br><span class="lux-hero-tagline">Luxury Rwanda & Denmark</span></div>
+    <div class="lux-hero-desc">
+      Find the most exclusive places to stay, dine, relax, and experience—handpicked by PPR Wanda Tours. From private safaris to world-class spas and gourmet cuisine, let us unlock a world of privilege for you.
+    </div>
+    <form class="lux-search-bar" action="tours.html" method="get">
+      <input type="text" placeholder="Ex: gorilla trek, spa, gourmet" name="q" />
+      <select name="region">
+        <option value="">Where</option>
+        <option value="rwanda">Rwanda</option>
+        <option value="denmark">Denmark</option>
+        <option value="africa">Africa</option>
+      </select>
+      <button type="submit">Search</button>
+    </form>
+    <div class="lux-highlight-filters">
+      <a href="tours.html#exclusive-restaurants" class="lux-highlight-btn"><i class="fa fa-utensils"></i> Restaurant</a>
+      <a href="tours.html#luxury-hotels" class="lux-highlight-btn"><i class="fa fa-hotel"></i> Hotels</a>
+      <a href="tours.html#scenic-places" class="lux-highlight-btn"><i class="fa fa-mountain-sun"></i> Nature</a>
+      <a href="tours.html#shopping" class="lux-highlight-btn"><i class="fa fa-shopping-bag"></i> Shopping</a>
     </div>
   </section>
 
-  <!-- SIGNATURE EXPERIENCES -->
-  <section class="lux-section">
-    <div class="lux-section-title">Signature Luxury Experiences</div>
-    <div class="lux-section-desc">
+  <section class="lux-experiences-section">
+    <div class="lux-experiences-title">Signature Luxury Experiences</div>
+    <div class="lux-experiences-desc">
       Discover our most celebrated exclusives. Each is tailored for privacy, serenity, and grandeur—designed just for you.
     </div>
-    <div class="lux-cards">
-      <div class="lux-card">
-        <img src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?auto=format&fit=crop&w=600&q=80" alt="Private Gorilla Trekking" class="lux-card-media" />
-        <div class="lux-card-content">
-          <div class="lux-card-title">Private Gorilla Trekking</div>
-          <div class="lux-card-desc">Encounter Rwanda’s mountain gorillas in a private group, guided by experts, with VIP park access and post-trek champagne.</div>
-          <a href="wildlife.html" class="lux-card-link">See Wildlife Luxury</a>
+    <div class="lux-experiences-cards">
+      <div class="lux-experience-card">
+        <img src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?auto=format&fit=crop&w=600&q=80" alt="Private Gorilla Trekking" class="lux-experience-img" />
+        <div class="lux-experience-content">
+          <div class="lux-experience-title">Private Gorilla Trekking</div>
+          <div class="lux-experience-desc">Encounter Rwanda’s mountain gorillas in a private group, guided by experts, with VIP park access and post-trek champagne.</div>
+          <a href="wildlife.html" class="lux-experience-link">See Wildlife Luxury</a>
         </div>
-        <div class="lux-card-corner"></div>
+        <div class="lux-experience-corner"></div>
       </div>
-      <div class="lux-card">
-        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="Lakeside Villas" class="lux-card-media" />
-        <div class="lux-card-content">
-          <div class="lux-card-title">Lakeside Villas & Spas</div>
-          <div class="lux-card-desc">Relax in secluded villas on Lake Kivu, with infinity pools, personal chefs, and sunset cruises at your leisure.</div>
-          <a href="relax.html" class="lux-card-link">Discover Relaxation</a>
+      <div class="lux-experience-card">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="Lakeside Villas" class="lux-experience-img" />
+        <div class="lux-experience-content">
+          <div class="lux-experience-title">Lakeside Villas & Spas</div>
+          <div class="lux-experience-desc">Relax in secluded villas on Lake Kivu, with infinity pools, personal chefs, and sunset cruises at your leisure.</div>
+          <a href="relax.html" class="lux-experience-link">Discover Relaxation</a>
         </div>
-        <div class="lux-card-corner"></div>
+        <div class="lux-experience-corner"></div>
       </div>
-      <div class="lux-card">
-        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" alt="Helicopter Scenic Flights" class="lux-card-media" />
-        <div class="lux-card-content">
-          <div class="lux-card-title">Helicopter Scenic Flights</div>
-          <div class="lux-card-desc">Arrive in style with private helicopter transfers to volcanoes, lakes, and hidden gems—no lines, no wait, only wonder.</div>
-          <a href="custom-experiences.html" class="lux-card-link">Custom Experiences</a>
+      <div class="lux-experience-card">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" alt="Helicopter Scenic Flights" class="lux-experience-img" />
+        <div class="lux-experience-content">
+          <div class="lux-experience-title">Helicopter Scenic Flights</div>
+          <div class="lux-experience-desc">Arrive in style with private helicopter transfers to volcanoes, lakes, and hidden gems—no lines, no wait, only wonder.</div>
+          <a href="custom-experiences.html" class="lux-experience-link">Custom Experiences</a>
         </div>
-        <div class="lux-card-corner"></div>
+        <div class="lux-experience-corner"></div>
       </div>
-      <div class="lux-card">
-        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=600&q=80" alt="Private Dining & Chef" class="lux-card-media" />
-        <div class="lux-card-content">
-          <div class="lux-card-title">Private Chef & Fine Dining</div>
-          <div class="lux-card-desc">Savour multi-course meals prepared by renowned chefs, with wine pairings and local delicacies—served wherever you desire.</div>
-          <a href="culinary.html" class="lux-card-link">Luxury Culinary</a>
+      <div class="lux-experience-card">
+        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=600&q=80" alt="Private Dining & Chef" class="lux-experience-img" />
+        <div class="lux-experience-content">
+          <div class="lux-experience-title">Private Chef & Fine Dining</div>
+          <div class="lux-experience-desc">Savour multi-course meals prepared by renowned chefs, with wine pairings and local delicacies—served wherever you desire.</div>
+          <a href="culinary.html" class="lux-experience-link">Luxury Culinary</a>
         </div>
-        <div class="lux-card-corner"></div>
+        <div class="lux-experience-corner"></div>
+      </div>
+      <!-- Additional Luxurious Experiences -->
+      <div class="lux-experience-card">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Family Retreats" class="lux-experience-img" />
+        <div class="lux-experience-content">
+          <div class="lux-experience-title">Luxury Family Retreats</div>
+          <div class="lux-experience-desc">Enjoy unforgettable moments with your loved ones at our luxury retreats—perfect for families and friends seeking privacy and pampering.</div>
+          <a href="family-trip.html" class="lux-experience-link">Family Experiences</a>
+        </div>
+        <div class="lux-experience-corner"></div>
+      </div>
+      <div class="lux-experience-card">
+        <img src="https://images.unsplash.com/photo-1469398715555-76331a0b1b49?auto=format&fit=crop&w=600&q=80" alt="Anniversary Escapes" class="lux-experience-img" />
+        <div class="lux-experience-content">
+          <div class="lux-experience-title">Anniversary Escapes</div>
+          <div class="lux-experience-desc">Celebrate milestones with romantic escapes, candlelit dinners, and unforgettable surprises curated just for you and your partner.</div>
+          <a href="custom-experiences.html" class="lux-experience-link">Anniversary Luxury</a>
+        </div>
+        <div class="lux-experience-corner"></div>
+      </div>
+      <div class="lux-experience-card">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Exclusive Events" class="lux-experience-img" />
+        <div class="lux-experience-content">
+          <div class="lux-experience-title">Exclusive Events & Galas</div>
+          <div class="lux-experience-desc">Host or attend private galas, launch parties, and exclusive gatherings with all the elegance and privacy you deserve.</div>
+          <a href="events.html" class="lux-experience-link">See Events</a>
+        </div>
+        <div class="lux-experience-corner"></div>
       </div>
     </div>
-    <div class="lux-section-desc" style="margin-top:40px;">
+    <div class="lux-experiences-desc" style="margin-top:24px;">
       Want something special? Ask us for family retreats, anniversary escapes, exclusive events, or a tailored adventure.
-    </div>
-
-    <!-- MORE LUXURY SERVICES -->
-    <div class="lux-extra-services">
-      <div class="lux-service">
-        <i class="fa-solid fa-glass-cheers"></i>
-        <div class="lux-service-title">Dedicated Concierge</div>
-        <div class="lux-service-desc">24/7 personal assistance for every detail—from spa bookings to private celebrations.</div>
-      </div>
-      <div class="lux-service">
-        <i class="fa-solid fa-car-side"></i>
-        <div class="lux-service-title">Luxury Transfers</div>
-        <div class="lux-service-desc">Travel in comfort with chauffeured limousines, classic cars, or luxury SUVs at your call.</div>
-      </div>
-      <div class="lux-service">
-        <i class="fa-solid fa-spa"></i>
-        <div class="lux-service-title">Wellness & Spa Retreats</div>
-        <div class="lux-service-desc">Signature spa treatments, yoga, and wellness rituals in breathtaking natural settings.</div>
-      </div>
-      <div class="lux-service">
-        <i class="fa-solid fa-gem"></i>
-        <div class="lux-service-title">VIP Access & Events</div>
-        <div class="lux-service-desc">Invitations to private galas, art showings, and cultural events—just for you.</div>
-      </div>
     </div>
   </section>
 
-  <!-- VIDEO EXPERIENCE -->
+  <div class="lux-services-title">Luxury Services</div>
+  <div class="lux-services-cards">
+    <div class="lux-services-card">
+      <div class="lux-services-icon"><i class="fa-solid fa-glass-cheers"></i></div>
+      <div class="lux-services-title-card">Dedicated Concierge</div>
+      <div class="lux-services-desc">24/7 personal assistance for every detail—from spa bookings to private celebrations.</div>
+    </div>
+    <div class="lux-services-card">
+      <div class="lux-services-icon"><i class="fa-solid fa-car-side"></i></div>
+      <div class="lux-services-title-card">Luxury Transfers</div>
+      <div class="lux-services-desc">Travel in comfort with chauffeured limousines, classic cars, or luxury SUVs at your call.</div>
+    </div>
+    <div class="lux-services-card">
+      <div class="lux-services-icon"><i class="fa-solid fa-spa"></i></div>
+      <div class="lux-services-title-card">Wellness & Spa Retreats</div>
+      <div class="lux-services-desc">Signature spa treatments, yoga, and wellness rituals in breathtaking natural settings.</div>
+    </div>
+    <div class="lux-services-card">
+      <div class="lux-services-icon"><i class="fa-solid fa-gem"></i></div>
+      <div class="lux-services-title-card">VIP Access & Events</div>
+      <div class="lux-services-desc">Invitations to private galas, art showings, and cultural events—just for you.</div>
+    </div>
+    <div class="lux-services-card">
+      <div class="lux-services-icon"><i class="fa-solid fa-champagne-glasses"></i></div>
+      <div class="lux-services-title-card">Private Celebrations</div>
+      <div class="lux-services-desc">Let us plan your birthday, engagement, or any special occasion in lavish style—anywhere you wish.</div>
+    </div>
+    <div class="lux-services-card">
+      <div class="lux-services-icon"><i class="fa-solid fa-shield-heart"></i></div>
+      <div class="lux-services-title-card">Personal Security</div>
+      <div class="lux-services-desc">Discreet security and peace of mind for you and your guests throughout your luxury stay or event.</div>
+    </div>
+    <div class="lux-services-card">
+      <div class="lux-services-icon"><i class="fa-solid fa-crown"></i></div>
+      <div class="lux-services-title-card">Tailored Experiences</div>
+      <div class="lux-services-desc">Every detail customized just for you—your dreams, your tastes, your pace.</div>
+    </div>
+  </div>
+
   <section class="lux-video-section">
     <div class="lux-video-title">A Glimpse Into Luxury</div>
     <video class="lux-video-frame" controls poster="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?auto=format&fit=crop&w=600&q=80">
@@ -536,17 +574,6 @@
     <div class="lux-video-caption">Moments from our most exclusive journeys.</div>
   </section>
 
-  <!-- CTA -->
-  <div class="lux-cta">
-    <div class="lux-cta-title">Your Private Luxury, Awaits</div>
-    <div class="lux-cta-desc">Contact our luxury travel designers to craft your perfect, personalized escape in Rwanda, Denmark, or beyond.</div>
-    <a href="booking.html" class="lux-cta-btn">Start Your Journey</a>
-    <div style="margin-top:18px;font-size:1.02rem;">
-      <b>Email:</b> <a href="mailto:info@pprwandatours.com" style="color:#ffd100;text-decoration:underline;">info@pprwandatours.com</a>
-      &nbsp; | &nbsp;
-      <b>WhatsApp:</b> <a href="https://wa.me/250788123456" style="color:#ffd100;text-decoration:underline;">+250 788 123 456</a>
-    </div>
-  </div>
   <footer>
     &copy; 2025 PPR Wanda Tours. All rights reserved.<br>
     <span class="footer-social">

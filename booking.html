@@ -14,7 +14,6 @@
       --rw-blue: #3d5897;
       --rw-yellow: #efd944;
       --rw-green: #4ba64f;
-      --rw-bg: #e8f0f5;
       --glass: rgba(255,255,255,0.14);
       --glass-heavy: rgba(255,255,255,0.84);
       --form-bg: rgba(255,255,255,0.34);
@@ -59,7 +58,6 @@
       animation: fadeInCard 1.1s cubic-bezier(.46,.9,.48,1.14);
       border: 1.2px solid var(--rw-blue);
       box-sizing: border-box;
-      transition: box-shadow 0.18s, border-color 0.18s, background 0.2s;
       background: linear-gradient(134deg, var(--form-bg) 88%, var(--glass-heavy) 100%);
       min-width: 290px;
       width: 96vw;
@@ -134,6 +132,7 @@
       gap: 12px;
       width: 100%;
       min-width: 0;
+      flex-wrap: wrap;
     }
     .form-row > .form-group {
       flex: 1 1 0;
@@ -215,9 +214,16 @@
       color: #fff;
       border-color: var(--rw-green);
     }
-    .phone-row { display: flex; gap: 8px; align-items: center; min-width:0;}
+    .phone-row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      min-width: 0;
+      width: 100%;
+    }
     .phone-flag {
       font-size: 1.25em; margin-right: 2px; position:relative; left:4px;
+      flex-shrink: 0;
     }
     .phone-code-dropdown {
       border: 1.2px solid var(--rw-blue);
@@ -233,8 +239,33 @@
       position: relative;
       transition: border 0.19s, box-shadow 0.19s;
       width: 90px;
+      flex-shrink: 0;
     }
     .phone-code-dropdown:focus { border-color: var(--rw-yellow); }
+    .phone-code-dropdown {
+  min-width: 130px;   /* Wider country code select */
+  max-width: 150px;
+  width: 150px;
+  /* ...other styles... */
+}
+
+.phone-input {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 260px;   /* Make input smaller */
+}
+    .easy-contact-row {
+      display: flex;
+      gap: 12px;
+      width: 100%;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .easy-contact-row .form-group {
+      margin-bottom: 0;
+      flex: 1 1 0;
+    }
     .addon-group { display: flex; flex-wrap: wrap; gap: 10px 13px; margin-top: 4px; }
     .addon-checkbox {
       background: rgba(245,250,253,0.77);
@@ -327,6 +358,7 @@
       .booking-container { padding: 7vw 2vw 4vw 2vw; }
       .booking-title { font-size: 1.07rem;}
       .form-row { flex-direction: column; gap: 0;}
+      .easy-contact-row { flex-direction: column; gap: 0;}
       .form-group { font-size: 1rem; }
       .addon-group { min-width: 0; }
     }
@@ -364,49 +396,67 @@
         <div class="error-message" id="error-email"></div>
       </div>
     </div>
-    <div class="form-row">
-      <div class="form-group">
-        <label for="phone">Phone Number <span class="required">*</span></label>
-        <div class="phone-row">
-          <span class="phone-flag fi fi-dk" id="phoneFlag"></span>
-          <select id="phoneCode" class="phone-code-dropdown" required>
-            <option value="+45" data-flag="dk" selected>🇩🇰 +45</option>
-            <option value="+250" data-flag="rw">🇷🇼 +250</option>
-            <option value="+46" data-flag="se">🇸🇪 +46</option>
-            <option value="+47" data-flag="no">🇳🇴 +47</option>
-            <option value="+358" data-flag="fi">🇫🇮 +358</option>
-            <option value="+49" data-flag="de">🇩🇪 +49</option>
-            <option value="+33" data-flag="fr">🇫🇷 +33</option>
-            <option value="+44" data-flag="gb">🇬🇧 +44</option>
-            <option value="+1" data-flag="us">🇺🇸 +1</option>
-            <option value="+27" data-flag="za">🇿🇦 +27</option>
-            <option value="+254" data-flag="ke">🇰🇪 +254</option>
-            <option value="+256" data-flag="ug">🇺🇬 +256</option>
-            <option value="+7" data-flag="ru">🇷🇺 +7</option>
-            <option value="+81" data-flag="jp">🇯🇵 +81</option>
-            <option value="+61" data-flag="au">🇦🇺 +61</option>
-            <option value="+20" data-flag="eg">🇪🇬 +20</option>
-          </select>
-          <input type="tel" id="phone" name="Phone" style="flex:2; margin-left:4px;" required placeholder="12 34 56 78">
-        </div>
-        <div class="error-message" id="error-phone"></div>
-      </div>
-      <div class="form-group country-dropdown">
-        <label for="nationality">Nationality <span class="required">*</span></label>
-        <span class="country-flag fi fi-dk" id="flagIcon"></span>
-        <select id="nationality" name="Nationality" required autocomplete="country">
-          <option value="Denmark" data-flag="dk" selected>🇩🇰 Denmark</option>
-          <option value="Rwanda" data-flag="rw">🇷🇼 Rwanda</option>
-          <option value="Sweden" data-flag="se">🇸🇪 Sweden</option>
-          <option value="Norway" data-flag="no">🇳🇴 Norway</option>
-          <option value="Finland" data-flag="fi">🇫🇮 Finland</option>
-          <option value="Germany" data-flag="de">🇩🇪 Germany</option>
-          <option value="France" data-flag="fr">🇫🇷 France</option>
-          <option value="UK" data-flag="gb">🇬🇧 UK</option>
-          <option value="USA" data-flag="us">🇺🇸 USA</option>
-          <option value="Other" data-flag="un">🌍 Other</option>
+    <!-- PHONE ROW, NATIONALITY BELOW -->
+    <div class="form-group">
+      <label for="phone">Phone Number <span class="required">*</span></label>
+      <div class="phone-row">
+        <span class="phone-flag fi fi-dk" id="phoneFlag"></span>
+        <select id="phoneCode" class="phone-code-dropdown" required>
+          <option value="+45" data-flag="dk" selected>🇩🇰 +45</option>
+          <option value="+250" data-flag="rw">🇷🇼 +250</option>
+          <option value="+46" data-flag="se">🇸🇪 +46</option>
+          <option value="+47" data-flag="no">🇳🇴 +47</option>
+          <option value="+358" data-flag="fi">🇫🇮 +358</option>
+          <option value="+49" data-flag="de">🇩🇪 +49</option>
+          <option value="+33" data-flag="fr">🇫🇷 +33</option>
+          <option value="+44" data-flag="gb">🇬🇧 +44</option>
+          <option value="+1" data-flag="us">🇺🇸 +1</option>
+          <option value="+27" data-flag="za">🇿🇦 +27</option>
+          <option value="+254" data-flag="ke">🇰🇪 +254</option>
+          <option value="+256" data-flag="ug">🇺🇬 +256</option>
+          <option value="+7" data-flag="ru">🇷🇺 +7</option>
+          <option value="+81" data-flag="jp">🇯🇵 +81</option>
+          <option value="+61" data-flag="au">🇦🇺 +61</option>
+          <option value="+20" data-flag="eg">🇪🇬 +20</option>
         </select>
-        <div class="error-message" id="error-nationality"></div>
+        <input type="tel" id="phone" name="Phone" class="phone-input" required placeholder="12 34 56 78">
+      </div>
+      <div class="error-message" id="error-phone"></div>
+    </div>
+    <div class="form-group country-dropdown">
+      <label for="nationality">Nationality <span class="required">*</span></label>
+      <span class="country-flag fi fi-dk" id="flagIcon"></span>
+      <select id="nationality" name="Nationality" required autocomplete="country">
+        <option value="Denmark" data-flag="dk" selected>🇩🇰 Denmark</option>
+        <option value="Rwanda" data-flag="rw">🇷🇼 Rwanda</option>
+        <option value="Sweden" data-flag="se">🇸🇪 Sweden</option>
+        <option value="Norway" data-flag="no">🇳🇴 Norway</option>
+        <option value="Finland" data-flag="fi">🇫🇮 Finland</option>
+        <option value="Germany" data-flag="de">🇩🇪 Germany</option>
+        <option value="France" data-flag="fr">🇫🇷 France</option>
+        <option value="UK" data-flag="gb">🇬🇧 UK</option>
+        <option value="USA" data-flag="us">🇺🇸 USA</option>
+        <option value="Other" data-flag="un">🌍 Other</option>
+      </select>
+      <div class="error-message" id="error-nationality"></div>
+    </div>
+    <!-- Easy Contact -->
+    <div class="easy-contact-row">
+      <div class="form-group" style="min-width:120px;flex:1;">
+        <label for="easyContactPlatform"><i class="fa-solid fa-handshake"></i> Easy Contact (Optional)</label>
+        <select id="easyContactPlatform" name="Easy Contact Platform">
+          <option value="">Choose platform...</option>
+          <option value="whatsapp" data-icon="fa-brands fa-whatsapp">WhatsApp</option>
+          <option value="instagram" data-icon="fa-brands fa-instagram">Instagram</option>
+          <option value="facebook" data-icon="fa-brands fa-facebook">Facebook</option>
+          <option value="telegram" data-icon="fa-brands fa-telegram">Telegram</option>
+          <option value="twitter" data-icon="fa-brands fa-twitter">Twitter/X</option>
+          <option value="tiktok" data-icon="fa-brands fa-tiktok">TikTok</option>
+        </select>
+      </div>
+      <div class="form-group" style="min-width:120px;flex:1;">
+        <label for="easyContactValue" id="easyContactValueLabel">Contact Username/Number</label>
+        <input type="text" id="easyContactValue" name="Easy Contact Value" placeholder="">
       </div>
     </div>
     <div class="form-group">
@@ -617,6 +667,36 @@
     phoneFlag.className = 'phone-flag fi fi-' + (flag ? flag : 'un');
   });
 
+  // Easy Contact dynamic label/placeholder
+  const easyContactPlatform = document.getElementById('easyContactPlatform');
+  const easyContactValue = document.getElementById('easyContactValue');
+  const easyContactValueLabel = document.getElementById('easyContactValueLabel');
+  easyContactPlatform.addEventListener('change', function(){
+    const plat = easyContactPlatform.value;
+    if (plat==="whatsapp") {
+      easyContactValue.placeholder = "Enter WhatsApp number";
+      easyContactValueLabel.textContent = "WhatsApp Number";
+    } else if (plat==="instagram") {
+      easyContactValue.placeholder = "Enter Instagram username";
+      easyContactValueLabel.textContent = "Instagram Username";
+    } else if (plat==="facebook") {
+      easyContactValue.placeholder = "Enter Facebook username";
+      easyContactValueLabel.textContent = "Facebook Username";
+    } else if (plat==="telegram") {
+      easyContactValue.placeholder = "Enter Telegram username";
+      easyContactValueLabel.textContent = "Telegram Username";
+    } else if (plat==="twitter") {
+      easyContactValue.placeholder = "Enter Twitter/X username";
+      easyContactValueLabel.textContent = "Twitter/X Username";
+    } else if (plat==="tiktok") {
+      easyContactValue.placeholder = "Enter TikTok username";
+      easyContactValueLabel.textContent = "TikTok Username";
+    } else {
+      easyContactValue.placeholder = "";
+      easyContactValueLabel.textContent = "Contact Username/Number";
+    }
+  });
+
   // Validation logic (shows hints only on submit and hides after 5s)
   function showError(id, msg) {
     const err = document.getElementById('error-' + id);
@@ -640,10 +720,8 @@
     // allow spaces but must be 6+ digits
     return phone.replace(/\s+/g, '').match(/^\d{6,}$/);
   }
-
   function validateForm(showHints) {
     let valid = true, firstError = null;
-    // Required fields and their rules
     const fields = [
       {id:'fullName', name:'Full Name',check:v=>!!v, msg:"Please enter your name."},
       {id:'email', name:'Email',check:validateEmail, msg:"Enter a valid email."},

@@ -1,0 +1,39 @@
+<form action="https://formspree.io/f/xvgrpezg" method="POST">
+  <h2>Book Your Rwanda Tour</h2>
+  <label>Full Name:
+    <input type="text" name="Full Name" required>
+  </label><br>
+  <label>Email Address:
+    <input type="email" name="Email" required>
+  </label><br>
+  <label>Phone Number:
+    <input type="tel" name="Phone">
+  </label><br>
+  <label>Country:
+    <input type="text" name="Country" required>
+  </label><br>
+  <label>Number of Travelers:
+    <input type="number" name="Travelers" min="1" required>
+  </label><br>
+  <label>Tour Package:
+    <select name="Package" required>
+      <option value="">Select a package</option>
+      <option value="Gorilla Trekking">Gorilla Trekking</option>
+      <option value="Kigali City Tour">Kigali City Tour</option>
+      <option value="Akagera Safari">Akagera Safari</option>
+      <option value="Cultural Experience">Cultural Experience</option>
+      <option value="Custom">Custom Tour</option>
+    </select>
+  </label><br>
+  <label>Arrival Date:
+    <input type="date" name="Arrival Date" required>
+  </label><br>
+  <label>Departure Date:
+    <input type="date" name="Departure Date">
+  </label><br>
+  <label>Additional Message:
+    <textarea name="Message" rows="4"></textarea>
+  </label><br>
+  <input type="hidden" name="_redirect" value="https://pprwandatours.com/thank-you.html">
+  <button type="submit">Book My Journey</button>
+</form>

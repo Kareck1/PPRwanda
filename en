@@ -1,1 +1,3639 @@
-<h2>delete the /en from the domain above and search</h2>
+<head>
+  <!-- Character encoding -->
+  <meta charset="UTF-8" />
+
+  <!-- Responsive design for mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Title -->
+  <title>P&amp;P Rwanda Tours | Rwanda Travel Agency for Danish Tourists | pp rwanda tours</title>
+
+  <!-- SEO Meta Description -->
+  <meta name="description" content="P&amp;P Rwanda Tours is a Rwanda-based travel agency specializing in guided tours and safaris for Danish tourists. Discover the beauty and adventure of Rwanda with expert local guides and personalized experiences." />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://pprwandatours.com/" />
+
+  <!-- Open Graph for social sharing -->
+  <meta property="og:title" content="P&amp;P Rwanda Tours | Rwanda Travel Agency for Danish Tourists" />
+  <meta property="og:description" content="Book your Rwanda adventure with P&amp;P Rwanda Tours – trusted by Danish travelers for quality, safety, and unforgettable experiences." />
+  <meta property="og:image" content="https://pprwandatours.com/happy%20family%20with%20them.jpg" />
+  <meta property="og:url" content="https://pprwandatours.com/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card for Twitter sharing -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="P&amp;P Rwanda Tours | Rwanda Travel Agency for Danish Tourists" />
+  <meta name="twitter:description" content="Book your Rwanda adventure with P&amp;P Rwanda Tours – trusted by Danish travelers for quality, safety, and unforgettable experiences." />
+  <meta name="twitter:image" content="https://pprwandatours.com/happy%20family%20with%20them.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- CSS Stylesheet (update path if needed) -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Optional: Google Fonts example (uncomment if used) -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet" /> -->
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- Cookie Consent Popup -->
+
+<!-- Cookie Consent Popup -->
+<div id="cookie-banner" class="cookie-container" role="dialog" aria-modal="true" aria-label="Cookie Consent Banner">
+  <div class="cookie-content">
+    <div class="cookie-flag-row">
+      <span class="cookie-flag" title="Denmark">🇩🇰</span>
+      <span class="cookie-flag" title="Rwanda">🇷🇼</span>
+    </div>
+    <h2>🍪 Manage Your Cookie Preferences</h2>
+    <p>
+      We use cookies to enhance your experience. Please select your preferences for <b>Functional</b>, <b>Analytics</b>, and <b>Marketing</b> cookies.
+      Learn more in our <a href="/cookie-policy" target="_blank">Cookie Policy</a>.
+    </p>
+    <form id="cookie-options" class="cookie-options" autocomplete="off">
+      <label class="cookie-switch">
+        <input type="checkbox" name="functional" checked disabled>
+        <span class="slider"></span>
+        Functional (required)
+      </label>
+      <label class="cookie-switch">
+        <input type="checkbox" name="analytics">
+        <span class="slider"></span>
+        Analytics
+      </label>
+      <label class="cookie-switch">
+        <input type="checkbox" name="marketing">
+        <span class="slider"></span>
+        Marketing
+      </label>
+    </form>
+    <div class="cookie-actions">
+      <button id="accept-cookies" class="cookie-btn accept" type="button">Accept All</button>
+      <button id="reject-cookies" class="cookie-btn reject" type="button">Reject All</button>
+      <button id="save-cookies" class="cookie-btn save" type="button">Save Preferences</button>
+    </div>
+  </div>
+</div>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+/* Container for cookie banner */
+.cookie-container {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%) translateY(60px);
+  background: linear-gradient(135deg, #262a2f 90%, #ee6c4d 100%);
+  color: #fff;
+  padding: 32px 38px 30px 38px;
+  border-radius: 22px;
+  box-shadow: 0px 7px 32px 5px rgba(0,0,0,0.36);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  min-width: 300px;
+  max-width: 97vw;
+  width: 430px;
+  z-index: 9999;
+  font-family: 'Montserrat', Arial, sans-serif;
+  animation: none;
+  transition:
+    opacity 0.65s cubic-bezier(.4,1.7,.6,1),
+    transform 0.65s cubic-bezier(.4,1.7,.6,1);
+}
+
+.cookie-container.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+  animation: cookie-slide-in 0.7s cubic-bezier(.23,1.01,.32,1) 1;
+}
+.cookie-container.hide {
+  opacity: 0;
+  transform: translateX(-50%) translateY(60px) scale(0.98);
+  pointer-events: none;
+  animation: cookie-slide-out 0.5s cubic-bezier(.6,-0.28,.74,.05) 1;
+}
+
+/* Flags row */
+.cookie-flag-row {
+  display: flex;
+  gap: 0.4em;
+  margin-bottom: 0.3em;
+  font-size: 1.7em;
+  justify-content: center;
+}
+
+.cookie-flag {
+  filter: drop-shadow(0 2px 4px #0004);
+}
+
+/* Banner content */
+.cookie-content {
+  width: 100%;
+  text-align: center;
+}
+.cookie-content h2 {
+  font-size: 1.21em;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  letter-spacing: 0.01em;
+}
+.cookie-content p {
+  font-size: 1.08em;
+  margin-bottom: 18px;
+  margin-top: 0;
+}
+.cookie-content a {
+  color: #ee6c4d;
+  text-decoration: underline;
+}
+
+.cookie-options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto 15px auto;
+  gap: 7px;
+  width: 100%;
+  max-width: 320px;
+}
+
+/* Switch style for cookie options */
+.cookie-switch {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  font-weight: 500;
+  gap: 0.68em;
+  cursor: pointer;
+  margin-bottom: 2px;
+  user-select: none;
+}
+
+.cookie-switch input[type="checkbox"] {
+  display: none;
+}
+.cookie-switch .slider {
+  width: 32px;
+  height: 18px;
+  background: #444;
+  border-radius: 13px;
+  position: relative;
+  transition: background 0.3s;
+  display: inline-block;
+}
+.cookie-switch input:checked + .slider {
+  background: #32c671;
+}
+.cookie-switch .slider:before {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.3s;
+}
+.cookie-switch input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+/* Actions */
+.cookie-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+.cookie-btn {
+  padding: 11px 19px;
+  border: none;
+  border-radius: 7px;
+  font-size: 0.98em;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 3px 0;
+  transition: background 0.22s, transform 0.22s, box-shadow 0.22s;
+  box-shadow: 0 2px 9px 0 rgba(0,0,0,0.11);
+  outline: none;
+}
+.cookie-btn.accept {
+  background: #32c671;
+  color: #fff;
+}
+.cookie-btn.reject {
+  background: #dc3545;
+  color: #fff;
+}
+.cookie-btn.save {
+  background: #007bff;
+  color: #fff;
+}
+.cookie-btn:hover, .cookie-btn:focus {
+  opacity: 0.89;
+  transform: scale(1.06);
+  box-shadow: 0 4px 13px 0 #0002;
+}
+
+/* Animations */
+@keyframes cookie-slide-in {
+  0% { opacity: 0; transform: translateX(-50%) translateY(80px) scale(0.98);}
+  65% { opacity: 1; transform: translateX(-50%) translateY(-18px) scale(1.03);}
+  85% { opacity: 1; transform: translateX(-50%) translateY(7px) scale(1);}
+  100% { opacity: 1; transform: translateX(-50%) translateY(0) scale(1);}
+}
+@keyframes cookie-slide-out {
+  0% { opacity: 1; transform: translateX(-50%) translateY(0) scale(1);}
+  100% { opacity: 0; transform: translateX(-50%) translateY(60px) scale(0.96);}
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .cookie-container {
+    width: 98vw;
+    min-width: unset;
+    max-width: 99vw;
+    padding: 16px 9px 14px 9px;
+    border-radius: 13px;
+    bottom: 8px;
+  }
+  .cookie-content h2 {
+    font-size: 1em;
+  }
+  .cookie-content p {
+    font-size: 0.92em;
+  }
+  .cookie-options {
+    max-width: 98vw;
+    font-size: 0.98em;
+  }
+  .cookie-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .cookie-btn {
+    width: 100%;
+    font-size: 0.95em;
+    padding: 10px 0;
+  }
+}
+</style>
+<script>
+(function(){
+  const cookieBanner = document.getElementById('cookie-banner');
+
+  // Show banner with entry animation
+  function showBanner() {
+    cookieBanner.style.display = "flex";
+    setTimeout(()=>cookieBanner.classList.add('show'), 100);
+  }
+
+  // Hide banner with exit animation, then remove from DOM
+  function hideBanner() {
+    cookieBanner.classList.remove('show');
+    cookieBanner.classList.add('hide');
+    setTimeout(()=>{ cookieBanner.style.display="none"; }, 650);
+  }
+
+  // Store preferences in localStorage
+  function setCookieConsent(prefs) {
+    localStorage.setItem('cookieConsent', JSON.stringify(prefs));
+  }
+  function getCookieConsent() {
+    try {
+      return JSON.parse(localStorage.getItem('cookieConsent')||'{}');
+    } catch { return {}; }
+  }
+
+  // Accept all
+  document.getElementById('accept-cookies').onclick = function(){
+    document.querySelectorAll('.cookie-options input[type="checkbox"]').forEach(cb=>{
+      if(!cb.disabled) cb.checked = true;
+    });
+    setCookieConsent({
+      functional: true,
+      analytics: true,
+      marketing: true,
+      country: getCountry(),
+      consent: "accepted"
+    });
+    hideBanner();
+  };
+  // Reject all
+  document.getElementById('reject-cookies').onclick = function(){
+    document.querySelectorAll('.cookie-options input[type="checkbox"]').forEach(cb=>{
+      if(!cb.disabled) cb.checked = false;
+    });
+    setCookieConsent({
+      functional: true,
+      analytics: false,
+      marketing: false,
+      country: getCountry(),
+      consent: "rejected"
+    });
+    showBanner(); // Show banner again on next load until accepted
+    // Note: We'll keep the banner visible even after reject; user must accept to close
+    // So we do not hideBanner() here
+  };
+  // Save preferences
+  document.getElementById('save-cookies').onclick = function(){
+    setCookieConsent({
+      functional: true,
+      analytics: document.querySelector('input[name="analytics"]').checked,
+      marketing: document.querySelector('input[name="marketing"]').checked,
+      country: getCountry(),
+      consent: (document.querySelector('input[name="analytics"]').checked || document.querySelector('input[name="marketing"]').checked) ? "custom" : "rejected"
+    });
+    // Only hide if accepted any cookies
+    if (
+      document.querySelector('input[name="analytics"]').checked ||
+      document.querySelector('input[name="marketing"]').checked
+    ) {
+      hideBanner();
+    } else {
+      showBanner(); // keep banner if only functional
+    }
+  };
+
+  // Always show banner unless accepted
+  window.addEventListener('DOMContentLoaded', () => {
+    let consent = getCookieConsent();
+    if(consent && consent.consent === "accepted") {
+      cookieBanner.style.display="none";
+    } else {
+      showBanner();
+    }
+  });
+
+  // Helper to detect country (mocked for demo, improve with geo-lookup API in production)
+  function getCountry() {
+    let lang = (navigator.language||'').toLowerCase();
+    if(lang.startsWith('da')) return "Denmark";
+    if(lang.startsWith('rw') || lang.startsWith('fr')) return "Rwanda";
+    return "Other";
+  }
+})();
+</script>
+
+
+
+
+
+
+
+
+        <link rel="stylesheet" id="dvteam_fix-css" href="https://visitrwanda.com/wp-content/plugins/dvteam/css/fix.css?ver=1.0" type="text/css" media="all" />
+        <link rel="stylesheet" id="formcraft-common-css" href="https://visitrwanda.com/wp-content/plugins/formcraft3/dist/formcraft-common.css?ver=3.8.16" type="text/css" media="all" />
+        <link rel="stylesheet" id="formcraft-form-css" href="https://visitrwanda.com/wp-content/plugins/formcraft3/dist/form.css?ver=3.8.16" type="text/css" media="all" />
+        <link rel="stylesheet" id="sp-news-public-css" href="https://visitrwanda.com/wp-content/plugins/sp-news-and-widget/assets/css/wpnw-public.css?ver=5.0.3" type="text/css" media="all" />
+        <link rel="stylesheet" id="custom-css-0-css" href="https://visitrwanda.com/wp-content/themes/rwanda/assets/css/common.css?ver=1681269192" type="text/css" media="all" />
+        <link rel="stylesheet" id="custom-css-1-css" href="https://visitrwanda.com/wp-content/themes/rwanda/assets/css/font-awesome.css?ver=1681269196" type="text/css" media="all" />
+        <link rel="stylesheet" id="custom-css-2-css" href="https://visitrwanda.com/wp-content/themes/rwanda/assets/css/fonts.css?ver=1681269196" type="text/css" media="all" />
+        <link rel="stylesheet" id="custom-css-3-css" href="https://visitrwanda.com/wp-content/themes/rwanda/assets/css/flow-flow.css?ver=1681269194" type="text/css" media="all" />
+        <link rel="stylesheet" id="custom-css-4-css" href="https://visitrwanda.com/wp-content/themes/rwanda/assets/css/stylesheet.css?ver=1681269192" type="text/css" media="all" />
+        <link rel="stylesheet" id="custom-css-5-css" href="https://visitrwanda.com/wp-content/themes/rwanda/assets/css/stylesheet3.css?ver=1681269198" type="text/css" media="all" />
+        <link rel="stylesheet" id="custom-css-6-css" href="https://visitrwanda.com/wp-content/themes/rwanda/assets/css/stylesheet4.css?ver=1681269194" type="text/css" media="all" />
+        <link rel="stylesheet" id="custom-css-7-css" href="https://visitrwanda.com/wp-content/themes/rwanda/assets/css/responsive.css?ver=1681269196" type="text/css" media="all" />
+        <link rel="stylesheet" id="custom-css-8-css" href="https://visitrwanda.com/wp-content/themes/rwanda/assets/css/responsive2.css?ver=1681269196" type="text/css" media="all" />
+
+        </script>
+        <script type="text/javascript" src="https://visitrwanda.com/wp-content/themes/rwanda/assets/js/libs/jquery.min.js?ver=1681269238" id="jquery-js"></script>
+        <script type="text/javascript" src="https://visitrwanda.com/wp-content/themes/rwanda/assets/js/libs/isinviewport.js?ver=1681269238" id="custom-js-0-js"></script>
+        <script type="text/javascript" src="https://visitrwanda.com/wp-content/themes/rwanda/assets/js/libs/jquery.cycle2.js?ver=1681269236" id="custom-js-1-js"></script>
+        <script type="text/javascript" src="https://visitrwanda.com/wp-content/themes/rwanda/assets/js/libs/jquery.hbaLoadImages.js?ver=1681269238" id="custom-js-2-js"></script>
+        <script type="text/javascript" src="https://visitrwanda.com/wp-content/themes/rwanda/assets/js/libs/jquery.matchHeight.js?ver=1681269236" id="custom-js-3-js"></script>
+        <script type="text/javascript" src="https://visitrwanda.com/wp-content/themes/rwanda/assets/js/libs/jquery.ajaxq.js?ver=1681269238" id="custom-js-4-js"></script>
+        <script type="text/javascript" src="https://visitrwanda.com/wp-content/themes/rwanda/assets/js/utils/scrollbar.js?ver=1681269240" id="custom-js-5-js"></script>
+        <script type="text/javascript" src="https://visitrwanda.com/wp-content/themes/rwanda/assets/js/utils/jquery.extend.js?ver=1681269242" id="custom-js-6-js"></script>
+        <script type="text/javascript" src="https://visitrwanda.com/wp-content/themes/rwanda/assets/js/utils/browser.js?ver=1681269238" id="custom-js-7-js"></script>
+        <script type="text/javascript" src="https://visitrwanda.com/wp-content/themes/rwanda/assets/js/utils/video.js?ver=1681269240" id="custom-js-8-js"></script>
+        <script type="text/javascript" src="https://visitrwanda.com/wp-content/themes/rwanda/assets/js/utils/mouse.js?ver=1681269242" id="custom-js-9-js"></script>
+        <script type="text/javascript" src="https://visitrwanda.com/wp-content/themes/rwanda/assets/js/utils/media.gallery.js?ver=1681269240" id="custom-js-10-js"></script>
+        <script type="text/javascript" src="https://visitrwanda.com/wp-content/themes/rwanda/assets/js/utils/sticky.js?ver=1681269242" id="custom-js-11-js"></script>
+        <script type="text/javascript" src="https://visitrwanda.com/wp-content/themes/rwanda/assets/js/utils/video-popup.js?ver=1681269242" id="custom-js-12-js"></script>
+        <script type="text/javascript" src="https://visitrwanda.com/wp-content/themes/rwanda/assets/js/utils/map.js?ver=1681269240" id="custom-js-13-js"></script>
+        <script type="text/javascript" src="https://visitrwanda.com/wp-content/themes/rwanda/assets/js/utils/footer-menu.js?ver=1681269240" id="custom-js-14-js"></script>
+        <script type="text/javascript" src="https://visitrwanda.com/wp-content/themes/rwanda/assets/js/itineraries.js?ver=1681269232" id="custom-js-15-js"></script>
+        <script type="text/javascript" src="https://visitrwanda.com/wp-content/themes/rwanda/assets/js/kigali_accommodation.js?ver=1681269234" id="custom-js-16-js"></script>
+        <script type="text/javascript" src="https://visitrwanda.com/wp-content/themes/rwanda/assets/js/news_events.js?ver=1681269234" id="custom-js-17-js"></script>
+        <script type="text/javascript" src="https://visitrwanda.com/wp-content/themes/rwanda/assets/js/blog.js?ver=1681269236" id="custom-js-18-js"></script>
+        <script type="text/javascript" src="https://visitrwanda.com/wp-content/themes/rwanda/assets/js/script.js?ver=1681269234" id="custom-js-19-js"></script>
+        <link rel="https://api.w.org/" href="https://visitrwanda.com/wp-json/" />
+        <link rel="alternate" title="JSON" type="application/json" href="https://visitrwanda.com/wp-json/wp/v2/pages/9" />
+        <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://visitrwanda.com/xmlrpc.php?rsd" />
+        <meta name="generator" content="WordPress 6.7.2" />
+        <link rel="canonical" href="https://visitrwanda.com/" />
+        <link rel="shortlink" href="https://visitrwanda.com/" />
+        <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://visitrwanda.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvisitrwanda.com%2F" />
+        <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://visitrwanda.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvisitrwanda.com%2F&#038;format=xml" />
+
+
+    <body class="home page-template page-template-templates page-template-home page-template-templateshome-php page page-id-9">
+        <div class="viewport">
+            <div class="main-header">
+                <div class="header">
+                    <div class="c">
+                        <div class="header-menu">
+                            <div class="header-left-menu">
+                 
+                                <div class="menu-header-left-menu-container">
+                                    <ul id="menu-header-left-menu" class="menu">
+                                        <li id="menu-item-169" class="home-menu menu-item menu-item-type-post_type menu-item-object-page menu-item-169">
+    <a href="https://kareck1.github.io/PPRwandatestweb/">Home</a>
+</li>
+
+                                        <li id="menu-item-471" class="destinations-menu menu-item menu-item-type-post_type menu-item-object-page menu-item-471">
+    <a href="destinations.html">Destinations</a>
+</li>
+
+
+
+
+<li id="menu-item-25" class="menu-item dropdown">
+    <a href="#" class="dropdown-toggle">Tour Packages ▼</a>
+    <ul class="dropdown-menu">
+        <li><a href="family-trip.html">Family Trip</a></li>
+        <li><a href="group-trip.html">Group Tours</a></li>
+        <li><a href="lecture-rwanda.html">Lecture on Rwanda</a></li>
+        <li><a href="solo-journey.html">Solo Journey</a></li>
+        <li><a href="luxury-trip.html">Luxury Experience</a></li>
+        <li><a href="eco-tourism.html">Eco-Tourism</a></li>
+    </ul>
+</li>
+
+<style>
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        background: black;
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+        border-radius: 5px;
+        padding: 10px;
+        list-style: none;
+        width: 220px;
+        transition: all 0.3s ease-in-out;
+    }
+    .dropdown-menu li {
+        padding: 10px;
+        transition: background 0.3s ease-in-out;
+        cursor: pointer;
+    }
+    .dropdown-menu li:hover {
+        background: #f0f0f0;
+    }
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        background: #171515;
+    }
+</style>
+
+
+
+                                        
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let toggle = document.querySelector('.dropdown-toggle');
+        let menu = toggle.nextElementSibling;
+
+        toggle.addEventListener('click', function(event) {
+            event.preventDefault();
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+</script>
+
+
+
+
+
+
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="header-right-menu">
+                                <div class="menu-header-right-menu-container">
+                                    <ul id="menu-header-right-menu" class="menu">
+                                        <li id="menu-item-537" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-537"><a href="media.html">Media</a></li>
+                                       <li id="menu-item-537" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-537"><a href="booking.html">Book now</a></li>
+                                        <li id="menu-item-19958" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19958"><a href="partnerships.html">Partnerships</a></li>
+                                        <li id="menu-item-21475" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21475"> <a href="events.html">Events</a></li>
+                                        <li id="menu-item-21475" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21475"> <a href="about.html">About</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="white-header">
+                    <div class="c">
+                        <div class="top-header-menu">
+                            <div class="top-logo">
+                                <a class="fd-link" href="https://kareck1.github.io/PPRwandatestweb">
+
+
+
+
+
+
+                                    
+                                    
+<html lang="en">
+<head>
+  <head>
+  <script>
+    if (window.location.pathname === "/en" || window.location.pathname === "/en/") {
+      window.location.replace("/");
+    }
+  </script>
+
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PPRWANDATOURS</title>
+  <style>
+.logo_img {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 5px auto;
+}
+
+/* Responsive/mobile styles for top bar */
+@media (max-width: 700px) {
+  .white-header {
+    position: fixed;                   /* Keep the bar at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0px !important;
+    background: rgba(20, 20, 20, 0.48) !important; /* Transparent black */
+    min-height: 0 !important;
+    padding: 0 !important;
+    box-shadow: 0 1px 8px #0002;
+    z-index: 1000;                     /* Ensure bar stays on top */
+    width: 100vw;
+  }
+  .top-header-menu,
+  .top-logo {
+    height: 100px !important;
+    display: flex;
+    align-items: center;
+  }
+ .logo_img {
+    height: 100px !important;
+    width: auto !important;
+    margin: 0 0 0 12px;
+  }
+  /* Hamburger icon styling */
+  .burger_menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin: 0 16px 0 auto;
+    position: relative;
+    z-index: 1100;
+    cursor: pointer;
+  }
+  .burger_menu .lines,
+  .burger_menu .lines:before,
+  .burger_menu .lines:after {
+    background: #db5a6b; /* red lines for visibility */
+    content: '';
+    display: block;
+    height: 6px; 
+    width: 16px;
+    border-radius: 40px;
+    position: absolute;
+    left: 10px;
+    transition: all 1s cubic-bezier(.4,0,.2,1);
+  }
+  .burger_menu .lines {
+    position: absolute;
+    top: 20px;
+  }
+  .burger_menu .lines:before {
+    top: -10px;
+  }
+  .burger_menu .lines:after {
+    top: 10px;
+  }
+}
+
+/* Extra small screens: shrink hamburger further */
+
+@media (max-width: 420px) {
+  .white-header {
+    height: 0px !important;
+  }
+  .top-header-menu,
+  .top-logo {
+    height: 100px !important;
+  }
+  .logo_img {
+    height: 100px !important;
+    margin-left: 4px;
+  }
+  .burger_menu {
+    width: 60px;           /* Make it wider for a better touch target */
+    height: 100px;         /* Match header height */
+    margin-right: 16px;    /* Space it from the right edge */
+    display: flex;
+    align-items: center;   /* Vertically center the lines */
+    justify-content: center;
+    position: relative;
+    z-index: 1100;
+    cursor: pointer;
+  }
+  .burger_menu .lines,
+  .burger_menu .lines:before,
+  .burger_menu .lines:after {
+    background: #db5a6b;      /* red for visibility */
+    content: '';
+    display: block;
+    height: 6px;           /* Thicker lines for big size */
+    width: 16px;           /* Match the new width */
+    border-radius: 40px;
+    position: absolute;
+    left: 10px;
+    transition: all 1s cubic-bezier(.4,0,.2,1);
+  }
+  .burger_menu .lines {
+    position: absolute;
+    top: 57px;             /* Vertically center (header is 100px) */
+  }
+  .burger_menu .lines:before {
+    top: -10px;            /* Space up */
+  }
+  .burger_menu .lines:after {
+    top: 10px;             /* Space down */
+  }
+
+/* Prevent content from hiding under the fixed header */
+@media (max-width: 700px) {
+  body {
+    padding-top: 0x !important;
+  }
+}
+@media (max-width: 420px) {
+  body {
+    padding-top: 0px !important;
+  }
+}
+  </style>
+</head>
+<body>
+  <img 
+<!-- Place this in your HTML where the logo should appear -->
+<img 
+  src="https://github.com/Kareck1/PPRwandatestweb/raw/refs/heads/main/mountain%20logo.webp" 
+  alt="Mountain Logo" 
+  class="logo_img" 
+/>
+
+<!-- Place this <style> block in your <head> or just before </body> -->
+<style>
+
+
+/* Subtle glow on hover */
+
+}
+
+</style>
+
+<!-- Place this script at the end of your body or after the logo image -->
+<script>
+const logo = document.querySelector('.logo_img');
+
+// Bounce every 4 seconds
+setInterval(() => {
+  logo.style.animation = 'logo-bounce 1.3s cubic-bezier(.62,1.53,.54,.9)';
+  setTimeout(() => logo.style.animation = '', 1300);
+}, 4000);
+
+// Animate (spin-pop) on click
+logo.addEventListener('click', () => {
+  logo.classList.add('logo-spin-pop');
+  setTimeout(() => logo.classList.remove('logo-spin-pop'), 900);
+});
+</script> 
+</body>
+</html>
+
+
+
+
+
+
+                                    
+                                </a>
+                            </div>
+                            <div class="weather-condition">
+
+                                <a class="burger_menu"><span class="lines"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+                
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover Rwanda's breathtaking landscapes, rich culture, and unforgettable adventures with PPRWANDA." />
+  <meta name="keywords" content="Rwanda travel, gorilla trekking, Kigali tours, Rwanda safaris, PPRWANDA" />
+  <meta name="author" content="PPRWANDA Tours" />
+  <title>PPRWANDA | Discover Rwanda</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .video-background iframe {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
+
+
+    .cta-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #ee6c4d;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: transform 0.3s;
+      animation: fadeInScale 1.5s ease-in-out forwards;
+    }
+
+    .cta-btn:hover {
+      transform: scale(1.1);
+    }
+
+    /* Tour Packages */
+    .packages {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    .package-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .package {
+      width: 300px;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      animation: fadeInUp 1.5s ease-in-out forwards;
+    }
+
+    .package img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .package-content {
+      padding: 20px;
+    }
+
+    .package h3 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .package p {
+      font-size: 1rem;
+      margin: 10px 0;
+    }
+
+    .explore-btn {
+      display: inline-block;
+      background: #007bff;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .explore-btn:hover {
+      background: #0056b3;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    footer .social-icons a {
+      margin: 0 10px;
+      font-size: 1.5rem;
+      color: white;
+      transition: color 0.3s;
+    }
+
+    footer .social-icons a:hover {
+      color: #ee6c4d;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInScale {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="hero">
+  <div class="hero-slider">
+    <!-- First slide is a video, active ONLY here -->
+    <div class="hero-slide active">
+      <video autoplay loop muted playsinline style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;">
+        <source src="https://www.go2africa.com/wp-content/uploads/2025/03/ONLINE_Go2Africa_30secWebFilm_ProRes-4.webm" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1565349479047-d6211d4efc90?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+    <div class="hero-slide" style="background-image: url('https://images.pexels.com/photos/19827348/pexels-photo-19827348/free-photo-of-marara-castle-in-rwanda.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');"></div>
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1662612732223-1fe6ea43263e?q=80&w=1482&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+    <div class="hero-slide" style="background-image: url('https://github.com/Kareck1/PPRwandatestweb/blob/main/photo.jpg?raw=true');"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content not-selectable">
+
+
+
+
+
+
+
+      
+
+<!-- BEGIN Language Switcher: Copy everything below and paste where you want the language buttons -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Switcher</title>
+    <style>
+        .language-switcher {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            z-index: 10;
+            margin-bottom: 1em;
+        }
+        .language-switcher .flag-btn {
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+        }
+        .language-switcher .flag-btn img {
+            display: block;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .language-switcher .flag-btn:hover img {
+            box-shadow: 0 0 0 2px #007bff;
+            transform: scale(1.1);
+        }
+        @media (max-width: 600px) {
+            .language-switcher {
+                gap: 10px;
+            }
+        }
+        /* Hide Google Translate banner & dropdown */
+        .goog-te-banner-frame, .goog-te-gadget {
+            display: none !important;
+        }
+        body {
+            top: 0px !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="flag-btn" data-lang="en" title="English">
+            <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/gb.svg" alt="English" width="32" height="32">
+        </button>
+        <button class="flag-btn" data-lang="fr" title="Français">
+            <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/fr.svg" alt="Français" width="32" height="32">
+        </button>
+        <button class="flag-btn" data-lang="da" title="Dansk">
+            <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/dk.svg" alt="Dansk" width="32" height="32">
+        </button>
+    </div>
+
+    <div id="google_translate_element" style="display:none;"></div>
+
+    <script>
+        function loadGoogleTranslate() {
+            const script = document.createElement("script");
+            script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateInit";
+            document.body.appendChild(script);
+        }
+
+        function googleTranslateInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: "en",
+                includedLanguages: "en,fr,da"
+            }, "google_translate_element");
+        }
+
+        function switchLanguage(lang) {
+            if (lang === "en") {
+                location.reload(); // Reload the page to reset it to original English
+                return;
+            }
+
+            if (!window.googleTranslateLoaded) {
+                window.googleTranslateLoaded = true;
+                loadGoogleTranslate(); // Load Google Translate only when needed
+            }
+
+            setTimeout(() => {
+                const iframe = document.querySelector(".goog-te-banner-frame");
+                if (iframe) iframe.style.display = "none"; // Hide banner
+
+                const select = document.querySelector(".goog-te-combo");
+                if (select) {
+                    select.value = lang;
+                    select.dispatchEvent(new Event("change"));
+                }
+            }, 2000);
+        }
+
+        document.querySelectorAll(".flag-btn").forEach(button => {
+            button.addEventListener("click", function () {
+                const langCode = this.getAttribute("data-lang");
+                localStorage.setItem("preferredLanguage", langCode);
+                switchLanguage(langCode);
+            });
+        });
+
+    </script>
+
+</body>
+</html>
+
+
+<!-- END Language Switcher -->
+
+
+
+
+
+
+
+      
+      
+      <h1>Explore Rwanda Like Never Before</h1>
+      <p>Embark on unforgettable adventures with <span class="brand">PPRWANDA Tours</span>.</p>
+      <a href="booking.html" class="cta-btn">Book now</a>
+    </div>
+    <div class="hero-indicators">
+      <span class="hero-dot active" data-slide="0"></span>
+      <span class="hero-dot" data-slide="1"></span>
+      <span class="hero-dot" data-slide="2"></span>
+      <span class="hero-dot" data-slide="3"></span>
+      <span class="hero-dot" data-slide="4"></span>
+    </div>
+  </div>
+</section>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #141414;
+  font-family: 'Montserrat', Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.hero {
+  position: relative;
+  height: 805px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  margin-top: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 1.2s cubic-bezier(0.4, 0.8, 0.6, 1), transform 1.2s cubic-bezier(0.4, 0.8, 0.6, 1);
+  transform: scale(1.04) translateX(0);
+}
+.hero-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 2;
+  transform: scale(1) translateX(0);
+  animation: heroFadeIn 1s;
+}
+.hero-slide.slide-left {
+  transform: translateX(-100vw);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.7s;
+}
+.hero-slide.slide-right {
+  transform: translateX(100vw);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.7s;
+}
+
+@keyframes heroFadeIn {
+  from { opacity: 0; transform: scale(1.06);}
+  to { opacity: 1; transform: scale(1);}
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -52%);
+  z-index: 4;
+  width: 98vw;
+  max-width: 640px;
+  padding: 32px 8vw 36px 8vw;
+  background: rgba(20, 20, 20, 0.18);
+  border-radius: 16px;
+  box-shadow: 0 8px 36px 6px rgba(0,0,0,0.13);
+  backdrop-filter: blur(1.5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.hero-content h1,
+.hero-content p,
+.hero-content .brand,
+.cta-btn {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.hero-content h1 {
+  font-size: 2.7rem;
+  margin: 0 0 14px 0;
+  color: #c91038;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  line-height: 1.1;
+}
+.hero-content p {
+  font-size: 1.22rem;
+  margin: 0 0 24px 0;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  font-weight: 400;
+}
+.hero-content .brand {
+  color: #ee6c4d;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.cta-btn {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 13px 34px;
+  background: #ee6c4d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1.15rem;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  transition: transform 0.25s, background 0.21s;
+  animation: fadeInScale 1.5s ease-in-out forwards;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.11);
+  cursor: pointer;
+}
+.cta-btn:hover, .cta-btn:focus {
+  transform: scale(1.08);
+  background: #c91038;
+  outline: none;
+}
+.hero-indicators {
+  position: absolute;
+  bottom: 90px;
+  left: 0; right: 0;
+  text-align: center;
+  z-index: 5;
+  user-select: none;
+}
+.hero-dot {
+  display: inline-block;
+  width: 14px; height: 14px;
+  margin: 0 7px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.5s, border-color 0.5s, box-shadow 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+  vertical-align: middle;
+}
+.hero-dot.active {
+  background: #7a0516;
+  border-color: #ee6c4d;
+  box-shadow: 0 0 0 3px #fff2;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes fadeInScale {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero { height: 600px; }
+  .hero-content { max-width: 98vw; padding: 17px 2vw 17px 2vw;}
+  .hero-content h1 { font-size: 1.7rem; }
+  .hero-content p { font-size: 1rem;}
+  .cta-btn { font-size: 1rem; padding: 11px 22px;}
+  .hero-indicators { bottom: 50px;}
+}
+@media (max-width: 600px) {
+  .hero { height: 500px;}
+  .hero-content { top: 53%; padding: 8px 1vw;}
+  .hero-content h1 { font-size: 1.08rem;}
+  .hero-content p { font-size: 0.89rem;}
+  .cta-btn { font-size: 0.89rem; padding: 8px 12px;}
+  .hero-indicators { bottom: 26px;}
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.hero-dot');
+  let current = 0;
+  let sliderTimer = null;
+  const slideDuration = 180000; // 3 minutes in ms
+  let isSliding = false;
+
+  function showSlide(n, direction = 0) {
+    if (isSliding || n === current) return;
+    isSliding = true;
+
+    slides.forEach((slide, i) => {
+      slide.classList.remove('slide-left', 'slide-right');
+      if (i === current && i !== n) {
+        slide.classList.add(direction === 1 ? 'slide-left' : direction === -1 ? 'slide-right' : '');
+        setTimeout(() => slide.classList.remove('slide-left', 'slide-right'), 600);
+      }
+    });
+
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === n);
+    });
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === n);
+    });
+    current = n;
+    setTimeout(() => { isSliding = false; }, 500);
+  }
+
+  function nextSlide() {
+    let next = (current + 1) % slides.length;
+    showSlide(next, 1);
+  }
+  function prevSlide() {
+    let prev = (current - 1 + slides.length) % slides.length;
+    showSlide(prev, -1);
+  }
+
+  function resetTimer() {
+    if (sliderTimer) clearInterval(sliderTimer);
+    sliderTimer = setInterval(nextSlide, slideDuration);
+  }
+
+  // Dot click event
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      let n = parseInt(dot.getAttribute('data-slide'));
+      let dir = n > current ? 1 : -1;
+      showSlide(n, dir);
+      resetTimer();
+    });
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', e => {
+    if (e.key === "ArrowRight") {
+      nextSlide(); resetTimer();
+    } else if (e.key === "ArrowLeft") {
+      prevSlide(); resetTimer();
+    }
+  });
+
+  // Touch/Swipe navigation
+  let touchStartX = null;
+  let touchEndX = null;
+  const slider = document.querySelector('.hero-slider');
+  slider.addEventListener('touchstart', function(e) {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+  slider.addEventListener('touchend', function(e) {
+    touchEndX = e.changedTouches[0].screenX;
+    if (Math.abs(touchEndX - touchStartX) > 40) {
+      if (touchEndX < touchStartX) { nextSlide(); resetTimer(); }
+      else { prevSlide(); resetTimer(); }
+    }
+  });
+
+  // Mouse drag navigation
+  let isDragging = false;
+  let dragStartX = null;
+  let dragEndX = null;
+  slider.addEventListener('mousedown', function(e) {
+    isDragging = true;
+    dragStartX = e.screenX;
+  });
+  slider.addEventListener('mouseup', function(e) {
+    if (!isDragging) return;
+    dragEndX = e.screenX;
+    if (Math.abs(dragEndX - dragStartX) > 40) {
+      if (dragEndX < dragStartX) { nextSlide(); resetTimer(); }
+      else { prevSlide(); resetTimer(); }
+    }
+    isDragging = false;
+  });
+  slider.addEventListener('mouseleave', function() { isDragging = false; });
+
+  // Prevent accidental text selection during drag
+  slider.addEventListener('dragstart', e => e.preventDefault());
+
+  // Ensure correct slide and timer on load
+  showSlide(0, 0);
+  resetTimer();
+});
+</script>
+
+
+
+
+
+
+
+
+<!-- FONT IMPORT (Nunito for friendly/premium appearance) -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    /* Custom prefix: sh- for side hero */
+    --sh-rw-green: #2b5132;
+    --sh-rw-yellow: #dcc941;
+    --sh-rw-blue: #478db4;
+    --sh-dk-red: #b7282e;
+    --sh-dk-white: #f5f5f5;
+    --sh-text-dark: #1b2f19;
+    --sh-desc-gray: #444e57;
+    --sh-bg: #fcfcfc;
+    --sh-cta-green: #2b5132;
+    --sh-cta-red: #b7282e;
+    --sh-cta-white: #fff;
+    --sh-side-padding: clamp(22px, 7vw, 110px);
+  }
+  .sh-hero-side {
+    margin: 0;
+    padding: 44px 0 0 0;
+    width: 100%;
+    background: linear-gradient(90deg, #f7fbe7 60%, #fcfcfc 100%);
+    /* Subtle fade from left */
+  }
+  .sh-hero-side-inner {
+    max-width: 1100px;
+    margin-left: var(--sh-side-padding);
+    margin-right: auto;
+    padding: 0;
+    min-width: 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .sh-hero-content {
+    flex: 1 1 520px;
+    min-width: 320px;
+    max-width: 700px;
+    padding: 0;
+  }
+  .sh-hero-headline {
+    font-family: 'Nunito', 'Segoe UI', Arial, sans-serif;
+    font-size: clamp(2rem, 3vw, 3.4rem);
+    font-weight: 900;
+    color: var(--sh-rw-green);
+    margin-bottom: 0.1em;
+    margin-top: 0;
+    line-height: 1.1;
+    text-align: left;
+    letter-spacing: -0.01em;
+    word-break: break-word;
+    opacity: 0;
+    transform: translateX(-24px);
+    transition: opacity 0.5s, transform 0.6s cubic-bezier(.7,1.4,.7,1.1);
+    max-width: 820px;
+  }
+  .sh-hero-flags {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    font-size: clamp(1.25rem, 1.6vw, 1.75rem);
+    font-weight: 900;
+    color: var(--sh-dk-red);
+    margin-bottom: 0.5em;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.5s 0.10s, transform 0.5s 0.10s cubic-bezier(.7,1.4,.7,1.1);
+    letter-spacing: 0.03em;
+    text-shadow: 0 2px 8px #00000008;
+  }
+  .sh-hero-flags span {
+    color: var(--sh-rw-yellow);
+    font-weight: 900;
+    opacity: 0.81;
+    font-size: 1.02em;
+    letter-spacing: 0.02em;
+    margin: 0 4px;
+  }
+  .sh-hero-highlight {
+    font-size: clamp(1.05rem, 1.09vw, 1.22rem);
+    color: var(--sh-rw-blue);
+    font-weight: 700;
+    margin-bottom: 0.35em;
+    margin-top: 0;
+    letter-spacing: 0.01em;
+    text-align: left;
+    opacity: 0;
+    transform: translateX(-14px);
+    transition: opacity 0.5s 0.18s, transform 0.5s 0.18s cubic-bezier(.7,1.4,.7,1.1);
+  }
+  .sh-hero-desc {
+    color: var(--sh-desc-gray);
+    font-size: clamp(1.01rem, 0.93vw, 1.10rem);
+    font-weight: 700;
+    line-height: 1.7;
+    margin: 0 0 0.7em 0;
+    text-align: left;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: opacity 0.5s 0.25s, transform 0.5s 0.25s cubic-bezier(.7,1.4,.7,1.1);
+    max-width: 95%;
+  }
+  .sh-hero-desc strong {
+    color: var(--sh-dk-red);
+    font-weight: 900;
+  }
+  .sh-hero-cta {
+    display: inline-block;
+    margin: 1em 0 0 0;
+    padding: 0.57em 1.7em;
+    background: var(--sh-cta-green);
+    color: var(--sh-cta-white);
+    font-weight: 900;
+    font-size: 1.09em;
+    border: none;
+    border-radius: 1.3em;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    box-shadow: 0 2px 12px #2b513218;
+    transition: background 0.19s, color 0.19s, opacity 0.5s 0.32s, transform 0.5s 0.32s cubic-bezier(.7,1.4,.7,1.1);
+    opacity: 0;
+    transform: translateX(-7px);
+  }
+  .sh-hero-cta:hover {
+    background: var(--sh-cta-red);
+    color: #fffbe6;
+  }
+  /* Carousel styles */
+  .sh-hero-carousel-wrapper {
+    display: block;
+    min-width: 220px;
+    flex: 1 1 360px;
+    max-width: 420px;
+    height: 240px;
+    margin-left: 38px;
+    border-radius: 24px;
+    box-shadow: 0 4px 22px #2b513222;
+    position: relative;
+    overflow: hidden;
+    background: #e7efe4;
+  }
+  .sh-hero-carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    position: absolute;
+    top: 0; left: 0;
+    opacity: 0;
+    transition: opacity 0.6s cubic-bezier(.7,1.4,.7,1.1);
+    z-index: 1;
+  }
+  .sh-hero-carousel-img.sh-active {
+    opacity: 1;
+    z-index: 2;
+  }
+  .sh-hero-carousel-controls {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+  }
+  .sh-hero-carousel-dot {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background: #2b5132cc;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: background 0.22s, border 0.22s, opacity 0.22s;
+  }
+  .sh-hero-carousel-dot.sh-active {
+    background: #dcc941;
+    border: 2px solid #2b5132;
+    opacity: 1;
+  }
+  .sh-hero-animate {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+  }
+  @media (max-width: 1100px) {
+    .sh-hero-side-inner {
+      max-width: 99vw;
+      margin-left: calc(var(--sh-side-padding) / 2);
+    }
+    .sh-hero-headline { font-size: 2.1rem; }
+    .sh-hero-carousel-wrapper { margin-left: 16px; min-width: 160px; max-width: 320px; height: 180px; }
+  }
+  @media (max-width: 700px) {
+    .sh-hero-side-inner {
+      flex-direction: column;
+      gap: 0;
+      margin-left: 0;
+      padding-left: 6vw;
+      padding-right: 2vw;
+    }
+    .sh-hero-content { max-width: 97vw; }
+    .sh-hero-headline { font-size: 1.32rem; }
+    .sh-hero-flags { font-size: 1.05rem;}
+    .sh-hero-desc, .sh-hero-highlight { font-size: 0.97rem;}
+    .sh-hero-cta { font-size: 0.98rem;}
+    .sh-hero-carousel-wrapper { display: none; }
+  }
+</style>
+
+<div class="sh-hero-side">
+  <div class="sh-hero-side-inner">
+    <div class="sh-hero-content">
+      <h1 class="sh-hero-headline">
+        Bridge Two Worlds.<br>Travel One Story.
+      </h1>
+      <div class="sh-hero-flags">🇷🇼 <span>meets</span> 🇩🇰</div>
+      <div class="sh-hero-highlight">
+        Where the heart of Africa and the spirit of Scandinavia unite for remarkable journeys.
+      </div>
+      <div class="sh-hero-desc">
+        <strong>PPRWANDA Tours</strong> blends Rwanda’s wild beauty with Denmark’s passion for discovery.<br>
+        Uncover new cultures, taste, and adventure—together, in safety and style.
+      </div>
+      <button class="sh-hero-cta" onclick="window.location.href='tours.html'">
+        Start Your Adventure
+      </button>
+    </div>
+    <!-- Carousel replaces static image here -->
+    <div class="sh-hero-carousel-wrapper" aria-label="Tour Images Carousel">
+      <img 
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKTSn1UGuWJ_DsEV24pQEEdycs6vtAdtpkA&s"
+        alt="Rwanda landscape 1"
+        class="sh-hero-carousel-img sh-active"
+        data-index="0"
+        loading="lazy"
+      />
+      <img 
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5WvPSun53ZORn2xZA8_3akTb-qw0puEkBtg&s"
+        alt="Rwanda landscape 2"
+        class="sh-hero-carousel-img"
+        data-index="1"
+        loading="lazy"
+      />
+      <img 
+        src="https://www.asiliaafrica.com/wp-content/uploads/2024/04/The-lush-Rwandan-landscape-with-Volacones-National-Park-in-the-distance.jpg"
+        alt="Volcanoes National Park Rwanda"
+        class="sh-hero-carousel-img"
+        data-index="2"
+        loading="lazy"
+      />
+      <div class="sh-hero-carousel-controls">
+        <button class="sh-hero-carousel-dot sh-active" aria-label="Show image 1" data-index="0"></button>
+        <button class="sh-hero-carousel-dot" aria-label="Show image 2" data-index="1"></button>
+        <button class="sh-hero-carousel-dot" aria-label="Show image 3" data-index="2"></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Animate hero section on scroll-in (and on load if visible)
+  function sh_animateHero() {
+    const els = [
+      '.sh-hero-headline',
+      '.sh-hero-flags',
+      '.sh-hero-highlight',
+      '.sh-hero-desc',
+      '.sh-hero-cta',
+      '.sh-hero-carousel-wrapper'
+    ].map(sel => document.querySelector(sel)).filter(Boolean);
+
+    if (!("IntersectionObserver" in window)) {
+      els.forEach((el,i) => setTimeout(() => el.classList.add('sh-hero-animate'), i*90));
+      return;
+    }
+    let triggered = false;
+    const hero = document.querySelector('.sh-hero-side');
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting && !triggered) {
+        els.forEach((el,i) => setTimeout(() => el.classList.add('sh-hero-animate'), i*80));
+        triggered = true;
+      } else if (!entries[0].isIntersecting && triggered) {
+        els.forEach(el => el.classList.remove('sh-hero-animate'));
+        triggered = false;
+      }
+    }, { threshold: 0.2 });
+    observer.observe(hero);
+  }
+  window.addEventListener('DOMContentLoaded', sh_animateHero);
+
+  // Carousel JS
+  (function() {
+    const imgs = Array.from(document.querySelectorAll('.sh-hero-carousel-img'));
+    const dots = Array.from(document.querySelectorAll('.sh-hero-carousel-dot'));
+    let idx = 0, timer = null;
+
+    function show(i) {
+      imgs.forEach((img, j) => img.classList.toggle('sh-active', j === i));
+      dots.forEach((dot, j) => dot.classList.toggle('sh-active', j === i));
+      idx = i;
+    }
+
+    function next() {
+      show((idx + 1) % imgs.length);
+    }
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        show(Number(dot.dataset.index));
+        if (timer) {
+          clearInterval(timer);
+          timer = setInterval(next, 4800);
+        }
+      });
+    });
+
+    timer = setInterval(next, 4800);
+
+    // Optional: Pause on hover
+    const wrapper = document.querySelector('.sh-hero-carousel-wrapper');
+    wrapper.addEventListener('mouseenter', () => timer && clearInterval(timer));
+    wrapper.addEventListener('mouseleave', () => timer = setInterval(next, 4800));
+  })();
+</script>
+
+
+
+
+
+<!-- Signature Experiences Section - Modern Glassmorphism & Animation Redesign -->
+<!--
+Signature Experiences: Modern, clean, English card grid with your custom experiences.
+- Responsive: grid on desktop/tablet; horizontal carousel on mobile.
+- Cool blue/teal theme, no yellow or harsh colors.
+- All content from your "pro-sig-grid" card list (including Family, Group, Lecture, Solo, Luxury).
+-->
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<section class="travel-root">
+  <!-- FILTER BAR -->
+  <div class="travel-filters">
+    <select class="travel-filter"><option>Travel type</option></select>
+    <select class="travel-filter"><option>Departure country</option></select>
+    <select class="travel-filter"><option>Destination</option></select>
+    <input class="travel-search" type="text" placeholder="Search by city, adventure, culture...">
+  </div>
+
+  <!-- CARD GRID / HORIZONTAL CAROUSEL -->
+  <div class="travel-grid" id="travelGrid">
+    <!-- Card 1: Wildlife & Adventure -->
+    <a href="wildlife.html" class="travel-card-link">
+      <div class="travel-card">
+        <div class="travel-img" style="background-image:url('https://images.unsplash.com/photo-1535083312973-c2005d1b7517?w=800&auto=format&fit=crop&q=60');">
+          <span class="travel-badge adventure">Adventure</span>
+        </div>
+        <div class="travel-card-content">
+          <small class="travel-subtitle">Wildlife &amp; Adventure</small>
+          <h3>Wildlife &amp; Adventure</h3>
+          <div class="travel-meta">
+            <span><i class="fa-regular fa-clock"></i> 5 days</span>
+            <span><i class="fa-solid fa-location-dot"></i> Volcanoes NP, Akagera</span>
+          </div>
+          <p class="travel-desc">Gorilla trekking, safari drives, and hiking — the best of wild Rwanda for bold explorers!</p>
+        </div>
+      </div>
+    </a>
+    <!-- Card 2: Nature & Eco-Tours -->
+    <a href="nature.html" class="travel-card-link">
+      <div class="travel-card">
+        <div class="travel-img" style="background-image:url('https://plus.unsplash.com/premium_photo-1726783549537-fbfd238184dc?w=800&auto=format&fit=crop&q=60');">
+          <span class="travel-badge nature">Eco</span>
+        </div>
+        <div class="travel-card-content">
+          <small class="travel-subtitle">Nature &amp; Eco-Tours</small>
+          <h3>Nature &amp; Eco-Tours</h3>
+          <div class="travel-meta">
+            <span><i class="fa-regular fa-clock"></i> 4 days</span>
+            <span><i class="fa-solid fa-location-dot"></i> Lake Kivu, Nyungwe</span>
+          </div>
+          <p class="travel-desc">Canopy walk, boat cruise, tea &amp; coffee tours. Discover Rwanda’s green heart, sustainably.</p>
+        </div>
+      </div>
+    </a>
+    <!-- Card 3: Culture & History -->
+    <a href="culture.html" class="travel-card-link">
+      <div class="travel-card">
+        <div class="travel-img" style="background-image:url('https://images.unsplash.com/photo-1648799791608-ffea4a7202a3?w=800&auto=format&fit=crop&q=60');">
+          <span class="travel-badge culture">Culture</span>
+        </div>
+        <div class="travel-card-content">
+          <small class="travel-subtitle">Culture &amp; History</small>
+          <h3>Culture &amp; History</h3>
+          <div class="travel-meta">
+            <span><i class="fa-regular fa-clock"></i> 3 days</span>
+            <span><i class="fa-solid fa-location-dot"></i> Kigali, Huye</span>
+          </div>
+          <p class="travel-desc">City tours, museums and cultural villages. Experience Rwanda’s story, past and present.</p>
+        </div>
+      </div>
+    </a>
+    <!-- Card 4: Special Experience -->
+    <a href="custom-experiences.html" class="travel-card-link">
+      <div class="travel-card">
+        <div class="travel-img" style="background-image:url('https://images.unsplash.com/photo-1735991477176-96bfed6d2ecc?w=800&auto=format&fit=crop&q=60');">
+          <span class="travel-badge special">Special</span>
+        </div>
+        <div class="travel-card-content">
+          <small class="travel-subtitle">Special Experience</small>
+          <h3>Special Experience</h3>
+          <div class="travel-meta">
+            <span><i class="fa-regular fa-clock"></i> Custom</span>
+            <span><i class="fa-solid fa-location-dot"></i> Kigali &amp; Beyond</span>
+          </div>
+          <p class="travel-desc">Honeymoon, photography, or something unique? Let us create your dream trip to Rwanda!</p>
+        </div>
+      </div>
+    </a>
+<!-- Card 5: Culinary Journey -->
+<a href="culinary.html" class="travel-card-link">
+  <div class="travel-card">
+    <div class="travel-img"
+      style="background-image:url('https://img.freepik.com/free-photo/hands-holding-bowl-fajita-mexican-food_181624-45672.jpg?ga=GA1.1.1613078690.1748718061&semt=ais_items_boosted&w=740');">
+      <span class="travel-badge food">Cuisine</span>
+    </div>
+    <div class="travel-card-content">
+      <small class="travel-subtitle">Culinary Journey</small>
+      <h3>Culinary Journey</h3>
+      <div class="travel-meta">
+        <span><i class="fa-regular fa-clock"></i> 2 days</span>
+        <span><i class="fa-solid fa-location-dot"></i> Kigali, Musanze</span>
+      </div>
+      <p class="travel-desc">Sample Rwandan flavors with local food tours, cooking classes, and vibrant market visits.</p>
+    </div>
+  </div>
+</a>
+    <!-- Card 6: Relax & Wellness -->
+    <a href="relax.html" class="travel-card-link">
+      <div class="travel-card">
+        <div class="travel-img" style="background-image:url('https://img.freepik.com/free-photo/group-five-happy-african-american-traveler-girls-sitting-car-open-trunk_627829-13439.jpg?ga=GA1.1.1613078690.1748718061&semt=ais_items_boosted&w=740');">
+          <span class="travel-badge relax">Relax</span>
+        </div>
+        <div class="travel-card-content">
+          <small class="travel-subtitle">Relax &amp; Wellness</small>
+          <h3>Relax &amp; Wellness</h3>
+          <div class="travel-meta">
+            <span><i class="fa-regular fa-clock"></i> 3 days</span>
+            <span><i class="fa-solid fa-location-dot"></i> Lake Kivu, Resorts</span>
+          </div>
+          <p class="travel-desc">Unwind by the lake, enjoy spa treatments and yoga retreats in Rwanda’s most tranquil spots.</p>
+        </div>
+      </div>
+    </a>
+    <!-- Card 7: Family Trip -->
+    <a href="family-trip.html" class="travel-card-link">
+      <div class="travel-card">
+        <div class="travel-img" style="background-image:url('https://img.freepik.com/free-photo/young-family-enjoying-trips_23-2149176546.jpg?ga=GA1.1.1613078690.1748718061&semt=ais_items_boosted&w=740');">
+          <span class="travel-badge family">Family</span>
+        </div>
+        <div class="travel-card-content">
+          <small class="travel-subtitle">Family Trip</small>
+          <h3>Family Trip</h3>
+          <div class="travel-meta">
+            <span><i class="fa-regular fa-clock"></i> 6 days</span>
+            <span><i class="fa-solid fa-location-dot"></i> Kigali, Gisenyi</span>
+          </div>
+          <p class="travel-desc">Fun-filled experiences for all ages, including lake adventures and cultural activities for the whole family.</p>
+        </div>
+      </div>
+    </a>
+    <!-- Card 8: Group Tours -->
+    <a href="group-trip.html" class="travel-card-link">
+      <div class="travel-card">
+        <div class="travel-img" style="background-image:url('https://img.freepik.com/free-photo/medium-shot-smiley-friends-nature_23-2149026836.jpg?ga=GA1.1.1613078690.1748718061&semt=ais_items_boosted&w=740');">
+          <span class="travel-badge group">Group</span>
+        </div>
+        <div class="travel-card-content">
+          <small class="travel-subtitle">Group Tours</small>
+          <h3>Group Tours</h3>
+          <div class="travel-meta">
+            <span><i class="fa-regular fa-clock"></i> 8 days</span>
+            <span><i class="fa-solid fa-location-dot"></i> Rwanda Highlights</span>
+          </div>
+          <p class="travel-desc">Travel with friends or colleagues and enjoy Rwanda’s top sights with a professional guide and seamless logistics.</p>
+        </div>
+      </div>
+    </a>
+    <!-- Card 9: Lecture on Rwanda -->
+    <a href="lecture-rwanda.html" class="travel-card-link">
+      <div class="travel-card">
+        <div class="travel-img" style="background-image:url('https://img.freepik.com/free-photo/top-view-scouts-playing-with-map_23-2149885210.jpg?ga=GA1.1.1613078690.1748718061&semt=ais_items_boosted&w=740');">
+          <span class="travel-badge lecture">Lecture</span>
+        </div>
+        <div class="travel-card-content">
+          <small class="travel-subtitle">Lecture on Rwanda</small>
+          <h3>Lecture on Rwanda</h3>
+          <div class="travel-meta">
+            <span><i class="fa-regular fa-clock"></i> 1 day</span>
+            <span><i class="fa-solid fa-location-dot"></i> Kigali</span>
+          </div>
+          <p class="travel-desc">Engage in an informative lecture on Rwanda’s history, people, and culture, led by a renowned local expert.</p>
+        </div>
+      </div>
+    </a>
+    <!-- Card 10: Solo Journey -->
+    <a href="solo-journey.html" class="travel-card-link">
+      <div class="travel-card">
+        <div class="travel-img" style="background-image:url('https://img.freepik.com/free-photo/full-shot-cute-couple-outdoors_23-2150243229.jpg?ga=GA1.1.1613078690.1748718061&semt=ais_items_boosted&w=740');">
+          <span class="travel-badge solo">Solo</span>
+        </div>
+        <div class="travel-card-content">
+          <small class="travel-subtitle">Solo Journey</small>
+          <h3>Solo Journey</h3>
+          <div class="travel-meta">
+            <span><i class="fa-regular fa-clock"></i> 5 days</span>
+            <span><i class="fa-solid fa-location-dot"></i> Kigali &amp; Beyond</span>
+          </div>
+          <p class="travel-desc">Explore Rwanda independently with curated routes, safe stays, and support for solo adventurers.</p>
+        </div>
+      </div>
+    </a>
+    <!-- Card 11: Luxury Experience -->
+    <a href="luxury-trip.html" class="travel-card-link">
+      <div class="travel-card">
+        <div class="travel-img" style="background-image:url('https://img.freepik.com/free-photo/full-shot-woman-posing-romantic-garden_23-2150316912.jpg?ga=GA1.1.1613078690.1748718061&semt=ais_items_boosted&w=740');">
+          <span class="travel-badge luxury">Luxury</span>
+        </div>
+        <div class="travel-card-content">
+          <small class="travel-subtitle">Luxury Experience</small>
+          <h3>Luxury Experience</h3>
+          <div class="travel-meta">
+            <span><i class="fa-regular fa-clock"></i> 7 days</span>
+            <span><i class="fa-solid fa-location-dot"></i> Exclusive Resorts</span>
+          </div>
+          <p class="travel-desc">Indulge in world-class lodges, premium safaris, gourmet cuisine, and personalized experiences in Rwanda.</p>
+        </div>
+      </div>
+    </a>
+    <!-- Card 12: Eco-Tourism (Extra) -->
+    <a href="eco-tourism.html" class="travel-card-link">
+      <div class="travel-card">
+        <div class="travel-img" style="background-image:url('https://img.freepik.com/free-photo/beautiful-scenery-chamarel-waterfall-mauritius-cloudy-sky_181624-19823.jpg?ga=GA1.1.1613078690.1748718061&semt=ais_items_boosted&w=740');">
+          <span class="travel-badge nature">Eco-Tourism</span>
+        </div>
+        <div class="travel-card-content">
+          <small class="travel-subtitle">Eco-Tourism</small>
+          <h3>Eco-Tourism</h3>
+          <div class="travel-meta">
+            <span><i class="fa-regular fa-clock"></i> 4 days</span>
+            <span><i class="fa-solid fa-location-dot"></i> Lake Kivu, Volcanoes, Nyungwe</span>
+          </div>
+          <p class="travel-desc">Sustainable travel focused on Rwanda’s pristine nature, wildlife, and authentic community experiences.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+  <!-- Pagination -->
+  <div class="travel-pagination">
+    <a href="booking.html" class="travel-pagination-btn">BOOK NOW</a>
+
+  </div>
+</section>
+
+<style>
+body { background: #eef2f6; }
+.travel-root {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 38px 16px 44px 16px;
+  background: #eef2f6;
+  border-radius: 24px;
+  font-family: 'DM Sans', Arial, sans-serif;
+}
+.travel-filters {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 28px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.travel-filter, .travel-search {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 1.08rem;
+  border-radius: 18px;
+  border: none;
+  padding: 10px 22px;
+  background: #fff;
+  color: #2a486b;
+  box-shadow: 0 2px 14px #1b2c4822;
+  outline: none;
+  transition: box-shadow .16s;
+}
+.travel-filter:focus, .travel-search:focus {
+  box-shadow: 0 0 0 2px #69c7e3cc;
+}
+.travel-search {
+  min-width: 220px;
+  flex: 1;
+}
+.travel-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  transition: all .2s;
+}
+@media (max-width: 1150px) {
+  .travel-grid { grid-template-columns: repeat(3, 1fr);}
+}
+@media (max-width: 900px) {
+  .travel-grid { grid-template-columns: repeat(2, 1fr);}
+}
+@media (max-width: 700px) {
+  .travel-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 18px;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 18px;
+    grid-template-columns: unset;
+    scrollbar-width: thin;
+    scrollbar-color: #4fd1c5 #eaf3fa;
+  }
+  .travel-card-link {
+    min-width: 84vw;
+    max-width: 92vw;
+    flex: 0 0 84vw;
+    scroll-snap-align: start;
+  }
+}
+
+/* Make the entire card clickable */
+.travel-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  border-radius: 18px;
+  transition: box-shadow .16s;
+}
+.travel-card-link:focus .travel-card,
+.travel-card-link:hover .travel-card {
+  box-shadow: 0 12px 40px #278bba33, 0 2px 18px #4fd1c533;
+  transform: translateY(-9px) scale(1.035);
+  outline: none;
+}
+
+/* Card Style */
+.travel-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 28px #1b2c482a;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform .17s cubic-bezier(.31,1.18,.52,1.19), box-shadow .18s;
+  min-height: 348px;
+  border: 1.5px solid #eaf3fa;
+  height: 100%;
+}
+.travel-img {
+  width: 100%;
+  aspect-ratio: 16/8.2;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 18px 18px 0 0;
+  overflow: hidden;
+}
+.travel-badge {
+  position: absolute;
+  top: 15px; left: 15px;
+  background: linear-gradient(90deg, #4fd1c5 0%, #278bba 100%);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 1.01rem;
+  padding: 7px 18px 7px 13px;
+  border-radius: 13px;
+  box-shadow: 0 2px 10px #278bba33;
+  letter-spacing: 1.1px;
+  animation: badge-pop .7s cubic-bezier(.19,1.08,.52,1.19);
+}
+.travel-badge.adventure,
+.travel-badge.nature,
+.travel-badge.culture,
+.travel-badge.special,
+.travel-badge.food,
+.travel-badge.relax,
+.travel-badge.family,
+.travel-badge.group,
+.travel-badge.lecture,
+.travel-badge.solo,
+.travel-badge.luxury {
+  background: linear-gradient(90deg, rgba(161,0,37,0.7) 0%, rgba(161,0,37,0.2) 100%);
+}
+@keyframes badge-pop {
+  0% { transform: scale(0.45) translateY(-18px); opacity: 0; }
+  100% { transform: scale(1) translateY(0); opacity: 1;}
+}
+.travel-card-content {
+  padding: 22px 19px 16px 19px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.travel-card-content h3 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.13rem;
+  font-weight: 900;
+  margin: 0 0 7px 0;
+  color: #1b2c48;
+  line-height: 1.3;
+  min-height: 44px;
+}
+.travel-card-content .travel-subtitle {
+  font-size: .92em;
+  color: #278bba;
+  font-weight: bold;
+  margin-bottom: 2px;
+  display: block;
+  letter-spacing: 0.04em;
+}
+.travel-meta {
+  display: flex;
+  gap: 11px;
+  font-size: .99rem;
+  color: #278bba;
+  margin-bottom: 13px;
+  flex-wrap: wrap;
+}
+.travel-meta span {
+  background: #eaf3fa;
+  border-radius: 8px;
+  padding: 3px 11px 3px 8px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: .97rem;
+}
+.travel-meta i {
+  color: #4fd1c5;
+  font-size: 1.03em;
+}
+.travel-desc {
+  color: #35698a;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  line-height: 1.55;
+}
+.travel-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+.travel-pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 18px;
+  margin-top: 32px;
+  color: #1b2c48;
+  font-size: 1rem;
+}
+.travel-pagination-btn {
+  background: #6b0516;
+  color: #278bba;
+  border: 1.5px solid #4fd1c5;
+  padding: 8px 20px;
+  border-radius: 12px;
+  font-family: 'Montserrat',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.14s, color 0.14s, border .14s;
+}
+.travel-pagination-btn:hover {
+  background: #4fd1c5;
+  color: #fff;
+  border-color: #278bba;
+}
+</style>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+<!-- MODERN CARD CAROUSEL css - FULL BACKGROUND IMAGE, EXTENDS TO SIDE, ANIMATED TEXT LEFT (only on large screens), no white bg, creative, new color scheme -->
+<!-- FONT IMPORT (Nunito for friendly/premium appearance) -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&display=swap" rel="stylesheet">
+
+<style>
+  /* General layout for the section */
+  .discover-rwanda-section {
+    width: 100%;
+    padding: 60px 20px; /* Adjust the padding to position content */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Align content vertically */
+  }
+
+  .discover-rwanda-container {
+    display: flex;
+    justify-content: center; /* Keeps title and button in a straight line */
+    align-items: center;
+    gap: 20px; /* Space between title and button */
+  }
+
+  .discover-rwanda-title {
+    font-family: 'Nunito', 'Segoe UI', Arial, sans-serif;
+    font-size: clamp(1.8rem, 5vw, 2.8rem); /* Shrinks based on screen width */
+    font-weight: 900;
+    color: #2b5132; /* Dark green */
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    opacity: 0;
+    transform: translateY(-20px); /* Starts slightly above its final position */
+    transition: opacity 0.5s, transform 0.6s cubic-bezier(.7, 1.4, .7, 1.1);
+  }
+
+  .discover-rwanda-cta {
+    padding: 0.6em 1.8em; /* Adjust button size */
+    background: #2b5132; /* Dark green */
+    color: white;
+    font-weight: 700;
+    font-size: clamp(1rem, 3vw, 1.3rem); /* Shrinks based on screen width */
+    border: none;
+    border-radius: 1.3em;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(43, 81, 50, 0.1);
+    opacity: 0;
+    transform: translateY(-10px); /* Starts slightly above its final position */
+    transition: background 0.19s, opacity 0.5s 0.32s, transform 0.5s 0.32s cubic-bezier(.7, 1.4, .7, 1.1);
+  }
+
+  .discover-rwanda-cta:hover {
+    background: #b7282e; /* Dark Red */
+  }
+
+  /* Animation for the title and button */
+  .discover-rwanda-animate {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .discover-rwanda-title {
+      font-size: clamp(1.5rem, 5vw, 2rem); /* Adjust for smaller screens */
+    }
+
+    .discover-rwanda-cta {
+      font-size: clamp(0.9rem, 3vw, 1.1rem);
+    }
+  }
+</style>
+
+<!-- HTML Structure -->
+<div class="discover-rwanda-section">
+  <div class="discover-rwanda-container">
+    <h1 class="discover-rwanda-title discover-rwanda-animate">
+      Discover Rwanda: Your Perfect Trip Awaits
+    </h1>
+    <button class="discover-rwanda-cta discover-rwanda-animate" onclick="window.location.href='booking.html'">
+      Go for it 
+    </button>
+  </div>
+</div>
+
+<script>
+  // Add animation delay for smooth transition of text and button
+  document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(function () {
+      document.querySelector('.discover-rwanda-title').classList.add('discover-rwanda-animate');
+      document.querySelector('.discover-rwanda-cta').classList.add('discover-rwanda-animate');
+    }, 100);
+  });
+</script>
+
+        
+
+
+
+
+  
+<!-- MODERN CARD CAROUSEL - FULL BACKGROUND IMAGE, EXTENDS TO SIDE, ANIMATED TEXT LEFT (only on large screens), no white bg, creative, new color scheme -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --mc2-primary: #1b2c48;
+    --mc2-accent: #ff5572;
+    --mc2-accent2: #ffe48c;
+    --mc2-dot: #fff;
+    --mc2-dot-active: #ff5572;
+    --mc2-shadow: 0 4px 36px #1b2c4888;
+  }
+  .mc2-carousel-bg-section {
+    position: relative;
+    width: 100vw;
+    min-height: 370px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+  /* Background image from active card */
+  .mc2-carousel-bg-image {
+    position: absolute;
+    inset: 0;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
+    z-index: 1;
+    transition: opacity 0.7s cubic-bezier(.7,1.4,.7,1.1);
+    opacity: 0;
+    will-change: opacity;
+  }
+  .mc2-carousel-bg-image.mc2-active {
+    opacity: 1;
+    z-index: 1;
+  }
+  /* Gradient overlay for contrast */
+  .mc2-carousel-bg-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #181d2e 0%, #181d2e88 20%, #181d2e44 36%, #181d2e08 60%, transparent 90%);
+    z-index: 2;
+    pointer-events: none;
+  }
+  .mc2-carousel-content-row {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 370px;
+    box-sizing: border-box;
+    padding-left: 5vw;
+    padding-right: 0;
+    gap: 0;
+  }
+  /* Animated left text */
+  .mc2-carousel-animated-words {
+    min-width: 340px;
+    max-width: 420px;
+    margin-right: 3vw;
+    font-family: 'Montserrat', 'Nunito', Arial, sans-serif;
+    color: #fff;
+    font-weight: 900;
+    font-size: 2.1rem;
+    letter-spacing: 0.03em;
+    line-height: 1.12;
+    opacity: 0.98;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45em;
+    animation: mc2-fadein-left 1.4s cubic-bezier(.69,1.4,.57,1.1) 0.1s backwards;
+  }
+  .mc2-carousel-animated-words .mc2-accent {
+    color: var(--mc2-accent);
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2.36rem;
+    letter-spacing: 0.03em;
+    font-weight: 900;
+    display: inline-block;
+    animation: mc2-colorpop 1.2s cubic-bezier(.69,1.4,.57,1.1);
+  }
+  .mc2-carousel-animated-words .mc2-accent2 {
+    color: var(--mc2-accent2);
+    font-size: 1.45rem;
+    margin-left: 10px;
+    letter-spacing: 0.07em;
+    animation: mc2-colorpop 1.5s cubic-bezier(.69,1.4,.57,1.1) 0.23s;
+  }
+  @keyframes mc2-fadein-left {
+    from { opacity: 0; transform: translateX(-60px);}
+    to   { opacity: 1; transform: none;}
+  }
+  @keyframes mc2-colorpop {
+    0% { filter: brightness(1.4) drop-shadow(0 0 8px #fff3);}
+    100% { filter: none;}
+  }
+  /* Carousel cards - right side, floating */
+  .mc2-card-carousel-wrapper {
+    flex: 1 1 540px;
+    min-width: 300px;
+    max-width: 580px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-bottom: 42px;
+    padding-top: 54px;
+    padding-right: 4vw;
+    height: 100%;
+    position: relative;
+    z-index: 4;
+  }
+  .mc2-card-carousel-cards {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 0;
+    position: relative;
+    width: 370px;
+    min-width: 300px;
+    max-width: 460px;
+    height: 260px;
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .mc2-card-carousel-card {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 340px;
+    max-width: 90vw;
+    height: 220px;
+    border-radius: 18px;
+    background: rgba(16, 20, 40, 0.78);
+    box-shadow: var(--mc2-shadow);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(60px) scale(0.97);
+    transition:
+      opacity 0.7s cubic-bezier(.7,1.4,.7,1.1),
+      transform 0.68s cubic-bezier(.7,1.4,.7,1.1),
+      box-shadow 0.2s;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .mc2-card-carousel-card.mc2-active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0) scale(1.05);
+    z-index: 3;
+    box-shadow: 0 10px 38px #ff557233, 0 2px 24px #ffa60011;
+  }
+  .mc2-card-carousel-card.mc2-prev,
+  .mc2-card-carousel-card.mc2-next {
+    opacity: 0.46;
+    pointer-events: none;
+    transform: translateX(-90px) scale(0.94);
+    z-index: 2;
+  }
+  .mc2-card-carousel-card.mc2-next {
+    transform: translateX(80px) scale(0.94);
+  }
+  .mc2-card-carousel-img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    display: block;
+  }
+  .mc2-card-carousel-label {
+    display: block;
+    background: rgba(255,255,255,0.93);
+    color: var(--mc2-primary);
+    padding: 16px 0 12px 0;
+    font-size: 1.13rem;
+    font-family: 'Nunito', Arial, sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    text-align: center;
+    text-shadow: 0 2px 6px #fff6;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+  }
+  .mc2-card-carousel-dots {
+    display: flex;
+    gap: 11px;
+    justify-content: flex-end;
+    margin-top: 34px;
+    margin-right: 9vw;
+    position: relative;
+    z-index: 5;
+  }
+  .mc2-card-carousel-dot {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--mc2-dot);
+    border: 0;
+    cursor: pointer;
+    transition: background 0.19s, border 0.19s;
+    outline: none;
+    box-shadow: 0 2px 8px #0a3c5b09;
+  }
+  .mc2-card-carousel-dot.mc2-active {
+    background: var(--mc2-dot-active);
+    box-shadow: 0 2px 8px #ff557219;
+  }
+  /* Hide animated text and adjust layout on small screens */
+  @media (max-width: 1100px) {
+    .mc2-carousel-content-row { padding-left: 2vw; }
+    .mc2-card-carousel-wrapper { padding-right: 1vw; }
+    .mc2-card-carousel-cards { width: 290px; }
+    .mc2-card-carousel-card { width: 230px; height: 150px; }
+    .mc2-card-carousel-label { font-size: 0.93rem; padding: 8px 0 6px 0;}
+  }
+  @media (max-width: 900px) {
+    .mc2-carousel-animated-words { display: none; }
+    .mc2-card-carousel-wrapper { padding-right: 0; padding-bottom: 18px; }
+    .mc2-card-carousel-cards { width: 98vw; min-width: 0; max-width: 99vw; }
+    .mc2-card-carousel-card { width: 97vw; min-width: 0; max-width: 98vw; }
+    .mc2-card-carousel-label { font-size: 1.08rem; }
+    .mc2-card-carousel-dots { margin-right: 0; justify-content: center;}
+  }
+  @media (max-width: 700px) {
+    .mc2-carousel-bg-section { min-height: 220px; }
+    .mc2-card-carousel-cards,
+    .mc2-card-carousel-card { height: 120px; }
+    .mc2-card-carousel-img { height: 54px; }
+    .mc2-card-carousel-label { font-size: 0.98rem; padding: 6px 0 4px 0;}
+  }
+</style>
+
+<div class="mc2-carousel-bg-section">
+  <!-- Carousel background images -->
+  <img class="mc2-carousel-bg-image mc2-active" src="https://images.unsplash.com/photo-1654094409270-e0135ee6a6c7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Family Trip Background" data-bg="0">
+  <img class="mc2-carousel-bg-image" src="https://images.unsplash.com/photo-1648510398515-c4a7bda2d544?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Group Tours Background" data-bg="1">
+  <img class="mc2-carousel-bg-image" src="https://plus.unsplash.com/premium_photo-1722686568915-b40ee8a6c072?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8TGVjdHVyZSUyMG9uJTIwUndhbmRhJTIwaW1hZ2VzJTIwYWZyaWNhJTIwaW1hZ2VzJTIwdG91cmlzdHN8ZW58MHx8MHx8fDA%3D" alt="Lecture on Rwanda Background" data-bg="2">
+  <img class="mc2-carousel-bg-image" src="https://images.unsplash.com/photo-1741771034079-3d142c11d913?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Solo Journey Background" data-bg="3">
+  <div class="mc2-carousel-bg-gradient"></div>
+  <div class="mc2-carousel-content-row">
+    <!-- Animated left text (big screens only) -->
+    <div class="mc2-carousel-animated-words">
+      <span>Find Your</span>
+      <span class="mc2-accent">Perfect Trip</span>
+      <span class="mc2-accent2">Tailored for You</span>
+    </div>
+    <!-- Card carousel right -->
+    <div class="mc2-card-carousel-wrapper">
+      <div class="mc2-card-carousel-cards" id="mc2-card-carousel-cards">
+        <a class="mc2-card-carousel-card" href="family-trip.html">
+          <img class="mc2-card-carousel-img" src="https://images.unsplash.com/photo-1654094409270-e0135ee6a6c7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Family Trip">
+          <span class="mc2-card-carousel-label">Family Trip</span>
+        </a>
+        <a class="mc2-card-carousel-card" href="group-trip.html">
+          <img class="mc2-card-carousel-img" src="https://images.unsplash.com/photo-1648510398515-c4a7bda2d544?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Group Tours">
+          <span class="mc2-card-carousel-label">Group Tours</span>
+        </a>
+        <a class="mc2-card-carousel-card" href="lecture-rwanda.html">
+          <img class="mc2-card-carousel-img" src="https://plus.unsplash.com/premium_photo-1722686568915-b40ee8a6c072?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8TGVjdHVyZSUyMG9uJTIwUndhbmRhJTIwaW1hZ2VzJTIwYWZyaWNhJTIwaW1hZ2VzJTIwdG91cmlzdHN8ZW58MHx8MHx8fDA%3D" alt="Lecture on Rwanda">
+          <span class="mc2-card-carousel-label">Lecture on Rwanda</span>
+        </a>
+        <a class="mc2-card-carousel-card" href="solo-journey.html">
+          <img class="mc2-card-carousel-img" src="https://images.unsplash.com/photo-1741771034079-3d142c11d913?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Solo Journey">
+          <span class="mc2-card-carousel-label">Solo Journey</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="mc2-card-carousel-dots" id="mc2-card-carousel-dots"></div>
+</div>
+<script>
+(function(){
+  const cards = Array.from(document.querySelectorAll('.mc2-card-carousel-card'));
+  const bgs = Array.from(document.querySelectorAll('.mc2-carousel-bg-image'));
+  const dotsCont = document.getElementById('mc2-card-carousel-dots');
+  let idx = 0, total = cards.length, timer = null;
+
+  function show(i) {
+    idx = i;
+    cards.forEach((card, j) => {
+      card.classList.remove('mc2-active', 'mc2-prev', 'mc2-next');
+      if(j === i) card.classList.add('mc2-active');
+      else if(j === i-1) card.classList.add('mc2-prev');
+      else if(j === i+1) card.classList.add('mc2-next');
+    });
+    bgs.forEach((bg, j) => {
+      bg.classList.toggle('mc2-active', j === i);
+    });
+    Array.from(dotsCont.children).forEach((dot, j) => {
+      dot.classList.toggle('mc2-active', j === i);
+    });
+  }
+  function next() {
+    show((idx+1)%total);
+  }
+  function prev() {
+    show((idx-1+total)%total);
+  }
+  function makeDots() {
+    dotsCont.innerHTML = "";
+    for(let i=0;i<total;i++) {
+      let btn = document.createElement('button');
+      btn.className = 'mc2-card-carousel-dot'+(i===0?' mc2-active':'');
+      btn.setAttribute('aria-label','Go to slide '+(i+1));
+      btn.onclick = ()=>{show(i); if(timer) {clearInterval(timer); timer = setInterval(next, 5200);}};
+      dotsCont.appendChild(btn);
+    }
+  }
+  makeDots();
+  show(0);
+  timer = setInterval(next, 5200);
+
+  // Pause on hover
+  const wrapper = document.querySelector('.mc2-card-carousel-wrapper');
+  wrapper.addEventListener('mouseenter', () => timer && clearInterval(timer));
+  wrapper.addEventListener('mouseleave', () => timer = setInterval(next, 5200));
+  // Optional: swipe/drag for cards
+  let isDown = false, startX, moved = false;
+  wrapper.addEventListener('mousedown', (e)=>{
+    isDown = true; startX = e.pageX; moved = false;
+  });
+  window.addEventListener('mouseup', (e)=>{
+    if(!isDown) return;
+    isDown = false;
+    if(!moved) return;
+    if(e.pageX - startX < -30) next();
+    else if(e.pageX - startX > 30) prev();
+  });
+  window.addEventListener('mousemove', (e)=>{
+    if(!isDown) return;
+    moved = true;
+  });
+  // Touch
+  wrapper.addEventListener('touchstart', (e)=>{
+    isDown = true; startX = e.touches[0].pageX; moved = false;
+  });
+  window.addEventListener('touchend', (e)=>{
+    if(!isDown) return;
+    isDown = false;
+    if(!moved) return;
+    let endX = (e.changedTouches && e.changedTouches[0].pageX) || 0;
+    if(endX - startX < -30) next();
+    else if(endX - startX > 30) prev();
+  });
+  window.addEventListener('touchmove', (e)=>{
+    if(!isDown) return;
+    moved = true;
+  });
+})();
+</script>
+
+    
+<!-- Partner Companies Section -->
+<!-- Partner Companies Section -->
+<style>
+  /* General Section Styling */
+  .partner-section {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #f9f9f9; /* Soft light background for the section */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    max-width: 800px;
+    margin: 0 auto; /* Center the section */
+  }
+
+  /* Title Styling */
+  .partner-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #b71c1c; /* Deep red, inspired by Denmark's flag */
+    font-size: 2rem;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* Paragraph Styling */
+  .partner-section p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    color: #4e4e4e; /* Neutral dark grey for readability */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 20px;
+  }
+
+  /* Smaller text (in span) under the paragraph */
+  .partner-section p span {
+    font-size: 0.9rem;
+    color: #00695c; /* Muted teal, inspired by Rwanda's flag */
+    margin-top: 6px;
+    display: block;
+    font-style: italic;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .partner-section h2 {
+      font-size: 1.6rem; /* Slightly smaller title for mobile */
+    }
+
+    .partner-section p {
+      font-size: 0.95rem; /* Slightly smaller paragraph text */
+    }
+  }
+</style>
+
+
+
+
+
+
+
+
+<section class="pp-cta4" aria-label="Plan Your Rwanda Adventure">
+  <!-- Left Card: Headline & Subtitle -->
+  <div class="pp-cta4__card pp-cta4__card--left pp-cta4__anim">
+    <div class="pp-cta4__iconcircle">
+      <svg width="30" height="30" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#1954a6" /><path d="M13 28c0-3 4-5 7-5s7 2 7 5" stroke="#fff" stroke-width="2" stroke-linecap="round"/><ellipse cx="16.5" cy="17" rx="2" ry="2.5" fill="#fff"/><ellipse cx="23.5" cy="17" rx="2" ry="2.5" fill="#fff"/></svg>
+    </div>
+    <h2 class="pp-cta4__title">Explore Rwanda with Local Experts</h2>
+    <div class="pp-cta4__subtitle">
+      Tailored tours for Danish travelers, guided by P&amp;P Rwanda Tours.
+    </div>
+  </div>
+  <!-- Center Card: Contact -->
+  <div class="pp-cta4__card pp-cta4__card--center pp-cta4__anim">
+    <div class="pp-cta4__iconcircle pp-cta4__iconcircle--contact">
+      <svg width="28" height="28" fill="none" viewBox="0 0 20 20">
+        <rect width="20" height="20" rx="5" fill="#1954a6"/>
+        <path d="M5 6.7A1.7 1.7 0 0 1 6.7 5h6.6A1.7 1.7 0 0 1 15 6.7v6.6A1.7 1.7 0 0 1 13.3 15H6.7A1.7 1.7 0 0 1 5 13.3V6.7Zm1.44 1.19l3.06 2.55a.5.5 0 0 0 .62 0l3.06-2.55M6 12.25l2.62-2.19m5.38 2.19-2.62-2.19" stroke="#fff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <a href="mailto:info@pprwandatours.com" class="pp-cta4__contact-link" aria-label="Email P&P Rwanda Tours">
+      info@pprwandatours.com
+    </a>
+    <div class="pp-cta4__phone">
+      <svg class="pp-cta4__phoneicon" width="17" height="17" fill="none" viewBox="0 0 20 20">
+        <path d="M5.92 3.5a1.2 1.2 0 0 0-1.2 1.34c.22 2.36 1.17 4.69 2.68 6.59a13.2 13.2 0 0 0 5.17 4.18c.53.25 1.18.04 1.42-.5l1.02-2.21a1.2 1.2 0 0 0-.32-1.32l-2.02-1.79a1.2 1.2 0 0 0-1.36-.13l-.77.48a9.41 9.41 0 0 1-2.44-2.44l.48-.77a1.2 1.2 0 0 0-.13-1.36L8.01 4.1a1.2 1.2 0 0 0-1.32-.32l-0.77.33z" fill="#1954a6"/>
+      </svg>
+      <a href="tel:+250788123456">+250 788 123 456</a>
+    </div>
+  </div>
+  <!-- Right Card: Trust/Highlight -->
+  <div class="pp-cta4__card pp-cta4__card--right pp-cta4__anim">
+    <div class="pp-cta4__iconcircle pp-cta4__iconcircle--badge">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+        <circle cx="14" cy="14" r="14" fill="#109648"/>
+        <path d="M9 19l2-2 2 2 2-2 2 2 2-2" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="14" cy="12" r="4" fill="#fff"/>
+        <text x="14" y="14.5" text-anchor="middle" fill="#109648" font-size="2.5" font-family="Arial" font-weight="bold">99%</text>
+      </svg>
+    </div>
+    <div class="pp-cta4__badge">99% Happy Danish Clients</div>
+    <div class="pp-cta4__flag">&#x1F1F7;&#x1F1FC; Rwanda</div>
+  </div>
+</section>
+
+<style>
+.pp-cta4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  background: linear-gradient(90deg, #f7fafc 60%, #e7f1fb 100%);
+  border-radius: 18px;
+  padding: 18px 8px;
+  margin: 30px 0 0 0;
+  box-shadow: 0 2px 13px rgba(25,84,166,0.08);
+  gap: 18px;
+  flex-wrap: wrap;
+  min-height: 180px;
+  position: relative;
+  overflow: hidden;
+}
+.pp-cta4__card {
+  flex: 1 1 0;
+  min-width: 245px;
+  max-width: 350px;
+  margin: 0 6px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(25,84,166,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  height: 100%;
+  padding: 24px 18px 22px 18px;
+  text-align: center;
+  transition: box-shadow 0.3s, transform 0.3s;
+  position: relative;
+  opacity: 0;
+  transform: translateY(40px) scale(0.97);
+  will-change: opacity, transform;
+}
+.pp-cta4__card.pp-cta4__visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: opacity 0.6s cubic-bezier(.19,1,.22,1), transform 0.6s cubic-bezier(.19,1,.22,1);
+}
+.pp-cta4__iconcircle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #e7f1fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px auto;
+  box-shadow: 0 1px 6px rgba(25,84,166,0.08);
+}
+.pp-cta4__iconcircle--contact { background: #f6eafd; }
+.pp-cta4__iconcircle--badge { background: #e7fbe9; }
+.pp-cta4__title {
+  font-size: 1.13rem;
+  font-weight: 700;
+  color: #1954a6;
+  margin: 0 0 7px 0;
+  line-height: 1.17;
+}
+.pp-cta4__subtitle {
+  font-size: 0.99rem;
+  color: #23416c;
+  font-weight: 400;
+}
+.pp-cta4__contact-link {
+  display: inline-block;
+  color: #1954a6;
+  font-weight: 700;
+  font-size: 1.04rem;
+  text-decoration: none;
+  background: #e7f1fb;
+  border-radius: 15px;
+  padding: 4px 14px;
+  margin-bottom: 8px;
+  margin-top: 2px;
+  transition: background 0.2s;
+  word-break: break-all;
+}
+.pp-cta4__contact-link:hover,
+.pp-cta4__contact-link:focus {
+  background: #d1e2f7;
+  text-decoration: underline;
+}
+.pp-cta4__phone {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.99rem;
+  color: #1954a6;
+  justify-content: center;
+}
+.pp-cta4__phone a {
+  color: #1954a6;
+  text-decoration: none;
+  font-weight: 600;
+}
+.pp-cta4__phone a:hover,
+.pp-cta4__phone a:focus {
+  text-decoration: underline;
+}
+.pp-cta4__phoneicon {
+  margin-right: 2px;
+  margin-bottom: -2px;
+}
+.pp-cta4__badge {
+  font-size: 1.06rem;
+  font-weight: 700;
+  color: #109648;
+  margin-bottom: 4px;
+}
+.pp-cta4__flag {
+  font-size: 1.12em;
+  color: #109648;
+  margin-top: 5px;
+  margin-bottom: -3px;
+}
+@media (max-width: 950px) {
+  .pp-cta4 {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 4px;
+    min-height: 0;
+  }
+  .pp-cta4__card {
+    min-width: 0;
+    max-width: 100vw;
+    width: 100%;
+    margin: 0 0 0 0;
+    min-height: 145px;
+    padding: 20px 7vw 16px 7vw;
+  }
+}
+</style>
+
+<script>
+(function(){
+  // Animate cards in as they scroll into view
+  function animateCards() {
+    const cards = document.querySelectorAll('.pp-cta4__anim');
+    if ('IntersectionObserver' in window) {
+      let io = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting) {
+            entry.target.classList.add('pp-cta4__visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.19 });
+      cards.forEach(card => io.observe(card));
+    } else {
+      // Fallback for old browsers
+      cards.forEach(card => card.classList.add('pp-cta4__visible'));
+    }
+  }
+  if(document.readyState !== 'loading') animateCards();
+  else document.addEventListener('DOMContentLoaded', animateCards);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+<!-- RWANDA GALLERY - SIDE CAPTION CAROUSEL, LARGE IMAGES, TITLE "Gallery: Images of Rwanda", EXPLANATION ON RIGHT, ARROWS, SCROLL/TOUCH FRIENDLY -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced Rwanda Gallery Slider</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <!-- FontAwesome for arrows -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      background: #f6fafd;
+      font-family: "Montserrat", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .advanced-slider-title {
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: #1b2c48;
+      margin: 18px 0 14px 18px;
+    }
+    .advanced-slider-container {
+      position: relative;
+      width: 100vw;
+      overflow: hidden;
+      padding: 0 0 28px 0;
+      box-sizing: border-box;
+    }
+    .advanced-slider-track {
+      display: flex;
+      flex-direction: row;
+      transition: transform 0.45s cubic-bezier(.77,0,.18,1);
+      gap: 24px;
+      will-change: transform;
+    }
+    .advanced-slider-item {
+      flex: 0 0 auto;
+      min-width: 320px;
+      max-width: 360px;
+      width: 24vw;
+      height: 240px;
+      margin: 0;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #eaeff3;
+      box-shadow: 0 2px 18px #4b8edb10;
+      position: relative;
+      transition: box-shadow 0.19s, transform 0.21s;
+      cursor: pointer;
+    }
+    .advanced-slider-item:hover {
+      box-shadow: 0 8px 38px #4b8edb36;
+      transform: scale(1.04) rotate(-1deg);
+      z-index: 2;
+    }
+    .advanced-slider-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 18px;
+      transition: filter 0.18s;
+    }
+    .advanced-slider-item:hover .advanced-slider-img {
+      filter: brightness(0.72) blur(0.5px);
+    }
+    .advanced-slider-title-overlay {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      padding: 15px 20px 16px 20px;
+      color: #fff;
+      background: linear-gradient(to top, #1b2c48dd 80%, #0000 100%);
+      font-size: 1.18em;
+      font-weight: 800;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s;
+      border-radius: 0 0 18px 18px;
+      text-shadow: 0 2px 16px #000a, 0 1px 8px #4b8edb11;
+      text-align: left;
+    }
+    .advanced-slider-item:hover .advanced-slider-title-overlay {
+      opacity: 1;
+    }
+    /* Arrow navigation */
+    .advanced-slider-arrow {
+      position: absolute;
+      top: 50%;
+      z-index: 10;
+      background: #fff;
+      color: #327dba;
+      border: none;
+      border-radius: 50%;
+      font-size: 2.2em;
+      width: 52px;
+      height: 52px;
+      box-shadow: 0 2px 18px #4b8edb1c;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.92;
+      transform: translateY(-50%);
+      transition: background 0.14s, color 0.14s, opacity 0.17s;
+      user-select: none;
+    }
+    .advanced-slider-arrow:active,
+    .advanced-slider-arrow:focus {
+      background: #327dba;
+      color: #fff;
+      opacity: 1;
+    }
+    .advanced-slider-arrow.left { left: 6px; }
+    .advanced-slider-arrow.right { right: 6px; }
+    /* Dots */
+    .advanced-slider-dots {
+      margin: 14px 0 0 0;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+    .advanced-slider-dot {
+      width: 13px; height: 13px;
+      background: #e9f1f7;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      transition: background 0.19s;
+      box-shadow: 0 2px 8px #327dba12;
+    }
+    .advanced-slider-dot.active {
+      background: #327dba;
+    }
+    /* Scrollbar for overflow */
+    .advanced-slider-container::-webkit-scrollbar { display: none; }
+    @media (max-width: 1200px) {
+      .advanced-slider-item { min-width: 210px; max-width: 230px; width: 31vw; height: 135px;}
+    }
+    @media (max-width: 700px) {
+      .advanced-slider-title { font-size: 1.03rem; margin: 10px 0 8px 8px; }
+      .advanced-slider-item {
+        min-width: 130px; max-width: 160px; width: 66vw; height: 86px;
+      }
+      .advanced-slider-title-overlay { font-size: .92em; padding: 7px 8px 7px 8px; }
+      .advanced-slider-arrow { font-size: 1.3em; width: 36px; height: 36px;}
+    }
+  </style>
+</head>
+<body>
+  <div class="advanced-slider-title">Gallery: Rwanda</div>
+  <div class="advanced-slider-container" id="sliderContainer">
+    <button class="advanced-slider-arrow left" id="sliderLeft" aria-label="Previous images">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <div class="advanced-slider-track" id="sliderTrack"></div>
+    <button class="advanced-slider-arrow right" id="sliderRight" aria-label="Next images">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+  <div class="advanced-slider-dots" id="sliderDots"></div>
+  <script>
+    // data
+    const galleryImages = [
+      {src: "https://images.unsplash.com/photo-1557456170-0cf4f4d0d362?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFrZXxlbnwwfHwwfHx8MA%3D%3D", title: "Lake Kivu"},
+      {src: "https://www.nyungweforestnationalpark.org/wp-content/uploads/2021/08/Mount-Bisoke.jpg", title: "Volcanoes"},
+
+      {src: "https://www.brettonwoodsproject.org/wp-content/uploads/2023/07/shutterstock_1237092538.jpg", title: "Kigali by Night"},
+      {src: "https://www.explorerwandatours.com/wp-content/uploads/2023/07/tourists-visiting-tea-750x450.jpg", title: "Tea Plantations"},
+      {src: "https://images.unsplash.com/photo-1704562550146-894f47734265?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", title: "Akagera Safari"},
+      {src: "https://experts.gorillahighlands.com/wp-content/uploads/2023/05/Congo-Nile-Trail-view-photo-courtesy-of-Cesar-Niyonkuru.jpg", title: "Congo Nile Trail"},
+      {src: "https://elephantgrass.nl/wp-content/uploads/2021/12/rolling-hills-of-rwanda-on-elephantgrass-scaled.jpg", title: "Rolling Hills"},
+      {src: "https://images.unsplash.com/photo-1696739275378-22490283e2f8?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", title: "Sunrise Kigali"},
+      {src: "https://images.unsplash.com/photo-1720945489924-19b707539b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8a2lnYWxpJTIwVHJhZGl0aW9uYWwlMjBJbWlnb25nbyUyMEFydHRvdXJpc218ZW58MHx8MHx8fDA%3D", title: "Imigongo Art"},
+      {src: "https://f4v2a8t7.delivery.rocketcdn.me/wp-content/uploads/2017/06/Rwandan-Schools-67.jpg", title: "Children of Rwanda"}
+    ];
+
+    // Slider logic
+    const imagesPerView = () => {
+      if (window.innerWidth < 700) return 1;
+      if (window.innerWidth < 1200) return 2;
+      return 3;
+    };
+    let currentIndex = 0;
+    function clampIndex(idx) {
+      const max = galleryImages.length - imagesPerView();
+      return Math.max(0, Math.min(idx, max));
+    }
+    const sliderTrack = document.getElementById('sliderTrack');
+    const sliderLeft = document.getElementById('sliderLeft');
+    const sliderRight = document.getElementById('sliderRight');
+    const sliderDots = document.getElementById('sliderDots');
+
+    function renderSlider() {
+      sliderTrack.innerHTML = galleryImages.map((img, i) =>
+        `<div class="advanced-slider-item">
+          <img class="advanced-slider-img" src="${img.src}" alt="${img.title}">
+          <div class="advanced-slider-title-overlay">${img.title}</div>
+        </div>`
+      ).join('');
+      updateSlider();
+      renderDots();
+    }
+
+    function updateSlider(animate=true) {
+      const perView = imagesPerView();
+      const item = sliderTrack.querySelector(".advanced-slider-item");
+      if (!item) return;
+      const gap = 24;
+      const itemWidth = item.offsetWidth + gap;
+      let offset = currentIndex * itemWidth;
+      sliderTrack.style.transform = `translateX(-${offset}px)`;
+      if (!animate) sliderTrack.style.transition = "none";
+      else sliderTrack.style.transition = "transform 0.45s cubic-bezier(.77,0,.18,1)";
+      // Show/hide arrows
+      sliderLeft.style.visibility = currentIndex === 0 ? "hidden" : "visible";
+      sliderRight.style.visibility = (currentIndex >= galleryImages.length - perView) ? "hidden" : "visible";
+      // Dots
+      Array.from(sliderDots.children).forEach((dot, i) => {
+        dot.classList.toggle("active", i === currentIndex);
+      });
+    }
+
+    function renderDots() {
+      const perView = imagesPerView();
+      const dotsNum = Math.max(1, galleryImages.length - perView + 1);
+      sliderDots.innerHTML = "";
+      for (let i = 0; i < dotsNum; i++) {
+        const dot = document.createElement("button");
+        dot.className = "advanced-slider-dot" + (i === 0 ? " active" : "");
+        dot.onclick = () => { currentIndex = i; updateSlider(); };
+        sliderDots.appendChild(dot);
+      }
+    }
+
+    sliderLeft.onclick = () => {
+      currentIndex = clampIndex(currentIndex - 1);
+      updateSlider();
+    };
+    sliderRight.onclick = () => {
+      currentIndex = clampIndex(currentIndex + 1);
+      updateSlider();
+    };
+    window.addEventListener("resize", () => {
+      currentIndex = clampIndex(currentIndex);
+      renderDots();
+      updateSlider(false);
+    });
+
+    // Drag/Swipe support
+    let dragStart = null, dragX = 0;
+    sliderTrack.addEventListener("mousedown", e => {
+      dragStart = e.clientX;
+      dragX = sliderTrack.style.transform ? parseFloat(sliderTrack.style.transform.match(/-?[\d.]+/)[0]) : 0;
+      sliderTrack.style.transition = "none";
+      document.body.style.userSelect = "none";
+    });
+    window.addEventListener("mousemove", e => {
+      if (dragStart === null) return;
+      const dx = e.clientX - dragStart;
+      sliderTrack.style.transform = `translateX(${dragX + dx}px)`;
+    });
+    window.addEventListener("mouseup", e => {
+      if (dragStart === null) return;
+      const dx = e.clientX - dragStart;
+      if (Math.abs(dx) > 60) {
+        currentIndex = clampIndex(currentIndex - Math.sign(dx));
+      }
+      updateSlider();
+      dragStart = null;
+      document.body.style.userSelect = "";
+    });
+    // Touch
+    let touchStart = null, touchX = 0;
+    sliderTrack.addEventListener("touchstart", e => {
+      touchStart = e.touches[0].clientX;
+      touchX = sliderTrack.style.transform ? parseFloat(sliderTrack.style.transform.match(/-?[\d.]+/)[0]) : 0;
+      sliderTrack.style.transition = "none";
+    });
+    sliderTrack.addEventListener("touchmove", e => {
+      if (touchStart === null) return;
+      const dx = e.touches[0].clientX - touchStart;
+      sliderTrack.style.transform = `translateX(${touchX + dx}px)`;
+    });
+    sliderTrack.addEventListener("touchend", e => {
+      if (touchStart === null) return;
+      const dx = e.changedTouches[0].clientX - touchStart;
+      if (Math.abs(dx) > 60) {
+        currentIndex = clampIndex(currentIndex - Math.sign(dx));
+      }
+      updateSlider();
+      touchStart = null;
+    });
+
+    // Keyboard arrows
+    window.addEventListener("keydown", e => {
+      if (e.key === "ArrowLeft") {
+        currentIndex = clampIndex(currentIndex - 1);
+        updateSlider();
+      }
+      if (e.key === "ArrowRight") {
+        currentIndex = clampIndex(currentIndex + 1);
+        updateSlider();
+      }
+    });
+
+    // Init
+    renderSlider();
+    // Focus arrows for accessibility
+    sliderLeft.tabIndex = 0;
+    sliderRight.tabIndex = 0;
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+  
+
+
+<!-- Modern, Microsoft-style footer for PPR Wanda Tours -->
+<!-- Uses system-ui & Inter font, perfect flag/icon shrinking, all icons in line, and Microsoft footer color -->
+
+<!-- Modern, Microsoft-style footer for PPR Wanda Tours, with all columns in one row on desktop, including Help & Info, and perfectly aligned social/icons/flags row -->
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+<footer class="custom-footer">
+  <div class="footer-social-row">
+    <a href="/" class="footer-brand">Follow P&PRWandaTours</a>
+    <div class="footer-social-icons">
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="footer-social-icon"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com" target="_blank" aria-label="Twitter" class="footer-social-icon"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="footer-social-icon"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com/in/mazimpaka-phillippe" target="_blank" aria-label="LinkedIn" class="footer-social-icon"><i class="fab fa-linkedin-in"></i></a>
+      <a href="mailto:info@pprwandatours.com" aria-label="Email" class="footer-social-icon"><i class="fas fa-envelope"></i></a>
+      <a href="https://wa.me/250788123456" target="_blank" aria-label="WhatsApp" class="footer-social-icon"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://youtube.com/@pprwandatours" target="_blank" aria-label="YouTube" class="footer-social-icon"><i class="fab fa-youtube"></i></a>
+    </div>
+    <span class="footer-flags">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Flag_of_Rwanda.svg" alt="Rwanda" title="Rwanda" class="footer-flag" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/512px-Flag_of_Denmark.svg.png?20230220190747" alt="Denmark" title="Denmark" class="footer-flag" />
+    </span>
+    <button class="footer-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to top">
+      <span style="font-size:1.07em;">&#8593;</span> Back to top
+    </button>
+  </div>
+  <div class="footer-main">
+    <div class="footer-link-col">
+      <h4>What's New</h4>
+      <ul>
+        <li><a href="/events.html">Upcoming Events</a></li>
+        <li><a href="/media.html">Media Highlights</a></li>
+        <li><a href="/tours.html">New Tours</a></li>
+        <li><a href="/about.html">Company Updates</a></li>
+        <li><a href="/partnerships.html">New Partnerships</a></li>
+        <li><a href="https://visitrwanda.com/" target="_blank">Visit Rwanda</a></li>
+        <li><a href="https://denmark.dk/" target="_blank">Discover Denmark</a></li>
+      </ul>
+    </div>
+    <div class="footer-link-col">
+      <h4>Our Tours</h4>
+      <ul>
+        <li><a href="/tours.html#gorilla">Gorilla Trekking</a></li>
+        <li><a href="/tours.html#lake-kivu">Lake Kivu</a></li>
+        <li><a href="/tours.html#city">Kigali City</a></li>
+        <li><a href="/tours.html#cultural">Culture & Heritage</a></li>
+        <li><a href="/tours.html#eco">Eco & Green</a></li>
+        <li><a href="/tours.html#denmark">Denmark Exchange</a></li>
+      </ul>
+    </div>
+    <div class="footer-link-col">
+      <h4>Partners</h4>
+      <ul>
+        <li><a href="/partnerships.html">Become a Partner</a></li>
+        <li><a href="/partnerships.html#benefits">Partner Benefits</a></li>
+        <li><a href="/partnerships.html#gallery">Our Collaborators</a></li>
+        <li><a href="mailto:info@pprwandatours.com?subject=Partnership Inquiry">Contact Partnerships</a></li>
+      </ul>
+    </div>
+    <div class="footer-link-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/media.html">Media Center</a></li>
+        <li><a href="/careers.html">Careers</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/sustainability.html">Sustainability</a></li>
+      </ul>
+    </div>
+    <div class="footer-link-col">
+      <h4>Help & Info</h4>
+      <ul>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="/support.html">Support Center</a></li>
+        <li><a href="/privacy.html">Privacy Policy</a></li>
+        <li><a href="/terms.html">Terms of Use</a></li>
+        <li><a href="/sitemap.html">Sitemap</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom-row">
+    <div>
+      <span>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Flag_of_Rwanda.svg" alt="Rwanda" class="footer-mini-flag"/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/512px-Flag_of_Denmark.svg.png?20230220190747" alt="Denmark" class="footer-mini-flag"/>
+      </span>
+      <span class="footer-lang">English (International)</span>
+      <span class="footer-privacy-links">
+        <a href="/privacy.html">Privacy</a> &middot;
+        <a href="/terms.html">Terms</a> &middot;
+        <a href="/contact.html">Contact</a> &middot;
+        <a href="/sitemap.html">Sitemap</a>
+      </span>
+    </div>
+    <div class="footer-copyright">
+      &copy; P&PRWanda Tours 2025. All Rights Reserved.
+    </div>
+  </div>
+  <style>
+    .custom-footer {
+      background: #f5f5f6;
+      border-top: 1px solid #e6e6e6;
+      font-family: system-ui, 'Segoe UI', 'Inter', Arial, sans-serif;
+      margin-top: 70px;
+      padding: 0;
+      font-size: 1rem;
+      color: #252529;
+      width: 100%;
+    }
+    .footer-social-row {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 26px 2vw 14px 2vw;
+      background: #f5f5f6;
+      border-bottom: 1px solid #e6e6e6;
+      min-height: 52px;
+      font-size: 1.1em;
+      flex-wrap: wrap;
+    }
+    .footer-brand {
+      color: #0078d4;
+      font-weight: 600;
+      font-size: 1.14em;
+      text-decoration: none;
+      margin-right: 8px;
+      transition: color 0.14s;
+    }
+    .footer-brand:hover { color: #242424;}
+    .footer-social-icons {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin-right: 8px;
+      flex-shrink: 1;
+    }
+    .footer-social-icon {
+      color: #252529;
+      background: #fff;
+      border-radius: 50%;
+      font-size: 2em;
+      width: 1.1em;
+      height: 1.1em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 1px 6px #e3e3e3;
+      border: 1px solid #e9e9e9;
+      transition: color 0.15s, background 0.13s, transform 0.14s;
+      text-decoration: none;
+    }
+    .footer-social-icon:hover, .footer-social-icon:focus {
+      color: #0078d4;
+      background: #e6f0fc;
+      transform: scale(1.14);
+    }
+    .footer-flags {
+      margin-left: 16px;
+      display: flex;
+      gap: 7px;
+      align-items: center;
+    }
+    .footer-flag {
+      height: 22px;
+      width: 34px;
+      object-fit: cover;
+      border-radius: 3px;
+      border: 1px solid #e6e6e6;
+      box-shadow: 0 1px 4px #dedede;
+      vertical-align: middle;
+      transition: transform 0.16s, height 0.16s, width 0.16s;
+    }
+    .footer-flag:hover { transform: scale(1.08) rotate(-2deg);}
+    .footer-top-btn {
+      margin-left: auto;
+      padding: 7px 15px;
+      background: #f8fafd;
+      border: 1px solid #e6e6e6;
+      color: #252529;
+      border-radius: 7px;
+      font-size: 1.01em;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background 0.15s, color 0.15s, box-shadow 0.14s;
+      box-shadow: 0 1px 4px #efefef85;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .footer-top-btn:hover { background: #0078d4; color: #fff;}
+    .footer-main {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      background: #f5f5f6;
+      padding: 36px 6vw 30px 6vw;
+      gap: 42px;
+      border-bottom: 1px solid #e6e6e6;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-link-col {
+      flex: 1 1 0;
+      min-width: 160px;
+      max-width: 230px;
+      margin-right: 0;
+    }
+    .footer-link-col h4 {
+      font-size: 1.13em;
+      color: #242424;
+      margin-bottom: 13px;
+      font-weight: 700;
+      font-family: inherit;
+      text-align: left;
+    }
+    .footer-link-col ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .footer-link-col ul li {
+      margin-bottom: 9px;
+      font-size: 1em;
+      font-family: inherit;
+      font-weight: 500;
+      text-align: left;
+    }
+    .footer-link-col ul li a {
+      color: #252529;
+      text-decoration: none;
+      transition: color 0.16s;
+      font-family: inherit;
+    }
+    .footer-link-col ul li a:hover {
+      color: #0078d4;
+      text-decoration: underline;
+    }
+    .footer-bottom-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 6vw 16px 6vw;
+      background: #ededf0;
+      border-top: 1px solid #e6e6e6;
+      font-size: 0.97em;
+    }
+    .footer-mini-flag {
+      width: 17px;
+      height: 13px;
+      border-radius: 2px;
+      margin-right: 2.5px;
+      vertical-align: middle;
+      box-shadow: 0 1px 4px #e1e8f7;
+      border: 1px solid #e6e6e6;
+      background: #fff;
+      object-fit: cover;
+      transition: width 0.18s, height 0.18s;
+    }
+    .footer-lang {
+      margin-left: 10px;
+      color: #888;
+      font-size: 0.97em;
+      font-family: inherit;
+    }
+    .footer-privacy-links {
+      margin-left: 13px;
+      font-family: inherit;
+      font-size: 0.97em;
+    }
+    .footer-privacy-links a {
+      color: #252529;
+      text-decoration: none;
+      margin: 0 2px;
+      font-weight: 500;
+      font-family: inherit;
+    }
+    .footer-privacy-links a:hover {
+      color: #0078d4;
+      text-decoration: underline;
+    }
+    .footer-bottom-row > div:last-child {
+      text-align: right;
+      color: #7e7e84;
+      font-size: 0.97em;
+      font-weight: 500;
+      font-family: inherit;
+    }
+    @media (max-width: 1200px) {
+      .footer-main { gap: 18px; }
+      .footer-link-col { min-width: 130px; max-width: 32vw;}
+    }
+    @media (max-width: 900px) {
+      .footer-main { flex-wrap: wrap; gap: 10px;}
+      .footer-link-col {min-width: 180px; max-width: 50vw;}
+    }
+    @media (max-width: 700px) {
+      .footer-main {flex-direction: column; flex-wrap: nowrap; padding: 24px 2vw 12px 2vw; gap: 0;}
+      .footer-link-col { margin-right: 0; min-width: 96vw; max-width: 100vw;}
+      .footer-bottom-row { flex-direction: column; align-items: flex-start; gap: 8px;}
+      .footer-social-row { padding: 16px 2vw;}
+      .footer-flags {gap: 5px;}
+      .footer-flag { height: 15px; width: 22px;}
+      .footer-social-icons { gap: 5vw; }
+      .footer-social-icon { font-size: 1.19em;}
+      .footer-brand { font-size: 1em; }
+      .footer-top-btn { font-size: 0.97em; padding: 6px 11px;}
+    }
+    @media (max-width: 410px) {
+      .footer-social-row { gap: 7px;}
+      .footer-flags {gap: 2px;}
+      .footer-flag { height: 11px; width: 14px;}
+      .footer-mini-flag { width: 11px; height: 9px;}
+      .footer-social-icons { gap: 2vw;}
+    }
+  </style>
+</footer>

@@ -1,2 +1,18 @@
+# Redirect /en and /en/ to homepage
 Redirect 301 /en https://www.pprwandatours.com/
 Redirect 301 /en/ https://www.pprwandatours.com/
+
+# Standard simply.com and security recommendations
+# Enable RewriteEngine if you need pretty URLs or additional redirects
+# RewriteEngine On
+
+# Prevent directory listing
+Options -Indexes
+
+# Protect .htaccess file
+<Files .htaccess>
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Optional: Add your own custom redirects or security headers below

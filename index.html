@@ -3319,14 +3319,24 @@ body { background: #eef2f6; }
   
 
 
+<!-- Modern, Microsoft-style footer for PPR Wanda Tours -->
+<!-- Uses system-ui & Inter font, perfect flag/icon shrinking, all icons in line, and Microsoft footer color -->
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
 <footer class="custom-footer">
   <div class="footer-social-row">
     <span>Follow PPR Wanda Tours</span>
-    <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="footer-social-icon"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://twitter.com" target="_blank" aria-label="Twitter" class="footer-social-icon"><i class="fab fa-x-twitter"></i></a>
-    <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="footer-social-icon"><i class="fab fa-instagram"></i></a>
-    <a href="https://http://linkedin.com/in/mazimpaka-phillippe" target="_blank" aria-label="LinkedIn" class="footer-social-icon"><i class="fab fa-linkedin-in"></i></a>
+    <div class="footer-social-icons">
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="footer-social-icon"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com" target="_blank" aria-label="Twitter" class="footer-social-icon"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="footer-social-icon"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com/in/mazimpaka-phillippe" target="_blank" aria-label="LinkedIn" class="footer-social-icon"><i class="fab fa-linkedin-in"></i></a>
+      <a href="mailto:info@pprwandatours.com" aria-label="Email" class="footer-social-icon"><i class="fas fa-envelope"></i></a>
+      <a href="https://wa.me/250788123456" target="_blank" aria-label="WhatsApp" class="footer-social-icon"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://youtube.com/@pprwandatours" target="_blank" aria-label="YouTube" class="footer-social-icon"><i class="fab fa-youtube"></i></a>
+    </div>
     <span class="footer-flags">
       <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Flag_of_Rwanda.svg" alt="Rwanda" title="Rwanda" class="footer-flag" />
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/512px-Flag_of_Denmark.svg.png?20230220190747" alt="Denmark" title="Denmark" class="footer-flag" />
@@ -3407,91 +3417,114 @@ body { background: #eef2f6; }
       &copy; PPR Wanda Tours 2025. All Rights Reserved.
     </div>
   </div>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <style>
     .custom-footer {
-      background: #f7f7f6;
-      border-top: 1px solid #e4e4e4;
-      font-family: 'Montserrat', Arial, sans-serif;
+      background: #f5f5f6;
+      border-top: 1px solid #e6e6e6;
+      font-family: system-ui, 'Segoe UI', 'Inter', Arial, sans-serif;
       margin-top: 70px;
       padding: 0;
       font-size: 1rem;
-      color: var(--deep-blue, #234c8a);
+      color: #252529;
       width: 100%;
     }
     .footer-social-row {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-      gap: 16px;
-      padding: 36px 6vw 24px 6vw;
-      background: #fff;
-      border-bottom: 1px solid #ececec;
-      position: relative;
+      gap: 20px;
+      padding: 32px 6vw 18px 6vw;
+      background: #f5f5f6;
+      border-bottom: 1px solid #e6e6e6;
       min-height: 52px;
+      font-size: 1.08em;
+      flex-wrap: wrap;
     }
     .footer-social-row span {
       font-size: 1.01em;
+      font-weight: 600;
+      color: #0078d4;
+    }
+    .footer-social-icons {
+      display: flex;
+      align-items: center;
+      gap: 1.9vw;
+      margin-left: 13px;
+      margin-right: 8px;
+      flex-shrink: 1;
     }
     .footer-social-icon {
-      color: #222e39;
-      font-size: 1.4em;
-      margin: 0 6px;
-      transition: color 0.15s, transform 0.18s;
-      display: inline-block;
-      vertical-align: middle;
+      color: #252529;
+      background: #fff;
+      border-radius: 50%;
+      font-size: 2em;
+      width: 1.1em;
+      height: 1.1em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 1px 6px #e3e3e3;
+      border: 1px solid #e9e9e9;
+      transition: color 0.15s, background 0.13s, transform 0.14s;
+      text-decoration: none;
     }
-    .footer-social-icon:hover { color: #eb3340; transform: scale(1.16);}
+    .footer-social-icon:hover, .footer-social-icon:focus {
+      color: #0078d4;
+      background: #e6f0fc;
+      transform: scale(1.14);
+    }
     .footer-flags {
       margin-left: 16px;
+      display: flex;
+      gap: 7px;
+      align-items: center;
     }
     .footer-flag {
-      height: 26px;
-      width: 40px;
+      height: 22px;
+      width: 34px;
       object-fit: cover;
-      border-radius: 5px;
-      border: 1.5px solid #ffd100;
-      margin-right: 5px;
-      box-shadow: 0 1px 4px #e0d9a7;
+      border-radius: 3px;
+      border: 1px solid #e6e6e6;
+      box-shadow: 0 1px 4px #dedede;
       vertical-align: middle;
-      transition: transform 0.18s;
+      transition: transform 0.16s, height 0.16s, width 0.16s;
     }
-    .footer-flag:hover { transform: scale(1.13) rotate(-2deg);}
+    .footer-flag:hover { transform: scale(1.08) rotate(-2deg);}
     .footer-top-btn {
       margin-left: auto;
-      padding: 8px 18px;
-      background: #f6f8fb;
-      border: 1.1px solid #d3dbe8;
-      color: #234c8a;
+      padding: 8px 17px;
+      background: #f8fafd;
+      border: 1px solid #e6e6e6;
+      color: #252529;
       border-radius: 7px;
       font-size: 1.08em;
       cursor: pointer;
       font-family: inherit;
-      transition: background 0.15s, color 0.15s, box-shadow 0.17s;
+      transition: background 0.15s, color 0.15s, box-shadow 0.14s;
       box-shadow: 0 1px 4px #efefef85;
       font-weight: 500;
     }
-    .footer-top-btn:hover { background: #ffd100; color: #eb3340;}
+    .footer-top-btn:hover { background: #0078d4; color: #fff;}
     .footer-main {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      background: #f7f7f6;
+      background: #f5f5f6;
       padding: 36px 6vw 30px 6vw;
-      gap: 32px;
+      gap: 42px;
+      border-bottom: 1px solid #e6e6e6;
     }
     .footer-link-col {
-      flex: 1 1 190px;
-      min-width: 160px;
+      flex: 1 1 180px;
+      min-width: 155px;
       max-width: 240px;
-      margin-right: 12px;
+      margin-right: 10px;
     }
     .footer-link-col h4 {
-      font-size: 1.09em;
-      color: #0288a7;
+      font-size: 1.12em;
+      color: #242424;
       margin-bottom: 13px;
       font-weight: 700;
-      font-family: 'Montserrat', Arial, sans-serif;
+      font-family: inherit;
     }
     .footer-link-col ul {
       margin: 0;
@@ -3501,14 +3534,17 @@ body { background: #eef2f6; }
     .footer-link-col ul li {
       margin-bottom: 9px;
       font-size: 1em;
+      font-family: inherit;
+      font-weight: 500;
     }
     .footer-link-col ul li a {
-      color: #234c8a;
+      color: #252529;
       text-decoration: none;
-      transition: color 0.15s;
+      transition: color 0.16s;
+      font-family: inherit;
     }
     .footer-link-col ul li a:hover {
-      color: #eb3340;
+      color: #0078d4;
       text-decoration: underline;
     }
     .footer-bottom-row {
@@ -3517,52 +3553,72 @@ body { background: #eef2f6; }
       justify-content: space-between;
       align-items: center;
       padding: 16px 6vw 16px 6vw;
-      background: #f2f2f2;
-      border-top: 1px solid #e4e4e4;
+      background: #ededf0;
+      border-top: 1px solid #e6e6e6;
       font-size: 0.97em;
     }
     .footer-mini-flag {
-      width: 20px;
-      height: 14px;
-      border-radius: 3px;
-      margin-right: 3px;
+      width: 17px;
+      height: 13px;
+      border-radius: 2px;
+      margin-right: 2.5px;
       vertical-align: middle;
       box-shadow: 0 1px 4px #e1e8f7;
-      border: 1px solid #ffd100;
+      border: 1px solid #e6e6e6;
+      background: #fff;
+      object-fit: cover;
+      transition: width 0.18s, height 0.18s;
     }
     .footer-lang {
-      margin-left: 12px;
-      color: #666;
-      font-size: 0.98em;
+      margin-left: 10px;
+      color: #888;
+      font-size: 0.97em;
+      font-family: inherit;
     }
     .footer-privacy-links {
-      margin-left: 14px;
+      margin-left: 13px;
+      font-family: inherit;
+      font-size: 0.97em;
     }
     .footer-privacy-links a {
-      color: #234c8a;
+      color: #252529;
       text-decoration: none;
       margin: 0 2px;
+      font-weight: 500;
+      font-family: inherit;
     }
     .footer-privacy-links a:hover {
-      color: #eb3340;
+      color: #0078d4;
       text-decoration: underline;
     }
     .footer-bottom-row > div:last-child {
       text-align: right;
-      color: #888;
-      font-size: 0.96em;
+      color: #7e7e84;
+      font-size: 0.97em;
       font-weight: 500;
+      font-family: inherit;
     }
-    @media (max-width:1000px) {
+    @media (max-width: 1000px) {
       .footer-main { flex-wrap: wrap; gap: 12px;}
       .footer-link-col {min-width: 120px; max-width: 100%;}
+      .footer-social-icons { gap: 4vw;}
     }
     @media (max-width: 700px) {
-      .footer-main {flex-direction: column; padding: 26px 2vw 16px 2vw;}
+      .footer-main {flex-direction: column; padding: 24px 2vw 12px 2vw;}
       .footer-link-col { margin-right: 0;}
       .footer-bottom-row { flex-direction: column; align-items: flex-start; gap: 8px;}
-      .footer-social-row { padding: 20px 2vw;}
+      .footer-social-row { padding: 16px 2vw;}
+      .footer-flags {gap: 5px;}
+      .footer-flag { height: 15px; width: 22px;}
+      .footer-social-icons { gap: 7vw;}
+      .footer-social-icon { font-size: 1.19em;}
+    }
+    @media (max-width: 410px) {
+      .footer-social-row { gap: 7px;}
+      .footer-flags {gap: 2px;}
+      .footer-flag { height: 11px; width: 14px;}
+      .footer-mini-flag { width: 11px; height: 9px;}
+      .footer-social-icons { gap: 3vw;}
     }
   </style>
 </footer>
-    
